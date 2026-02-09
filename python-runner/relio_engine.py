@@ -2,96 +2,159 @@ import os
 import time
 import re
 import math
+import json
 import requests
 import networkx as nx
 import matplotlib.pyplot as plt
 from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor
-import json
-
 from Bio import Entrez
 
 # =========================
-# CONFIGURATION
+# CONFIG
 # =========================
-Entrez.email = "your.email@example.com"  # <-- change this
+Entrez.email = "your.email@example.com"
 Entrez.tool = "Relio"
 NCBI_DELAY = 0.35
 
+
 # =========================
-# UTILITIES
+# UTILS
 # =========================
 def sleep():
     time.sleep(NCBI_DELAY)
+
 
 def get_context_direction(text, gene):
     starts = [m.start() for m in re.finditer(rf"\b{gene}\b", text)]
     if not starts:
         return "neutral"
+
     idx = starts[0]
-    snippet = text[max(0, idx-100): min(len(text), idx+100)].lower()
+    snippet = text[max(0, idx-120): min(len(text), idx+120)].lower()
+
     if any(w in snippet for w in ["increase", "induce", "upregulat", "activat", "stimulat", "enhance", "promot"]):
         return "up"
     if any(w in snippet for w in ["decrease", "inhibit", "suppress", "reduc", "block", "attenuate", "prevent"]):
         return "down"
     return "neutral"
 
+
 # =========================
-# 1. WHITELIST
+# SCIENCE LAYER
+# =========================
+def compute_fingerprint(gene_evidence):
+    ups = sum(1 for hits in gene_evidence.values() for h in hits if h["direction"] == "up")
+    downs = sum(1 for hits in gene_evidence.values() for h in hits if h["direction"] == "down")
+
+    total = ups + downs
+    if total == 0:
+        return {"direction": "Neutral", "entropy": 0, "up": 0, "down": 0}
+
+    p_up = ups / total
+    p_down = downs / total
+    entropy = -sum(p * math.log2(p) for p in [p_up, p_down] if p > 0)
+
+    if p_up > 0.6:
+        direction = "Predominant Activation"
+    elif p_down > 0.6:
+        direction = "Predominant Inhibition"
+    else:
+        direction = "Mixed / Uncertain"
+
+    return {
+        "direction": direction,
+        "entropy": round(entropy, 3),
+        "up": ups,
+        "down": downs
+    }
+
+
+def analyze_contradictions(gene_evidence):
+    contradictions = []
+    for gene, hits in gene_evidence.items():
+        ups = sum(1 for h in hits if h["direction"] == "up")
+        downs = sum(1 for h in hits if h["direction"] == "down")
+        if ups > 0 and downs > 0:
+            contradictions.append({
+                "gene": gene,
+                "up": ups,
+                "down": downs,
+                "status": "Contradictory"
+            })
+    return contradictions
+
+
+# =========================
+# 1. GENE WHITELIST
 # =========================
 def build_gene_whitelist(outcome):
-    print(f"[1] 🧠 Building Gene Whitelist for '{outcome}'...")
+    print(f"[1] Building whitelist for {outcome}")
+    genes = set()
     try:
         sleep()
         h = Entrez.esearch(db="gene", term=f"{outcome} AND Homo sapiens[Organism]", retmax=200)
         ids = Entrez.read(h)["IdList"]
         h.close()
-        genes = set()
-        if ids:
-            sleep()
-            h = Entrez.esummary(db="gene", id=",".join(ids))
-            data = Entrez.read(h, validate=False)
-            h.close()
-            for d in data["DocumentSummarySet"]["DocumentSummary"]:
-                g = d.get("Name", "")
-                if g.isupper() and 2 <= len(g) <= 10:
-                    genes.add(g)
-        print(f"    → Whitelist: {len(genes)} verified genes.")
-        return genes
-    except:
-        return set()
+
+        if not ids:
+            return genes
+
+        sleep()
+        h = Entrez.esummary(db="gene", id=",".join(ids))
+        data = Entrez.read(h, validate=False)
+        h.close()
+
+        for d in data["DocumentSummarySet"]["DocumentSummary"]:
+            g = d.get("Name", "")
+            if g.isupper() and 2 <= len(g) <= 10:
+                genes.add(g)
+
+    except Exception as e:
+        print("Whitelist failed:", e)
+
+    print("Whitelist size:", len(genes))
+    return genes
+
 
 # =========================
-# 2. MINING
+# 2. ABSTRACT MINING
 # =========================
 def mine_abstracts_fast(compound, outcome, genes, limit=100):
-    print(f"\n[2] ⚡ FAST MODE: Fetching up to {limit} PubMed Abstracts...")
     gene_evidence = defaultdict(list)
     pmids = []
+
     try:
         h = Entrez.esearch(db="pubmed", term=f"{compound} AND {outcome}", retmax=limit, sort="relevance")
         ids = Entrez.read(h)["IdList"]
         h.close()
         pmids = ids
-        if not ids: return {}, []
-        print(f"    → Found {len(ids)} abstracts. Downloading...")
+
+        if not ids:
+            return gene_evidence, pmids
+
         sleep()
         h = Entrez.efetch(db="pubmed", id=",".join(ids), rettype="abstract", retmode="text")
         text_blob = h.read()
         h.close()
-        abstracts = [a.strip() for a in text_blob.split("\n\n") if len(a)>50]
+
+        abstracts = [a for a in text_blob.split("\n\n") if len(a) > 50]
+
         for i, txt in enumerate(abstracts):
             pid = ids[i] if i < len(ids) else "Unknown"
             for g in genes:
                 if re.search(rf"\b{g}\b", txt):
                     direction = get_context_direction(txt, g)
-                    gene_evidence[g].append({"id": pid, "direction": direction})
-        return gene_evidence, pmids
-    except:
-        return {}, []
+                    gene_evidence[g].append({"pmid": pid, "direction": direction})
+
+    except Exception as e:
+        print("Mining error:", e)
+
+    return gene_evidence, pmids
+
 
 # =========================
-# 3. PATHWAY MAPPING
+# 3. PATHWAYS
 # =========================
 def fetch_live_pathways(gene):
     paths = set()
@@ -101,125 +164,102 @@ def fetch_live_pathways(gene):
         if r.ok:
             for res in r.json().get("results", []):
                 paths.add(res["name"])
-    except: pass
-    try:
-        r = requests.get("https://webservice.wikipathways.org/findPathwaysByText",
-                         params={"query": gene, "format": "json"}, timeout=2)
-        if r.ok:
-            for res in r.json().get("result", []):
-                if res.get("species") == "Homo sapiens":
-                    paths.add(res["name"])
-    except: pass
+    except:
+        pass
     return list(paths)
 
+
 def build_pathway_map(gene_evidence):
-    print("\n[3] 🚀 Mapping Pathways (Live API)...")
     pathway_map = defaultdict(set)
-    genes_to_map = list(gene_evidence.keys())
+    genes = list(gene_evidence.keys())
+
     with ThreadPoolExecutor(max_workers=10) as executor:
-        results = executor.map(fetch_live_pathways, genes_to_map)
-        for gene, paths in zip(genes_to_map, results):
+        results = executor.map(fetch_live_pathways, genes)
+        for gene, paths in zip(genes, results):
             for p in paths:
-                p_clean = p.split(" - ")[0].strip()
-                if "Disease" not in p_clean and "metabolism" not in p_clean.lower():
-                    pathway_map[p_clean].add(gene)
-    print(f"    → Mapped {len(pathway_map)} pathways.")
+                p = p.split(" - ")[0]
+                if "disease" not in p.lower():
+                    pathway_map[p].add(gene)
+
     return pathway_map
 
+
 # =========================
-# 4. GRAPH GENERATION
+# 4. GRAPH
 # =========================
-def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome, graph_path):
-    print("\n[4] 🎨 Generating Graph...")
+def draw_graph(gene_evidence, pathway_map, graph_path):
     G = nx.Graph()
-    if pathway_map:
-        top_paths = sorted(pathway_map.items(), key=lambda x: len(x[1]), reverse=True)[:20]
-        for p, genes in top_paths:
-            for g in genes:
-                G.add_edge(g, p)
-    else:
-        top_genes = sorted(gene_evidence.keys(), key=lambda g: len(gene_evidence[g]), reverse=True)[:20]
-        G.add_node(compound)
-        for g in top_genes:
-            G.add_edge(compound, g)
-    plt.figure(figsize=(14,12))
+
+    for p, genes in list(pathway_map.items())[:15]:
+        for g in genes:
+            G.add_edge(g, p)
+
+    if not G.nodes:
+        for g in list(gene_evidence.keys())[:15]:
+            G.add_node(g)
+
+    plt.figure(figsize=(14, 12))
     pos = nx.kamada_kawai_layout(G)
-    nx.draw_networkx_nodes(G, pos, node_color='#6EC1E4', node_size=1500)
-    nx.draw_networkx_edges(G, pos, alpha=0.4)
-    nx.draw_networkx_labels(G, pos, font_size=9, font_weight="bold")
-    plt.axis('off')
-    plt.tight_layout()
+    nx.draw(G, pos, with_labels=True, node_size=1400, font_size=9)
     plt.savefig(graph_path, dpi=300)
     plt.close()
-    print(f"    ✔ Graph saved: {graph_path}")
+
 
 # =========================
-# 5. REPORT GENERATION
+# MAIN ENGINE
 # =========================
-def generate_full_report_text(compound, outcome, gene_evidence, pathway_map, paper_ids, mode_name):
-    lines = []
-    lines.append("="*60)
-    lines.append(f"Relio REPORT: {compound} + {outcome}")
-    lines.append("="*60)
-    lines.append(f"Mode: {mode_name}")
-    lines.append(f"Documents Analyzed: {len(paper_ids)}")
-    lines.append("-"*40)
-    lines.append("Gene Evidence Summary:")
-    for g, ev in gene_evidence.items():
-        hits = len(ev)
-        dirs = [e['direction'] for e in ev]
-        d_mode = Counter(dirs).most_common(1)[0][0] if dirs else "neutral"
-        lines.append(f"{g}: {hits} hits, direction={d_mode}")
-    return "\n".join(lines)
+def run_relio_job(compound, outcome, mode, job_id):
 
-# =========================
-# 6. MAIN FUNCTION
-# =========================
-def run_relio_job(compound, outcome, mode_name, job_id):
     whitelist = build_gene_whitelist(outcome)
-    if not whitelist:
-        print("❌ Whitelist failed.")
-        return None
-
-    if mode_name.upper() == "FAST":
-        gene_evidence, paper_ids = mine_abstracts_fast(compound, outcome, whitelist)
-        mode_name_str = "FAST"
-    else:
-        # For now only FAST implemented
-        gene_evidence, paper_ids = mine_abstracts_fast(compound, outcome, whitelist)
-        mode_name_str = "FULL"
-
+    gene_evidence, pmids = mine_abstracts_fast(compound, outcome, whitelist)
     pathway_map = build_pathway_map(gene_evidence)
 
-    # Paths
-    results_dir = os.path.join("python-runner", "results")
-    os.makedirs(results_dir, exist_ok=True)
+    # Gene stats
+    gene_stats = {}
+    for g, hits in gene_evidence.items():
+        ups = sum(1 for h in hits if h["direction"] == "up")
+        downs = sum(1 for h in hits if h["direction"] == "down")
+        neutral = sum(1 for h in hits if h["direction"] == "neutral")
 
-    images_dir = os.path.join("python-runner", "images")
-    os.makedirs(images_dir, exist_ok=True)
+        if ups > downs:
+            dom = "UP"
+        elif downs > ups:
+            dom = "DOWN"
+        elif ups == downs and ups > 0:
+            dom = "MIXED"
+        else:
+            dom = "NEUTRAL"
 
-    graph_filename = f"{job_id}.png"
-    graph_path = os.path.join(images_dir, graph_filename)
+        gene_stats[g] = {
+            "up": ups,
+            "down": downs,
+            "neutral": neutral,
+            "dominant": dom,
+            "pathways": [p for p, gs in pathway_map.items() if g in gs]
+        }
 
-    draw_graph(compound, gene_evidence, pathway_map, mode_name_str, outcome, graph_path)
+    fingerprint = compute_fingerprint(gene_evidence)
+    contradictions = analyze_contradictions(gene_evidence)
 
-    report_text = generate_full_report_text(compound, outcome, gene_evidence, pathway_map, paper_ids, mode_name_str)
+    os.makedirs("python-runner/results", exist_ok=True)
+    os.makedirs("python-runner/images", exist_ok=True)
 
-    # Save JSON with actual results
-    result_json = {
+    graph_file = f"{job_id}.png"
+    draw_graph(gene_evidence, pathway_map, f"python-runner/images/{graph_file}")
+
+    result = {
         "job_id": job_id,
         "compound": compound,
         "outcome": outcome,
-        "mode": mode_name_str,
-        "report": report_text,
-        "graph": graph_filename,
-        "gene_evidence": gene_evidence,
-        "pathways": {k: list(v) for k,v in pathway_map.items()}
+        "fingerprint": fingerprint,
+        "contradictions": contradictions,
+        "genes": gene_stats,
+        "pathways": {k: list(v) for k, v in pathway_map.items()},
+        "sources": [f"https://pubmed.ncbi.nlm.nih.gov/{p}/" for p in pmids],
+        "graph": graph_file
     }
 
-    result_file = os.path.join(results_dir, f"{job_id}.json")
-    with open(result_file, "w") as f:
-        json.dump(result_json, f, indent=2)
+    with open(f"python-runner/results/{job_id}.json", "w") as f:
+        json.dump(result, f, indent=2)
 
-    print(f"\n[5] 📝 Results saved: {result_file}")
-    return result_json
+    return result
