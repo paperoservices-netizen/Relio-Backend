@@ -179,20 +179,24 @@ def generate_full_report(compound, outcome, gene_evidence, pathway_map, paper_id
 # =========================
 # 7. Job wrapper
 # =========================
+# Example main function
 def run_litmap_job(data, job_id, result_dir, image_dir):
-    compound = data.get("compound", "TextInput")
-    outcome = data.get("outcome", "")
-    mode = data.get("mode", "FAST").upper()
+    compound = data["compound"]
+    outcome = data["outcome"]
+    mode = data["mode"]
+
     whitelist = build_gene_whitelist(outcome)
-    if mode=="FAST":
+    if mode == "FAST":
         ev, paper_ids = mine_abstracts_fast(compound, outcome, whitelist)
-        mode_name="FAST"
+        mode_name = "FAST"
     else:
         ev, paper_ids = mine_pmc_full(compound, outcome, whitelist)
-        mode_name="FULL"
+        mode_name = "FULL"
+
     if not ev:
-        print("No evidence found")
+        print("❌ No evidence found")
         return
+
     pmap = build_pathway_map(ev)
     draw_graph(compound, ev, pmap, mode_name, outcome, image_dir)
     generate_full_report(compound, outcome, ev, pmap, paper_ids, mode_name, result_dir)
