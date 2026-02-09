@@ -1,0 +1,143 @@
+{
+  "job_id": "21824537688",
+  "compound": "Turmeric",
+  "outcome": "Infection",
+  "mode": "FAST",
+  "report": "============================================================\nRelio REPORT: Turmeric + Infection\n============================================================\nMode: FAST\nDocuments Analyzed: 100\n----------------------------------------\nGene Evidence Summary:\nTNF: 3 hits, direction=up\nSTAT3: 1 hits, direction=neutral\nFOXP3: 2 hits, direction=up\nCCR5: 2 hits, direction=up\nACE: 2 hits, direction=down",
+  "graph": "21824537688.png",
+  "gene_evidence": {
+    "TNF": [
+      {
+        "id": "38721680",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "STAT3": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "FOXP3": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "CCR5": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "ACE": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ]
+  },
+  "pathways": {
+    "HDAC6 interactions in the central nervous system": [
+      "FOXP3"
+    ],
+    "Th17 cell differentiation pathway": [
+      "FOXP3"
+    ],
+    "Integrative Analysis of  Treg-Glial Interactions": [
+      "FOXP3"
+    ],
+    "TGF-beta signaling": [
+      "FOXP3"
+    ],
+    "Inflammatory bowel disease signaling": [
+      "FOXP3"
+    ],
+    "FOXP3 in COVID-19": [
+      "FOXP3"
+    ],
+    "A network map of RORgt mediated signaling pathway in inflammatory diseases": [
+      "FOXP3"
+    ],
+    "AXL signaling": [
+      "FOXP3"
+    ],
+    "Allograft rejection": [
+      "FOXP3"
+    ],
+    "RUNX1 and FOXP3 control the development of regulatory T lymphocytes (Tregs)": [
+      "FOXP3"
+    ],
+    "Leukocyte-intrinsic Hippo pathway functions": [
+      "FOXP3"
+    ],
+    "CCL18 signaling": [
+      "FOXP3"
+    ],
+    "Transcriptional regulation by RUNX1": [
+      "FOXP3"
+    ],
+    "Ulcerative colitis signaling": [
+      "FOXP3"
+    ],
+    "Elabela signaling": [
+      "ACE"
+    ],
+    "ACE inhibitor pathway": [
+      "ACE"
+    ],
+    "Mitochondrial immune response to SARS-CoV-2": [
+      "ACE"
+    ],
+    "WikiPathways Test: Metabolites and Metabolic Interactions": [
+      "ACE"
+    ],
+    "SARS-CoV-2 and ACE2 receptor: molecular mechanisms": [
+      "ACE"
+    ],
+    "COVID-19 adverse outcome pathway": [
+      "ACE"
+    ],
+    "Renin-angiotensin-aldosterone system (RAAS)": [
+      "ACE"
+    ],
+    "SARS-CoV-2 mitochondrial chronic oxidative stress and endothelial dysfunction": [
+      "ACE"
+    ],
+    "ADHD and autism (ASD) pathways": [
+      "ACE"
+    ],
+    "Non-classical role of vitamin D": [
+      "ACE"
+    ],
+    "Conversion of angiotensinogen to angiotensin II": [
+      "ACE"
+    ],
+    "Renin Angiotensin System and Bradykinin pathways in COVID-19": [
+      "ACE"
+    ],
+    "Downregulation of ACE2 by SARS-CoV-2 spike protein": [
+      "ACE"
+    ]
+  }
+}
