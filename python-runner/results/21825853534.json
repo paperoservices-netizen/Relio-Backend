@@ -1,0 +1,189 @@
+{
+  "job_id": "21825853534",
+  "compound": "Turmeric",
+  "outcome": "Infection",
+  "mode": "FAST",
+  "report": "============================================================\nRelio REPORT: Turmeric + Infection\n============================================================\nMode: FAST\nDocuments Analyzed: 100\n----------------------------------------\nGene Evidence Summary:\nTNF: 3 hits, direction=up\nSTAT3: 1 hits, direction=neutral\nCCR5: 2 hits, direction=up\nFOXP3: 2 hits, direction=up\nACE: 2 hits, direction=down",
+  "graph": "21825853534.png",
+  "gene_evidence": {
+    "TNF": [
+      {
+        "id": "38721680",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "STAT3": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "CCR5": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "FOXP3": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "ACE": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ]
+  },
+  "pathways": {
+    "Selective expression of chemokine receptors during T-cell polarization": [
+      "CCR5"
+    ],
+    "GPCRs, other": [
+      "CCR5"
+    ],
+    "G alpha (i) signaling events": [
+      "CCR5"
+    ],
+    "GPCRs, class A rhodopsin-like": [
+      "CCR5"
+    ],
+    "HIV Life Cycle": [
+      "CCR5"
+    ],
+    "T-cell receptor signaling": [
+      "CCR5"
+    ],
+    "Network map of SARS-CoV-2 signaling": [
+      "CCR5"
+    ],
+    "Acute viral myocarditis": [
+      "CCR5"
+    ],
+    "Class A/1 (rhodopsin-like receptors)": [
+      "CCR5"
+    ],
+    "Peptide GPCRs": [
+      "CCR5"
+    ],
+    "Cell interactions in pancreatic cancer microenvironment": [
+      "CCR5"
+    ],
+    "Interleukin-10 signaling": [
+      "CCR5"
+    ],
+    "Opioid receptor pathways": [
+      "CCR5"
+    ],
+    "FLT3 p.Gln640SerfsTer8 signaling": [
+      "CCR5"
+    ],
+    "CCL18 signaling": [
+      "CCR5",
+      "FOXP3"
+    ],
+    "Cytokine-cytokine receptor interaction": [
+      "CCR5"
+    ],
+    "RUNX1 and FOXP3 control the development of regulatory T lymphocytes (Tregs)": [
+      "FOXP3"
+    ],
+    "Th17 cell differentiation pathway": [
+      "FOXP3"
+    ],
+    "Integrative Analysis of  Treg-Glial Interactions": [
+      "FOXP3"
+    ],
+    "AXL signaling": [
+      "FOXP3"
+    ],
+    "Transcriptional regulation by RUNX1": [
+      "FOXP3"
+    ],
+    "Allograft rejection": [
+      "FOXP3"
+    ],
+    "Ulcerative colitis signaling": [
+      "FOXP3"
+    ],
+    "A network map of RORgt mediated signaling pathway in inflammatory diseases": [
+      "FOXP3"
+    ],
+    "Inflammatory bowel disease signaling": [
+      "FOXP3"
+    ],
+    "TGF-beta signaling": [
+      "FOXP3"
+    ],
+    "FOXP3 in COVID-19": [
+      "FOXP3"
+    ],
+    "Leukocyte-intrinsic Hippo pathway functions": [
+      "FOXP3"
+    ],
+    "HDAC6 interactions in the central nervous system": [
+      "FOXP3"
+    ],
+    "Non-classical role of vitamin D": [
+      "ACE"
+    ],
+    "Conversion of angiotensinogen to angiotensin II": [
+      "ACE"
+    ],
+    "SARS-CoV-2 mitochondrial chronic oxidative stress and endothelial dysfunction": [
+      "ACE"
+    ],
+    "Elabela signaling": [
+      "ACE"
+    ],
+    "Mitochondrial immune response to SARS-CoV-2": [
+      "ACE"
+    ],
+    "COVID-19 adverse outcome pathway": [
+      "ACE"
+    ],
+    "Renin Angiotensin System and Bradykinin pathways in COVID-19": [
+      "ACE"
+    ],
+    "ADHD and autism (ASD) pathways": [
+      "ACE"
+    ],
+    "SARS-CoV-2 and ACE2 receptor: molecular mechanisms": [
+      "ACE"
+    ],
+    "WikiPathways Test: Metabolites and Metabolic Interactions": [
+      "ACE"
+    ],
+    "ACE inhibitor pathway": [
+      "ACE"
+    ],
+    "Renin-angiotensin-aldosterone system (RAAS)": [
+      "ACE"
+    ],
+    "Downregulation of ACE2 by SARS-CoV-2 spike protein": [
+      "ACE"
+    ]
+  }
+}
