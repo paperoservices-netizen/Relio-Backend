@@ -36,9 +36,9 @@ jobs:
 
       - name: Run Relio Analysis
         run: |
-          export PYTHONPATH=$PYTHONPATH:$(pwd)/python-runner
           python python-runner/run_job.py \
             "${{ github.event.inputs.compound }}" \
             "${{ github.event.inputs.outcome }}" \
             "${{ github.event.inputs.mode }}" \
             "${{ github.run_id }}"
+
