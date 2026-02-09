@@ -135,20 +135,28 @@ def build_pathway_map(gene_evidence):
 # =========================
 # 6. GRAPH
 # =========================
-def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome, image_dir):
-    print("\n[4] 🎨 Generating Graph...")
-    G = nx.Graph()
-    for p, genes in pathway_map.items():
-        for g in genes: G.add_edge(g,p)
-    plt.figure(figsize=(12,10))
-    pos = nx.kamada_kawai_layout(G)
-    nx.draw(G,pos, with_labels=True, node_color="#6EC1E4")
-    plt.title(f"{compound} + {outcome} ({mode_name})")
-    plt.axis("off")
-    os.makedirs(image_dir, exist_ok=True)
-    plt.savefig(os.path.join(image_dir,"graph.png"), dpi=300)
-    print(f"    ✔ Graph saved: {os.path.join(image_dir,'graph.png')}")
+def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome, save_path):
+    import networkx as nx
+    from matplotlib.lines import Line2D
 
+    G = nx.Graph()
+    if pathway_map:
+        top_paths = sorted(pathway_map.items(), key=lambda x: len(x[1]), reverse=True)[:20]
+        for p, genes in top_paths:
+            for g in genes:
+                G.add_edge(g, p)
+    else:
+        top_genes = sorted(gene_evidence.keys(), key=lambda g: len(gene_evidence[g]), reverse=True)[:20]
+        for g in top_genes:
+            G.add_edge(compound, g)
+
+    plt.figure(figsize=(14,12))
+    pos = nx.kamada_kawai_layout(G)
+    nx.draw(G, pos, with_labels=True, node_size=1500, node_color="#6EC1E4")
+    plt.title(f"{compound} + {outcome} ({mode_name})")
+    plt.tight_layout()
+    plt.savefig(save_path)
+    plt.close()
 # =========================
 # 7. REPORT
 # =========================
@@ -170,21 +178,48 @@ def generate_full_report(compound, outcome, gene_evidence, pathway_map, paper_id
 # =========================
 # 8. MAIN FUNCTION
 # =========================
-def run_relio_job(data, job_id, result_dir, image_dir):
-    compound = data["compound"]
-    outcome = data["outcome"]
-    mode = data["mode"].upper()
+def run_relio_job(compound, outcome, mode, job_id):
+    # Whitelist
     whitelist = build_gene_whitelist(outcome)
+
     if not whitelist:
-        print("❌ Whitelist failed")
-        return
-    if mode=="FAST":
-        ev,paper_ids = mine_abstracts_fast(compound,outcome,whitelist)
+        print("❌ Whitelist failed.")
+        return {"error": "Whitelist failed"}
+
+    # Mining
+    if mode.upper() == "FAST":
+        gene_evidence, paper_ids = mine_abstracts_fast(compound, outcome, whitelist, limit=100)
+        mode_name = "FAST (Abstracts)"
     else:
-        ev,paper_ids = mine_pmc_full(compound,outcome,whitelist)
-    if not ev:
-        print("❌ No evidence found")
-        return
-    pmap = build_pathway_map(ev)
-    draw_graph(compound, ev, pmap, mode, outcome, image_dir)
-    generate_full_report(compound, outcome, ev, pmap, paper_ids, mode, result_dir)
+        gene_evidence, paper_ids = mine_pmc_full(compound, outcome, whitelist, limit=100)
+        mode_name = "FULL (PMC Full Text)"
+
+    if not gene_evidence:
+        print("❌ No evidence found.")
+        return {"error": "No evidence found"}
+
+    # Pathway mapping
+    pathway_map = build_pathway_map(gene_evidence)
+
+    # Graphs
+    images_folder = f"python-runner/images/{job_id}"
+    os.makedirs(images_folder, exist_ok=True)
+    graph_path = f"{images_folder}/{job_id}_graph.png"
+    draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome, graph_path)
+
+    # Prepare JSON result
+    fingerprint = compute_fingerprint(gene_evidence, pathway_map)
+    conflicts = analyze_contradictions(gene_evidence) if "FULL" in mode_name else []
+    
+    result = {
+        "compound": compound,
+        "outcome": outcome,
+        "mode": mode_name,
+        "fingerprint": fingerprint,
+        "conflicts": conflicts,
+        "gene_evidence": {g: ev for g, ev in gene_evidence.items()},
+        "paper_ids": paper_ids,
+        "graph_path": graph_path
+    }
+
+    return result

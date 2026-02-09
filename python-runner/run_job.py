@@ -1,18 +1,26 @@
-import sys, os
+import sys
+import os
 from relio_engine import run_relio_job
 
-# Command-line arguments: compound, outcome, mode, job_id
+if len(sys.argv) != 5:
+    print("Usage: python run_job.py <compound> <outcome> <mode> <job_id>")
+    sys.exit(1)
+
 compound = sys.argv[1]
 outcome = sys.argv[2]
-mode = sys.argv[3].upper()
+mode = sys.argv[3]
 job_id = sys.argv[4]
 
-# Create job-specific result directories
-result_dir = f"python-runner/results/{job_id}"
-image_dir = f"python-runner/images/{job_id}"
-os.makedirs(result_dir, exist_ok=True)
-os.makedirs(image_dir, exist_ok=True)
+# Create job-specific folders
+os.makedirs(f"python-runner/results", exist_ok=True)
+os.makedirs(f"python-runner/images/{job_id}", exist_ok=True)
 
-data = {"compound": compound, "outcome": outcome, "mode": mode}
+# Run the analysis
+result = run_relio_job(compound, outcome, mode, job_id)
 
-run_relio_job(data, job_id, result_dir, image_dir)
+# Save JSON result
+import json
+with open(f"python-runner/results/{job_id}.json", "w") as f:
+    json.dump(result, f, indent=2)
+
+print(f"✔ Job {job_id} completed. JSON saved in results/, graphs in images/{job_id}/")
