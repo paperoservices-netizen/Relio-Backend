@@ -1,5 +1,5 @@
 import sys, os
-from python_runner.relio_engine import run_relio_job  # fixed import
+from relio_engine import run_relio_job
 
 # Command-line arguments: compound, outcome, mode, job_id
 compound = sys.argv[1]
