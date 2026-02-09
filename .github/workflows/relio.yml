@@ -21,25 +21,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout the repo
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # 2️⃣ Setup Python
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
-      # 3️⃣ Install dependencies from requirements.txt
       - name: Install dependencies
         run: |
-          pip install --upgrade pip
+          python -m pip install --upgrade pip
           pip install -r python-runner/requirements.txt
 
-      # 4️⃣ Run Relio Job
       - name: Run Relio Job
         run: |
           python python-runner/run_job.py \
@@ -48,11 +44,10 @@ jobs:
             "${{ github.event.inputs.mode }}" \
             "${{ github.run_id }}"
 
-      # 5️⃣ Commit results back to repo
       - name: Commit Results
         run: |
           git config user.name github-actions
           git config user.email actions@github.com
-          git add python-runner/results python-runner/images
+          git add python-runner/results/*.json python-runner/images/*.png
           git commit -m "Relio job ${{ github.run_id }}" || echo "Nothing to commit"
           git push
