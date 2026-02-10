@@ -1,19 +1,31 @@
+"""
+RELIO ENGINE
+============
+Refactored LitMap V0.1 core
+- FAST mode: abstracts only
+- FULL mode: PMC full text + maze graph + contradictions
+- Outputs:
+  - python-runner/results/litmap_report_<job>.txt
+  - python-runner/results/images/litmap_maze_<job>.png
+"""
+
 import os
 import time
 import re
 import math
-import json
 import requests
 import networkx as nx
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor
+
 from Bio import Entrez
 
 # =========================
 # CONFIG
 # =========================
-Entrez.email = "your.email@example.com"
+Entrez.email = "relio@paperoservices.ai"
 Entrez.tool = "Relio"
 NCBI_DELAY = 0.35
 
@@ -31,7 +43,7 @@ def get_context_direction(text, gene):
         return "neutral"
 
     idx = starts[0]
-    snippet = text[max(0, idx-120): min(len(text), idx+120)].lower()
+    snippet = text[max(0, idx - 120): min(len(text), idx + 120)].lower()
 
     if any(w in snippet for w in ["increase", "induce", "upregulat", "activat", "stimulat", "enhance", "promot"]):
         return "up"
@@ -40,60 +52,56 @@ def get_context_direction(text, gene):
     return "neutral"
 
 
-# =========================
-# SCIENCE LAYER
-# =========================
-def compute_fingerprint(gene_evidence):
-    ups = sum(1 for hits in gene_evidence.values() for h in hits if h["direction"] == "up")
-    downs = sum(1 for hits in gene_evidence.values() for h in hits if h["direction"] == "down")
+def analyze_contradictions(gene_evidence):
+    conflicts = []
+    for gene, hits in gene_evidence.items():
+        dirs = [h["direction"] for h in hits]
+        up = dirs.count("up")
+        down = dirs.count("down")
+        total = up + down
+        if total > 1 and min(up, down) / total > 0.2:
+            conflicts.append({
+                "gene": gene,
+                "up": up,
+                "down": down,
+                "consensus": "Contradictory"
+            })
+    return conflicts
 
-    total = ups + downs
-    if total == 0:
-        return {"direction": "Neutral", "entropy": 0, "up": 0, "down": 0}
 
-    p_up = ups / total
-    p_down = downs / total
-    entropy = -sum(p * math.log2(p) for p in [p_up, p_down] if p > 0)
+def compute_fingerprint(gene_evidence, pathway_map):
+    up = sum(1 for hits in gene_evidence.values() for h in hits if h["direction"] == "up")
+    down = sum(1 for hits in gene_evidence.values() for h in hits if h["direction"] == "down")
 
-    if p_up > 0.6:
+    if up > down * 1.5:
         direction = "Predominant Activation"
-    elif p_down > 0.6:
+    elif down > up * 1.5:
         direction = "Predominant Inhibition"
     else:
-        direction = "Mixed / Uncertain"
+        direction = "Balanced Modulation"
 
-    return {
-        "direction": direction,
-        "entropy": round(entropy, 3),
-        "up": ups,
-        "down": downs
-    }
+    path_sizes = [len(v) for v in pathway_map.values()]
+    total = sum(path_sizes)
+    entropy = 0.0
+    if total:
+        probs = [p / total for p in path_sizes]
+        entropy = -sum(p * math.log2(p) for p in probs)
 
-
-def analyze_contradictions(gene_evidence):
-    contradictions = []
-    for gene, hits in gene_evidence.items():
-        ups = sum(1 for h in hits if h["direction"] == "up")
-        downs = sum(1 for h in hits if h["direction"] == "down")
-        if ups > 0 and downs > 0:
-            contradictions.append({
-                "gene": gene,
-                "up": ups,
-                "down": downs,
-                "status": "Contradictory"
-            })
-    return contradictions
+    return {"direction": direction, "entropy": round(entropy, 3)}
 
 
 # =========================
-# 1. GENE WHITELIST
+# GENE WHITELIST
 # =========================
 def build_gene_whitelist(outcome):
-    print(f"[1] Building whitelist for {outcome}")
     genes = set()
     try:
         sleep()
-        h = Entrez.esearch(db="gene", term=f"{outcome} AND Homo sapiens[Organism]", retmax=200)
+        h = Entrez.esearch(
+            db="gene",
+            term=f"{outcome} AND Homo sapiens[Organism]",
+            retmax=200
+        )
         ids = Entrez.read(h)["IdList"]
         h.close()
 
@@ -110,62 +118,144 @@ def build_gene_whitelist(outcome):
             if g.isupper() and 2 <= len(g) <= 10:
                 genes.add(g)
 
-    except Exception as e:
-        print("Whitelist failed:", e)
+    except Exception:
+        pass
 
-    print("Whitelist size:", len(genes))
     return genes
 
 
 # =========================
-# 2. ABSTRACT MINING
+# MINING
 # =========================
 def mine_abstracts_fast(compound, outcome, genes, limit=100):
     gene_evidence = defaultdict(list)
     pmids = []
 
     try:
-        h = Entrez.esearch(db="pubmed", term=f"{compound} AND {outcome}", retmax=limit, sort="relevance")
-        ids = Entrez.read(h)["IdList"]
+        h = Entrez.esearch(
+            db="pubmed",
+            term=f"{compound} AND {outcome}",
+            retmax=limit,
+            sort="relevance"
+        )
+        pmids = Entrez.read(h)["IdList"]
         h.close()
-        pmids = ids
 
-        if not ids:
-            return gene_evidence, pmids
+        if not pmids:
+            return {}, []
 
         sleep()
-        h = Entrez.efetch(db="pubmed", id=",".join(ids), rettype="abstract", retmode="text")
-        text_blob = h.read()
+        h = Entrez.efetch(
+            db="pubmed",
+            id=",".join(pmids),
+            rettype="abstract",
+            retmode="text"
+        )
+        blob = h.read()
         h.close()
 
-        abstracts = [a for a in text_blob.split("\n\n") if len(a) > 50]
+        abstracts = [a for a in blob.split("\n\n") if len(a) > 50]
 
         for i, txt in enumerate(abstracts):
-            pid = ids[i] if i < len(ids) else "Unknown"
+            pid = pmids[i] if i < len(pmids) else "Unknown"
             for g in genes:
                 if re.search(rf"\b{g}\b", txt):
-                    direction = get_context_direction(txt, g)
-                    gene_evidence[g].append({"pmid": pid, "direction": direction})
+                    gene_evidence[g].append({
+                        "id": pid,
+                        "direction": get_context_direction(txt, g)
+                    })
 
-    except Exception as e:
-        print("Mining error:", e)
+    except Exception:
+        pass
 
     return gene_evidence, pmids
 
 
+def mine_pmc_full(compound, outcome, genes, limit=100):
+    gene_evidence = defaultdict(list)
+    pmc_ids = []
+
+    try:
+        h = Entrez.esearch(
+            db="pmc",
+            term=f"{compound} AND {outcome} AND open access[filter]",
+            retmax=limit,
+            sort="relevance"
+        )
+        pmc_ids = Entrez.read(h)["IdList"]
+        h.close()
+
+        if not pmc_ids:
+            return {}, []
+
+        batch = 20
+        for i in range(0, len(pmc_ids), batch):
+            sleep()
+            h = Entrez.efetch(
+                db="pmc",
+                id=",".join(pmc_ids[i:i + batch]),
+                retmode="xml"
+            )
+            articles = Entrez.read(h, validate=False)
+            h.close()
+
+            art_list = articles if isinstance(articles, list) else articles.get("pmc-articles", [])
+            if isinstance(art_list, dict):
+                art_list = [art_list]
+
+            for art in art_list:
+                text = str(art)
+                pmc = "Unknown"
+                try:
+                    for aid in art.get("front", {}).get("article-meta", {}).get("article-id", []):
+                        if aid.attributes.get("pub-id-type") == "pmc":
+                            pmc = "PMC" + str(aid)
+                except Exception:
+                    pass
+
+                for g in genes:
+                    if re.search(rf"[^a-zA-Z]{g}[^a-zA-Z]", text):
+                        gene_evidence[g].append({
+                            "id": pmc,
+                            "direction": get_context_direction(text, g)
+                        })
+
+    except Exception:
+        pass
+
+    return gene_evidence, pmc_ids
+
+
 # =========================
-# 3. PATHWAYS
+# PATHWAYS
 # =========================
 def fetch_live_pathways(gene):
     paths = set()
     try:
-        r = requests.get("https://reactome.org/ContentService/search/query",
-                         params={"query": gene, "species": "Homo sapiens", "types": "Pathway"}, timeout=2)
+        r = requests.get(
+            "https://reactome.org/ContentService/search/query",
+            params={"query": gene, "species": "Homo sapiens", "types": "Pathway"},
+            timeout=2
+        )
         if r.ok:
             for res in r.json().get("results", []):
                 paths.add(res["name"])
-    except:
+    except Exception:
         pass
+
+    try:
+        r = requests.get(
+            "https://webservice.wikipathways.org/findPathwaysByText",
+            params={"query": gene, "format": "json"},
+            timeout=2
+        )
+        if r.ok:
+            for res in r.json().get("result", []):
+                if res.get("species") == "Homo sapiens":
+                    paths.add(res["name"])
+    except Exception:
+        pass
+
     return list(paths)
 
 
@@ -173,93 +263,107 @@ def build_pathway_map(gene_evidence):
     pathway_map = defaultdict(set)
     genes = list(gene_evidence.keys())
 
-    with ThreadPoolExecutor(max_workers=10) as executor:
-        results = executor.map(fetch_live_pathways, genes)
-        for gene, paths in zip(genes, results):
+    with ThreadPoolExecutor(max_workers=10) as ex:
+        results = ex.map(fetch_live_pathways, genes)
+        for g, paths in zip(genes, results):
             for p in paths:
-                p = p.split(" - ")[0]
-                if "disease" not in p.lower():
-                    pathway_map[p].add(gene)
+                p_clean = p.split(" - ")[0].strip()
+                if "disease" not in p_clean.lower():
+                    pathway_map[p_clean].add(g)
 
     return pathway_map
 
 
 # =========================
-# 4. GRAPH
+# GRAPH
 # =========================
-def draw_graph(gene_evidence, pathway_map, graph_path):
+def draw_graph(compound, gene_evidence, pathway_map, mode_name, job_id):
+    if "FAST" in mode_name:
+        return None
+
     G = nx.Graph()
 
-    for p, genes in list(pathway_map.items())[:15]:
-        for g in genes:
-            G.add_edge(g, p)
+    if pathway_map:
+        top = sorted(pathway_map.items(), key=lambda x: len(x[1]), reverse=True)[:20]
+        for p, genes in top:
+            for g in genes:
+                G.add_edge(g, p)
 
-    if not G.nodes:
-        for g in list(gene_evidence.keys())[:15]:
-            G.add_node(g)
+    else:
+        top_genes = sorted(gene_evidence.keys(), key=lambda g: len(gene_evidence[g]), reverse=True)[:20]
+        for g in top_genes:
+            G.add_edge(compound, g)
 
-    plt.figure(figsize=(14, 12))
+    plt.figure(figsize=(18, 14))
     pos = nx.kamada_kawai_layout(G)
-    nx.draw(G, pos, with_labels=True, node_size=1400, font_size=9)
-    plt.savefig(graph_path, dpi=300)
+
+    nx.draw(G, pos, with_labels=True, node_size=1200, font_size=8)
+    plt.title(f"Relio LitMap: {compound}")
+
+    out = f"python-runner/results/images/litmap_maze_{job_id}.png"
+    plt.savefig(out, dpi=300)
     plt.close()
 
+    return out
+
 
 # =========================
-# MAIN ENGINE
+# REPORT
 # =========================
-def run_relio_job(compound, outcome, mode, job_id):
+def generate_report(compound, outcome, gene_evidence, pathway_map, paper_ids, mode_name, job_id):
+    fingerprint = compute_fingerprint(gene_evidence, pathway_map)
+    conflicts = analyze_contradictions(gene_evidence) if "FULL" in mode_name else []
+
+    lines = []
+    lines.append("=" * 80)
+    lines.append(f"RELIO LITMAP REPORT: {compound.upper()} + {outcome.upper()}")
+    lines.append("=" * 80)
+    lines.append(f"Mode          : {mode_name}")
+    lines.append(f"Papers        : {len(paper_ids)}")
+    lines.append(f"Direction     : {fingerprint['direction']}")
+    lines.append("")
+
+    for g, ev in sorted(gene_evidence.items(), key=lambda x: len(x[1]), reverse=True):
+        dirs = Counter([e["direction"] for e in ev]).most_common(1)[0][0]
+        lines.append(f"{g:8} | {len(ev):3} | {dirs}")
+
+    out = f"python-runner/results/litmap_report_{job_id}.txt"
+    with open(out, "w") as f:
+        f.write("\n".join(lines))
+
+    return out
+
+
+# =========================
+# MAIN ENTRY
+# =========================
+def run_litmap(compound, outcome, mode, job_id):
+    os.makedirs("python-runner/results/images", exist_ok=True)
 
     whitelist = build_gene_whitelist(outcome)
-    gene_evidence, pmids = mine_abstracts_fast(compound, outcome, whitelist)
-    pathway_map = build_pathway_map(gene_evidence)
+    if not whitelist:
+        return {"error": "Gene whitelist failed"}
 
-    # Gene stats
-    gene_stats = {}
-    for g, hits in gene_evidence.items():
-        ups = sum(1 for h in hits if h["direction"] == "up")
-        downs = sum(1 for h in hits if h["direction"] == "down")
-        neutral = sum(1 for h in hits if h["direction"] == "neutral")
+    if mode == "FAST":
+        gene_ev, ids = mine_abstracts_fast(compound, outcome, whitelist)
+        mode_name = "FAST (Abstracts)"
+    else:
+        gene_ev, ids = mine_pmc_full(compound, outcome, whitelist)
+        mode_name = "FULL (PMC Full Text)"
 
-        if ups > downs:
-            dom = "UP"
-        elif downs > ups:
-            dom = "DOWN"
-        elif ups == downs and ups > 0:
-            dom = "MIXED"
-        else:
-            dom = "NEUTRAL"
+    if not gene_ev:
+        return {"error": "No evidence found"}
 
-        gene_stats[g] = {
-            "up": ups,
-            "down": downs,
-            "neutral": neutral,
-            "dominant": dom,
-            "pathways": [p for p, gs in pathway_map.items() if g in gs]
-        }
+    pmap = build_pathway_map(gene_ev)
+    graph_path = draw_graph(compound, gene_ev, pmap, mode_name, job_id)
+    report_path = generate_report(compound, outcome, gene_ev, pmap, ids, mode_name, job_id)
 
-    fingerprint = compute_fingerprint(gene_evidence)
-    contradictions = analyze_contradictions(gene_evidence)
-
-    os.makedirs("python-runner/results", exist_ok=True)
-    os.makedirs("python-runner/images", exist_ok=True)
-
-    graph_file = f"{job_id}.png"
-    draw_graph(gene_evidence, pathway_map, f"python-runner/images/{graph_file}")
-
-    result = {
-        "job_id": job_id,
+    return {
         "compound": compound,
         "outcome": outcome,
-        "fingerprint": fingerprint,
-        "contradictions": contradictions,
-        "genes": gene_stats,
-        "pathways": {k: list(v) for k, v in pathway_map.items()},
-        "sources": [f"https://pubmed.ncbi.nlm.nih.gov/{p}/" for p in pmids],
-        "graph": graph_file
+        "mode": mode_name,
+        "genes": len(gene_ev),
+        "papers": len(ids),
+        "graph": graph_path,
+        "report": report_path
     }
-
-    with open(f"python-runner/results/{job_id}.json", "w") as f:
-        json.dump(result, f, indent=2)
-
-    return result

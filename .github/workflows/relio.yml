@@ -3,13 +3,13 @@ name: Relio
 on:
   workflow_dispatch:
     inputs:
+      job_id:
+        required: true
       compound:
         required: true
       outcome:
         required: true
       mode:
-        required: true
-      job_id:
         required: true
 
 permissions:
@@ -20,29 +20,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.10"
+    - uses: actions/setup-python@v5
+      with:
+        python-version: "3.10"
 
-      - name: Install deps
-        run: |
-          pip install --upgrade pip
-          pip install -r python-runner/requirements.txt
+    - name: Install deps
+      run: pip install -r requirements.txt
 
-      - name: Run Relio
-        run: |
-          python python-runner/run_job.py \
-            "${{ inputs.compound }}" \
-            "${{ inputs.outcome }}" \
-            "${{ inputs.mode }}" \
-            "${{ inputs.job_id }}"
+    - name: Run Relio
+      run: |
+        python python-runner/run_job.py \
+          "${{ github.event.inputs.compound }}" \
+          "${{ github.event.inputs.outcome }}" \
+          "${{ github.event.inputs.mode }}" \
+          "${{ github.event.inputs.job_id }}"
 
-      - name: Commit results
-        run: |
-          git config user.name github-actions
-          git config user.email actions@github.com
-          git add python-runner/results python-runner/images
-          git commit -m "Relio ${{ inputs.job_id }}" || echo "Nothing to commit"
-          git push
+    - name: Commit results
+      run: |
+        git config user.name github-actions
+        git config user.email actions@github.com
+        git add python-runner/results
+        git commit -m "Relio ${{ github.event.inputs.job_id }}" || true
+        git push
