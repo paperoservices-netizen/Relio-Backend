@@ -35,7 +35,7 @@ jobs:
 
       - name: Run Relio engine
         run: |
-          python python_runner/relio_job.py \
+          python -m python_runner.relio_job \
           "${{ github.event.inputs.compound }}" \
           "${{ github.event.inputs.outcome }}" \
           "${{ github.event.inputs.mode }}" \
