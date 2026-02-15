@@ -1,0 +1,292 @@
+{
+  "compound": "Turmeric",
+  "outcome": "Infection",
+  "mode": "FAST",
+  "mode_name": "FAST (Abstracts)",
+  "genes": {
+    "TNF": [
+      {
+        "id": "38721680",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "STAT3": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "FOXP3": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "CCR5": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "ACE": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ]
+  },
+  "pathways": {
+    "Th17 cell differentiation pathway": [
+      "FOXP3"
+    ],
+    "AXL signaling": [
+      "FOXP3"
+    ],
+    "TGF-beta signaling": [
+      "FOXP3"
+    ],
+    "Ulcerative colitis signaling": [
+      "FOXP3"
+    ],
+    "FOXP3 in COVID-19": [
+      "FOXP3"
+    ],
+    "Leukocyte-intrinsic Hippo pathway functions": [
+      "FOXP3"
+    ],
+    "RUNX1 and FOXP3 control the development of regulatory T lymphocytes (Tregs)": [
+      "FOXP3"
+    ],
+    "Inflammatory bowel disease signaling": [
+      "FOXP3"
+    ],
+    "CCL18 signaling": [
+      "FOXP3",
+      "CCR5"
+    ],
+    "A network map of RORgt mediated signaling pathway in inflammatory diseases": [
+      "FOXP3"
+    ],
+    "Integrative Analysis of  Treg-Glial Interactions": [
+      "FOXP3"
+    ],
+    "Transcriptional regulation by RUNX1": [
+      "FOXP3"
+    ],
+    "HDAC6 interactions in the central nervous system": [
+      "FOXP3"
+    ],
+    "Allograft rejection": [
+      "FOXP3"
+    ],
+    "Acute viral myocarditis": [
+      "CCR5"
+    ],
+    "HIV Life Cycle": [
+      "CCR5"
+    ],
+    "FLT3 p.Gln640SerfsTer8 signaling": [
+      "CCR5"
+    ],
+    "Cell interactions in pancreatic cancer microenvironment": [
+      "CCR5"
+    ],
+    "GPCRs, other": [
+      "CCR5"
+    ],
+    "T-cell receptor signaling": [
+      "CCR5"
+    ],
+    "G alpha (i) signaling events": [
+      "CCR5"
+    ],
+    "Interleukin-10 signaling": [
+      "CCR5"
+    ],
+    "Cytokine-cytokine receptor interaction": [
+      "CCR5"
+    ],
+    "Peptide GPCRs": [
+      "CCR5"
+    ],
+    "Network map of SARS-CoV-2 signaling": [
+      "CCR5"
+    ],
+    "GPCRs, class A rhodopsin-like": [
+      "CCR5"
+    ],
+    "Class A/1 (rhodopsin-like receptors)": [
+      "CCR5"
+    ],
+    "Opioid receptor pathways": [
+      "CCR5"
+    ],
+    "Selective expression of chemokine receptors during T-cell polarization": [
+      "CCR5"
+    ],
+    "ACE inhibitor pathway": [
+      "ACE"
+    ],
+    "ADHD and autism (ASD) pathways": [
+      "ACE"
+    ],
+    "WikiPathways Test: Metabolites and Metabolic Interactions": [
+      "ACE"
+    ],
+    "Downregulation of ACE2 by SARS-CoV-2 spike protein": [
+      "ACE"
+    ],
+    "Renin Angiotensin System and Bradykinin pathways in COVID-19": [
+      "ACE"
+    ],
+    "Conversion of angiotensinogen to angiotensin II": [
+      "ACE"
+    ],
+    "Mitochondrial immune response to SARS-CoV-2": [
+      "ACE"
+    ],
+    "Renin-angiotensin-aldosterone system (RAAS)": [
+      "ACE"
+    ],
+    "SARS-CoV-2 and ACE2 receptor: molecular mechanisms": [
+      "ACE"
+    ],
+    "Non-classical role of vitamin D": [
+      "ACE"
+    ],
+    "COVID-19 adverse outcome pathway": [
+      "ACE"
+    ],
+    "Elabela signaling": [
+      "ACE"
+    ],
+    "SARS-CoV-2 mitochondrial chronic oxidative stress and endothelial dysfunction": [
+      "ACE"
+    ]
+  },
+  "documents": [
+    "26528921",
+    "39330180",
+    "36997729",
+    "36720711",
+    "36119096",
+    "38242053",
+    "16731272",
+    "38794899",
+    "38817411",
+    "31088018",
+    "34696344",
+    "35253616",
+    "34757887",
+    "26404185",
+    "32535791",
+    "36904331",
+    "38685809",
+    "37356247",
+    "27896883",
+    "34443248",
+    "33142686",
+    "32067524",
+    "36480131",
+    "39770516",
+    "37569540",
+    "31185140",
+    "35996526",
+    "37536946",
+    "29923222",
+    "20821233",
+    "34660038",
+    "37378778",
+    "37314412",
+    "40599653",
+    "36455820",
+    "39055752",
+    "36981935",
+    "38664750",
+    "34237598",
+    "36868489",
+    "27863601",
+    "35293297",
+    "32998270",
+    "25200875",
+    "41362433",
+    "36703758",
+    "26188032",
+    "24165896",
+    "38133257",
+    "34325638",
+    "35352306",
+    "36846914",
+    "35933899",
+    "39148307",
+    "30909623",
+    "28343845",
+    "38612606",
+    "30085362",
+    "41176175",
+    "39541651",
+    "35496320",
+    "36729019",
+    "36965256",
+    "23566550",
+    "34579443",
+    "32806984",
+    "29976394",
+    "37517298",
+    "38085369",
+    "32452193",
+    "32418527",
+    "28449595",
+    "41096639",
+    "36499036",
+    "29541936",
+    "25206217",
+    "39901813",
+    "35469998",
+    "22186854",
+    "34013606",
+    "35773779",
+    "40005051",
+    "36756300",
+    "38042387",
+    "38721680",
+    "36130809",
+    "32334064",
+    "33809891",
+    "33184809",
+    "40799052",
+    "29621160",
+    "35041229",
+    "1496714",
+    "39128326",
+    "39808292",
+    "36098090",
+    "28884496",
+    "36640146",
+    "29625661",
+    "27892897"
+  ],
+  "images": {
+    "graph": null
+  }
+}
