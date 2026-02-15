@@ -3,35 +3,48 @@ name: Relio Engine
 on:
   workflow_dispatch:
     inputs:
-      compound: { required: true }
-      outcome: { required: true }
-      mode: { required: true }
-      job_id: { required: true }
+      compound:
+        description: "Compound name"
+        required: true
+      outcome:
+        description: "Outcome name"
+        required: true
+      mode:
+        description: "FAST or FULL"
+        required: true
+      job_id:
+        description: "Unique job id"
+        required: true
 
 jobs:
   run:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v4
-      with: { fetch-depth: 0 }
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-    - uses: actions/setup-python@v5
-      with: { python-version: "3.10" }
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
 
-    - run: |
-        pip install biopython networkx matplotlib requests
+      - name: Install dependencies
+        run: |
+          pip install biopython networkx matplotlib requests
 
-    - run: |
-        python python-runner/relio_job.py \
-          "${{inputs.compound}}" \
-          "${{inputs.outcome}}" \
-          "${{inputs.mode}}" \
-          "${{inputs.job_id}}"
+      - name: Run Relio engine
+        run: |
+          python python_runner/relio_job.py \
+          "${{ github.event.inputs.compound }}" \
+          "${{ github.event.inputs.outcome }}" \
+          "${{ github.event.inputs.mode }}" \
+          "${{ github.event.inputs.job_id }}"
 
-    - run: |
-        git config user.name "relio"
-        git config user.email "actions@github.com"
-        git add python-runner
-        git commit -m "Relio result ${{inputs.job_id}}" || true
-        git pull --rebase || true
-        git push
+      - name: Commit results
+        run: |
+          git config user.name "relio"
+          git config user.email "actions@github.com"
+          git add python_runner
+          git commit -m "Relio result ${{ github.event.inputs.job_id }}" || echo "Nothing to commit"
+          git push
