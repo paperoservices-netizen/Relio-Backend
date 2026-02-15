@@ -1,0 +1,9 @@
+{
+  "compound": "Turmeric",
+  "outcome": "Infection",
+  "mode": "FAST (Abstracts)",
+  "genes": 5,
+  "papers": 100,
+  "graph": null,
+  "report": "python-runner/results/litmap_report_test1.txt"
+}

@@ -1,0 +1,12 @@
+================================================================================
+RELIO LITMAP REPORT: TURMERIC + INFECTION
+================================================================================
+Mode          : FAST (Abstracts)
+Papers        : 100
+Direction     : Balanced Modulation
+
+TNF      |   3 | up
+CCR5     |   2 | up
+FOXP3    |   2 | up
+ACE      |   2 | down
+STAT3    |   1 | neutral
