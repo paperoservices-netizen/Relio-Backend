@@ -173,64 +173,96 @@ def build_pathway_map(gene_evidence):
     return pathway_map
 
 def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome):
+    """Graph generation with full error handling for CI"""
     if "FAST" in mode_name:
         print("\n[4] ⏩ Graph generation skipped (Fast Mode).")
         return
 
     print("\n[4] 🎨 Generating Maze-Like Graph...")
-    G = nx.Graph()
-    if pathway_map:
-        top_paths = sorted(pathway_map.items(), key=lambda x: len(x[1]), reverse=True)[:20]
-        pathway_nodes = set()
-        gene_nodes = set()
-        for p, genes in top_paths:
-            pathway_nodes.add(p)
-            for g in genes:
-                gene_nodes.add(g)
-                G.add_edge(g, p)
+    
+    # Skip graph in CI/headless environments
+    if os.environ.get('CI') or os.environ.get('GITHUB_ACTIONS') or not os.environ.get('DISPLAY'):
+        print("    ⚠️ Graph skipped (CI/Headless mode) - Text report generated")
+        return
+    
+    try:
+        # Test required imports
+        import scipy
+        import matplotlib
+        matplotlib.use('Agg')  # Non-interactive backend
+        
+        G = nx.Graph()
+        
+        if pathway_map:
+            top_paths = sorted(pathway_map.items(), key=lambda x: len(x[1]), reverse=True)[:20]
+            pathway_nodes = set()
+            gene_nodes = set()
+            
+            for p, genes in top_paths:
+                pathway_nodes.add(p)
+                for g in genes:
+                    gene_nodes.add(g)
+                    G.add_edge(g, p)
 
-        plt.figure(figsize=(20, 16))
-        pos = nx.kamada_kawai_layout(G)
+            plt.figure(figsize=(20, 16))
+            pos = nx.kamada_kawai_layout(G)
 
-        nx.draw_networkx_nodes(G, pos, nodelist=list(pathway_nodes), node_color='#7ED957', node_size=2800)
-        nx.draw_networkx_nodes(G, pos, nodelist=list(gene_nodes), node_color='#6EC1E4', node_size=1400)
-        nx.draw_networkx_edges(G, pos, alpha=0.3, width=1.5)
+            # Draw pathway nodes (green)
+            nx.draw_networkx_nodes(G, pos, nodelist=list(pathway_nodes), 
+                                 node_color='#7ED957', node_size=2800, alpha=0.9)
+            # Draw gene nodes (blue)  
+            nx.draw_networkx_nodes(G, pos, nodelist=list(gene_nodes), 
+                                 node_color='#6EC1E4', node_size=1400, alpha=0.9)
+            nx.draw_networkx_edges(G, pos, alpha=0.3, width=1.5)
 
-        labels = {n: n.replace(" ", "\n", 2) if len(n)>15 else n for n in G.nodes()}
-        nx.draw_networkx_labels(G, pos, labels, font_size=8, font_weight="bold")
+            # Labels with line breaks
+            labels = {n: n.replace(" ", "\n", 1) if len(n)>15 else n for n in G.nodes()}
+            nx.draw_networkx_labels(G, pos, labels, font_size=8, font_weight="bold")
 
-        legend_elements = [
-            Line2D([0], [0], marker='o', color='w', label='Target Gene', markerfacecolor='#6EC1E4', markersize=15),
-            Line2D([0], [0], marker='o', color='w', label='Biological Pathway', markerfacecolor='#7ED957', markersize=15)
-        ]
-        plt.legend(handles=legend_elements, loc='upper left', fontsize=12, frameon=True)
-        plt.suptitle(f"LitMap Analysis: {compound} + {outcome}", fontsize=16, fontweight='bold', y=0.95)
+            # Legend
+            legend_elements = [
+                Line2D([0], [0], marker='o', color='w', label='Target Gene', 
+                      markerfacecolor='#6EC1E4', markersize=15),
+                Line2D([0], [0], marker='o', color='w', label='Biological Pathway', 
+                      markerfacecolor='#7ED957', markersize=15)
+            ]
+            plt.legend(handles=legend_elements, loc='upper left', fontsize=12, frameon=True)
+            plt.suptitle(f"LitMap Analysis: {compound} + {outcome}", fontsize=16, 
+                        fontweight='bold', y=0.95)
 
-    else:
-        print("    ⚠️ Using Gene-Star Graph (No pathways found)")
-        top_genes = sorted(gene_evidence.keys(), key=lambda g: len(gene_evidence[g]), reverse=True)[:20]
-        G.add_node(compound, color='red')
-        for g in top_genes: G.add_edge(compound, g)
+        else:
+            print("    ⚠️ Using Gene-Star Graph (No pathways found)")
+            top_genes = sorted(gene_evidence.keys(), key=lambda g: len(gene_evidence[g]), reverse=True)[:20]
+            G.add_node(compound)
+            for g in top_genes: 
+                G.add_edge(compound, g)
 
-        plt.figure(figsize=(14, 12))
-        pos = nx.kamada_kawai_layout(G)
+            plt.figure(figsize=(14, 12))
+            pos = nx.kamada_kawai_layout(G)
 
-        nx.draw_networkx_nodes(G, pos, nodelist=[compound], node_color='#FF6B6B', node_size=3000)
-        nx.draw_networkx_nodes(G, pos, nodelist=top_genes, node_color='#6EC1E4', node_size=1500)
-        nx.draw_networkx_edges(G, pos, alpha=0.4)
-        nx.draw_networkx_labels(G, pos, font_size=9, font_weight="bold")
+            nx.draw_networkx_nodes(G, pos, nodelist=[compound], node_color='#FF6B6B', node_size=3000)
+            nx.draw_networkx_nodes(G, pos, nodelist=top_genes, node_color='#6EC1E4', node_size=1500)
+            nx.draw_networkx_edges(G, pos, alpha=0.4)
+            nx.draw_networkx_labels(G, pos, font_size=9, font_weight="bold")
 
-        legend_elements = [
-            Line2D([0], [0], marker='o', color='w', label='Compound', markerfacecolor='#FF6B6B', markersize=15),
-            Line2D([0], [0], marker='o', color='w', label='Gene Target', markerfacecolor='#6EC1E4', markersize=15)
-        ]
-        plt.legend(handles=legend_elements, loc='lower right', fontsize=12)
+            legend_elements = [
+                Line2D([0], [0], marker='o', color='w', label='Compound', markerfacecolor='#FF6B6B', markersize=15),
+                Line2D([0], [0], marker='o', color='w', label='Gene Target', markerfacecolor='#6EC1E4', markersize=15)
+            ]
+            plt.legend(handles=legend_elements, loc='lower right', fontsize=12)
 
-    plt.axis('off')
-    plt.tight_layout()
-    plt.savefig("litmap_maze.png", dpi=300)
-    plt.close()
-    print("    ✔ Graph saved as 'litmap_maze.png'")
+        plt.axis('off')
+        plt.tight_layout()
+        plt.savefig("litmap_maze.png", dpi=300, bbox_inches='tight', facecolor='white')
+        plt.close()
+        print("    ✔ Graph saved as 'litmap_maze.png'")
+        
+    except ImportError as e:
+        print(f"    ⚠️ Graph skipped (missing module: {str(e)}) - Text report generated")
+    except Exception as e:
+        print(f"    ⚠️ Graph failed ({str(e)}) - Text report generated")
+
+
 
 def generate_full_report(compound, outcome, gene_evidence, pathway_map, paper_ids, mode_name):
     print("\n[5] 📝 Generating Report...")
