@@ -1,5 +1,6 @@
 import sys, os, json, shutil
-from litmap import *
+from .litmap import *
+
 
 compound, outcome, mode, job_id = sys.argv[1:]
 
