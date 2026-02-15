@@ -11,19 +11,34 @@ os.makedirs(RES_DIR, exist_ok=True)
 
 print("RELIO JOB:", compound, outcome, mode, job_id)
 
+print("\nLITMAP V0.1")
+print("===========")
+print("- TOOL NAME: LitMap V0.1")
+print("- FAST MODE: Max 100 Abstracts. Speed focused. (No Graph).")
+print("- FULL MODE: Max 100 Full Text. Maze Graph with LEGENDS. Contradiction Analysis.")
+print("- OUTPUT: Terminal Print + Text File + PNG Graph.")
+print()
+
 whitelist = build_gene_whitelist(outcome)
 
-if mode == "FAST":
-    genes, docs = mine_abstracts_fast(compound, outcome, whitelist)
+if whitelist:
+    if mode == "FAST":
+        ev, ids = mine_abstracts_fast(compound, outcome, whitelist, limit=100)
+        mode_name = "FAST (Abstracts)"
+    else:
+        ev, ids = mine_pmc_full(compound, outcome, whitelist, limit=100)
+        mode_name = "FULL (PMC Full Text)"
+
+    if ev:
+        pmap = build_pathway_map(ev)
+        draw_graph(compound, ev, pmap, mode_name, outcome)
+        generate_full_report(compound, outcome, ev, pmap, ids, mode_name)
+    else:
+        print("❌ No evidence found.")
 else:
-    genes, docs = mine_pmc_full(compound, outcome, whitelist)
+    print("❌ Whitelist failed.")
 
-pathways = build_pathway_map(genes)
-
-draw_graph(compound, genes, pathways, mode, outcome)
-generate_full_report(compound, outcome, genes, pathways, docs, mode)
-
-# Move outputs
+# Move outputs with job_id
 src_img = os.path.join(IMG_DIR, "litmap_maze.png")
 dst_img = os.path.join(IMG_DIR, f"{job_id}_graph.png")
 if os.path.exists(src_img):
@@ -34,18 +49,16 @@ dst_rep = os.path.join(RES_DIR, f"{job_id}_report.txt")
 if os.path.exists(src_rep):
     shutil.move(src_rep, dst_rep)
 
+# Generate JSON result (keep this for GitHub Actions)
 result = {
     "compound": compound,
     "outcome": outcome,
     "mode": mode,
-    "genes": genes,
-    "pathways": {k: list(v) for k, v in pathways.items()},
-    "documents": docs,
-    "fingerprint": compute_fingerprint(genes, pathways),
-    "contradictions": analyze_contradictions(genes),
-    "images": {
-        "graph": f"{job_id}_graph.png"
-    }
+    "mode_name": mode_name,
+    "genes": dict(ev),
+    "pathways": {k: list(v) for k, v in pmap.items()},
+    "documents": ids,
+    "images": {"graph": f"{job_id}_graph.png" if os.path.exists(dst_img) else None}
 }
 
 with open(os.path.join(RES_DIR, f"{job_id}.json"), "w") as f:
