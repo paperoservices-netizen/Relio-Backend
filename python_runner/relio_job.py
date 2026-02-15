@@ -68,20 +68,29 @@ dst_rep = os.path.join(RES_DIR, f"{job_id}_report.txt")
 if os.path.exists(src_rep):
     shutil.move(src_rep, dst_rep)
 
-# Generate JSON result (production safe)
+# ✅ FIXED: Convert sets to lists for JSON serialization
+pathways_serializable = {}
+if pmap:
+    for pathway, genes_set in pmap.items():
+        pathways_serializable[pathway] = list(genes_set)  # Convert set → list
+
+# Generate JSON result (100% JSON-safe)
 result = {
     "compound": compound,
     "outcome": outcome,
     "mode": mode,
     "mode_name": mode_name or f"{mode} (Failed)",
-    "genes": dict(ev),
-    "pathways": dict(pmap) if pmap else {},
-    "documents": ids,
+    "genes": {gene: [{"id": hit["id"], "direction": hit["direction"]} for hit in hits] for gene, hits in ev.items()},
+    "pathways": pathways_serializable,
+    "documents": list(set(ids)),  # Remove duplicates
     "images": {
         "graph": f"{job_id}_graph.png" if os.path.exists(dst_img) else None
     },
     "job_id": job_id,
-    "success": bool(ev and whitelist)
+    "success": bool(ev and whitelist),
+    "total_genes": len(ev),
+    "total_documents": len(ids),
+    "total_pathways": len(pmap)
 }
 
 json_path = os.path.join(RES_DIR, f"{job_id}.json")
