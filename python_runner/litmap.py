@@ -64,7 +64,8 @@ def draw_graph(compound,genes,pathways,mode,outcome):
     for p,gs in pathways.items():
         for g in gs: G.add_edge(g,p)
     nx.draw(G,with_labels=True)
-    plt.savefig("python_runner/images/litmap_maze.png",dpi=200)
+    os.makedirs("python_runner/images", exist_ok=True)
+    plt.savefig("python_runner/images/litmap_maze.png", dpi=300)
     plt.close()
 
 def generate_full_report(compound,outcome,genes,pathways,docs,mode):
