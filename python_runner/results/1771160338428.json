@@ -1,0 +1,321 @@
+{
+  "compound": "Curcumin",
+  "outcome": "Wound healing",
+  "mode": "FAST",
+  "mode_name": "FAST (Abstracts)",
+  "genes": {
+    "TNF": [
+      {
+        "id": "37353114",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "FBN1": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "EGF": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ]
+  },
+  "pathways": {
+    "Elastic fibre formation": [
+      "FBN1"
+    ],
+    "Post-translational protein phosphorylation": [
+      "FBN1"
+    ],
+    "Regulation of IGF transport and uptake by IGF binding proteins": [
+      "FBN1"
+    ],
+    "Progeria-associated lipodystrophy": [
+      "FBN1"
+    ],
+    "Burn wound healing": [
+      "EGF",
+      "FBN1"
+    ],
+    "Hypothesized pathways in pathogenesis of cardiovascular disease": [
+      "FBN1"
+    ],
+    "7q11.23 copy number variation syndrome": [
+      "FBN1"
+    ],
+    "TGF-beta receptor signaling in skeletal dysplasias": [
+      "EGF",
+      "FBN1"
+    ],
+    "PIP3 activates AKT signaling": [
+      "EGF"
+    ],
+    "TGF-beta receptor signaling": [
+      "EGF"
+    ],
+    "Hair follicle development: induction": [
+      "EGF"
+    ],
+    "Extra-nuclear estrogen signaling": [
+      "EGF"
+    ],
+    "Signaling by NODAL": [
+      "EGF"
+    ],
+    "Tyrosine kinase inhibitors in glioblastoma": [
+      "EGF"
+    ],
+    "MAPK signaling": [
+      "EGF"
+    ],
+    "Non-small cell lung cancer": [
+      "EGF"
+    ],
+    "Hematopoietic stem cell differentiation": [
+      "EGF"
+    ],
+    "Focal adhesion: PI3K-Akt-mTOR-signaling": [
+      "EGF"
+    ],
+    "PI3K-Akt signaling": [
+      "EGF"
+    ],
+    "Clathrin-mediated endocytosis": [
+      "EGF"
+    ],
+    "15q25 copy number variation": [
+      "EGF"
+    ],
+    "EGF/EGFR signaling": [
+      "EGF"
+    ],
+    "Exercise and hypertrophy in skeletal muscle": [
+      "EGF"
+    ],
+    "Pancreatic adenocarcinoma pathway": [
+      "EGF"
+    ],
+    "Pluripotent stem cell differentiation pathway": [
+      "EGF"
+    ],
+    "NF1 copy number variation syndrome": [
+      "EGF"
+    ],
+    "Signaling by EGFR": [
+      "EGF"
+    ],
+    "Signaling by ERBB4": [
+      "EGF"
+    ],
+    "Cardiac hypertrophic response": [
+      "EGF"
+    ],
+    "ErbB signaling": [
+      "EGF"
+    ],
+    "Pleural mesothelioma": [
+      "EGF"
+    ],
+    "Endometrial cancer": [
+      "EGF"
+    ],
+    "MicroRNAs in cardiomyocyte hypertrophy": [
+      "EGF"
+    ],
+    "Signaling by ERBB2": [
+      "EGF"
+    ],
+    "Signaling by NOTCH3": [
+      "EGF"
+    ],
+    "Gastrin-CREB signaling via PKC and MAPK": [
+      "EGF"
+    ],
+    "Polycystic kidney disease pathway": [
+      "EGF"
+    ],
+    "Lung fibrosis": [
+      "EGF"
+    ],
+    "Extracellular vesicles in the crosstalk of cardiac cells": [
+      "EGF"
+    ],
+    "RAF/MAP kinase cascade": [
+      "EGF"
+    ],
+    "Cancer pathways": [
+      "EGF"
+    ],
+    "Embryonic stem cell pluripotency pathways": [
+      "EGF"
+    ],
+    "Relationship between inflammation, COX-2 and EGFR": [
+      "EGF"
+    ],
+    "Mammary gland development: puberty": [
+      "EGF"
+    ],
+    "EGFR tyrosine kinase inhibitor resistance": [
+      "EGF"
+    ],
+    "Regulation of actin cytoskeleton": [
+      "EGF"
+    ],
+    "ERK pathway in Huntington's disease": [
+      "EGF"
+    ],
+    "Focal adhesion": [
+      "EGF"
+    ],
+    "NRP1-triggered signaling in pancreatic cancer": [
+      "EGF"
+    ],
+    "Response to elevated platelet cytosolic Ca ions": [
+      "EGF"
+    ],
+    "Breast cancer pathway": [
+      "EGF"
+    ],
+    "Effect of omega-3 PUFA on Huntington's disease pathways": [
+      "EGF"
+    ],
+    "Bladder cancer": [
+      "EGF"
+    ],
+    "JAK/STAT pathway": [
+      "EGF"
+    ]
+  },
+  "documents": [
+    "39439502",
+    "37930078",
+    "28711364",
+    "30841550",
+    "36657541",
+    "40459062",
+    "36402615",
+    "35988208",
+    "23902423",
+    "33897889",
+    "39350179",
+    "31284147",
+    "38812993",
+    "31899378",
+    "37688693",
+    "27918967",
+    "34254427",
+    "41388841",
+    "39332460",
+    "37943252",
+    "38206528",
+    "38955296",
+    "38554903",
+    "37353114",
+    "37441591",
+    "35089010",
+    "36689161",
+    "38612433",
+    "38960235",
+    "39586586",
+    "36158895",
+    "33050393",
+    "34044118",
+    "39293307",
+    "30370528",
+    "37525890",
+    "34378857",
+    "35430990",
+    "37871718",
+    "37673138",
+    "31437503",
+    "37990627",
+    "25200875",
+    "33200488",
+    "40948430",
+    "36053389",
+    "37897069",
+    "34167629",
+    "36239733",
+    "39079700",
+    "38176495",
+    "35489626",
+    "38164267",
+    "39126901",
+    "34256564",
+    "37687262",
+    "40474848",
+    "38744363",
+    "31148250",
+    "32696423",
+    "27640646",
+    "32220621",
+    "39263695",
+    "32811405",
+    "28754055",
+    "39121609",
+    "35008566",
+    "34750447",
+    "30813056",
+    "32717624",
+    "35714899",
+    "39662680",
+    "38359334",
+    "35137655",
+    "25240595",
+    "34364574",
+    "38215487",
+    "36961254",
+    "33561460",
+    "31261029",
+    "39140414",
+    "36178709",
+    "30393833",
+    "37356283",
+    "34657625",
+    "37624646",
+    "40142326",
+    "23891622",
+    "28550899",
+    "38056111",
+    "31030591",
+    "32808857",
+    "30195611",
+    "30521949",
+    "37419431",
+    "41456263",
+    "31759002",
+    "32745765",
+    "29659146",
+    "38629652"
+  ],
+  "images": {
+    "graph": null
+  }
+}
