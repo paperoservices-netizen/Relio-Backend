@@ -1,21 +1,9 @@
-import sys, json, os
-from relio_engine import run_litmap
+import sys,json,os
+from relio import run_relio
 
-compound = sys.argv[1]
-outcome  = sys.argv[2]
-mode     = sys.argv[3].upper()
-job_id   = sys.argv[4]
+compound,outcome,mode,job_id=sys.argv[1:5]
+res=run_relio(compound,outcome,mode,job_id)
 
-print("🧬 Relio job:", job_id)
-
-os.makedirs("python-runner/results/images", exist_ok=True)
-
-result = run_litmap(
-    compound=compound,
-    outcome=outcome,
-    mode=mode,
-    job_id=job_id
-)
-
-with open(f"python-runner/results/{job_id}.json", "w") as f:
-    json.dump(result, f, indent=2)
+os.makedirs("python-runner/results",exist_ok=True)
+with open(f"python-runner/results/{job_id}.json","w") as f:
+    json.dump(res,f,indent=2)

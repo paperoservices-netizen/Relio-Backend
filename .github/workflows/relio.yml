@@ -1,46 +1,25 @@
-name: Relio
-
+name: Relio Runner
 on:
   workflow_dispatch:
     inputs:
-      job_id:
-        required: true
-      compound:
-        required: true
-      outcome:
-        required: true
-      mode:
-        required: true
-
-permissions:
-  contents: write
+      compound: { required: true }
+      outcome: { required: true }
+      mode: { required: true, default: "FAST" }
+      job_id: { required: true }
 
 jobs:
   run:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v4
-
-    - uses: actions/setup-python@v5
-      with:
-        python-version: "3.10"
-
-    - name: Install dependencies
-      run: pip install -r python-runner/requirements.txt
-
-    - name: Run Relio
-      run: |
-        python python-runner/run_job.py \
-          "${{ github.event.inputs.compound }}" \
-          "${{ github.event.inputs.outcome }}" \
-          "${{ github.event.inputs.mode }}" \
-          "${{ github.event.inputs.job_id }}"
-
-    - name: Commit results
-      run: |
-        git config user.name github-actions
-        git config user.email actions@github.com
-        git add python-runner/results
-        git commit -m "Relio ${{ github.event.inputs.job_id }}" || true
-        git push
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.10" }
+      - run: pip install biopython requests networkx matplotlib
+      - run: python python-runner/run_job.py "${{ inputs.compound }}" "${{ inputs.outcome }}" "${{ inputs.mode }}" "${{ inputs.job_id }}"
+      - run: |
+          git config user.name github-actions
+          git config user.email actions@github.com
+          git add python-runner/results python-runner/images
+          git commit -m "Relio ${{ inputs.job_id }}" || true
+          git pull origin master --rebase || true
+          git push
