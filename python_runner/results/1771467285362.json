@@ -1,0 +1,317 @@
+{
+  "compound": "Strontium ",
+  "outcome": "Antioxidant ",
+  "mode": "FAST",
+  "mode_name": "FAST (Abstracts)",
+  "genes": {
+    "CRP": [
+      {
+        "id": "33921909",
+        "direction": "neutral"
+      }
+    ],
+    "TNF": [
+      {
+        "id": "34444705",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "TG": [
+      {
+        "id": "40180071",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "CAT": [
+      {
+        "id": "39800155",
+        "direction": "neutral"
+      },
+      {
+        "id": "7494379",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "GPX1": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "TNFSF11": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "PPARG": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "NFKB1": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "ATF4": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "TH": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ]
+  },
+  "pathways": {
+    "Differentiation of white and brown adipocyte": [
+      "PPARG"
+    ],
+    "Orexin receptor pathway": [
+      "PPARG"
+    ],
+    "Transcriptional regulation of white adipocyte differentiation": [
+      "PPARG"
+    ],
+    "Generic transcription pathway": [
+      "PPARG"
+    ],
+    "Osteoblast differentiation and related diseases": [
+      "PPARG"
+    ],
+    "Transcription factor regulation in adipogenesis": [
+      "PPARG"
+    ],
+    "Overlap between signal transduction pathways contributing to LMNA laminopathies": [
+      "PPARG"
+    ],
+    "GDNF signaling": [
+      "PPARG"
+    ],
+    "PPAR-gamma pathway": [
+      "PPARG"
+    ],
+    "Cancer pathways": [
+      "PPARG"
+    ],
+    "Progeria-associated lipodystrophy": [
+      "PPARG"
+    ],
+    "Wnt signaling, NetPath": [
+      "PPARG"
+    ],
+    "Galanin receptor pathway": [
+      "PPARG"
+    ],
+    "Nuclear receptors": [
+      "PPARG"
+    ],
+    "Thermogenesis": [
+      "PPARG"
+    ],
+    "10q22q23 copy number variation": [
+      "PPARG"
+    ],
+    "PTEN Regulation": [
+      "PPARG"
+    ],
+    "Transcriptional cascade regulating adipogenesis": [
+      "PPARG"
+    ],
+    "HIF1A and PPARG in hypertrophic cardiomyopathy": [
+      "PPARG"
+    ],
+    "Thyroid hormones production and peripheral downstream signaling effects": [
+      "PPARG"
+    ],
+    "Sterol regulatory element-binding proteins (SREBP) signaling": [
+      "PPARG"
+    ],
+    "Transcriptional regulation by MECP2": [
+      "PPARG"
+    ],
+    "Familial partial lipodystrophy": [
+      "PPARG"
+    ],
+    "16p11.2 proximal deletion syndrome": [
+      "PPARG"
+    ],
+    "Gastrin signaling": [
+      "PPARG"
+    ],
+    "Liver steatosis adverse outcome pathway": [
+      "PPARG"
+    ],
+    "Influence of laminopathies on Wnt signaling": [
+      "PPARG"
+    ],
+    "A network map of RORgt mediated signaling pathway in inflammatory diseases": [
+      "PPARG"
+    ],
+    "AXL signaling": [
+      "PPARG"
+    ],
+    "SUMOylation of intracellular receptors": [
+      "PPARG"
+    ],
+    "White fat cell differentiation": [
+      "PPARG"
+    ],
+    "PPAR signaling": [
+      "PPARG"
+    ],
+    "Adipogenesis": [
+      "PPARG"
+    ],
+    "Circadian rhythm genes": [
+      "PPARG"
+    ],
+    "Prostaglandin synthesis and regulation": [
+      "PPARG"
+    ]
+  },
+  "documents": [
+    "35961092",
+    "31468984",
+    "40180071",
+    "38942316",
+    "20200810",
+    "29985715",
+    "38008735",
+    "36839661",
+    "4897542",
+    "38882777",
+    "39932423",
+    "38606081",
+    "8672011",
+    "22661191",
+    "1104258",
+    "40154687",
+    "5399578",
+    "39135876",
+    "26074023",
+    "35864276",
+    "30518039",
+    "22221100",
+    "34444705",
+    "37299124",
+    "28285518",
+    "12120607",
+    "29173484",
+    "36435000",
+    "28539734",
+    "38671912",
+    "36435438",
+    "20518192",
+    "40968134",
+    "28138822",
+    "37540564",
+    "37373395",
+    "30904655",
+    "36564511",
+    "39638525",
+    "37715904",
+    "32991310",
+    "28456475",
+    "40002371",
+    "26699282",
+    "30912673",
+    "8534133",
+    "35842508",
+    "25163458",
+    "40409650",
+    "32232355",
+    "4937851",
+    "38249274",
+    "40890176",
+    "41443168",
+    "37242586",
+    "40865359",
+    "29396921",
+    "37879277",
+    "40632155",
+    "7494379",
+    "37696404",
+    "30732877",
+    "28130552",
+    "37072289",
+    "35687997",
+    "24709542",
+    "23273614",
+    "36707609",
+    "23152094",
+    "28176196",
+    "32492875",
+    "30575881",
+    "4648541",
+    "31380792",
+    "41276180",
+    "38319101",
+    "38596826",
+    "40124596",
+    "34986560",
+    "37429496",
+    "37351758",
+    "39396587",
+    "29544806",
+    "33921909",
+    "23026258",
+    "31055131",
+    "32916939",
+    "35040054",
+    "23943055",
+    "36007758",
+    "39477851",
+    "39800155",
+    "12177138",
+    "39818714",
+    "30560305",
+    "1108209",
+    "34691229",
+    "35442110",
+    "30449180",
+    "25382543"
+  ],
+  "images": {
+    "graph": null
+  },
+  "job_id": "1771467285362",
+  "success": true,
+  "total_genes": 10,
+  "total_documents": 100,
+  "total_pathways": 35
+}
