@@ -1,0 +1,418 @@
+{
+  "compound": "berberine ",
+  "outcome": "Cholesterol",
+  "mode": "FAST",
+  "mode_name": "FAST (Abstracts)",
+  "genes": {
+    "CYP19A1": [
+      {
+        "id": "35499044",
+        "direction": "neutral"
+      }
+    ],
+    "TNF": [
+      {
+        "id": "38429794",
+        "direction": "neutral"
+      },
+      {
+        "id": "28102849",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "LDLR": [
+      {
+        "id": "30466986",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "CRP": [
+      {
+        "id": "28102849",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "PCSK9": [
+      {
+        "id": "31666640",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "CYP3A4": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "MET": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "TLR4": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "EGF": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "CETP": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "SIRT1": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ]
+  },
+  "pathways": {
+    "Steroidogenic pathway": [
+      "CYP19A1"
+    ],
+    "Follicle stimulating hormone (FSH) signaling": [
+      "CYP19A1"
+    ],
+    "Primary ovarian insufficiency": [
+      "CYP19A1"
+    ],
+    "Oxidation by cytochrome P450": [
+      "CYP19A1"
+    ],
+    "Cyclin-dependent kinase 4/6 inhibitors in breast cancer": [
+      "CYP19A1"
+    ],
+    "Relationship between inflammation, COX-2 and EGFR": [
+      "CYP19A1"
+    ],
+    "Integrated breast cancer pathway": [
+      "CYP19A1",
+      "SIRT1"
+    ],
+    "Metapathway biotransformation Phase I and II": [
+      "CYP19A1"
+    ],
+    "Sulfatase and aromatase pathway": [
+      "CYP19A1"
+    ],
+    "Phase I": [
+      "CYP19A1"
+    ],
+    "Ovarian infertility": [
+      "CYP19A1"
+    ],
+    "Inclusion body myositis": [
+      "SIRT1"
+    ],
+    "Omega-6-fatty acids in senescence": [
+      "SIRT1"
+    ],
+    "Androgen receptor signaling": [
+      "SIRT1"
+    ],
+    "TAR syndrome": [
+      "SIRT1"
+    ],
+    "SREBF and miR33 in cholesterol and lipid homeostasis": [
+      "SIRT1"
+    ],
+    "Circadian rhythm genes": [
+      "SIRT1"
+    ],
+    "10q11.21q11.23 copy number variation syndrome": [
+      "SIRT1"
+    ],
+    "3q29 copy number variation syndrome": [
+      "SIRT1"
+    ],
+    "Somatroph axis (GH) and its relationship to dietary restriction and aging": [
+      "SIRT1"
+    ],
+    "SIRT1 negatively regulates rRNA expression": [
+      "SIRT1"
+    ],
+    "Hallmark of cancer: metastasis and epithelial-to-mesenchymal transition": [
+      "SIRT1"
+    ],
+    "AKT signaling and ARTD family members": [
+      "SIRT1"
+    ],
+    "Molecular pathway for oxidative stress": [
+      "SIRT1"
+    ],
+    "Age-related macular degeneration": [
+      "SIRT1"
+    ],
+    "Sterol regulatory element-binding proteins (SREBP) signaling": [
+      "SIRT1"
+    ],
+    "Circadian Clock": [
+      "SIRT1"
+    ],
+    "Interactions between LOXL4 and oxidative stress pathway": [
+      "SIRT1"
+    ],
+    "Cellular response to heat stress": [
+      "SIRT1"
+    ],
+    "CAMKK2 pathway": [
+      "SIRT1"
+    ],
+    "FOXO-mediated transcription": [
+      "SIRT1"
+    ],
+    "Caloric restriction and aging": [
+      "SIRT1"
+    ],
+    "NAD+ biosynthetic pathways": [
+      "SIRT1"
+    ]
+  },
+  "documents": [
+    "40740996",
+    "35251851",
+    "37611246",
+    "35250593",
+    "39297910",
+    "40362407",
+    "40698132",
+    "30587933",
+    "39998703",
+    "35988871",
+    "38547616",
+    "41039626",
+    "28408313",
+    "32789786",
+    "37652508",
+    "22313171",
+    "37183391",
+    "36195307",
+    "18397984",
+    "36941490",
+    "31217846",
+    "36381647",
+    "41089338",
+    "28363723",
+    "26308759",
+    "29365334",
+    "36805484",
+    "33415147",
+    "34956436",
+    "41243097",
+    "39204178",
+    "29922427",
+    "36031579",
+    "38659110",
+    "36253427",
+    "18430428",
+    "33981233",
+    "22780092",
+    "19782362",
+    "39042390",
+    "34899318",
+    "15531889",
+    "38353052",
+    "39056209",
+    "27131395",
+    "32353823",
+    "33152460",
+    "40871675",
+    "34407851",
+    "38740003",
+    "40230688",
+    "31666640",
+    "28704936",
+    "34686466",
+    "40439602",
+    "28102849",
+    "35721198",
+    "31094214",
+    "32429343",
+    "31895879",
+    "33775071",
+    "34923903",
+    "23512497",
+    "35499044",
+    "37063419",
+    "29802549",
+    "30466986",
+    "15926873",
+    "29769413",
+    "30909733",
+    "29579096",
+    "26520899",
+    "16759828",
+    "33183320",
+    "25002181",
+    "37951092",
+    "34480937",
+    "41543854",
+    "38144162",
+    "30068904",
+    "38361373",
+    "20673726",
+    "29859248",
+    "34333328",
+    "39640489",
+    "32231564",
+    "34444711",
+    "31441678",
+    "35606250",
+    "36402125",
+    "40865345",
+    "31915452",
+    "18442638",
+    "30057809",
+    "29228954",
+    "35104597",
+    "27757035",
+    "41062796",
+    "38338016",
+    "38429794"
+  ],
+  "images": {
+    "graph": null
+  },
+  "job_id": "1771918621931",
+  "success": true,
+  "total_genes": 11,
+  "total_documents": 100,
+  "total_pathways": 33
+}
