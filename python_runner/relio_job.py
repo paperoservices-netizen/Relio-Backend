@@ -2,14 +2,12 @@ import sys
 import os
 import json
 import shutil
-import time
 from python_runner.litmap import *
 
-# Print exact Colab banner
 print("""
-LITMAP V0.1
+RELIO V0.1
 ===========
-- TOOL NAME: LitMap V0.1
+- TOOL NAME: Relio V0.1
 - FAST MODE: Max 100 Abstracts. Speed focused. (No Graph).
 - FULL MODE: Max 100 Full Text. Maze Graph with LEGENDS. Contradiction Analysis.
 - OUTPUT: Terminal Print + Text File + PNG Graph.
@@ -31,17 +29,17 @@ RES_DIR = os.path.join(BASE, "results")
 os.makedirs(IMG_DIR, exist_ok=True)
 os.makedirs(RES_DIR, exist_ok=True)
 
-# Initialize defaults
+# Initialize
 mode_name = None
 ev = {}
 ids = []
 pmap = {}
 
-# Main processing
+# Build whitelist
 whitelist = build_gene_whitelist(outcome)
 
 if whitelist:
-    if mode == "FAST":
+    if mode.upper() == "FAST":
         ev, ids = mine_abstracts_fast(compound, outcome, whitelist, limit=100)
         mode_name = "FAST (Abstracts)"
     else:
@@ -50,39 +48,36 @@ if whitelist:
 
     if ev:
         pmap = build_pathway_map(ev)
-        draw_graph(compound, ev, pmap, mode_name, outcome)
-        generate_full_report(compound, outcome, ev, pmap, ids, mode_name)
+        draw_graph(compound, ev, pmap, mode_name, outcome, IMG_DIR)  # Pass folder to save graph
+        generate_full_report(compound, outcome, ev, pmap, ids, mode_name, IMG_DIR)
     else:
         print("❌ No evidence found.")
 else:
     print("❌ Whitelist failed.")
 
-# Move outputs with job_id
-src_img = os.path.join(IMG_DIR, "litmap_maze.png")
+# Move outputs (optional, already saved in folder)
 dst_img = os.path.join(IMG_DIR, f"{job_id}_graph.png")
-if os.path.exists(src_img):
-    shutil.move(src_img, dst_img)
+graph_path = os.path.join(IMG_DIR, "litmap_maze.png")
+if os.path.exists(graph_path):
+    shutil.move(graph_path, dst_img)
 
-src_rep = os.path.join(RES_DIR, "litmap_report.txt")
 dst_rep = os.path.join(RES_DIR, f"{job_id}_report.txt")
-if os.path.exists(src_rep):
-    shutil.move(src_rep, dst_rep)
+report_path = os.path.join(RES_DIR, "litmap_report.txt")
+if os.path.exists(report_path):
+    shutil.move(report_path, dst_rep)
 
-# ✅ FIXED: Convert sets to lists for JSON serialization
-pathways_serializable = {}
-if pmap:
-    for pathway, genes_set in pmap.items():
-        pathways_serializable[pathway] = list(genes_set)  # Convert set → list
+# Serialize pathways safely
+pathways_serializable = {p: list(genes) for p, genes in pmap.items()}
 
-# Generate JSON result (100% JSON-safe)
+# Generate JSON
 result = {
     "compound": compound,
     "outcome": outcome,
     "mode": mode,
     "mode_name": mode_name or f"{mode} (Failed)",
-    "genes": {gene: [{"id": hit["id"], "direction": hit["direction"]} for hit in hits] for gene, hits in ev.items()},
+    "genes": {gene: [{"id": h["id"], "direction": h["direction"]} for h in hits] for gene, hits in ev.items()},
     "pathways": pathways_serializable,
-    "documents": list(set(ids)),  # Remove duplicates
+    "documents": list(set(ids)),
     "images": {
         "graph": f"{job_id}_graph.png" if os.path.exists(dst_img) else None
     },

@@ -1,26 +1,39 @@
-import time, re, os, requests, math
+import os, time, re, requests, math
+from collections import defaultdict, Counter
+from concurrent.futures import ThreadPoolExecutor
+
 import networkx as nx
+import matplotlib
+matplotlib.use('Agg')  # Always non-interactive backend
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
-from collections import Counter, defaultdict
-from concurrent.futures import ThreadPoolExecutor
 from Bio import Entrez
 
-Entrez.email = "relio@github"
-NCBI_DELAY = 0.35
+import lxml.etree as ET
+from tqdm import tqdm
+
+Entrez.email = "robio.ra.bt@gmail.com"
+Entrez.api_key = "0968ae56e9a676e026f2fd87dcc17a9f8009"
+Entrez.tool = "Relio_V0.1"
+NCBI_DELAY = 0.11
 
 def sleep():
     time.sleep(NCBI_DELAY)
 
 def get_context_direction(text, gene):
-    """Scans for up/down regulation keywords."""
-    starts = [m.start() for m in re.finditer(rf"\b{gene}\b", text)]
+    """Scans for up/down regulation keywords around the gene."""
+    # Added IGNORECASE to match the new text search
+    starts = [m.start() for m in re.finditer(rf"\b{re.escape(gene)}\b", text, re.IGNORECASE)]
     if not starts: return "neutral"
     idx = starts[0]
-    snippet = text[max(0, idx-100): min(len(text), idx+100)].lower()
-
-    if any(w in snippet for w in ["increase", "induce", "upregulat", "activat", "stimulat", "enhance", "promot"]): return "up"
-    if any(w in snippet for w in ["decrease", "inhibit", "suppress", "reduc", "block", "attenuate", "prevent"]): return "down"
+    # Widened the snippet window to 150 characters for complex full-text sentences
+    snippet = text[max(0, idx-150): min(len(text), idx+150)].lower()
+    
+    up_words = ["increase", "induce", "upregulat", "activat", "stimulat", "enhance", "promot", "up-regulat", "elevat"]
+    down_words = ["decrease", "inhibit", "suppress", "reduc", "block", "attenuate", "prevent", "down-regulat", "knockdown", "silenc"]
+    
+    if any(w in snippet for w in up_words): return "up"
+    if any(w in snippet for w in down_words): return "down"
     return "neutral"
 
 def analyze_contradictions(gene_evidence):
@@ -42,18 +55,18 @@ def analyze_contradictions(gene_evidence):
 def compute_fingerprint(gene_evidence, pathway_map):
     up = sum(1 for hits in gene_evidence.values() for h in hits if h['direction']=='up')
     down = sum(1 for hits in gene_evidence.values() for h in hits if h['direction']=='down')
-
+    
     if up > down * 1.5: direction = "Predominant Activation"
     elif down > up * 1.5: direction = "Predominant Inhibition"
     else: direction = "Balanced Modulation"
-
+    
     path_counts = [len(genes) for genes in pathway_map.values()]
     total_conn = sum(path_counts)
     entropy = 0.0
     if total_conn > 0:
         probs = [c / total_conn for c in path_counts]
         entropy = -sum(p * math.log2(p) for p in probs)
-
+        
     return {"direction": direction, "entropy": entropy}
 
 def build_gene_whitelist(outcome):
@@ -74,36 +87,44 @@ def build_gene_whitelist(outcome):
                 if g.isupper() and 2 <= len(g) <= 10: genes.add(g)
         print(f"    → Whitelist: {len(genes)} verified genes.")
         return genes
-    except: 
-        print("    → Whitelist failed.")
-        return set()
+    except: return set()
 
 def mine_abstracts_fast(compound, outcome, genes, limit=100):
     print(f"\n[2] ⚡ FAST MODE: Fetching up to {limit} PubMed Abstracts...")
     gene_evidence = defaultdict(list)
-    pmids = []
     try:
         h = Entrez.esearch(db="pubmed", term=f"{compound} AND {outcome}", retmax=limit, sort="relevance")
         ids = Entrez.read(h)["IdList"]
         h.close()
-        pmids = ids
         if not ids: return {}, []
         print(f"    → Found {len(ids)} abstracts. Downloading...")
 
         sleep()
-        h = Entrez.efetch(db="pubmed", id=",".join(ids), rettype="abstract", retmode="text")
-        text_blob = h.read()
+        # Fetch as XML instead of raw text
+        h = Entrez.efetch(db="pubmed", id=",".join(ids), retmode="xml")
+        records = Entrez.read(h)
         h.close()
-        abstracts = [a.strip() for a in text_blob.split("\n\n") if len(a)>50]
-
-        for i, txt in enumerate(abstracts):
-            pid = ids[i] if i < len(ids) else "Unknown"
-            for g in genes:
-                if re.search(rf"\b{g}\b", txt):
-                    direction = get_context_direction(txt, g)
-                    gene_evidence[g].append({"id": pid, "direction": direction})
-        return gene_evidence, pmids
-    except: return {}, []
+        
+        for article in records.get('PubmedArticle', []):
+            try:
+                pid = str(article['MedlineCitation']['PMID'])
+                # Join all parts of a structured abstract safely
+                abstract_parts = article['MedlineCitation']['Article'].get('Abstract', {}).get('AbstractText', [])
+                full_abstract = " ".join([str(part) for part in abstract_parts])
+                
+                if not full_abstract: continue
+                
+                for g in genes:
+                    if re.search(rf"\b{g}\b", full_abstract):
+                        direction = get_context_direction(full_abstract, g)
+                        gene_evidence[g].append({"id": pid, "direction": direction})
+            except KeyError:
+                continue
+                
+        return gene_evidence, ids
+    except Exception as e:
+        print(f"Error in fast mode: {e}")
+        return {}, []
 
 def mine_pmc_full(compound, outcome, genes, limit=100):
     print(f"\n[2] 🤿 FULL MODE: Searching up to {limit} PMC Full Text Articles...")
@@ -115,42 +136,84 @@ def mine_pmc_full(compound, outcome, genes, limit=100):
         h.close()
         pmc_list = ids
         if not ids: return {}, []
-        print(f"    → Found {len(ids)} full-text XMLs. Downloading...")
-
-        batch_size = 20
-        for i in range(0, len(ids), batch_size):
+        print(f"    → Found {len(ids)} full-text XMLs. Downloading in safe batches...")
+        
+        # LOWER BATCH SIZE to prevent NCBI payload truncation
+        batch_size = 5 
+        articles_processed = 0
+        
+        # Wrap the range() function in tqdm()
+        for i in tqdm(range(0, len(ids), batch_size), desc="Mining PMC XMLs", unit="batch", colour="green"):
+            batch_ids = ids[i:i+batch_size]
             try:
-                sleep()
-                h = Entrez.efetch(db="pmc", id=",".join(ids[i:i+batch_size]), retmode="xml")
-                articles = Entrez.read(h, validate=False)
+                sleep() 
+                h = Entrez.efetch(db="pmc", id=",".join(batch_ids), retmode="xml")
+                xml_data = h.read()
                 h.close()
-                art_list = articles if isinstance(articles, list) else articles.get("pmc-articles", [])
-                if isinstance(art_list, dict): art_list = [art_list]
-                for art in art_list:
+                
+                # Ensure it is a string for ElementTree parsing
+                if isinstance(xml_data, bytes):
+                    xml_data = xml_data.decode('utf-8', errors='ignore')
+                    
+                root = ET.fromstring(xml_data)
+                
+                # Catch silent NCBI API errors (e.g., rate limits, invalid email)
+                if root.tag == 'ERROR' or root.find('.//ERROR') is not None:
+                    err_msg = "".join(root.itertext())
+                    print(f"    ⚠️ NCBI API Warning: {err_msg.strip()}")
+                    continue
+
+                for article in root.findall('.//article'):
+                    articles_processed += 1
                     current_pmc = "Unknown"
-                    try:
-                        for aid in art.get('front', {}).get('article-meta', {}).get('article-id', []):
-                            if aid.attributes.get('pub-id-type') == 'pmc': current_pmc = "PMC" + str(aid)
-                    except: pass
-                    full_text = str(art)
+                    for article_id in article.findall('.//article-id'):
+                        if article_id.get('pub-id-type') == 'pmc':
+                            current_pmc = "PMC" + (article_id.text or "")
+                            break
+                    
+                    # Foolproof text stripping using itertext()
+                    text_chunks = []
+                    for section in article.findall('.//abstract') + article.findall('.//body'):
+                        text_chunks.append(" ".join(section.itertext()))
+                        
+                    clean_full_text = " ".join(text_chunks)
+                    
+                    if not clean_full_text.strip():
+                        continue
+                        
+                    # Search for genes cleanly (Case-Insensitive)
                     for g in genes:
-                        if re.search(rf"[^a-zA-Z]{g}[^a-zA-Z]", full_text):
-                            direction = get_context_direction(full_text, g)
+                        if re.search(rf"\b{re.escape(g)}\b", clean_full_text, re.IGNORECASE):
+                            direction = get_context_direction(clean_full_text, g)
                             gene_evidence[g].append({"id": current_pmc, "direction": direction})
-            except: continue
+                            
+                # Terminal update so you know it hasn't frozen
+                print(f"    ⏳ Parsed {articles_processed}/{len(ids)} articles...")
+                            
+            except ET.ParseError as e:
+                print(f"    ⚠️ XML Parse Error (NCBI likely truncated the payload): {e}")
+                continue
+            except Exception as e:
+                print(f"    ⚠️ Batch error: {e}")
+                continue
+                
         return gene_evidence, pmc_list
-    except: return {}, []
+        
+    except Exception as e: 
+        print(f"    ❌ Fatal error in full mode: {e}")
+        return {}, []
 
 def fetch_live_pathways(gene):
     paths = set()
     try:
-        r = requests.get("https://reactome.org/ContentService/search/query",
+        r = requests.get("https://reactome.org/ContentService/search/query", 
                        params={"query": gene, "species": "Homo sapiens", "types": "Pathway"}, timeout=2)
         if r.ok:
-            for res in r.json().get("results", []): paths.add(res["name"])
+            for res in r.json().get("results", []): 
+                paths.add(res["name"])
     except: pass
     try:
-        r = requests.get("https://webservice.wikipathways.org/findPathwaysByText",
+        r = requests.get("https://webservice.wikipathways.org/findPathwaysByText", 
                        params={"query": gene, "format": "json"}, timeout=2)
         if r.ok:
             for res in r.json().get("result", []):
@@ -172,119 +235,90 @@ def build_pathway_map(gene_evidence):
     print(f"    → Mapped {len(pathway_map)} pathways.")
     return pathway_map
 
-def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome):
-    """Graph generation with full error handling for CI"""
+def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome, img_dir):
     if "FAST" in mode_name:
         print("\n[4] ⏩ Graph generation skipped (Fast Mode).")
         return
 
     print("\n[4] 🎨 Generating Maze-Like Graph...")
-    
-    # Skip graph in CI/headless environments
-    if os.environ.get('CI') or os.environ.get('GITHUB_ACTIONS') or not os.environ.get('DISPLAY'):
-        print("    ⚠️ Graph skipped (CI/Headless mode) - Text report generated")
-        return
-    
-    try:
-        # Test required imports
-        import scipy
-        import matplotlib
-        matplotlib.use('Agg')  # Non-interactive backend
+    G = nx.Graph()
+    if pathway_map:
+        top_paths = sorted(pathway_map.items(), key=lambda x: len(x[1]), reverse=True)[:20]
+        pathway_nodes = set()
+        gene_nodes = set()
+        for p, genes in top_paths:
+            pathway_nodes.add(p)
+            for g in genes:
+                gene_nodes.add(g)
+                G.add_edge(g, p)
         
-        G = nx.Graph()
+        plt.figure(figsize=(20, 16))
         
-        if pathway_map:
-            top_paths = sorted(pathway_map.items(), key=lambda x: len(x[1]), reverse=True)[:20]
-            pathway_nodes = set()
-            gene_nodes = set()
-            
-            for p, genes in top_paths:
-                pathway_nodes.add(p)
-                for g in genes:
-                    gene_nodes.add(g)
-                    G.add_edge(g, p)
-
-            plt.figure(figsize=(20, 16))
-            pos = nx.kamada_kawai_layout(G)
-
-            # Draw pathway nodes (green)
-            nx.draw_networkx_nodes(G, pos, nodelist=list(pathway_nodes), 
-                                 node_color='#7ED957', node_size=2800, alpha=0.9)
-            # Draw gene nodes (blue)  
-            nx.draw_networkx_nodes(G, pos, nodelist=list(gene_nodes), 
-                                 node_color='#6EC1E4', node_size=1400, alpha=0.9)
-            nx.draw_networkx_edges(G, pos, alpha=0.3, width=1.5)
-
-            # Labels with line breaks
-            labels = {n: n.replace(" ", "\n", 1) if len(n)>15 else n for n in G.nodes()}
-            nx.draw_networkx_labels(G, pos, labels, font_size=8, font_weight="bold")
-
-            # Legend
-            legend_elements = [
-                Line2D([0], [0], marker='o', color='w', label='Target Gene', 
-                      markerfacecolor='#6EC1E4', markersize=15),
-                Line2D([0], [0], marker='o', color='w', label='Biological Pathway', 
-                      markerfacecolor='#7ED957', markersize=15)
-            ]
-            plt.legend(handles=legend_elements, loc='upper left', fontsize=12, frameon=True)
-            plt.suptitle(f"LitMap Analysis: {compound} + {outcome}", fontsize=16, 
-                        fontweight='bold', y=0.95)
-
-        else:
-            print("    ⚠️ Using Gene-Star Graph (No pathways found)")
-            top_genes = sorted(gene_evidence.keys(), key=lambda g: len(gene_evidence[g]), reverse=True)[:20]
-            G.add_node(compound)
-            for g in top_genes: 
-                G.add_edge(compound, g)
-
-            plt.figure(figsize=(14, 12))
-            pos = nx.kamada_kawai_layout(G)
-
-            nx.draw_networkx_nodes(G, pos, nodelist=[compound], node_color='#FF6B6B', node_size=3000)
-            nx.draw_networkx_nodes(G, pos, nodelist=top_genes, node_color='#6EC1E4', node_size=1500)
-            nx.draw_networkx_edges(G, pos, alpha=0.4)
-            nx.draw_networkx_labels(G, pos, font_size=9, font_weight="bold")
-
-            legend_elements = [
-                Line2D([0], [0], marker='o', color='w', label='Compound', markerfacecolor='#FF6B6B', markersize=15),
-                Line2D([0], [0], marker='o', color='w', label='Gene Target', markerfacecolor='#6EC1E4', markersize=15)
-            ]
-            plt.legend(handles=legend_elements, loc='lower right', fontsize=12)
-
-        plt.axis('off')
-        plt.tight_layout()
-        plt.savefig("litmap_maze.png", dpi=300, bbox_inches='tight', facecolor='white')
-        plt.close()
-        print("    ✔ Graph saved as 'litmap_maze.png'")
+        # MAZE LAYOUT
+        pos = nx.kamada_kawai_layout(G) 
         
-    except ImportError as e:
-        print(f"    ⚠️ Graph skipped (missing module: {str(e)}) - Text report generated")
-    except Exception as e:
-        print(f"    ⚠️ Graph failed ({str(e)}) - Text report generated")
+        # PLOT NODES
+        nx.draw_networkx_nodes(G, pos, nodelist=list(pathway_nodes), node_color='#7ED957', node_size=2800)
+        nx.draw_networkx_nodes(G, pos, nodelist=list(gene_nodes), node_color='#6EC1E4', node_size=1400)
+        nx.draw_networkx_edges(G, pos, alpha=0.3, width=1.5)
+        
+        labels = {n: n.replace(" ", "\n", 2) if len(n)>15 else n for n in G.nodes()}
+        nx.draw_networkx_labels(G, pos, labels, font_size=8, font_weight="bold")
 
+        # --- LEGEND ---
+        legend_elements = [
+            Line2D([0], [0], marker='o', color='w', label='Target Gene', markerfacecolor='#6EC1E4', markersize=15),
+            Line2D([0], [0], marker='o', color='w', label='Biological Pathway', markerfacecolor='#7ED957', markersize=15)
+        ]
+        plt.legend(handles=legend_elements, loc='upper left', fontsize=12, frameon=True)
+        plt.suptitle(f"RELIO Analysis: {compound} + {outcome}", fontsize=16, fontweight='bold', y=0.95)
 
+    else: 
+        print("    ⚠️ Using Gene-Star Graph (No pathways found)")
+        top_genes = sorted(gene_evidence.keys(), key=lambda g: len(gene_evidence[g]), reverse=True)[:20]
+        G.add_node(compound, color='red')
+        for g in top_genes: G.add_edge(compound, g)
+        
+        plt.figure(figsize=(14, 12))
+        pos = nx.kamada_kawai_layout(G)
+        
+        nx.draw_networkx_nodes(G, pos, nodelist=[compound], node_color='#FF6B6B', node_size=3000)
+        nx.draw_networkx_nodes(G, pos, nodelist=top_genes, node_color='#6EC1E4', node_size=1500)
+        nx.draw_networkx_edges(G, pos, alpha=0.4)
+        nx.draw_networkx_labels(G, pos, font_size=9, font_weight="bold")
+        
+        legend_elements = [
+            Line2D([0], [0], marker='o', color='w', label='Compound', markerfacecolor='#FF6B6B', markersize=15),
+            Line2D([0], [0], marker='o', color='w', label='Gene Target', markerfacecolor='#6EC1E4', markersize=15)
+        ]
+        plt.legend(handles=legend_elements, loc='lower right', fontsize=12)
 
-def generate_full_report(compound, outcome, gene_evidence, pathway_map, paper_ids, mode_name):
+    plt.axis('off')
+    plt.tight_layout()
+    plt.savefig(os.path.join(img_dir, "litmap_maze.png"), dpi=300, bbox_inches='tight', facecolor='white')
+    print("    ✔ Graph saved as 'litmap_maze.png'")
+
+def generate_full_report(compound, outcome, gene_evidence, pathway_map, paper_ids, mode_name, img_dir):
     print("\n[5] 📝 Generating Report...")
     fingerprint = compute_fingerprint(gene_evidence, pathway_map)
-
+    
     conflicts = []
     if "FULL" in mode_name:
         conflicts = analyze_contradictions(gene_evidence)
-
+    
     gene_to_paths = defaultdict(list)
     for p, genes in pathway_map.items():
         for g in genes: gene_to_paths[g].append(p)
 
     lines = []
     lines.append("="*80)
-    lines.append(f"LITMAP V0.1 REPORT: {compound.upper()} + {outcome.upper()}")
+    lines.append(f"RELIO V0.1 REPORT: {compound.upper()} + {outcome.upper()}")
     lines.append("="*80)
-    lines.append(f"Mode              : {mode_name}")
-    lines.append(f"Docs Analyzed     : {len(paper_ids)} (Strict Limit: 100)")
-    lines.append(f"Net Direction     : {fingerprint['direction']}")
+    lines.append(f"Mode             : {mode_name}")
+    lines.append(f"Docs Analyzed    : {len(paper_ids)} (Strict Limit: 100)")
+    lines.append(f"Net Direction    : {fingerprint['direction']}")
     lines.append("-" * 80 + "\n")
-
+    
     if "FULL" in mode_name:
         lines.append("1. CONTRADICTION & CONTEXT ANALYSIS")
         lines.append("-" * 40)
@@ -299,19 +333,19 @@ def generate_full_report(compound, outcome, gene_evidence, pathway_map, paper_id
     lines.append("-" * 80)
     lines.append(f"{'GENE':<8} | {'HITS':<4} | {'DIR':<7} | {'FULL PATHWAY LIST'}")
     lines.append("-" * 80)
-
+    
     top_genes_all = sorted(gene_evidence.items(), key=lambda x: len(x[1]), reverse=True)
     for g, ev in top_genes_all:
         hits = len(ev)
         dirs = [e['direction'] for e in ev]
         d_mode = Counter(dirs).most_common(1)[0][0]
         if any(c['gene'] == g for c in conflicts): d_mode = "MIXED"
-
+            
         my_paths = gene_to_paths.get(g, [])
         path_str = ", ".join(my_paths) if my_paths else "No specific pathways mapped"
         lines.append(f"{g:<8} | {hits:<4} | {d_mode:<7} | {path_str}")
     lines.append("-" * 80 + "\n")
-
+    
     lines.append("3. SOURCE DOCUMENT LIST (Clickable Links)")
     lines.append("-" * 40)
     unique_ids = sorted(list(set(paper_ids)))
@@ -323,13 +357,14 @@ def generate_full_report(compound, outcome, gene_evidence, pathway_map, paper_id
                 lines.append(f"- https://www.ncbi.nlm.nih.gov/pmc/articles/{pid_str}/")
         else:
             lines.append(f"- https://pubmed.ncbi.nlm.nih.gov/{pid_str}/")
-
+            
     final_report_str = "\n".join(lines)
-
-    with open("litmap_report.txt", "w") as f:
+    
+    report_file = os.path.join(img_dir, "litmap_report.txt")
+    with open(report_file, "w") as f:
         f.write(final_report_str)
     print("    ✔ Report saved as 'litmap_report.txt'")
-
+    
     print("\n" + "="*30 + " TERMINAL REPORT OUTPUT " + "="*30 + "\n")
     print(final_report_str)
     print("\n" + "="*80 + "\n")

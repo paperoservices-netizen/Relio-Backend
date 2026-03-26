@@ -2,3 +2,5 @@ biopython
 requests
 networkx
 matplotlib
+tqdm
+lxml
