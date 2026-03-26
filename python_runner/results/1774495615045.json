@@ -1,0 +1,289 @@
+{
+  "compound": "Turmeric",
+  "outcome": "Infection",
+  "mode": "FAST",
+  "mode_name": "FAST (Abstracts)",
+  "genes": {
+    "TNF": [
+      {
+        "id": "26404185",
+        "direction": "up"
+      },
+      {
+        "id": "34579443",
+        "direction": "neutral"
+      },
+      {
+        "id": "23566550",
+        "direction": "up"
+      },
+      {
+        "id": "23295981",
+        "direction": "neutral"
+      }
+    ],
+    "STAT3": [
+      {
+        "id": "29923222",
+        "direction": "neutral"
+      }
+    ],
+    "CCR5": [
+      {
+        "id": "37314412",
+        "direction": "down"
+      }
+    ],
+    "FOXP3": [
+      {
+        "id": "37314412",
+        "direction": "down"
+      }
+    ],
+    "ACE": [
+      {
+        "id": "33184809",
+        "direction": "down"
+      }
+    ]
+  },
+  "pathways": {
+    "Class A/1 (rhodopsin-like receptors)": [
+      "CCR5"
+    ],
+    "Cell interactions in pancreatic cancer microenvironment": [
+      "CCR5"
+    ],
+    "Selective expression of chemokine receptors during T-cell polarization": [
+      "CCR5"
+    ],
+    "Cytokine-cytokine receptor interaction": [
+      "CCR5"
+    ],
+    "Interleukin-10 signaling": [
+      "CCR5"
+    ],
+    "Network map of SARS-CoV-2 signaling": [
+      "CCR5"
+    ],
+    "G alpha (i) signaling events": [
+      "CCR5"
+    ],
+    "HIV Life Cycle": [
+      "CCR5"
+    ],
+    "Acute viral myocarditis": [
+      "CCR5"
+    ],
+    "GPCRs, class A rhodopsin-like": [
+      "CCR5"
+    ],
+    "Peptide GPCRs": [
+      "CCR5"
+    ],
+    "CCL18 signaling": [
+      "FOXP3",
+      "CCR5"
+    ],
+    "FLT3 p.Gln640SerfsTer8 signaling": [
+      "CCR5"
+    ],
+    "GPCRs, other": [
+      "CCR5"
+    ],
+    "T-cell receptor signaling": [
+      "CCR5"
+    ],
+    "Opioid receptor pathways": [
+      "CCR5"
+    ],
+    "RUNX1 and FOXP3 control the development of regulatory T lymphocytes (Tregs)": [
+      "FOXP3"
+    ],
+    "A network map of RORgt mediated signaling pathway in inflammatory diseases": [
+      "FOXP3"
+    ],
+    "Integrative Analysis of  Treg-Glial Interactions": [
+      "FOXP3"
+    ],
+    "Transcriptional regulation by RUNX1": [
+      "FOXP3"
+    ],
+    "FOXP3 in COVID-19": [
+      "FOXP3"
+    ],
+    "Th17 cell differentiation pathway": [
+      "FOXP3"
+    ],
+    "HDAC6 interactions in the central nervous system": [
+      "FOXP3"
+    ],
+    "TGF-beta signaling": [
+      "FOXP3"
+    ],
+    "AXL signaling": [
+      "FOXP3"
+    ],
+    "Leukocyte-intrinsic Hippo pathway functions": [
+      "FOXP3"
+    ],
+    "Allograft rejection": [
+      "FOXP3"
+    ],
+    "Inflammatory bowel disease signaling": [
+      "FOXP3"
+    ],
+    "Ulcerative colitis signaling": [
+      "FOXP3"
+    ],
+    "SARS-CoV-2 and ACE2 receptor: molecular mechanisms": [
+      "ACE"
+    ],
+    "Downregulation of ACE2 by SARS-CoV-2 spike protein": [
+      "ACE"
+    ],
+    "Non-classical role of vitamin D": [
+      "ACE"
+    ],
+    "COVID-19 adverse outcome pathway": [
+      "ACE"
+    ],
+    "ACE inhibitor pathway": [
+      "ACE"
+    ],
+    "Renin Angiotensin System and Bradykinin pathways in COVID-19": [
+      "ACE"
+    ],
+    "ADHD and autism (ASD) pathways": [
+      "ACE"
+    ],
+    "SARS-CoV-2 mitochondrial chronic oxidative stress and endothelial dysfunction": [
+      "ACE"
+    ],
+    "Renin-angiotensin-aldosterone system (RAAS)": [
+      "ACE"
+    ],
+    "WikiPathways Test: Metabolites and Metabolic Interactions": [
+      "ACE"
+    ],
+    "Elabela signaling": [
+      "ACE"
+    ],
+    "Conversion of angiotensinogen to angiotensin II": [
+      "ACE"
+    ],
+    "Mitochondrial immune response to SARS-CoV-2": [
+      "ACE"
+    ]
+  },
+  "documents": [
+    "36846914",
+    "37356247",
+    "38085369",
+    "29976394",
+    "20821233",
+    "38133257",
+    "39541651",
+    "38042387",
+    "38242053",
+    "36480131",
+    "21594675",
+    "32067524",
+    "40427672",
+    "34443248",
+    "38817411",
+    "18398870",
+    "36868489",
+    "26709650",
+    "27863601",
+    "33809891",
+    "29923222",
+    "36981935",
+    "23566550",
+    "22186854",
+    "32418527",
+    "33142686",
+    "34325638",
+    "38721680",
+    "39055752",
+    "16731272",
+    "41034312",
+    "26528921",
+    "34757887",
+    "19336870",
+    "28884496",
+    "37517298",
+    "39148307",
+    "41176175",
+    "28449595",
+    "36703758",
+    "41258635",
+    "35469998",
+    "25206217",
+    "29621160",
+    "40362617",
+    "35996526",
+    "28343845",
+    "37378778",
+    "37536946",
+    "34237598",
+    "41362433",
+    "34660038",
+    "27892897",
+    "32806984",
+    "32998270",
+    "31185140",
+    "25200875",
+    "38664750",
+    "40799052",
+    "36904331",
+    "32535791",
+    "37536430",
+    "35933899",
+    "29625661",
+    "24165896",
+    "39330180",
+    "35253616",
+    "23295981",
+    "33184809",
+    "34696344",
+    "39901813",
+    "36729019",
+    "36965256",
+    "37569540",
+    "35496320",
+    "26404185",
+    "40599653",
+    "40005051",
+    "36720711",
+    "26188032",
+    "39770516",
+    "34579443",
+    "40583343",
+    "35352306",
+    "36997729",
+    "38794899",
+    "38612606",
+    "41150115",
+    "38685809",
+    "30085362",
+    "36455820",
+    "1496714",
+    "29541936",
+    "36756300",
+    "37314412",
+    "32452193",
+    "36119096",
+    "35293297",
+    "27896883",
+    "36499036"
+  ],
+  "images": {
+    "graph": null
+  },
+  "job_id": "1774495615045",
+  "success": true,
+  "total_genes": 5,
+  "total_documents": 100,
+  "total_pathways": 42
+}
