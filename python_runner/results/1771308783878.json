@@ -1,0 +1,6490 @@
+{
+  "compound": "Curcumin ",
+  "outcome": "Anti diabetic ",
+  "mode": "FULL",
+  "mode_name": "FULL (PMC Full Text)",
+  "genes": {
+    "STAT3": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "PTEN": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "TNF": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "CRP": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "JAK2": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "GSK3B": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "INS": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "TLR4": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "FOXO1": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "KIT": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "EGFR": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "BDNF": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "C3": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "SIRT1": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "F3": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "CXCL8": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "CCL2": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "NLRP3": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "MAPT": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "HMGB1": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "IL6": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "SOD2": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "HLA-G": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "SOD1": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "F2": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "PON1": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "MET": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "AR": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "COL1A1": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "HMOX1": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "STAT1": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "LDLR": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "LPL": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "FAS": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "MMP2": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "PRKN": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "MMP9": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "MTHFR": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "AKT1": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "ACE": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "SMAD3": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "TLR2": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "CD44": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "MUC1": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "CASP3": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "HLA-B": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "MTOR": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "HGF": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "ACE2": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "EGF": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "IGFBP3": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "CCR5": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "CXCR4": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "EZH2": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "CYP3A4": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "ATM": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "NOD2": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "CXCL12": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "MIF": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "AHR": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "CXCL10": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "CCL5": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "ALB": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "IL1B": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "LEP": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "NFE2L2": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "FGF2": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "CAV1": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "HIF1A": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "NOS3": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "FOXO3": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "CDKN1A": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "BCL2": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "FN1": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "MDM2": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "TP53": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "ICAM1": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "GSTM1": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "VEGFA": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "NOS2": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "PPARG": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "PTGS2": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "RELA": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "MMP3": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "ABCA1": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "PCSK9": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "MMP1": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "KDR": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "BAX": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "CD14": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "ABCB1": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "CYP2C9": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "SP1": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "IGF1R": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "F5": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "WT1": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "IL2": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "NFKB1": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "IL10": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "VDR": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "FOXP3": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "ABCG2": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "TLR9": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "DNMT1": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "CYP2C19": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "MPO": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "MAPK3": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "MAPK8": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "EP300": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "MAPK1": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "JUN": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "CFTR": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "HFE": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ]
+  },
+  "pathways": {
+    "16p11.2 distal deletion syndrome": [
+      "JAK2",
+      "C3",
+      "KDR"
+    ],
+    "AGE/RAGE pathway": [
+      "NOS3",
+      "SOD1",
+      "MMP9",
+      "SMAD3",
+      "JAK2",
+      "HIF1A",
+      "NOS2",
+      "INS",
+      "SP1"
+    ],
+    "Urotensin-II-mediated signaling": [
+      "FN1",
+      "ABCA1",
+      "COL1A1",
+      "BAX",
+      "IL1B",
+      "SOD2",
+      "HMOX1",
+      "ICAM1",
+      "MMP9",
+      "SMAD3",
+      "JAK2"
+    ],
+    "Brain-derived neurotrophic factor (BDNF) signaling": [
+      "FOXO3",
+      "JAK2",
+      "MAPT",
+      "BDNF"
+    ],
+    "IL5 signaling": [
+      "JAK2"
+    ],
+    "Chemokine signaling": [
+      "CCL5",
+      "CXCL12",
+      "FOXO3",
+      "CXCR4",
+      "CXCL10",
+      "JAK2"
+    ],
+    "Cancer pathways": [
+      "CXCL12",
+      "HGF",
+      "PPARG",
+      "IL2",
+      "JAK2",
+      "HIF1A",
+      "FN1",
+      "CXCR4",
+      "SMAD3",
+      "BAX",
+      "MMP3",
+      "GSTM1",
+      "AR",
+      "PTGS2",
+      "IGF1R",
+      "MET",
+      "F2",
+      "CXCL8",
+      "VEGFA",
+      "MMP1",
+      "HMOX1",
+      "NFE2L2",
+      "NOS2",
+      "SP1"
+    ],
+    "15q24 copy number variation": [
+      "JAK2"
+    ],
+    "Gastrin signaling": [
+      "PTGS2",
+      "NOS3",
+      "FOXO3",
+      "VEGFA",
+      "CD44",
+      "PPARG",
+      "IL2",
+      "JAK2",
+      "SP1"
+    ],
+    "Notch signaling": [
+      "JAK2",
+      "HIF1A"
+    ],
+    "IL4 signaling": [
+      "JAK2"
+    ],
+    "Osteoarthritic chondrocyte hypertrophy": [
+      "COL1A1",
+      "VEGFA",
+      "JAK2",
+      "HIF1A",
+      "KDR"
+    ],
+    "mBDNF and proBDNF regulation of GABA neurotransmission": [
+      "JAK2"
+    ],
+    "Sodium channel in epilepsy": [
+      "JAK2"
+    ],
+    "Mammary gland development: pregnancy and lactation": [
+      "JAK2",
+      "CAV1"
+    ],
+    "Thyroid stimulating hormone (TSH) signaling": [
+      "JAK2"
+    ],
+    "EGF/EGFR signaling": [
+      "JAK2",
+      "SP1",
+      "NOS3",
+      "CAV1"
+    ],
+    "Focal adhesion: PI3K-Akt-mTOR-signaling": [
+      "FN1",
+      "IGF1R",
+      "NOS3",
+      "COL1A1",
+      "FOXO3",
+      "MET",
+      "VEGFA",
+      "HGF",
+      "KDR",
+      "FGF2",
+      "IL2",
+      "JAK2",
+      "HIF1A",
+      "NOS2",
+      "INS"
+    ],
+    "Kit receptor signaling": [
+      "JAK2"
+    ],
+    "Tyrosine kinase inhibitors in glioblastoma": [
+      "JAK2"
+    ],
+    "Growth hormone receptor signaling": [
+      "JAK2"
+    ],
+    "Regulatory circuits of STAT3 signaling": [
+      "JAK2"
+    ],
+    "T-cell activation SARS-CoV-2": [
+      "IL2",
+      "FOXO3",
+      "JAK2",
+      "BAX"
+    ],
+    "Signaling by Erythropoietin": [
+      "JAK2"
+    ],
+    "Th17 cell differentiation pathway": [
+      "IL1B",
+      "IL2",
+      "JAK2",
+      "HIF1A",
+      "AHR",
+      "FOXP3"
+    ],
+    "ncRNAs involved in STAT3 signaling in hepatocellular carcinoma": [
+      "JAK2"
+    ],
+    "Signaling by leptin": [
+      "JAK2",
+      "LEP"
+    ],
+    "Interleukin-20 family signaling": [
+      "JAK2"
+    ],
+    "Signaling by SCF-KIT": [
+      "JAK2",
+      "MMP9"
+    ],
+    "Thymic stromal lymphopoietin (TSLP) signaling": [
+      "JAK2"
+    ],
+    "RAF/MAP kinase cascade": [
+      "FN1",
+      "IGF1R",
+      "MET",
+      "HGF",
+      "FGF2",
+      "IL2",
+      "JAK2"
+    ],
+    "TROP2 regulatory signaling": [
+      "AR",
+      "FN1",
+      "IGF1R",
+      "BAX",
+      "JAK2"
+    ],
+    "JAK/STAT pathway": [
+      "IGF1R",
+      "NOS3",
+      "BAX",
+      "IL1B",
+      "LEP",
+      "JAK2",
+      "SP1"
+    ],
+    "Interferon signaling in tuberculosis": [
+      "JAK2"
+    ],
+    "Hallmark of cancer: sustaining proliferative signaling": [
+      "JAK2",
+      "IGF1R",
+      "MET",
+      "KDR"
+    ],
+    "Mesodermal commitment pathway": [
+      "SMAD3",
+      "JAK2",
+      "NFE2L2"
+    ],
+    "Interleukin-3, Interleukin-5 and GM-CSF signaling": [
+      "IL2",
+      "JAK2"
+    ],
+    "Interleukin-12 family signaling": [
+      "JAK2"
+    ],
+    "Interferon gamma signaling": [
+      "CD44",
+      "HLA-B",
+      "JAK2",
+      "ICAM1"
+    ],
+    "Leptin signaling": [
+      "IGF1R",
+      "NOS3",
+      "BAX",
+      "IL1B",
+      "LEP",
+      "JAK2",
+      "SP1"
+    ],
+    "Psoriasis mechanism and therapies": [
+      "CD14",
+      "JAK2",
+      "CXCL8",
+      "IL1B"
+    ],
+    "Chromatin organization": [
+      "JAK2",
+      "INS",
+      "EZH2"
+    ],
+    "IL3 signaling": [
+      "JAK2"
+    ],
+    "IL17 signaling": [
+      "JAK2",
+      "SP1"
+    ],
+    "Network map of SARS-CoV-2 signaling": [
+      "ALB",
+      "CXCL12",
+      "IL1B",
+      "NLRP3",
+      "CXCL10",
+      "JAK2",
+      "HIF1A",
+      "FN1",
+      "CCL5",
+      "CCR5",
+      "ACE2",
+      "IL10",
+      "PTGS2",
+      "IGFBP3",
+      "CD14",
+      "CXCL8",
+      "VEGFA",
+      "FGF2",
+      "AHR"
+    ],
+    "Hepatitis B infection": [
+      "BAX",
+      "CXCL8",
+      "MMP9",
+      "SMAD3",
+      "JAK2",
+      "TLR2"
+    ],
+    "PI3K-Akt signaling": [
+      "FN1",
+      "IGF1R",
+      "NOS3",
+      "COL1A1",
+      "FOXO3",
+      "MET",
+      "TLR2",
+      "HGF",
+      "VEGFA",
+      "KDR",
+      "FGF2",
+      "IL2",
+      "JAK2",
+      "INS",
+      "BDNF"
+    ],
+    "Serotonin HTR1 group and FOS pathway": [
+      "JAK2"
+    ],
+    "Type II interferon signaling": [
+      "IL1B",
+      "ICAM1",
+      "CXCL10",
+      "HLA-B",
+      "JAK2"
+    ],
+    "Interleukin-4 and Interleukin-13 signaling": [
+      "FN1",
+      "PTGS2",
+      "FGF2",
+      "MUC1",
+      "FOXO3",
+      "VEGFA",
+      "IL1B",
+      "HGF",
+      "MMP3",
+      "MMP1",
+      "IL10",
+      "ICAM1",
+      "HMOX1",
+      "MMP9",
+      "JAK2",
+      "HIF1A",
+      "NOS2"
+    ],
+    "IL11 signaling": [
+      "JAK2",
+      "ICAM1"
+    ],
+    "Oncostatin M signaling": [
+      "LDLR",
+      "VEGFA",
+      "MMP3",
+      "MMP1",
+      "JAK2",
+      "HIF1A"
+    ],
+    "Leptin-insulin signaling overlap": [
+      "JAK2",
+      "LEP",
+      "INS"
+    ],
+    "JAK-STAT signaling in the regulation of beta cells": [
+      "JAK2"
+    ],
+    "Interleukin-2 family signaling": [
+      "IL2",
+      "JAK2"
+    ],
+    "IL23 inhibitors in inflammatory bowel disease": [
+      "JAK2"
+    ],
+    "Prolactin signaling": [
+      "JAK2",
+      "NOS2"
+    ],
+    "Prolactin receptor signaling": [
+      "JAK2"
+    ],
+    "CCL18 signaling": [
+      "FN1",
+      "FGF2",
+      "COL1A1",
+      "FOXP3",
+      "CXCL8",
+      "VEGFA",
+      "MMP3",
+      "IL10",
+      "CD44",
+      "CCR5",
+      "CXCR4",
+      "MMP9",
+      "SMAD3",
+      "JAK2",
+      "HIF1A",
+      "SP1"
+    ],
+    "Interleukin-6 family signaling": [
+      "JAK2"
+    ],
+    "IL26 signaling": [
+      "BAX",
+      "CXCL8",
+      "IL1B",
+      "MMP1",
+      "IL10",
+      "ICAM1",
+      "MMP9",
+      "JAK2",
+      "NOS2",
+      "MPO"
+    ],
+    "PDGFR-beta pathway": [
+      "JAK2"
+    ],
+    "IL6 signaling": [
+      "JAK2"
+    ],
+    "EGFR tyrosine kinase inhibitor resistance": [
+      "IGF1R",
+      "FOXO3",
+      "BAX",
+      "MET",
+      "VEGFA",
+      "HGF",
+      "FGF2",
+      "JAK2",
+      "KDR"
+    ],
+    "Interferon-mediated signaling": [
+      "JAK2"
+    ],
+    "EPO receptor signaling": [
+      "JAK2"
+    ],
+    "Selenium micronutrient network": [
+      "MPO",
+      "ALB",
+      "LDLR",
+      "IL1B",
+      "IL10",
+      "MTHFR",
+      "SOD2",
+      "SOD1",
+      "ABCA1",
+      "INS"
+    ],
+    "Human cytomegalovirus infection": [
+      "INS",
+      "EZH2"
+    ],
+    "6q16 copy number variation": [
+      "LEP",
+      "INS",
+      "BDNF"
+    ],
+    "Alzheimer's disease and miRNA effects": [
+      "PTGS2",
+      "IL1B",
+      "MAPT",
+      "NOS2",
+      "INS"
+    ],
+    "Thyroxine (thyroid hormone) production": [
+      "INS"
+    ],
+    "Cyclin-dependent kinase 4/6 inhibitors in breast cancer": [
+      "IGF1R",
+      "INS"
+    ],
+    "Adipogenesis": [
+      "PPARG",
+      "LEP",
+      "SMAD3",
+      "MIF",
+      "HIF1A",
+      "AHR",
+      "INS",
+      "SP1"
+    ],
+    "Regulation of beta-cell development": [
+      "INS"
+    ],
+    "Glycerophospholipid biosynthesis": [
+      "INS"
+    ],
+    "Nonalcoholic fatty liver disease": [
+      "BAX",
+      "CXCL8",
+      "IL1B",
+      "LEP",
+      "INS"
+    ],
+    "White fat cell differentiation": [
+      "PPARG",
+      "INS"
+    ],
+    "Signaling by insulin receptor": [
+      "INS"
+    ],
+    "Glucose homeostasis": [
+      "INS"
+    ],
+    "Transport of bile salts and organic acids, metal ions and amine compounds": [
+      "MET",
+      "INS"
+    ],
+    "Pluripotent stem cell differentiation pathway": [
+      "HGF",
+      "VEGFA",
+      "INS",
+      "FGF2"
+    ],
+    "Cardiac progenitor differentiation": [
+      "KDR",
+      "CXCR4",
+      "INS",
+      "FGF2"
+    ],
+    "Orexin receptor pathway": [
+      "NOS3",
+      "LDLR",
+      "CXCL8",
+      "IL1B",
+      "VEGFA",
+      "MMP3",
+      "IL10",
+      "PPARG",
+      "LEP",
+      "HMOX1",
+      "NFE2L2",
+      "ICAM1",
+      "HIF1A",
+      "INS"
+    ],
+    "GLP-1 in pancreatic islet cells": [
+      "INS"
+    ],
+    "Alzheimer's disease": [
+      "PTGS2",
+      "IL1B",
+      "MAPT",
+      "NOS2",
+      "INS"
+    ],
+    "Insulin processing": [
+      "INS"
+    ],
+    "Pleural mesothelioma": [
+      "ATM",
+      "CXCL12",
+      "HGF",
+      "HMGB1",
+      "CD44",
+      "NLRP3",
+      "CXCL10",
+      "HIF1A",
+      "FN1",
+      "CCL5",
+      "BAX",
+      "MMP3",
+      "IL10",
+      "EZH2",
+      "MMP9",
+      "INS",
+      "BDNF",
+      "IGF1R",
+      "MET",
+      "VEGFA",
+      "FGF2",
+      "KDR",
+      "SP1"
+    ],
+    "Type II diabetes mellitus": [
+      "INS"
+    ],
+    "GLP-1 from intestine and pancreas and role in glucose homeostasis": [
+      "INS"
+    ],
+    "Galanin receptor pathway": [
+      "PPARG",
+      "VEGFA",
+      "INS"
+    ],
+    "Cardiac hypertrophic response": [
+      "INS"
+    ],
+    "Senescence and autophagy in cancer": [
+      "FN1",
+      "IGF1R",
+      "IGFBP3",
+      "COL1A1",
+      "IL1B",
+      "CD44",
+      "SMAD3",
+      "INS"
+    ],
+    "Congenital generalized lipodystrophy": [
+      "CAV1",
+      "HIF1A",
+      "INS"
+    ],
+    "Neuroinflammation and glutamatergic signaling": [
+      "IL10",
+      "IL1B",
+      "FGF2",
+      "SMAD3",
+      "BDNF"
+    ],
+    "Signaling by NTRK2 (TRKB)": [
+      "BDNF"
+    ],
+    "miR-targeted genes in lymphocytes": [
+      "CXCL12",
+      "MET",
+      "EZH2",
+      "ABCG2",
+      "HMOX1",
+      "FGF2",
+      "BDNF"
+    ],
+    "Neural crest cell migration during development": [
+      "MMP9",
+      "BDNF"
+    ],
+    "Perturbed thyroid hormone homeostasis leading to developmental neurotoxicity": [
+      "BDNF"
+    ],
+    "Blood-based neuroinflammation markers": [
+      "CCL5",
+      "IL1B",
+      "BDNF"
+    ],
+    "MAPK signaling": [
+      "CD14",
+      "IL1B",
+      "MAPT",
+      "FGF2",
+      "BDNF"
+    ],
+    "Prader-Willi and Angelman syndrome": [
+      "BDNF"
+    ],
+    "MECP2 and associated Rett syndrome": [
+      "IGF1R",
+      "BDNF",
+      "EZH2",
+      "FGF2",
+      "SP1"
+    ],
+    "Neural crest cell migration in cancer": [
+      "MMP9",
+      "BDNF"
+    ],
+    "HDAC6 interactions in the central nervous system": [
+      "CFTR",
+      "FOXP3",
+      "BAX",
+      "MAPT",
+      "SOD1",
+      "SP1",
+      "PRKN",
+      "MIF",
+      "HIF1A",
+      "BDNF"
+    ],
+    "Fragile X syndrome": [
+      "MMP9",
+      "BDNF"
+    ],
+    "Opioid receptor pathways": [
+      "PTGS2",
+      "IGF1R",
+      "NOS3",
+      "CD14",
+      "BAX",
+      "IL1B",
+      "KDR",
+      "CCR5",
+      "HMOX1",
+      "NFE2L2",
+      "SOD1",
+      "SP1",
+      "NOS2",
+      "MMP9",
+      "BDNF"
+    ],
+    "Hippocampal synaptogenesis and neurogenesis": [
+      "BDNF"
+    ],
+    "BDNF signaling in neurodevelopment": [
+      "FOXO3",
+      "BAX",
+      "BDNF"
+    ],
+    "Follicle stimulating hormone (FSH) signaling": [
+      "BDNF"
+    ],
+    "Synaptic signaling associated with autism spectrum disorder": [
+      "BDNF"
+    ],
+    "Thyroid hormone imbalance leading to neurodevelopmental abnormalities": [
+      "BDNF"
+    ],
+    "BDNF-TrkB signaling": [
+      "BDNF"
+    ],
+    "Chronic hyperglycemia impairment of neuron function": [
+      "MMP1",
+      "MMP3",
+      "C3",
+      "MMP9",
+      "BDNF"
+    ],
+    "Involvement of &delta;-secretase in neurodegenerative diseases": [
+      "BDNF"
+    ],
+    "Sudden infant death syndrome (SIDS) susceptibility pathways": [
+      "AR",
+      "VEGFA",
+      "IL1B",
+      "IL10",
+      "SP1",
+      "HIF1A",
+      "BDNF"
+    ],
+    "ERK pathway in Huntington's disease": [
+      "BDNF"
+    ],
+    "Spinal cord injury": [
+      "PTGS2",
+      "IL2",
+      "FOXO3",
+      "CXCL8",
+      "IL1B",
+      "LEP",
+      "C3",
+      "ICAM1",
+      "MMP9",
+      "CXCL10",
+      "MIF",
+      "NOS2",
+      "BDNF"
+    ],
+    "Effect of omega-3 PUFA on Huntington's disease pathways": [
+      "BAX",
+      "IL1B",
+      "BDNF",
+      "ABCA1",
+      "SP1"
+    ],
+    "Neurogenesis regulation in the olfactory epithelium": [
+      "CXCL12",
+      "MAPT",
+      "BDNF"
+    ],
+    "17q12 copy number variation syndrome": [
+      "CCL5",
+      "BDNF"
+    ],
+    "Transcriptional regulation by MECP2": [
+      "PPARG",
+      "MET",
+      "BDNF"
+    ],
+    "Complement activation": [
+      "C3"
+    ],
+    "Cells and molecules involved in local acute inflammatory response": [
+      "ICAM1",
+      "C3"
+    ],
+    "Complement cascade": [
+      "AR",
+      "C3"
+    ],
+    "Complement system": [
+      "ICAM1",
+      "ALB",
+      "C3",
+      "TLR2"
+    ],
+    "Lupus therapies": [
+      "C3"
+    ],
+    "Complement and coagulation cascades": [
+      "F5",
+      "F2",
+      "C3",
+      "F3"
+    ],
+    "Neutrophil degranulation": [
+      "HMGB1",
+      "CD44",
+      "C3",
+      "MMP9",
+      "MPO",
+      "MIF",
+      "TLR2"
+    ],
+    "Allograft rejection": [
+      "CXCL12",
+      "VEGFA",
+      "IL1B",
+      "HLA-G",
+      "ABCB1",
+      "IL10",
+      "C3",
+      "IL2",
+      "HLA-B",
+      "FOXP3"
+    ],
+    "Regulation of IGF transport and uptake by IGF binding proteins": [
+      "FN1",
+      "ALB",
+      "IGFBP3",
+      "MMP1",
+      "C3",
+      "PCSK9"
+    ],
+    "Biocrates metabolites overview": [
+      "MET",
+      "C3"
+    ],
+    "Krebs cycle disorders": [
+      "C3"
+    ],
+    "Pathophysiology of age-related macular degeneration": [
+      "VEGFA",
+      "C3",
+      "MMP9"
+    ],
+    "Extrafollicular and follicular B cell activation by SARS-CoV-2": [
+      "CXCL12",
+      "C3",
+      "CXCR4"
+    ],
+    "Signaling by FGFR2": [
+      "C3",
+      "FGF2"
+    ],
+    "Complement-mediated inflammation of pulmonary alveolus in COVID-19 (hypothetical pathway)": [
+      "C3",
+      "ACE2"
+    ],
+    "Dengue-2 interactions with complement and coagulation cascades": [
+      "F5",
+      "F2",
+      "C3",
+      "F3"
+    ],
+    "Complement system in neuronal development and plasticity": [
+      "BAX",
+      "C3"
+    ],
+    "Acquired partial lipodystrophy / Barraquer-Simons syndrome": [
+      "C3"
+    ],
+    "TYROBP causal network in microglia": [
+      "C3"
+    ],
+    "Post-translational protein phosphorylation": [
+      "FN1",
+      "ALB",
+      "IGFBP3",
+      "C3",
+      "PCSK9"
+    ],
+    "FOXO-mediated transcription": [
+      "FOXO3",
+      "SIRT1"
+    ],
+    "Hallmark of cancer: metastasis and epithelial-to-mesenchymal transition": [
+      "SIRT1",
+      "EZH2"
+    ],
+    "Cellular response to heat stress": [
+      "ATM",
+      "SIRT1"
+    ],
+    "Caloric restriction and aging": [
+      "SIRT1"
+    ],
+    "Sterol regulatory element-binding proteins (SREBP) signaling": [
+      "PPARG",
+      "LDLR",
+      "SIRT1",
+      "SP1"
+    ],
+    "Age-related macular degeneration": [
+      "SIRT1"
+    ],
+    "Androgen receptor signaling": [
+      "AR",
+      "SMAD3",
+      "CAV1",
+      "SIRT1",
+      "SP1"
+    ],
+    "Interactions between LOXL4 and oxidative stress pathway": [
+      "NFE2L2",
+      "FN1",
+      "SIRT1"
+    ],
+    "Omega-6-fatty acids in senescence": [
+      "PTGS2",
+      "SIRT1"
+    ],
+    "Circadian rhythm genes": [
+      "NOS2",
+      "EZH2",
+      "PPARG",
+      "LEP",
+      "SIRT1",
+      "AHR"
+    ],
+    "SREBF and miR33 in cholesterol and lipid homeostasis": [
+      "LDLR",
+      "SIRT1",
+      "ABCA1"
+    ],
+    "10q11.21q11.23 copy number variation syndrome": [
+      "SIRT1",
+      "NLRP3"
+    ],
+    "3q29 copy number variation syndrome": [
+      "ATM",
+      "HFE",
+      "SIRT1",
+      "HIF1A"
+    ],
+    "CAMKK2 pathway": [
+      "SIRT1",
+      "NOS3",
+      "CCL5",
+      "ICAM1",
+      "HMOX1",
+      "HFE",
+      "ABCA1",
+      "HIF1A",
+      "KDR"
+    ],
+    "TAR syndrome": [
+      "CFTR",
+      "MET",
+      "HLA-G",
+      "CXCR4",
+      "HLA-B",
+      "SIRT1"
+    ],
+    "Integrated breast cancer pathway": [
+      "AR",
+      "ATM",
+      "BAX",
+      "VEGFA",
+      "MMP1",
+      "SMAD3",
+      "SIRT1",
+      "AHR",
+      "SP1"
+    ],
+    "SIRT1 negatively regulates rRNA expression": [
+      "SIRT1"
+    ],
+    "Somatroph axis (GH) and its relationship to dietary restriction and aging": [
+      "SIRT1"
+    ],
+    "Circadian Clock": [
+      "HIF1A",
+      "SIRT1"
+    ],
+    "NAD+ biosynthetic pathways": [
+      "SIRT1"
+    ],
+    "Inclusion body myositis": [
+      "SIRT1",
+      "MAPT"
+    ],
+    "Molecular pathway for oxidative stress": [
+      "SOD2",
+      "SIRT1"
+    ],
+    "AKT signaling and ARTD family members": [
+      "ATM",
+      "SIRT1"
+    ],
+    "PodNet: protein-protein interactions in the podocyte": [
+      "PTGS2",
+      "IGF1R",
+      "IGFBP3",
+      "VDR",
+      "CXCL12",
+      "MET",
+      "F3",
+      "VEGFA",
+      "CXCL10",
+      "SMAD3",
+      "WT1",
+      "HIF1A",
+      "KDR",
+      "SP1"
+    ],
+    "Macrophage markers": [
+      "CD14",
+      "F3"
+    ],
+    "VEGFA-VEGFR2 signaling": [
+      "FN1",
+      "PTGS2",
+      "ALB",
+      "NOS3",
+      "IGFBP3",
+      "FOXO3",
+      "CXCL8",
+      "F3",
+      "VEGFA",
+      "HMGB1",
+      "SOD2",
+      "ICAM1",
+      "CAV1"
+    ],
+    "STING pathway in Kawasaki-like disease and COVID-19": [
+      "F3",
+      "IL1B",
+      "NLRP3"
+    ],
+    "Novel intracellular components of RIG-I-like receptor pathway": [
+      "CXCL10",
+      "CXCL12",
+      "CXCL8"
+    ],
+    "Antiviral and anti-inflammatory effects of Nrf2 on SARS-CoV-2 pathway": [
+      "ACE2",
+      "CXCL8",
+      "IL1B",
+      "MMP3",
+      "MMP1",
+      "NFE2L2",
+      "HMOX1"
+    ],
+    "Non-genomic actions of 1,25-dihydroxyvitamin D3": [
+      "VDR",
+      "CXCL8",
+      "NOD2",
+      "TLR2",
+      "SP1"
+    ],
+    "miRNA role in immune response in sepsis": [
+      "ICAM1",
+      "CXCL8",
+      "IL10"
+    ],
+    "Uterine natural killer cells and progesterone, estrogen, and chorionic gonadotropin": [
+      "CCL5",
+      "CXCL12",
+      "CXCL8",
+      "HLA-G",
+      "VEGFA",
+      "IL10",
+      "CXCR4",
+      "CXCL10"
+    ],
+    "Lung fibrosis": [
+      "FGF2",
+      "CCL5",
+      "CXCL8",
+      "IL1B",
+      "HGF",
+      "HMOX1",
+      "NFE2L2",
+      "MMP9"
+    ],
+    "Lung pathology of COVID-19": [
+      "CXCL10",
+      "CXCL8",
+      "IL1B"
+    ],
+    "IL18 signaling": [
+      "FN1",
+      "PTGS2",
+      "CCL5",
+      "COL1A1",
+      "BAX",
+      "CXCL8",
+      "IL1B",
+      "VEGFA",
+      "MMP3",
+      "MMP1",
+      "IL10",
+      "ICAM1",
+      "HMOX1",
+      "MMP9",
+      "NOS2",
+      "SP1"
+    ],
+    "DDR1-mediated signaling": [
+      "FN1",
+      "PTGS2",
+      "IGF1R",
+      "CXCL8",
+      "IL1B",
+      "ICAM1",
+      "MMP9",
+      "NOS2",
+      "SP1"
+    ],
+    "Interactions of natural killer cells in pancreatic cancer": [
+      "CCL5",
+      "CXCL8"
+    ],
+    "Hallmark of Cancer: Avoiding immune destruction through non-genotoxic carcinogens": [
+      "CCL5",
+      "CXCL8"
+    ],
+    "SARS-CoV-2 innate immunity evasion and cell-specific immune response": [
+      "ACE2",
+      "CCL5",
+      "CXCL12",
+      "CXCL8",
+      "CXCL10",
+      "SMAD3"
+    ],
+    "Macrophage-stimulating protein (MSP) signaling": [
+      "FN1",
+      "IGF1R",
+      "CXCL8",
+      "IL1B",
+      "VEGFA",
+      "IL10",
+      "MMP9",
+      "CXCL10",
+      "SMAD3"
+    ],
+    "Modular map of bradykinin signaling network": [
+      "PTGS2",
+      "NOS3",
+      "FGF2",
+      "COL1A1",
+      "BAX",
+      "CXCL8",
+      "IL1B",
+      "VEGFA",
+      "SOD1",
+      "IL10",
+      "MAPT",
+      "MMP9",
+      "IL2",
+      "KDR"
+    ],
+    "Endothelin pathway": [
+      "PTGS2",
+      "NOS3",
+      "COL1A1",
+      "FOXO3",
+      "CXCL8",
+      "IL1B",
+      "VEGFA",
+      "MMP3",
+      "MMP1",
+      "FGF2",
+      "HIF1A",
+      "MMP9"
+    ],
+    "Cytokine-cytokine receptor interaction": [
+      "IL2",
+      "CCL5",
+      "CXCL12",
+      "CXCL8",
+      "IL10",
+      "CCR5",
+      "LEP",
+      "CXCR4",
+      "CXCL10"
+    ],
+    "Immune infiltration in pancreatic cancer": [
+      "CCL5",
+      "CXCL12",
+      "CXCL8",
+      "IL1B",
+      "VEGFA",
+      "IL10",
+      "MMP9",
+      "IL2"
+    ],
+    "GDNF signaling": [
+      "FOXO3",
+      "MET",
+      "CXCL8",
+      "VEGFA",
+      "PPARG",
+      "FGF2",
+      "SMAD3",
+      "HIF1A",
+      "SP1"
+    ],
+    "Overview of proinflammatory and profibrotic mediators": [
+      "IL2",
+      "CCL5",
+      "CXCL12",
+      "CXCL8",
+      "IL1B",
+      "VEGFA",
+      "MMP3",
+      "MMP1",
+      "IL10",
+      "MMP9",
+      "CXCL10"
+    ],
+    "Post-COVID neuroinflammation": [
+      "ACE2",
+      "CXCL8",
+      "IL1B",
+      "IL10",
+      "HMGB1",
+      "IL2"
+    ],
+    "Acute viral myocarditis": [
+      "BAX",
+      "IL10",
+      "NOD2",
+      "CCR5",
+      "CXCR4",
+      "NLRP3",
+      "MMP9",
+      "IL2",
+      "CAV1"
+    ],
+    "Cell recruitment (pro-inflammatory response)": [
+      "IL1B",
+      "NLRP3"
+    ],
+    "1p36 copy number variation syndrome": [
+      "SMAD3",
+      "NLRP3"
+    ],
+    "Activation of NLRP3 inflammasome by SARS-CoV-2": [
+      "IL1B",
+      "NLRP3"
+    ],
+    "Deubiquitination": [
+      "AR",
+      "CFTR",
+      "NOD2",
+      "NLRP3",
+      "SMAD3",
+      "HIF1A"
+    ],
+    "Nucleotide-binding domain, leucine rich repeat containing receptor (NLR) signaling": [
+      "NOD2",
+      "NLRP3"
+    ],
+    "Nucleotide-binding oligomerization domain (NOD) pathway": [
+      "NOD2",
+      "IL1B",
+      "NLRP3"
+    ],
+    "Integrative Analysis of  Treg-Glial Interactions": [
+      "IGF1R",
+      "CXCL12",
+      "FOXO3",
+      "VEGFA",
+      "IL1B",
+      "IL10",
+      "CD44",
+      "NLRP3",
+      "MMP9",
+      "IL2",
+      "SMAD3",
+      "NOS2",
+      "FOXP3"
+    ],
+    "Nanomaterial-induced inflammasome activation": [
+      "IL1B",
+      "NLRP3"
+    ],
+    "Prostaglandin signaling": [
+      "PTGS2",
+      "VEGFA",
+      "IL1B",
+      "NLRP3",
+      "MMP9",
+      "CXCL10",
+      "AHR"
+    ],
+    "IL1 and megakaryocytes in obesity": [
+      "IL1B",
+      "ICAM1",
+      "NLRP3",
+      "MMP9",
+      "TLR2"
+    ],
+    "SARS-CoV-2 and COVID-19 pathway": [
+      "ACE2",
+      "NLRP3"
+    ],
+    "Unfolded protein response": [
+      "NFE2L2",
+      "IL1B",
+      "NLRP3"
+    ],
+    "EPAC1 and PKA reduction of retinal inflammation": [
+      "IL1B",
+      "NLRP3"
+    ],
+    "AXL signaling": [
+      "FN1",
+      "COL1A1",
+      "FOXP3",
+      "MET",
+      "IL1B",
+      "VEGFA",
+      "PPARG",
+      "NLRP3",
+      "MMP9",
+      "SMAD3",
+      "CAV1",
+      "KDR",
+      "SP1"
+    ],
+    "Elabela signaling": [
+      "FN1",
+      "ACE2",
+      "NOS3",
+      "COL1A1",
+      "FOXO3",
+      "BAX",
+      "IL1B",
+      "ACE",
+      "SOD2",
+      "ICAM1",
+      "NLRP3",
+      "MMP9",
+      "IL2",
+      "SMAD3"
+    ],
+    "SARS-CoV-2 mitochondrial chronic oxidative stress and endothelial dysfunction": [
+      "ACE",
+      "ACE2",
+      "NLRP3"
+    ],
+    "Apoptotic execution phase": [
+      "HMGB1",
+      "MAPT"
+    ],
+    "Microtubule cytoskeleton regulation": [
+      "MAPT"
+    ],
+    "Copper homeostasis": [
+      "FOXO3",
+      "SP1",
+      "MAPT",
+      "SOD1"
+    ],
+    "ANK2 pathway in epilepsy development": [
+      "MAPT"
+    ],
+    "Suppression of HMGB1-mediated inflammation by THBD": [
+      "HMGB1"
+    ],
+    "Advanced glycosylation endproduct receptor signaling": [
+      "HMGB1"
+    ],
+    "Base excision repair": [
+      "HMGB1"
+    ],
+    "Burn wound healing": [
+      "FN1",
+      "COL1A1",
+      "CXCL12",
+      "BAX",
+      "VEGFA",
+      "IL1B",
+      "HGF",
+      "NOD2",
+      "HMGB1",
+      "MMP3",
+      "MMP1",
+      "ICAM1",
+      "KDR",
+      "CXCR4",
+      "MMP9",
+      "SMAD3",
+      "TLR9",
+      "TLR2"
+    ],
+    "DNA repair pathways, full network": [
+      "HMGB1",
+      "ATM"
+    ],
+    "Retinoblastoma gene in cancer": [
+      "HMGB1",
+      "DNMT1"
+    ],
+    "TAK1 activates NF-kB by phosphorylation and activation of IKK complex": [
+      "HMGB1",
+      "NOD2"
+    ],
+    "DNA damage response (only ATM dependent)": [
+      "ATM",
+      "LDLR",
+      "FOXO3",
+      "BAX",
+      "HMGB1",
+      "SOD2",
+      "SMAD3"
+    ],
+    "DDX58/IFIH1-mediated induction of interferon-alpha/beta": [
+      "HMGB1"
+    ],
+    "Autophagy in pancreatic ductal adenocarcinoma": [
+      "HMGB1",
+      "PRKN",
+      "NFE2L2"
+    ],
+    "Regulation of TLR by endogenous ligand": [
+      "HMGB1",
+      "CD14",
+      "TLR2"
+    ],
+    "ADHD and autism (ASD) pathways": [
+      "NOS3",
+      "CYP3A4",
+      "DNMT1",
+      "MET",
+      "CYP2C9",
+      "MTHFR",
+      "ACE",
+      "CYP2C19",
+      "SOD2",
+      "SOD1",
+      "NOS2"
+    ],
+    "FOXO-mediated transcription of oxidative stress, metabolic and neuronal genes": [
+      "FOXO3",
+      "SOD2"
+    ],
+    "Oxidative stress response": [
+      "SOD2",
+      "NFE2L2",
+      "HMOX1",
+      "SOD1",
+      "SP1"
+    ],
+    "Mitochondrial biogenesis": [
+      "SOD2"
+    ],
+    "Deregulated CDK5 triggers multiple neurodegenerative pathways in Alzheimer's disease models": [
+      "FOXO3",
+      "SOD2"
+    ],
+    "Detoxification of reactive oxygen species": [
+      "SOD2",
+      "SOD1"
+    ],
+    "Male infertility": [
+      "AR",
+      "NOS3",
+      "ATM",
+      "NOS2",
+      "ABCB1",
+      "MTHFR",
+      "PON1",
+      "SOD2",
+      "NFE2L2",
+      "MMP9",
+      "AHR"
+    ],
+    "Gene and protein expression by JAK-STAT signaling after Interleukin-12 stimulation": [
+      "SOD2",
+      "MIF",
+      "IL10",
+      "SOD1"
+    ],
+    "Proteasome degradation": [
+      "HLA-B",
+      "HLA-G"
+    ],
+    "Immunoregulatory interactions between lymphoid and non-lymphoid cells": [
+      "AR",
+      "ICAM1",
+      "HLA-G"
+    ],
+    "Ebola virus infection in host": [
+      "HLA-B",
+      "CAV1",
+      "IGF1R",
+      "HLA-G"
+    ],
+    "Physico-chemical features and toxicity-associated pathways": [
+      "FN1",
+      "SOD1"
+    ],
+    "Response to elevated platelet cytosolic Ca ions": [
+      "FN1",
+      "ALB",
+      "HGF",
+      "SOD1"
+    ],
+    "Extracellular vesicles in the crosstalk of cardiac cells": [
+      "MMP9",
+      "SOD1"
+    ],
+    "Amyotrophic lateral sclerosis (ALS)": [
+      "BAX",
+      "SOD1"
+    ],
+    "CYP2E1 activation leading to neurodegeneration": [
+      "NFE2L2",
+      "SOD1"
+    ],
+    "Regulation of actin cytoskeleton": [
+      "FN1",
+      "CD14",
+      "F2",
+      "FGF2"
+    ],
+    "Gamma carboxylation, hypusine formation and arylsulfatase activation": [
+      "F2"
+    ],
+    "Phase I biotransformations, non-P450": [
+      "PON1"
+    ],
+    "Protein repair": [
+      "MET"
+    ],
+    "Hippo signaling regulation": [
+      "SMAD3",
+      "IGF1R",
+      "MET",
+      "KDR"
+    ],
+    "Non-small cell lung cancer": [
+      "FOXO3",
+      "BAX",
+      "MET",
+      "HGF"
+    ],
+    "Phase II": [
+      "MET",
+      "GSTM1"
+    ],
+    "Semaphorin interactions": [
+      "MET"
+    ],
+    "tRNA modification in the nucleus and cytosol": [
+      "MET"
+    ],
+    "Axon guidance": [
+      "CXCL12",
+      "MET",
+      "CXCR4"
+    ],
+    "Kisspeptin/kisspeptin receptor system in the ovary": [
+      "MET",
+      "MMP9"
+    ],
+    "Eukaryotic translation initiation": [
+      "MET"
+    ],
+    "Mitochondrial translation": [
+      "MET"
+    ],
+    "Influenza Infection": [
+      "MET"
+    ],
+    "Tryptophan catabolism": [
+      "MET"
+    ],
+    "Synthesis of wybutosine at G37 of tRNA(Phe)": [
+      "MET"
+    ],
+    "miR-targeted genes in muscle cell": [
+      "COL1A1",
+      "CXCL12",
+      "MET",
+      "EZH2",
+      "ABCG2",
+      "HMOX1",
+      "FGF2"
+    ],
+    "Glioblastoma signaling": [
+      "ATM",
+      "FOXO3",
+      "MET",
+      "IGF1R"
+    ],
+    "nsp1 from SARS-CoV-2 inhibits translation initiation in the host cell": [
+      "MET"
+    ],
+    "Hepatocyte growth factor receptor signaling": [
+      "PTGS2",
+      "MET",
+      "HGF"
+    ],
+    "PIP3 activates AKT signaling": [
+      "NOS3",
+      "FOXO3",
+      "MET",
+      "HGF",
+      "FGF2"
+    ],
+    "MET in type 1 papillary renal cell carcinoma": [
+      "MET",
+      "HGF"
+    ],
+    "Transport of inorganic cations/anions and amino acids/oligopeptides": [
+      "MET"
+    ],
+    "TGF-beta signaling": [
+      "FN1",
+      "MET",
+      "MMP1",
+      "FOXP3",
+      "SMAD3",
+      "CAV1",
+      "SP1"
+    ],
+    "Listeria monocytogenes entry into host cells": [
+      "MET"
+    ],
+    "Receptor tyrosine kinase (RTK) family": [
+      "MET"
+    ],
+    "miR-targeted genes in squamous cell": [
+      "HMOX1",
+      "MET",
+      "FGF2"
+    ],
+    "NRP1-triggered signaling in pancreatic cancer": [
+      "COL1A1",
+      "MET",
+      "VEGFA",
+      "HGF",
+      "MMP9",
+      "SMAD3"
+    ],
+    "Androgen receptor network in prostate cancer": [
+      "AR",
+      "ATM",
+      "BAX",
+      "MET",
+      "MMP1",
+      "HGF",
+      "SMAD3",
+      "SP1"
+    ],
+    "Focal adhesion": [
+      "FN1",
+      "IGF1R",
+      "COL1A1",
+      "MET",
+      "HGF",
+      "CAV1",
+      "KDR"
+    ],
+    "Signaling by MET": [
+      "MET",
+      "HGF"
+    ],
+    "Eukaryotic translation elongation": [
+      "MET"
+    ],
+    "Hippo-Merlin signaling dysregulation": [
+      "IGF1R",
+      "MET",
+      "CD44",
+      "CXCL10",
+      "KDR"
+    ],
+    "Visual phototransduction": [
+      "MET"
+    ],
+    "miR-targeted genes in epithelium": [
+      "COL1A1",
+      "HMOX1",
+      "MET",
+      "EZH2"
+    ],
+    "Ras signaling": [
+      "IGF1R",
+      "MET",
+      "KDR"
+    ],
+    "tRNA aminoacylation": [
+      "MET"
+    ],
+    "Pathways into methionine and folate cycles": [
+      "DNMT1",
+      "MET",
+      "MTHFR"
+    ],
+    "Choline catabolism": [
+      "MET"
+    ],
+    "Nuclear receptors": [
+      "AR",
+      "PPARG",
+      "VDR"
+    ],
+    "Primary ovarian insufficiency": [
+      "AR",
+      "ATM",
+      "CAV1",
+      "WT1"
+    ],
+    "Targeted agents in triple negative breast cancer": [
+      "AR"
+    ],
+    "Cell surface interactions at the vascular wall": [
+      "AR",
+      "FN1",
+      "MMP1",
+      "CD44",
+      "CAV1",
+      "MIF"
+    ],
+    "Anti-inflammatory response favouring Leishmania parasite infection": [
+      "AR",
+      "IL10"
+    ],
+    "RHO GTPases activate PKNs": [
+      "AR"
+    ],
+    "Disorders of mitochondrial homeostatis, dynamics, protein import, and quality control": [
+      "AR",
+      "PRKN"
+    ],
+    "FCGR3A-mediated phagocytosis": [
+      "AR"
+    ],
+    "Activated PKN1 stimulates transcription of AR-regulated genes KLK2 and KLK3": [
+      "AR"
+    ],
+    "Biosynthesis and regeneration of tetrahydrobiopterin and catabolism of phenylalanine": [
+      "AR"
+    ],
+    "Fcgamma receptor (FCGR) dependent phagocytosis": [
+      "AR"
+    ],
+    "Generic transcription pathway": [
+      "AR",
+      "PPARG",
+      "VDR"
+    ],
+    "Thyroid hormones production and peripheral downstream signaling effects": [
+      "AR",
+      "PPARG"
+    ],
+    "Signaling by the B Cell Receptor (BCR)": [
+      "AR"
+    ],
+    "miRNA regulation of prostate cancer signaling": [
+      "AR"
+    ],
+    "Intracellular trafficking proteins involved in CMT neuropathy": [
+      "AR"
+    ],
+    "Binding and uptake of ligands by scavenger receptors": [
+      "AR",
+      "COL1A1",
+      "ALB"
+    ],
+    "HSP90 chaperone cycle for steroid hormone receptors (SHR)": [
+      "AR"
+    ],
+    "SUMOylation of intracellular receptors": [
+      "AR",
+      "PPARG",
+      "VDR"
+    ],
+    "Fc epsilon receptor (FCERI) signaling": [
+      "AR"
+    ],
+    "GLP-1 secretion from intestine to portal vein": [
+      "AR"
+    ],
+    "Transcriptional regulation by RUNX2": [
+      "AR",
+      "COL1A1",
+      "BAX"
+    ],
+    "Assembly of collagen fibrils and other multimeric structures": [
+      "COL1A1",
+      "MMP3",
+      "MMP9"
+    ],
+    "miR-509-3p alteration of YAP1/ECM axis": [
+      "FN1",
+      "COL1A1"
+    ],
+    "Fibrotic response of trabecular meshwork cells to TGFB3 and ENPP2 in aqueous humor": [
+      "FN1",
+      "COL1A1",
+      "SMAD3"
+    ],
+    "Angiotensin II receptor type 1 pathway": [
+      "ACE2",
+      "COL1A1",
+      "SMAD3",
+      "HIF1A",
+      "SP1"
+    ],
+    "Collagen chain trimerization": [
+      "COL1A1"
+    ],
+    "Inflammatory response pathway": [
+      "FN1",
+      "COL1A1",
+      "IL2"
+    ],
+    "Collagen biosynthesis and modifying enzymes": [
+      "COL1A1"
+    ],
+    "Type I collagen synthesis in the context of osteogenesis imperfecta": [
+      "COL1A1"
+    ],
+    "IL19 signaling": [
+      "COL1A1",
+      "MMP1",
+      "IL1B",
+      "IL10",
+      "CXCR4",
+      "MMP9",
+      "SMAD3"
+    ],
+    "Iron uptake and transport": [
+      "ABCG2",
+      "HMOX1",
+      "HFE"
+    ],
+    "miR-targeted genes in leukocytes": [
+      "HMOX1"
+    ],
+    "Nuclear receptors meta-pathway": [
+      "PTGS2",
+      "VDR",
+      "CYP3A4",
+      "BAX",
+      "IL1B",
+      "HGF",
+      "ABCB1",
+      "CYP2C9",
+      "CYP2C19",
+      "HMOX1",
+      "NFE2L2",
+      "GSTM1",
+      "IL2",
+      "AHR",
+      "SP1"
+    ],
+    "Overview of nanoparticle effects": [
+      "PTGS2",
+      "BAX",
+      "HMOX1"
+    ],
+    "Insertion of tail-anchored proteins into the endoplasmic reticulum membrane": [
+      "HMOX1"
+    ],
+    "IL10 anti-inflammatory signaling": [
+      "HMOX1",
+      "IL10"
+    ],
+    "Photodynamic therapy-induced NFE2L2 (NRF2) survival signaling": [
+      "NFE2L2",
+      "ABCG2",
+      "HMOX1"
+    ],
+    "Ferroptosis": [
+      "HMOX1"
+    ],
+    "NRF2 pathway": [
+      "NFE2L2",
+      "GSTM1",
+      "HMOX1",
+      "HGF"
+    ],
+    "Familial  hyperlipidemia type 1": [
+      "LDLR"
+    ],
+    "Statin inhibition of cholesterol production": [
+      "LDLR",
+      "ABCA1"
+    ],
+    "Cholestasis": [
+      "LDLR"
+    ],
+    "Metabolic pathway of LDL, HDL and TG, including diseases": [
+      "LDLR",
+      "PCSK9",
+      "ABCA1"
+    ],
+    "Lipid particles composition": [
+      "LDLR"
+    ],
+    "Plasma lipoprotein assembly, remodeling, and clearance": [
+      "LDLR",
+      "ALB",
+      "PCSK9",
+      "ABCA1"
+    ],
+    "Cholesterol biosynthesis pathway in hepatocytes": [
+      "LDLR",
+      "ABCA1"
+    ],
+    "Wnt signaling and pluripotency": [
+      "CD44",
+      "LDLR"
+    ],
+    "Bile acid synthesis and enterohepatic circulation": [
+      "LDLR"
+    ],
+    "Evolocumab mechanism to reduce LDL cholesterol": [
+      "LDLR",
+      "PCSK9"
+    ],
+    "Liver steatosis adverse outcome pathway": [
+      "PPARG",
+      "LDLR",
+      "AHR"
+    ],
+    "Fatty acid and lipoprotein transport in hepatocytes": [
+      "LDLR",
+      "PCSK9",
+      "ABCA1"
+    ],
+    "Familial hyperlipidemia type 2": [
+      "LDLR",
+      "PCSK9"
+    ],
+    "Familial hyperlipidemia type 5": [
+      "LDLR"
+    ],
+    "Clathrin-mediated endocytosis": [
+      "LDLR"
+    ],
+    "Metabolic reprogramming in pancreatic cancer": [
+      "LDLR"
+    ],
+    "PCSK9-mediated LDL receptor degradation": [
+      "LDLR",
+      "PCSK9"
+    ],
+    "Familial hyperlipidemia type 4": [
+      "LDLR"
+    ],
+    "Familial hyperlipidemia type 3": [
+      "LDLR"
+    ],
+    "22q11.2 copy number variation syndrome": [
+      "PRKN"
+    ],
+    "22q11.2 distal CNV": [
+      "PRKN"
+    ],
+    "Parkin-ubiquitin proteasomal system pathway": [
+      "PRKN"
+    ],
+    "Smith-Magenis and Potocki-Lupski syndrome copy number variation": [
+      "PRKN",
+      "BAX",
+      "IL1B"
+    ],
+    "Aggrephagy": [
+      "PRKN",
+      "CFTR"
+    ],
+    "Sildenafil treatment": [
+      "PRKN",
+      "NOS3",
+      "NOS2"
+    ],
+    "Mammary gland development: involution": [
+      "BAX",
+      "MMP9"
+    ],
+    "Activation of Matrix Metalloproteinases": [
+      "MMP1",
+      "MMP3",
+      "MMP9"
+    ],
+    "Endochondral ossification": [
+      "FGF2",
+      "VEGFA",
+      "IGF1R",
+      "MMP9"
+    ],
+    "Bladder cancer": [
+      "MMP1",
+      "VEGFA",
+      "MMP9"
+    ],
+    "PPAR Beta/Delta pathway": [
+      "PTGS2",
+      "IL1B",
+      "MMP9"
+    ],
+    "Affected pathways in Duchenne muscular dystrophy": [
+      "IL10",
+      "IL1B",
+      "MMP9",
+      "SMAD3",
+      "MPO",
+      "NOS2"
+    ],
+    "Epithelial to mesenchymal transition in colorectal cancer": [
+      "FN1",
+      "EZH2",
+      "MMP9",
+      "SMAD3",
+      "HIF1A"
+    ],
+    "Photodynamic therapy-induced NF-kB survival signaling": [
+      "PTGS2",
+      "VEGFA",
+      "IL1B",
+      "MMP3",
+      "MMP1",
+      "ICAM1",
+      "MMP9",
+      "IL2"
+    ],
+    "Collagen degradation": [
+      "MMP1",
+      "MMP3",
+      "MMP9"
+    ],
+    "Matrix metalloproteinases": [
+      "MMP1",
+      "MMP3",
+      "MMP9"
+    ],
+    "EPH-Ephrin signaling": [
+      "MMP9"
+    ],
+    "Neovascularization processes": [
+      "SMAD3",
+      "HIF1A",
+      "CXCR4",
+      "MMP9"
+    ],
+    "Endochondral ossification with skeletal dysplasias": [
+      "FGF2",
+      "VEGFA",
+      "IGF1R",
+      "MMP9"
+    ],
+    "Angiogenesis": [
+      "VEGFA",
+      "FGF2",
+      "HIF1A",
+      "MMP9"
+    ],
+    "Angiogenesis overview": [
+      "VEGFA",
+      "NOS3",
+      "KDR",
+      "MMP9"
+    ],
+    "TNF-related weak inducer of apoptosis (TWEAK) signaling": [
+      "CCL5",
+      "MMP9"
+    ],
+    "Degradation of the extracellular matrix": [
+      "CD44",
+      "MMP3",
+      "MMP1",
+      "MMP9"
+    ],
+    "Extra-nuclear estrogen signaling": [
+      "IGF1R",
+      "NOS3",
+      "FOXO3",
+      "MMP3",
+      "MMP9",
+      "CAV1"
+    ],
+    "MTHFR deficiency": [
+      "DNMT1",
+      "MTHFR"
+    ],
+    "Ethanol effects on histone modifications": [
+      "MTHFR"
+    ],
+    "Fluoropyrimidine activity": [
+      "ABCG2",
+      "MTHFR"
+    ],
+    "Spina bifida": [
+      "DNMT1",
+      "MTHFR"
+    ],
+    "Folate-alcohol and cancer pathway hypotheses": [
+      "MTHFR"
+    ],
+    "ACE inhibitor pathway": [
+      "ACE",
+      "ACE2",
+      "NOS3"
+    ],
+    "WikiPathways Test: Metabolites and Metabolic Interactions": [
+      "ACE"
+    ],
+    "Renin-angiotensin-aldosterone system (RAAS)": [
+      "ACE"
+    ],
+    "SARS-CoV-2 and ACE2 receptor: molecular mechanisms": [
+      "ACE",
+      "ACE2"
+    ],
+    "COVID-19 adverse outcome pathway": [
+      "ACE2",
+      "CXCL10",
+      "IL1B",
+      "IL10",
+      "ACE",
+      "IL2"
+    ],
+    "Downregulation of ACE2 by SARS-CoV-2 spike protein": [
+      "ACE",
+      "ACE2"
+    ],
+    "Mitochondrial immune response to SARS-CoV-2": [
+      "ACE",
+      "ACE2"
+    ],
+    "Renin Angiotensin System and Bradykinin pathways in COVID-19": [
+      "ACE2",
+      "NOS3",
+      "VDR",
+      "CYP3A4",
+      "IL1B",
+      "ACE"
+    ],
+    "Non-classical role of vitamin D": [
+      "ACE",
+      "ACE2"
+    ],
+    "Conversion of angiotensinogen to angiotensin II": [
+      "ACE"
+    ],
+    "Vitamin D in inflammatory diseases": [
+      "SMAD3",
+      "VDR"
+    ],
+    "Chromosomal and microsatellite instability in colorectal cancer": [
+      "PTGS2",
+      "SMAD3",
+      "BAX"
+    ],
+    "Hepatitis C and hepatocellular carcinoma": [
+      "PTGS2",
+      "VEGFA",
+      "MMP1",
+      "CD44",
+      "SMAD3",
+      "HIF1A",
+      "NOS2"
+    ],
+    "Catabolism of skeletal muscle in cachexia": [
+      "SMAD3",
+      "FOXO3",
+      "IL1B",
+      "IGF1R"
+    ],
+    "Pancreatic adenocarcinoma pathway": [
+      "SMAD3",
+      "BAX",
+      "VEGFA"
+    ],
+    "TGF-beta receptor signaling in skeletal dysplasias": [
+      "SMAD3"
+    ],
+    "Hypothesized pathways in pathogenesis of cardiovascular disease": [
+      "SMAD3"
+    ],
+    "TGFB / Smad signaling": [
+      "SMAD3"
+    ],
+    "TGF-beta signaling in thyroid cells for epithelial-mesenchymal transition": [
+      "FN1",
+      "SMAD3"
+    ],
+    "Cell cycle": [
+      "SMAD3",
+      "ATM"
+    ],
+    "Progeria-associated lipodystrophy": [
+      "SMAD3",
+      "PPARG"
+    ],
+    "Overlap between signal transduction pathways contributing to LMNA laminopathies": [
+      "SMAD3",
+      "PPARG"
+    ],
+    "Envelope proteins and their potential roles in EDMD physiopathology": [
+      "SMAD3"
+    ],
+    "Canonical and non-canonical TGF-B signaling": [
+      "SMAD3"
+    ],
+    "TGF-beta receptor signaling": [
+      "SMAD3"
+    ],
+    "Endoderm differentiation": [
+      "SMAD3",
+      "EZH2"
+    ],
+    "Transcriptional activity of SMAD2/SMAD3:SMAD4 heterotrimer": [
+      "SMAD3",
+      "SP1"
+    ],
+    "Extracellular vesicle-mediated signaling in recipient cells": [
+      "SMAD3",
+      "HGF"
+    ],
+    "Ovarian infertility": [
+      "SMAD3",
+      "ATM",
+      "VDR"
+    ],
+    "Signaling by NODAL": [
+      "SMAD3",
+      "FOXO3"
+    ],
+    "Factors and pathways affecting insulin-like growth factor (IGF1)-Akt signaling": [
+      "SMAD3",
+      "IGF1R"
+    ],
+    "Signaling by TGF-beta receptor complex": [
+      "SMAD3"
+    ],
+    "Interleukin-1 family signaling": [
+      "SMAD3",
+      "IL1B",
+      "NOD2"
+    ],
+    "Signaling by Activin": [
+      "SMAD3"
+    ],
+    "Defensins": [
+      "TLR2"
+    ],
+    "Ulcerative colitis signaling": [
+      "NOD2",
+      "IL10",
+      "TLR2",
+      "FOXP3"
+    ],
+    "MyD88:MAL(TIRAP) cascade initiated on plasma membrane": [
+      "CD14",
+      "TLR2"
+    ],
+    "A network map of RORgt mediated signaling pathway in inflammatory diseases": [
+      "BAX",
+      "MMP3",
+      "IL1B",
+      "NOD2",
+      "IL10",
+      "PPARG",
+      "IL2",
+      "TLR9",
+      "AHR",
+      "TLR2",
+      "FOXP3"
+    ],
+    "Transcriptional regulation of memory B cell differentiation": [
+      "TLR9",
+      "TLR2",
+      "EZH2"
+    ],
+    "MYD88 distinct input-output pathway": [
+      "TLR9",
+      "TLR2"
+    ],
+    "Class I MHC mediated antigen processing and presentation": [
+      "CD14",
+      "HLA-B",
+      "TLR2"
+    ],
+    "Inflammatory bowel disease signaling": [
+      "IL10",
+      "NOD2",
+      "IL2",
+      "TLR2",
+      "FOXP3"
+    ],
+    "Toll-like receptor signaling": [
+      "CCL5",
+      "CD14",
+      "IL1B",
+      "CXCL10",
+      "TLR9",
+      "TLR2"
+    ],
+    "Measles virus infection": [
+      "BAX",
+      "IL1B",
+      "IL2",
+      "TLR9",
+      "TLR2"
+    ],
+    "LTF danger signal response pathway": [
+      "CD14",
+      "IL1B",
+      "TLR2"
+    ],
+    "ApoE and miR-146 in inflammation and atherosclerosis": [
+      "TLR2"
+    ],
+    "Toll-like receptor cascades": [
+      "CD14",
+      "TLR9",
+      "TLR2"
+    ],
+    "Toll-like receptor signaling related to MyD88": [
+      "TLR9",
+      "TLR2"
+    ],
+    "8p23.1 copy number variation syndrome": [
+      "TLR2"
+    ],
+    "Regulation of toll-like receptor signaling": [
+      "CCL5",
+      "CD14",
+      "IL1B",
+      "CXCL10",
+      "TLR9",
+      "TLR2"
+    ],
+    "Type I interferon induction and signaling during SARS-CoV-2 infection": [
+      "TLR9",
+      "ACE2",
+      "TLR2"
+    ],
+    "Platelet-mediated interactions with vascular and circulating cells": [
+      "CCL5",
+      "ICAM1",
+      "IL1B",
+      "TLR2"
+    ],
+    "Insulin-like Growth Factor-2 mRNA Binding Proteins binding to RNA": [
+      "CD44"
+    ],
+    "Hematopoietic stem cell differentiation": [
+      "MUC1",
+      "IL1B",
+      "CXCR4"
+    ],
+    "O-linked glycosylation": [
+      "MUC1"
+    ],
+    "Altered glycosylation of MUC1 in tumor microenvironment": [
+      "MUC1"
+    ],
+    "E3 ubiquitin ligases ubiquitinate target proteins": [
+      "HLA-B"
+    ],
+    "Interferon alpha/beta signaling": [
+      "HLA-B"
+    ],
+    "Interleukin-7 signaling": [
+      "HGF"
+    ],
+    "SARS-CoV-2 Infection": [
+      "ACE2"
+    ],
+    "Soluble ACE2-mediated cell entry of SARS-CoV-2": [
+      "ACE2"
+    ],
+    "Physiopathology of endothelial dysfunction in coronavirus disease": [
+      "ICAM1",
+      "ACE2"
+    ],
+    "SARS-CoV-1 Infection": [
+      "ACE2"
+    ],
+    "COVID-19 structural coverage map": [
+      "ACE2"
+    ],
+    "Physiopathology of endothelial dysfunction in COVID-19": [
+      "ICAM1",
+      "ACE2"
+    ],
+    "SARS-CoV-2 altering angiogenesis via NRP1": [
+      "VEGFA",
+      "ACE2",
+      "KDR"
+    ],
+    "SARS coronavirus and innate immunity": [
+      "ACE2"
+    ],
+    "ROS in COVID-19 endothelial dysfunction": [
+      "ICAM1",
+      "ACE2"
+    ],
+    "ACE2 inhibition leads to pulmonary fibrosis": [
+      "ACE2"
+    ],
+    "Photodynamic therapy-induced HIF-1 survival signaling": [
+      "PTGS2",
+      "IGFBP3",
+      "BAX",
+      "VEGFA",
+      "HIF1A",
+      "NOS2"
+    ],
+    "Myometrial relaxation and contraction pathways": [
+      "SP1",
+      "NOS3",
+      "IL1B",
+      "IGFBP3"
+    ],
+    "16p11.2 proximal deletion syndrome": [
+      "PPARG",
+      "IGFBP3"
+    ],
+    "TP53 Regulates Transcription of Cell Death Genes": [
+      "BAX",
+      "IGFBP3"
+    ],
+    "Vitamin D receptor pathway": [
+      "IGFBP3",
+      "VDR",
+      "CD14",
+      "CYP3A4",
+      "CYP2C9",
+      "HIF1A"
+    ],
+    "GPCRs, other": [
+      "CCR5"
+    ],
+    "G alpha (i) signaling events": [
+      "CCL5",
+      "CXCL12",
+      "CCR5",
+      "CXCR4",
+      "CXCL10"
+    ],
+    "FLT3 p.Gln640SerfsTer8 signaling": [
+      "CCR5"
+    ],
+    "Peptide GPCRs": [
+      "CCR5",
+      "CXCR4"
+    ],
+    "GPCRs, class A rhodopsin-like": [
+      "CCR5",
+      "CXCR4"
+    ],
+    "Cell interactions in pancreatic cancer microenvironment": [
+      "CCL5",
+      "CXCL12",
+      "VEGFA",
+      "CCR5",
+      "CXCR4",
+      "CXCL10",
+      "KDR"
+    ],
+    "HIV Life Cycle": [
+      "CCR5",
+      "CXCR4"
+    ],
+    "T-cell receptor signaling": [
+      "CCR5",
+      "IL1B"
+    ],
+    "Selective expression of chemokine receptors during T-cell polarization": [
+      "IL2",
+      "CCR5",
+      "CXCR4"
+    ],
+    "Interleukin-10 signaling": [
+      "PTGS2",
+      "CCL5",
+      "IL1B",
+      "IL10",
+      "ICAM1",
+      "CCR5",
+      "CXCL10"
+    ],
+    "Class A/1 (rhodopsin-like receptors)": [
+      "CCL5",
+      "CXCL12",
+      "CCR5",
+      "CXCR4",
+      "CXCL10"
+    ],
+    "Signaling by ROBO receptors": [
+      "CXCL12",
+      "CXCR4"
+    ],
+    "Genes controlling nephrogenesis": [
+      "CXCL12",
+      "VEGFA",
+      "CXCR4",
+      "WT1",
+      "KDR"
+    ],
+    "2q37 copy number variation syndrome": [
+      "CXCL12",
+      "IL1B",
+      "CXCR4",
+      "ABCA1"
+    ],
+    "5q35 copy number variation": [
+      "IGF1R",
+      "CXCR4"
+    ],
+    "T cell modulation and desmoplasia in pancreatic cancer": [
+      "VDR",
+      "CXCL12",
+      "VEGFA",
+      "IL10",
+      "CXCR4"
+    ],
+    "Amplification and expansion of oncogenic pathways as metastatic traits": [
+      "VEGFA",
+      "CXCR4"
+    ],
+    "miRNA in muscle cell differentiation": [
+      "EZH2"
+    ],
+    "Growth factors and hormones in beta cell proliferation": [
+      "EZH2"
+    ],
+    "PTEN Regulation": [
+      "PPARG",
+      "EZH2"
+    ],
+    "Interactome of polycomb repressive complex 2 (PRC2)": [
+      "EZH2"
+    ],
+    "Histone modifications": [
+      "EZH2"
+    ],
+    "Oxidative Stress Induced Senescence": [
+      "EZH2"
+    ],
+    "Tumor suppressor activity of SMARCB1": [
+      "EZH2"
+    ],
+    "Hallmark of cancer: non-mutational epigenetic reprogramming": [
+      "DNMT1",
+      "EZH2"
+    ],
+    "Cell differentiation": [
+      "EZH2"
+    ],
+    "FBXL10 enhancement of MAP/ERK signaling in diffuse large B-cell lymphoma": [
+      "EZH2"
+    ],
+    "Activation of anterior HOX genes in hindbrain development during early embryogenesis": [
+      "EZH2"
+    ],
+    "ncRNAs in Wnt signaling in hepatocellular carcinoma": [
+      "EZH2"
+    ],
+    "Transcriptional regulation by E2F6": [
+      "EZH2"
+    ],
+    "PRC2 methylates histones and DNA": [
+      "DNMT1",
+      "EZH2"
+    ],
+    "lncRNA in canonical Wnt signaling and colorectal cancer": [
+      "EZH2"
+    ],
+    "Glucocorticoid biosynthesis": [
+      "CYP3A4"
+    ],
+    "Farnesoid X receptor pathway": [
+      "CYP3A4"
+    ],
+    "Constitutive androstane receptor pathway": [
+      "CYP3A4",
+      "ABCB1",
+      "CYP2C19",
+      "CYP2C9",
+      "SP1"
+    ],
+    "Liver X receptor pathway": [
+      "CYP3A4"
+    ],
+    "Fatty acid omega-oxidation": [
+      "CYP3A4"
+    ],
+    "Oxysterols derived from cholesterol": [
+      "CYP3A4"
+    ],
+    "Drug induction of bile acid pathway": [
+      "CYP3A4",
+      "ABCB1",
+      "VDR"
+    ],
+    "Phase I": [
+      "CYP2C19",
+      "CYP3A4",
+      "AHR",
+      "CYP2C9"
+    ],
+    "Colchicine metabolic pathway": [
+      "CYP3A4"
+    ],
+    "Nifedipine activity": [
+      "CYP3A4"
+    ],
+    "Octadecanoid formation from linoleic acid": [
+      "CYP2C19",
+      "CYP3A4",
+      "CYP2C9"
+    ],
+    "Angiopoietin-like protein 8 regulatory pathway": [
+      "CYP3A4"
+    ],
+    "Cannabinoid receptor signaling": [
+      "CYP2C19",
+      "CYP3A4",
+      "AHR",
+      "CYP2C9"
+    ],
+    "Metapathway biotransformation Phase I and II": [
+      "CYP2C9",
+      "CYP3A4",
+      "CYP2C19",
+      "GSTM1"
+    ],
+    "Oxidation by cytochrome P450": [
+      "CYP2C19",
+      "CYP3A4",
+      "CYP2C9"
+    ],
+    "Pregnane X receptor pathway": [
+      "CYP2C19",
+      "CYP3A4",
+      "ABCB1",
+      "CYP2C9"
+    ],
+    "Irinotecan pathway": [
+      "CYP3A4",
+      "ABCG2"
+    ],
+    "Omega-3-fatty acids in senescence": [
+      "PTGS2",
+      "CYP3A4",
+      "CYP2C9"
+    ],
+    "Aflatoxin activation and detoxification": [
+      "CYP3A4"
+    ],
+    "Biosynthesis of DHA-derived SPMs": [
+      "PTGS2",
+      "CYP3A4",
+      "CYP2C9"
+    ],
+    "Androgen biosynthesis": [
+      "CYP3A4"
+    ],
+    "Pathways affected in adenoid cystic carcinoma": [
+      "ATM",
+      "FOXO3"
+    ],
+    "Meiotic recombination": [
+      "ATM"
+    ],
+    "Homologous recombination": [
+      "ATM"
+    ],
+    "DDX1 as a regulatory component of the Drosha microprocessor": [
+      "ATM"
+    ],
+    "TP53 Regulates Transcription of DNA Repair Genes": [
+      "ATM"
+    ],
+    "G1 to S cell cycle control": [
+      "ATM"
+    ],
+    "DNA Double Strand Break Response": [
+      "ATM"
+    ],
+    "DNA damage response": [
+      "ATM",
+      "BAX"
+    ],
+    "DNA IR-damage and cellular response via ATR": [
+      "ATM",
+      "SP1"
+    ],
+    "Pexophagy": [
+      "ATM"
+    ],
+    "miRNA regulation of DNA damage response": [
+      "ATM",
+      "BAX"
+    ],
+    "Fanconi anemia": [
+      "ATM"
+    ],
+    "DNA IR-double strand breaks and cellular response via ATM": [
+      "ATM",
+      "BAX"
+    ],
+    "ATM signaling in development and disease": [
+      "ATM"
+    ],
+    "miRNAs involved in DNA damage response": [
+      "ATM"
+    ],
+    "FACT complex and DNA double-strand break repair": [
+      "ATM"
+    ],
+    "SMC1/SMC3 role in DNA damage": [
+      "ATM"
+    ],
+    "ATM signaling": [
+      "ATM"
+    ],
+    "TP53 network": [
+      "ATM",
+      "BAX"
+    ],
+    "Joubert syndrome": [
+      "ATM"
+    ],
+    "Hematopoietic stem cell gene regulation by GABP alpha/beta complex": [
+      "ATM",
+      "DNMT1",
+      "FOXO3"
+    ],
+    "DNA Damage/Telomere Stress Induced Senescence": [
+      "ATM"
+    ],
+    "NIPBL role in DNA damage": [
+      "ATM"
+    ],
+    "Lung adenocarcinoma (1)": [
+      "ATM"
+    ],
+    "miRNA regulation of p53 pathway in prostate cancer": [
+      "ATM",
+      "BAX"
+    ],
+    "Breast cancer pathway": [
+      "IGF1R",
+      "ATM",
+      "BAX",
+      "FGF2",
+      "SP1"
+    ],
+    "Integrated cancer pathway": [
+      "ATM",
+      "BAX"
+    ],
+    "MAP kinase activation": [
+      "NOD2"
+    ],
+    "Nod-like receptor (NLR) signaling": [
+      "NOD2"
+    ],
+    "ESR-mediated signaling": [
+      "CXCL12",
+      "SP1"
+    ],
+    "EV release from cardiac cells and their functional effects": [
+      "CXCL12"
+    ],
+    "Signaling by ERBB4": [
+      "CXCL12"
+    ],
+    "Parthanatos cell death signaling pathway": [
+      "MIF"
+    ],
+    "AOP416 KEs": [
+      "AHR"
+    ],
+    "AOP420 KE": [
+      "AHR"
+    ],
+    "Aryl hydrocarbon receptor signaling": [
+      "AHR"
+    ],
+    "Development and heterogeneity of the ILC family": [
+      "IL1B",
+      "AHR"
+    ],
+    "Tryptophan kynurenine pathway in post-COVID syndrome": [
+      "IL1B",
+      "AHR"
+    ],
+    "Aryl hydrocarbon receptor pathway": [
+      "PTGS2",
+      "BAX",
+      "VEGFA",
+      "IL1B",
+      "NFE2L2",
+      "IL2",
+      "AHR"
+    ],
+    "AOP417 KE": [
+      "AHR"
+    ],
+    "Kynurenine pathway and links to cell senescence": [
+      "AHR"
+    ],
+    "Hippo-YAP signaling": [
+      "CXCL10"
+    ],
+    "Interactions between immune cells and microRNAs in tumor microenvironment": [
+      "CXCL10",
+      "CCL5"
+    ],
+    "Cytosolic DNA-sensing pathway": [
+      "CXCL10",
+      "IL1B",
+      "CCL5"
+    ],
+    "Fibrin complement receptor 3 signaling": [
+      "CXCL10",
+      "CD14",
+      "NOS2"
+    ],
+    "15q11q13 copy number variation": [
+      "CCL5"
+    ],
+    "15q13.3 copy number variation syndrome": [
+      "CCL5"
+    ],
+    "Ebstein-Barr virus LMP1 signaling": [
+      "CCL5"
+    ],
+    "Transport of vitamins, nucleosides, and related molecules": [
+      "ALB"
+    ],
+    "Cytokines and inflammatory response": [
+      "IL2",
+      "IL10",
+      "IL1B"
+    ],
+    "Sickle cell disease": [
+      "IL1B"
+    ],
+    "Pro-inflammatory cytokines": [
+      "IL1B"
+    ],
+    "Monoamine transport and regulation": [
+      "IL1B"
+    ],
+    "C-type lectin receptors": [
+      "IL1B"
+    ],
+    "LDL- influence on CD14 and TLR4": [
+      "IL10",
+      "CD14",
+      "IL1B"
+    ],
+    "Serotonin transporter activity": [
+      "IL1B"
+    ],
+    "2q13 copy number variation syndrome": [
+      "IL2",
+      "IL1B"
+    ],
+    "Oligodendrocyte specification and differentiation, leading to myelin components for CNS": [
+      "IL1B"
+    ],
+    "Cytokine storm syndrome": [
+      "IL2",
+      "IL1B"
+    ],
+    "Signal transduction through IL1R": [
+      "IL1B"
+    ],
+    "IL1 signaling": [
+      "IL1B"
+    ],
+    "Interleukin-1 (IL-1) structural pathway": [
+      "IL1B"
+    ],
+    "Interleukin-1 processing": [
+      "IL1B"
+    ],
+    "PPAR-gamma pathway": [
+      "PTGS2",
+      "PPARG",
+      "IL1B"
+    ],
+    "Hunger and satiety": [
+      "LEP"
+    ],
+    "Synthesis, secretion, and deacylation of Ghrelin": [
+      "LEP"
+    ],
+    "Differentiation of white and brown adipocyte": [
+      "PPARG",
+      "LEP"
+    ],
+    "Incretin synthesis, secretion, and inactivation": [
+      "LEP"
+    ],
+    "Transcription factor regulation in adipogenesis": [
+      "PPARG",
+      "LEP"
+    ],
+    "Transcriptional regulation of white adipocyte differentiation": [
+      "PPARG",
+      "LEP"
+    ],
+    "Leptin and adiponectin": [
+      "LEP"
+    ],
+    "AMP-activated protein kinase signaling": [
+      "LEP"
+    ],
+    "Vitamin D-sensitive calcium signaling in depression": [
+      "NFE2L2",
+      "VDR"
+    ],
+    "Hereditary leiomyomatosis and renal cell carcinoma pathway": [
+      "VEGFA",
+      "HIF1A",
+      "NFE2L2"
+    ],
+    "Photodynamic therapy-induced unfolded protein response": [
+      "NFE2L2"
+    ],
+    "Head and neck squamous cell carcinoma": [
+      "VEGFA",
+      "IGF1R",
+      "NFE2L2"
+    ],
+    "Quercetin and Nf-kB / AP-1 induced apoptosis": [
+      "VEGFA",
+      "NFE2L2",
+      "MMP1"
+    ],
+    "Photodynamic therapy-induced AP-1 survival signaling": [
+      "IL2",
+      "BAX",
+      "NFE2L2"
+    ],
+    "PI3K Cascade": [
+      "TLR9",
+      "FGF2"
+    ],
+    "Endometrial cancer": [
+      "FOXO3",
+      "BAX",
+      "FGF2"
+    ],
+    "MicroRNAs in cardiomyocyte hypertrophy": [
+      "FGF2"
+    ],
+    "4p16.3 copy number variation": [
+      "FGF2"
+    ],
+    "Extracellular matrix organization": [
+      "FN1",
+      "FGF2"
+    ],
+    "Signaling by FGFR3": [
+      "FGF2"
+    ],
+    "Neural crest differentiation": [
+      "FGF2"
+    ],
+    "Syndecan interactions": [
+      "FGF2"
+    ],
+    "Osteoblast differentiation and related diseases": [
+      "PPARG",
+      "FGF2"
+    ],
+    "Oligodendrocyte development": [
+      "FGF2"
+    ],
+    "Signaling by FGFR4": [
+      "FGF2"
+    ],
+    "POU5F1 (OCT4), SOX2, NANOG activate genes related to proliferation": [
+      "FGF2"
+    ],
+    "Embryonic stem cell pluripotency pathways": [
+      "FGF2"
+    ],
+    "DYRK1A involvement regarding cell proliferation in brain development": [
+      "FGF2"
+    ],
+    "Signaling by FGFR1": [
+      "FGF2"
+    ],
+    "Signaling by VEGF": [
+      "CAV1",
+      "VEGFA"
+    ],
+    "TCF dependent signaling in response to WNT": [
+      "CAV1"
+    ],
+    "Integrin-mediated cell adhesion": [
+      "CAV1"
+    ],
+    "FOXO-mediated transcription of cell cycle genes": [
+      "FOXO3",
+      "CAV1"
+    ],
+    "Signaling by NOTCH1": [
+      "HIF1A"
+    ],
+    "MicroRNA for targeting cancer growth and vascularization in glioblastoma": [
+      "VEGFA",
+      "HIF1A"
+    ],
+    "Clear cell renal cell carcinoma pathways": [
+      "VEGFA",
+      "HIF1A",
+      "KDR"
+    ],
+    "Signaling by PTK6": [
+      "HIF1A"
+    ],
+    "Cellular response to hypoxia": [
+      "VEGFA",
+      "HIF1A"
+    ],
+    "Type 2 papillary renal cell carcinoma": [
+      "VEGFA",
+      "HIF1A"
+    ],
+    "lncRNA-mediated mechanisms of therapeutic resistance": [
+      "HIF1A"
+    ],
+    "HIF1A and PPARG in hypertrophic cardiomyopathy": [
+      "PPARG",
+      "HIF1A"
+    ],
+    "FGF23 signaling in hypophosphatemic rickets and related disorders": [
+      "HIF1A"
+    ],
+    "Caffeine in blood vessels": [
+      "NOS3"
+    ],
+    "Effects of nitric oxide": [
+      "NOS3",
+      "NOS2"
+    ],
+    "ROS and RNS production in phagocytes": [
+      "NOS3",
+      "NOS2"
+    ],
+    "Platelet homeostasis": [
+      "NOS3",
+      "NOS2"
+    ],
+    "Aspirin and miRNAs": [
+      "PTGS2",
+      "VEGFA",
+      "NOS3"
+    ],
+    "Corticotropin-releasing hormone signaling": [
+      "IL2",
+      "NOS3",
+      "SP1"
+    ],
+    "RIOK1 and RIOK2 in EGFR- and PI3K-mediated tumorigenesis": [
+      "FOXO3"
+    ],
+    "FOXO-mediated transcription of cell death genes": [
+      "FOXO3"
+    ],
+    "FLT3 signaling": [
+      "FOXO3"
+    ],
+    "Transcriptional regulation by RUNX3": [
+      "FOXO3"
+    ],
+    "MAPK6/MAPK4 signaling": [
+      "FOXO3"
+    ],
+    "Leukocyte-intrinsic Hippo pathway functions": [
+      "FOXO3",
+      "FOXP3"
+    ],
+    "Imatinib and chronic myeloid leukemia": [
+      "FOXO3",
+      "ABCG2",
+      "ABCB1"
+    ],
+    "PI3K-AKT-mTOR signaling and therapeutic opportunities in prostate cancer": [
+      "FOXO3"
+    ],
+    "Small cell lung cancer": [
+      "FN1",
+      "PTGS2",
+      "BAX",
+      "NOS2"
+    ],
+    "miRNA targets in ECM and membrane receptors": [
+      "FN1"
+    ],
+    "Mammary gland development: puberty": [
+      "FN1"
+    ],
+    "RAC1/PAK1/p38/MMP2 pathway": [
+      "FN1",
+      "BAX",
+      "NOS2"
+    ],
+    "Integrin signaling": [
+      "FN1"
+    ],
+    "Vedolizumab therapy for inflammatory bowel disease": [
+      "ICAM1"
+    ],
+    "p53 transcriptional gene network": [
+      "BAX",
+      "ICAM1"
+    ],
+    "Netrin-UNC5B signaling": [
+      "ICAM1",
+      "IL10",
+      "KDR"
+    ],
+    "RANKL/RANK signaling": [
+      "ICAM1"
+    ],
+    "Transcriptional regulation by the AP-2 (TFAP2) family of transcription factors": [
+      "VEGFA"
+    ],
+    "ROBO4 and VEGF signaling crosstalk": [
+      "VEGFA",
+      "KDR"
+    ],
+    "10q22q23 copy number variation": [
+      "PPARG",
+      "VEGFA"
+    ],
+    "Pathophysiological roles of DUX4 in FSHD1": [
+      "VEGFA"
+    ],
+    "GPR143 in melanocytes and retinal pigment epithelium cells": [
+      "VEGFA"
+    ],
+    "Heart development": [
+      "VEGFA"
+    ],
+    "Peroxisomal protein import": [
+      "NOS2"
+    ],
+    "Thermogenesis": [
+      "PPARG"
+    ],
+    "Prostaglandin synthesis and regulation": [
+      "PTGS2",
+      "PPARG"
+    ],
+    "Transcriptional cascade regulating adipogenesis": [
+      "PPARG"
+    ],
+    "Familial partial lipodystrophy": [
+      "PPARG"
+    ],
+    "Influence of laminopathies on Wnt signaling": [
+      "PPARG"
+    ],
+    "Wnt signaling, NetPath": [
+      "PPARG"
+    ],
+    "PPAR signaling": [
+      "PPARG",
+      "MMP1"
+    ],
+    "Biosynthesis of DPA-derived SPMs": [
+      "PTGS2"
+    ],
+    "Eicosanoid synthesis": [
+      "PTGS2"
+    ],
+    "Biosynthesis of EPA-derived SPMs": [
+      "PTGS2"
+    ],
+    "Glucocorticoid receptor pathway": [
+      "PTGS2"
+    ],
+    "Biosynthesis of electrophilic omega-3 PUFA oxo-derivatives": [
+      "PTGS2"
+    ],
+    "NSAIDs mechanism of action": [
+      "PTGS2"
+    ],
+    "Acetaminophen in analgesia and antipyresis": [
+      "PTGS2"
+    ],
+    "Gastrin-CREB signaling via PKC and MAPK": [
+      "MMP3"
+    ],
+    "NR1H2 and NR1H3-mediated signaling": [
+      "ABCA1"
+    ],
+    "Relationship between inflammation, COX-2 and EGFR": [
+      "MMP1"
+    ],
+    "Markers of kidney cell lineage": [
+      "WT1",
+      "KDR"
+    ],
+    "Polycystic kidney disease pathway": [
+      "IGF1R",
+      "CFTR",
+      "KDR"
+    ],
+    "Melanoma": [
+      "BAX",
+      "KDR"
+    ],
+    "Hallmark of Cancer: Resisting cell death through non-genotoxic carcinogenic ROS": [
+      "BAX"
+    ],
+    "Host-pathogen interaction of human coronaviruses": [
+      "BAX"
+    ],
+    "TP53 regulates transcription of cell cycle genes": [
+      "BAX"
+    ],
+    "Peroxiredoxin 2 induced ovarian failure": [
+      "BAX"
+    ],
+    "Apoptosis": [
+      "BAX",
+      "IGF1R"
+    ],
+    "Effects of MFN2 mutation": [
+      "BAX"
+    ],
+    "Pro-survival signaling of neuroprotectin D1": [
+      "BAX"
+    ],
+    "Nanomaterial induced apoptosis": [
+      "BAX"
+    ],
+    "Signaling by NTRK3 (TRKC)": [
+      "BAX"
+    ],
+    "Regucalcin in proximal tubule epithelial kidney cells": [
+      "BAX"
+    ],
+    "Apoptosis modulation and signaling": [
+      "BAX"
+    ],
+    "Intrinsic Pathway for Apoptosis": [
+      "BAX"
+    ],
+    "Mitochondrial fission and fusion": [
+      "BAX"
+    ],
+    "Apoptosis regulation by parathyroid hormone-related protein": [
+      "BAX"
+    ],
+    "TNF-alpha signaling": [
+      "BAX"
+    ],
+    "MyD88-independent TLR4 cascade": [
+      "CD14"
+    ],
+    "Tissue fate map": [
+      "CD14"
+    ],
+    "Acute myeloid leukemia": [
+      "CD14",
+      "MPO"
+    ],
+    "Pathogenic Escherichia coli infection": [
+      "CD14"
+    ],
+    "Proximal tubule transport": [
+      "ABCG2",
+      "ABCB1"
+    ],
+    "ABC-family proteins mediated transport": [
+      "ABCB1",
+      "CFTR"
+    ],
+    "Valproic acid pathway": [
+      "CYP2C9"
+    ],
+    "Effect of intestinal microbiome on anticoagulant response of vitamin K antagonists": [
+      "CYP2C9",
+      "VDR"
+    ],
+    "Arachidonate epoxygenase / epoxide hydrolase": [
+      "CYP2C9"
+    ],
+    "Diclofenac metabolic pathway": [
+      "CYP2C19",
+      "CYP2C9"
+    ],
+    "Estrogen signaling": [
+      "SP1"
+    ],
+    "RNA polymerase II transcribes snRNA genes": [
+      "SP1"
+    ],
+    "Estradiol regulation in porto-sinusoidal vascular disease": [
+      "SP1"
+    ],
+    "Initiation of transcription and translation elongation at the HIV-1 LTR": [
+      "SP1"
+    ],
+    "Mitochondrial gene expression": [
+      "SP1"
+    ],
+    "Oncogene Induced Senescence": [
+      "SP1"
+    ],
+    "Genetic causes of porto-sinusoidal vascular disease": [
+      "TLR9",
+      "SP1"
+    ],
+    "Estrogen receptor pathway": [
+      "SP1"
+    ],
+    "Activation of gene expression by SREBF (SREBP)": [
+      "SP1"
+    ],
+    "Signaling by type 1 insulin-like growth factor 1 receptor (IGF1R)": [
+      "IGF1R"
+    ],
+    "Insulin signaling": [
+      "IGF1R"
+    ],
+    "Formation of Fibrin Clot and the Clotting Cascade": [
+      "F5"
+    ],
+    "Primary focal segmental glomerulosclerosis (FSGS)": [
+      "WT1"
+    ],
+    "GDNF/RET signaling axis": [
+      "WT1"
+    ],
+    "Transcriptional regulation of testis differentiation": [
+      "WT1"
+    ],
+    "Nephrotic syndrome": [
+      "WT1"
+    ],
+    "Somatic sex determination": [
+      "WT1"
+    ],
+    "Mammalian disorder of sexual development": [
+      "WT1"
+    ],
+    "T cell receptor and co-stimulatory signaling": [
+      "IL2"
+    ],
+    "Control of immune tolerance by vasoactive intestinal peptide": [
+      "IL2",
+      "IL10"
+    ],
+    "Regulation of cytotoxic T cell responses by Malat1": [
+      "IL2"
+    ],
+    "FOXP3 in COVID-19": [
+      "IL2",
+      "FOXP3"
+    ],
+    "Celiac disease mechanism and therapies": [
+      "IL2"
+    ],
+    "IL2 signaling": [
+      "IL2"
+    ],
+    "T-cell antigen receptor (TCR) pathway during Staphylococcus aureus infection": [
+      "IL2",
+      "IL10"
+    ],
+    "RUNX1 and FOXP3 control the development of regulatory T lymphocytes (Tregs)": [
+      "IL2",
+      "FOXP3"
+    ],
+    "FGFR4 p.G388R signaling": [
+      "IL10"
+    ],
+    "PI3K/AKT/mTOR": [
+      "IL10",
+      "VDR"
+    ],
+    "Vitamins A and D": [
+      "VDR"
+    ],
+    "Transcriptional regulation by RUNX1": [
+      "FOXP3"
+    ],
+    "Trafficking and processing of endosomal TLR": [
+      "TLR9"
+    ],
+    "MyD88 dependent cascade initiated on endosome": [
+      "TLR9"
+    ],
+    "Lupus pathogenesis": [
+      "TLR9"
+    ],
+    "Induction of autophagy and toll-like receptor signaling by graphene oxide": [
+      "TLR9"
+    ],
+    "Cytosine methylation": [
+      "DNMT1"
+    ],
+    "NF1 copy number variation syndrome": [
+      "DNMT1"
+    ],
+    "NoRC negatively regulates rRNA expression": [
+      "DNMT1"
+    ],
+    "SUMOylation of DNA methylation proteins": [
+      "DNMT1"
+    ],
+    "DNA methylation": [
+      "DNMT1"
+    ],
+    "Trans-sulfuration pathway": [
+      "DNMT1"
+    ],
+    "Beta-globin gene expression regulation": [
+      "DNMT1"
+    ],
+    "Events associated with phagocytolytic activity of PMN cells": [
+      "MPO"
+    ],
+    "RHO GTPases regulate CFTR trafficking": [
+      "CFTR"
+    ],
+    "Late endosomal microautophagy": [
+      "CFTR"
+    ],
+    "Chaperone-mediated autophagy": [
+      "CFTR"
+    ],
+    "Hfe effect on hepcidin production": [
+      "HFE"
+    ]
+  },
+  "documents": [
+    "12525209",
+    "10062691",
+    "9370510",
+    "12678360",
+    "12411784",
+    "9902115",
+    "7496454",
+    "6271620",
+    "12090238",
+    "4176754",
+    "8828342",
+    "11752882",
+    "11867926",
+    "7603145",
+    "5078657",
+    "11799653",
+    "12144694",
+    "2964550",
+    "12041703",
+    "12343798",
+    "6566522",
+    "12273300",
+    "12715913",
+    "6891787",
+    "6091380",
+    "9976389",
+    "7795090",
+    "9599178",
+    "6567096",
+    "12278600",
+    "12251931",
+    "4395964",
+    "12367793",
+    "12009910",
+    "9812305",
+    "12196292",
+    "9268477",
+    "12430471",
+    "12000590",
+    "3886587",
+    "4855258",
+    "12531033",
+    "11001914",
+    "11971964",
+    "5985075",
+    "4312668",
+    "6272784",
+    "7949626",
+    "12564203",
+    "9370108",
+    "3476912",
+    "11100965",
+    "11357524",
+    "3796473",
+    "6299333",
+    "11955698",
+    "11722367",
+    "12525202",
+    "12731932",
+    "7019668",
+    "12408333",
+    "9881416",
+    "12429762",
+    "8659038",
+    "9620630",
+    "11203963",
+    "12323284",
+    "8126655",
+    "6478379",
+    "11679877",
+    "8435415",
+    "11445938",
+    "7019345",
+    "11911344",
+    "6524349",
+    "4846750",
+    "2567432",
+    "12491484",
+    "11820683",
+    "7690450",
+    "7912109",
+    "11206386",
+    "8526574",
+    "11277527",
+    "7387956",
+    "6770633",
+    "7072416",
+    "9320502",
+    "12047230",
+    "10779985",
+    "12894154",
+    "12322061",
+    "12413726",
+    "9543010",
+    "9391931",
+    "2999583",
+    "12073396",
+    "12701325",
+    "6681384",
+    "12326297"
+  ],
+  "images": {
+    "graph": null
+  },
+  "job_id": "1771308783878",
+  "success": true,
+  "total_genes": 113,
+  "total_documents": 100,
+  "total_pathways": 717
+}

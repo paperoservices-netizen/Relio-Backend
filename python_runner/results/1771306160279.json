@@ -1,0 +1,795 @@
+{
+  "compound": "curcumin",
+  "outcome": "anti inflammation",
+  "mode": "FAST",
+  "mode_name": "FAST (Abstracts)",
+  "genes": {
+    "NLRP3": [
+      {
+        "id": "26007179",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "TNF": [
+      {
+        "id": "35056657",
+        "direction": "neutral"
+      },
+      {
+        "id": "35868051",
+        "direction": "neutral"
+      },
+      {
+        "id": "36996692",
+        "direction": "down"
+      },
+      {
+        "id": "40362738",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "CRP": [
+      {
+        "id": "35056657",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "TLR4": [
+      {
+        "id": "36781592",
+        "direction": "up"
+      },
+      {
+        "id": "35347555",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "STAT3": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "JAK2": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "MIF": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "MPO": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "EGFR": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "AR": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "PCSK9": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "HMOX1": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "PTEN": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ]
+  },
+  "pathways": {
+    "Neuroinflammation": [
+      "TLR4"
+    ],
+    "Primary focal segmental glomerulosclerosis (FSGS)": [
+      "TLR4"
+    ],
+    "Fibrin complement receptor 3 signaling": [
+      "TLR4"
+    ],
+    "MyD88-independent TLR4 cascade": [
+      "TLR4"
+    ],
+    "Transcriptional regulation of memory B cell differentiation": [
+      "TLR4"
+    ],
+    "Sickle cell disease": [
+      "TLR4"
+    ],
+    "MyD88 dependent cascade initiated on endosome": [
+      "TLR4"
+    ],
+    "PI3K-Akt signaling": [
+      "PTEN",
+      "TLR4"
+    ],
+    "Nanomaterial-induced inflammasome activation": [
+      "TLR4"
+    ],
+    "TLR4 signaling and tolerance": [
+      "TLR4"
+    ],
+    "LDL- influence on CD14 and TLR4": [
+      "TLR4"
+    ],
+    "Toll-like receptor cascades": [
+      "TLR4"
+    ],
+    "Acute viral myocarditis": [
+      "TLR4"
+    ],
+    "miRNA role in immune response in sepsis": [
+      "TLR4"
+    ],
+    "Regulation of toll-like receptor signaling": [
+      "TLR4"
+    ],
+    "Regulation of TLR by endogenous ligand": [
+      "TLR4"
+    ],
+    "ApoE and miR-146 in inflammation and atherosclerosis": [
+      "TLR4"
+    ],
+    "IL23 inhibitors in inflammatory bowel disease": [
+      "TLR4"
+    ],
+    "Post-COVID neuroinflammation": [
+      "TLR4"
+    ],
+    "Pathogenic Escherichia coli infection": [
+      "TLR4"
+    ],
+    "Lupus pathogenesis": [
+      "TLR4"
+    ],
+    "Caspase activation via death receptors in the presence of ligand": [
+      "TLR4"
+    ],
+    "Integrative Analysis of  Treg-Glial Interactions": [
+      "TLR4"
+    ],
+    "Smith-Magenis and Potocki-Lupski syndrome copy number variation": [
+      "PTEN",
+      "TLR4"
+    ],
+    "Type I interferon induction and signaling during SARS-CoV-2 infection": [
+      "TLR4"
+    ],
+    "Interactions between immune cells and microRNAs in tumor microenvironment": [
+      "TLR4"
+    ],
+    "Nephrotoxcicity adverse outcome pathway": [
+      "TLR4"
+    ],
+    "8p23.1 copy number variation syndrome": [
+      "TLR4"
+    ],
+    "Inflammatory bowel disease signaling": [
+      "TLR4"
+    ],
+    "MyD88:MAL(TIRAP) cascade initiated on plasma membrane": [
+      "TLR4"
+    ],
+    "Spinal cord injury": [
+      "MIF",
+      "TLR4"
+    ],
+    "LTF danger signal response pathway": [
+      "TLR4"
+    ],
+    "Induction of autophagy and toll-like receptor signaling by graphene oxide": [
+      "TLR4"
+    ],
+    "Toll-like receptor signaling related to MyD88": [
+      "TLR4"
+    ],
+    "Toll-like receptor signaling": [
+      "TLR4"
+    ],
+    "COVID-19 and endothelial cell senescence": [
+      "TLR4"
+    ],
+    "Extrafollicular and follicular B cell activation by SARS-CoV-2": [
+      "TLR4"
+    ],
+    "Measles virus infection": [
+      "TLR4"
+    ],
+    "Non-genomic actions of 1,25-dihydroxyvitamin D3": [
+      "TLR4"
+    ],
+    "Opioid receptor pathways": [
+      "HMOX1",
+      "TLR4"
+    ],
+    "Platelet-mediated interactions with vascular and circulating cells": [
+      "TLR4"
+    ],
+    "Corticotropin-releasing hormone signaling": [
+      "TLR4"
+    ],
+    "Extracellular vesicles in the crosstalk of cardiac cells": [
+      "PTEN",
+      "TLR4"
+    ],
+    "MYD88 distinct input-output pathway": [
+      "TLR4"
+    ],
+    "Hepatitis B infection": [
+      "TLR4"
+    ],
+    "Burn wound healing": [
+      "TLR4"
+    ],
+    "Ebola virus infection in host": [
+      "TLR4"
+    ],
+    "Neutrophil degranulation": [
+      "MIF"
+    ],
+    "Parthanatos cell death signaling pathway": [
+      "MIF"
+    ],
+    "Cell surface interactions at the vascular wall": [
+      "MIF"
+    ],
+    "HDAC6 interactions in the central nervous system": [
+      "MIF"
+    ],
+    "Gene and protein expression by JAK-STAT signaling after Interleukin-12 stimulation": [
+      "MIF"
+    ],
+    "Adipogenesis": [
+      "MIF"
+    ],
+    "Plasma lipoprotein assembly, remodeling, and clearance": [
+      "PCSK9"
+    ],
+    "Familial hyperlipidemia type 2": [
+      "PCSK9"
+    ],
+    "Evolocumab mechanism to reduce LDL cholesterol": [
+      "PCSK9"
+    ],
+    "Post-translational protein phosphorylation": [
+      "PCSK9"
+    ],
+    "PCSK9-mediated LDL receptor degradation": [
+      "PCSK9"
+    ],
+    "Regulation of IGF transport and uptake by IGF binding proteins": [
+      "PCSK9"
+    ],
+    "Fatty acid and lipoprotein transport in hepatocytes": [
+      "PCSK9"
+    ],
+    "Metabolic pathway of LDL, HDL and TG, including diseases": [
+      "PCSK9"
+    ],
+    "Cancer pathways": [
+      "PTEN",
+      "HMOX1"
+    ],
+    "Photodynamic therapy-induced NFE2L2 (NRF2) survival signaling": [
+      "HMOX1"
+    ],
+    "Lung fibrosis": [
+      "HMOX1"
+    ],
+    "miR-targeted genes in squamous cell": [
+      "HMOX1"
+    ],
+    "IL10 anti-inflammatory signaling": [
+      "HMOX1"
+    ],
+    "Overview of nanoparticle effects": [
+      "HMOX1"
+    ],
+    "Orexin receptor pathway": [
+      "HMOX1"
+    ],
+    "miR-targeted genes in leukocytes": [
+      "HMOX1"
+    ],
+    "Ferroptosis": [
+      "HMOX1"
+    ],
+    "Nuclear receptors meta-pathway": [
+      "HMOX1"
+    ],
+    "Interleukin-4 and Interleukin-13 signaling": [
+      "HMOX1"
+    ],
+    "Insertion of tail-anchored proteins into the endoplasmic reticulum membrane": [
+      "HMOX1"
+    ],
+    "miR-targeted genes in muscle cell": [
+      "HMOX1"
+    ],
+    "miR-targeted genes in lymphocytes": [
+      "HMOX1"
+    ],
+    "Iron uptake and transport": [
+      "HMOX1"
+    ],
+    "IL18 signaling": [
+      "PTEN",
+      "HMOX1"
+    ],
+    "Urotensin-II-mediated signaling": [
+      "PTEN",
+      "HMOX1"
+    ],
+    "Antiviral and anti-inflammatory effects of Nrf2 on SARS-CoV-2 pathway": [
+      "HMOX1"
+    ],
+    "NRF2 pathway": [
+      "HMOX1"
+    ],
+    "miR-targeted genes in epithelium": [
+      "HMOX1"
+    ],
+    "CAMKK2 pathway": [
+      "HMOX1"
+    ],
+    "Oxidative stress response": [
+      "HMOX1"
+    ],
+    "CCL18 signaling": [
+      "PTEN"
+    ],
+    "Hallmark of Cancer: Avoiding immune destruction through non-genotoxic carcinogens": [
+      "PTEN"
+    ],
+    "Transcriptional regulation by MECP2": [
+      "PTEN"
+    ],
+    "Insulin signaling": [
+      "PTEN"
+    ],
+    "Androgen receptor signaling": [
+      "PTEN"
+    ],
+    "Focal adhesion": [
+      "PTEN"
+    ],
+    "TCR signaling": [
+      "PTEN"
+    ],
+    "mBDNF and proBDNF regulation of GABA neurotransmission": [
+      "PTEN"
+    ],
+    "Targeted agents in triple negative breast cancer": [
+      "PTEN"
+    ],
+    "Hallmark of cancer: sustaining proliferative signaling": [
+      "PTEN"
+    ],
+    "Embryonic stem cell pluripotency pathways": [
+      "PTEN"
+    ],
+    "TROP2 regulatory signaling": [
+      "PTEN"
+    ],
+    "Pathways affected in adenoid cystic carcinoma": [
+      "PTEN"
+    ],
+    "Senescence and autophagy in cancer": [
+      "PTEN"
+    ],
+    "MECP2 and associated Rett syndrome": [
+      "PTEN"
+    ],
+    "Factors and pathways affecting insulin-like growth factor (IGF1)-Akt signaling": [
+      "PTEN"
+    ],
+    "miRNA regulation of p53 pathway in prostate cancer": [
+      "PTEN"
+    ],
+    "Deubiquitination": [
+      "PTEN"
+    ],
+    "ADHD and autism (ASD) pathways": [
+      "PTEN"
+    ],
+    "Pleural mesothelioma": [
+      "PTEN"
+    ],
+    "Somatroph axis (GH) and its relationship to dietary restriction and aging": [
+      "PTEN"
+    ],
+    "T cell receptor and co-stimulatory signaling": [
+      "PTEN"
+    ],
+    "Effect of omega-3 PUFA on Huntington's disease pathways": [
+      "PTEN"
+    ],
+    "Copper homeostasis": [
+      "PTEN"
+    ],
+    "Melanoma": [
+      "PTEN"
+    ],
+    "PI3K-AKT-mTOR signaling and therapeutic opportunities in prostate cancer": [
+      "PTEN"
+    ],
+    "Macrophage-stimulating protein (MSP) signaling": [
+      "PTEN"
+    ],
+    "GDNF signaling": [
+      "PTEN"
+    ],
+    "Fanconi anemia": [
+      "PTEN"
+    ],
+    "Hepatocyte growth factor receptor signaling": [
+      "PTEN"
+    ],
+    "Hematopoietic stem cell gene regulation by GABP alpha/beta complex": [
+      "PTEN"
+    ],
+    "T-cell activation SARS-CoV-2": [
+      "PTEN"
+    ],
+    "Focal adhesion: PI3K-Akt-mTOR-signaling": [
+      "PTEN"
+    ],
+    "Synaptic signaling associated with autism spectrum disorder": [
+      "PTEN"
+    ],
+    "16p11.2 proximal deletion syndrome": [
+      "PTEN"
+    ],
+    "PTEN Regulation": [
+      "PTEN"
+    ],
+    "Endometrial cancer": [
+      "PTEN"
+    ],
+    "Small cell lung cancer": [
+      "PTEN"
+    ],
+    "Head and neck squamous cell carcinoma": [
+      "PTEN"
+    ],
+    "PIP3 activates AKT signaling": [
+      "PTEN"
+    ],
+    "EGF/EGFR signaling": [
+      "PTEN"
+    ],
+    "Glioblastoma signaling": [
+      "PTEN"
+    ],
+    "Phosphatidyl inositol phosphate pathway": [
+      "PTEN"
+    ],
+    "Circadian rhythm genes": [
+      "PTEN"
+    ],
+    "Microtubule cytoskeleton regulation": [
+      "PTEN"
+    ],
+    "Integrated cancer pathway": [
+      "PTEN"
+    ],
+    "Fragile X syndrome": [
+      "PTEN"
+    ],
+    "RIOK1 and RIOK2 in EGFR- and PI3K-mediated tumorigenesis": [
+      "PTEN"
+    ],
+    "DNA damage response (only ATM dependent)": [
+      "PTEN"
+    ],
+    "EGFR tyrosine kinase inhibitor resistance": [
+      "PTEN"
+    ],
+    "Breast cancer pathway": [
+      "PTEN"
+    ],
+    "Clear cell renal cell carcinoma pathways": [
+      "PTEN"
+    ],
+    "Androgen receptor network in prostate cancer": [
+      "PTEN"
+    ],
+    "p53 transcriptional gene network": [
+      "PTEN"
+    ],
+    "Integrated breast cancer pathway": [
+      "PTEN"
+    ],
+    "TP53 Regulates Metabolic Genes": [
+      "PTEN"
+    ],
+    "Tyrosine kinase inhibitors in glioblastoma": [
+      "PTEN"
+    ],
+    "Hallmark of Cancer: Resisting cell death through non-genotoxic carcinogenic ROS": [
+      "PTEN"
+    ],
+    "Molecular pathway for oxidative stress": [
+      "PTEN"
+    ],
+    "Leptin signaling": [
+      "PTEN"
+    ]
+  },
+  "documents": [
+    "38616356",
+    "20571541",
+    "30925757",
+    "32603817",
+    "29870054",
+    "36004614",
+    "28546962",
+    "26048786",
+    "36901908",
+    "37537138",
+    "31003422",
+    "37406950",
+    "22668065",
+    "39463225",
+    "28449676",
+    "34754179",
+    "36233038",
+    "38556563",
+    "35868051",
+    "31654258",
+    "38201900",
+    "37596598",
+    "28948084",
+    "32240451",
+    "31362244",
+    "31657968",
+    "38954936",
+    "29491072",
+    "36804260",
+    "32244563",
+    "37647442",
+    "36101515",
+    "30840308",
+    "20420526",
+    "38909404",
+    "34634654",
+    "28244571",
+    "21642934",
+    "41002416",
+    "39203857",
+    "31345163",
+    "31820492",
+    "25772169",
+    "35347555",
+    "38812161",
+    "38008819",
+    "38474160",
+    "31947962",
+    "32088363",
+    "26927041",
+    "40928616",
+    "23847105",
+    "39324614",
+    "36996692",
+    "36781592",
+    "34717976",
+    "21091916",
+    "37400988",
+    "26007179",
+    "25514226",
+    "28394628",
+    "35056657",
+    "36130650",
+    "31577640",
+    "34510720",
+    "25395833",
+    "37497225",
+    "39614566",
+    "28408820",
+    "36057221",
+    "40245976",
+    "33809891",
+    "41009419",
+    "36155114",
+    "17569218",
+    "39921492",
+    "37028867",
+    "32981501",
+    "21151942",
+    "40928423",
+    "28204864",
+    "34237598",
+    "30857125",
+    "36269798",
+    "29438458",
+    "32878407",
+    "28711364",
+    "35653021",
+    "37348593",
+    "20828642",
+    "20955148",
+    "36997729",
+    "37394650",
+    "31374813",
+    "18662800",
+    "32464325",
+    "35973294",
+    "32753008",
+    "40362738",
+    "31590042"
+  ],
+  "images": {
+    "graph": null
+  },
+  "job_id": "1771306160279",
+  "success": true,
+  "total_genes": 13,
+  "total_documents": 100,
+  "total_pathways": 143
+}

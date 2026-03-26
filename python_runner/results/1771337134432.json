@@ -1,0 +1,982 @@
+{
+  "compound": "curcumin",
+  "outcome": "anti inflammation",
+  "mode": "FAST",
+  "mode_name": "FAST (Abstracts)",
+  "genes": {
+    "NLRP3": [
+      {
+        "id": "26007179",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "CRP": [
+      {
+        "id": "35056657",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "TNF": [
+      {
+        "id": "35056657",
+        "direction": "neutral"
+      },
+      {
+        "id": "36130650",
+        "direction": "neutral"
+      },
+      {
+        "id": "29438458",
+        "direction": "down"
+      },
+      {
+        "id": "40245976",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "TLR4": [
+      {
+        "id": "35347555",
+        "direction": "up"
+      },
+      {
+        "id": "30037344",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "STAT3": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "JAK2": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "EGFR": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "AR": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "MPO": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "PCSK9": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "HMOX1": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "PTEN": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ]
+  },
+  "pathways": {
+    "Hepatitis B infection": [
+      "JAK2"
+    ],
+    "Chromatin organization": [
+      "JAK2"
+    ],
+    "Interleukin-4 and Interleukin-13 signaling": [
+      "JAK2"
+    ],
+    "Interleukin-6 family signaling": [
+      "JAK2"
+    ],
+    "Signaling by leptin": [
+      "JAK2"
+    ],
+    "Sodium channel in epilepsy": [
+      "JAK2"
+    ],
+    "Chemokine signaling": [
+      "JAK2"
+    ],
+    "Leptin signaling": [
+      "PTEN",
+      "EGFR",
+      "JAK2"
+    ],
+    "Serotonin HTR1 group and FOS pathway": [
+      "JAK2"
+    ],
+    "Signaling by SCF-KIT": [
+      "JAK2"
+    ],
+    "Focal adhesion: PI3K-Akt-mTOR-signaling": [
+      "PTEN",
+      "EGFR",
+      "JAK2"
+    ],
+    "Interferon-mediated signaling": [
+      "JAK2"
+    ],
+    "Hallmark of cancer: sustaining proliferative signaling": [
+      "PTEN",
+      "EGFR",
+      "JAK2"
+    ],
+    "EGF/EGFR signaling": [
+      "PTEN",
+      "EGFR",
+      "JAK2"
+    ],
+    "Gastrin signaling": [
+      "EGFR",
+      "JAK2"
+    ],
+    "Interleukin-3, Interleukin-5 and GM-CSF signaling": [
+      "JAK2"
+    ],
+    "ncRNAs involved in STAT3 signaling in hepatocellular carcinoma": [
+      "JAK2"
+    ],
+    "Growth hormone receptor signaling": [
+      "JAK2"
+    ],
+    "Interferon signaling in tuberculosis": [
+      "JAK2"
+    ],
+    "Regulatory circuits of STAT3 signaling": [
+      "EGFR",
+      "JAK2"
+    ],
+    "Oncostatin M signaling": [
+      "JAK2"
+    ],
+    "15q24 copy number variation": [
+      "JAK2"
+    ],
+    "IL26 signaling": [
+      "EGFR",
+      "JAK2"
+    ],
+    "AGE/RAGE pathway": [
+      "EGFR",
+      "JAK2"
+    ],
+    "Mesodermal commitment pathway": [
+      "JAK2"
+    ],
+    "Prolactin receptor signaling": [
+      "JAK2"
+    ],
+    "T-cell activation SARS-CoV-2": [
+      "PTEN",
+      "JAK2"
+    ],
+    "JAK/STAT pathway": [
+      "EGFR",
+      "JAK2"
+    ],
+    "Cancer pathways": [
+      "PTEN",
+      "AR",
+      "EGFR",
+      "JAK2"
+    ],
+    "Mammary gland development: pregnancy and lactation": [
+      "EGFR",
+      "JAK2"
+    ],
+    "IL5 signaling": [
+      "JAK2"
+    ],
+    "Interleukin-12 family signaling": [
+      "JAK2"
+    ],
+    "Psoriasis mechanism and therapies": [
+      "JAK2"
+    ],
+    "Interleukin-2 family signaling": [
+      "JAK2"
+    ],
+    "PDGFR-beta pathway": [
+      "JAK2"
+    ],
+    "CCL18 signaling": [
+      "PTEN",
+      "JAK2"
+    ],
+    "IL3 signaling": [
+      "JAK2"
+    ],
+    "Type II interferon signaling": [
+      "JAK2"
+    ],
+    "Osteoarthritic chondrocyte hypertrophy": [
+      "JAK2"
+    ],
+    "Urotensin-II-mediated signaling": [
+      "PTEN",
+      "EGFR",
+      "JAK2"
+    ],
+    "Signaling by Erythropoietin": [
+      "JAK2"
+    ],
+    "Kit receptor signaling": [
+      "JAK2"
+    ],
+    "Tyrosine kinase inhibitors in glioblastoma": [
+      "PTEN",
+      "EGFR",
+      "JAK2"
+    ],
+    "16p11.2 distal deletion syndrome": [
+      "JAK2"
+    ],
+    "Thymic stromal lymphopoietin (TSLP) signaling": [
+      "JAK2"
+    ],
+    "IL11 signaling": [
+      "JAK2"
+    ],
+    "RAF/MAP kinase cascade": [
+      "EGFR",
+      "JAK2"
+    ],
+    "Leptin-insulin signaling overlap": [
+      "JAK2"
+    ],
+    "IL17 signaling": [
+      "JAK2"
+    ],
+    "Th17 cell differentiation pathway": [
+      "JAK2"
+    ],
+    "JAK-STAT signaling in the regulation of beta cells": [
+      "JAK2"
+    ],
+    "Notch signaling": [
+      "JAK2"
+    ],
+    "IL4 signaling": [
+      "JAK2"
+    ],
+    "Brain-derived neurotrophic factor (BDNF) signaling": [
+      "JAK2"
+    ],
+    "EPO receptor signaling": [
+      "JAK2"
+    ],
+    "EGFR tyrosine kinase inhibitor resistance": [
+      "PTEN",
+      "EGFR",
+      "JAK2"
+    ],
+    "Network map of SARS-CoV-2 signaling": [
+      "JAK2"
+    ],
+    "Prolactin signaling": [
+      "JAK2"
+    ],
+    "PI3K-Akt signaling": [
+      "PTEN",
+      "EGFR",
+      "JAK2"
+    ],
+    "IL6 signaling": [
+      "JAK2"
+    ],
+    "Interferon gamma signaling": [
+      "JAK2"
+    ],
+    "Thyroid stimulating hormone (TSH) signaling": [
+      "JAK2"
+    ],
+    "mBDNF and proBDNF regulation of GABA neurotransmission": [
+      "PTEN",
+      "JAK2"
+    ],
+    "IL23 inhibitors in inflammatory bowel disease": [
+      "JAK2"
+    ],
+    "TROP2 regulatory signaling": [
+      "PTEN",
+      "AR",
+      "EGFR",
+      "JAK2"
+    ],
+    "Interleukin-20 family signaling": [
+      "JAK2"
+    ],
+    "ERK pathway in Huntington's disease": [
+      "EGFR"
+    ],
+    "Breast cancer pathway": [
+      "PTEN",
+      "EGFR"
+    ],
+    "L1CAM interactions": [
+      "EGFR"
+    ],
+    "AXL signaling": [
+      "EGFR"
+    ],
+    "Effect of omega-3 PUFA on Huntington's disease pathways": [
+      "PTEN",
+      "EGFR"
+    ],
+    "Cyclin-dependent kinase 4/6 inhibitors in breast cancer": [
+      "EGFR"
+    ],
+    "Non-small cell lung cancer": [
+      "EGFR"
+    ],
+    "Clear cell renal cell carcinoma pathways": [
+      "PTEN",
+      "EGFR"
+    ],
+    "Androgen receptor signaling": [
+      "PTEN",
+      "AR",
+      "EGFR"
+    ],
+    "Relationship between inflammation, COX-2 and EGFR": [
+      "EGFR"
+    ],
+    "Human cytomegalovirus infection": [
+      "EGFR"
+    ],
+    "2q37 copy number variation syndrome": [
+      "EGFR"
+    ],
+    "TAR syndrome": [
+      "EGFR"
+    ],
+    "Focal adhesion": [
+      "PTEN",
+      "EGFR"
+    ],
+    "Gastric cancer network 2": [
+      "EGFR"
+    ],
+    "ADHD and autism (ASD) pathways": [
+      "PTEN",
+      "EGFR"
+    ],
+    "HDAC6 interactions in the central nervous system": [
+      "EGFR"
+    ],
+    "Hippo-Merlin signaling dysregulation": [
+      "EGFR"
+    ],
+    "NF1 copy number variation syndrome": [
+      "EGFR"
+    ],
+    "Signaling by EGFR": [
+      "EGFR"
+    ],
+    "17q12 copy number variation syndrome": [
+      "EGFR"
+    ],
+    "Nanoparticle-mediated activation of receptor signaling": [
+      "EGFR"
+    ],
+    "Spinal cord injury": [
+      "EGFR"
+    ],
+    "Pancreatic adenocarcinoma pathway": [
+      "EGFR"
+    ],
+    "Receptor tyrosine kinase (RTK) family": [
+      "EGFR"
+    ],
+    "Head and neck squamous cell carcinoma": [
+      "PTEN",
+      "EGFR"
+    ],
+    "Integrated breast cancer pathway": [
+      "PTEN",
+      "AR",
+      "EGFR"
+    ],
+    "22q11.2 copy number variation syndrome": [
+      "EGFR"
+    ],
+    "RAC1/PAK1/p38/MMP2 pathway": [
+      "EGFR"
+    ],
+    "Aryl hydrocarbon receptor pathway": [
+      "EGFR"
+    ],
+    "Signaling by ERBB4": [
+      "EGFR"
+    ],
+    "Regulation of actin cytoskeleton": [
+      "EGFR"
+    ],
+    "Hair follicle development: induction": [
+      "EGFR"
+    ],
+    "Celiac disease mechanism and therapies": [
+      "EGFR"
+    ],
+    "Ebola virus infection in host": [
+      "EGFR"
+    ],
+    "Bladder cancer": [
+      "EGFR"
+    ],
+    "miR-targeted genes in lymphocytes": [
+      "EGFR"
+    ],
+    "TCA cycle nutrient use and invasiveness of ovarian cancer": [
+      "EGFR"
+    ],
+    "RIOK1 and RIOK2 in EGFR- and PI3K-mediated tumorigenesis": [
+      "PTEN",
+      "EGFR"
+    ],
+    "Extra-nuclear estrogen signaling": [
+      "EGFR"
+    ],
+    "Hallmark of Cancer: Resisting cell death through non-genotoxic carcinogenic ROS": [
+      "PTEN",
+      "EGFR"
+    ],
+    "MAPK signaling": [
+      "EGFR"
+    ],
+    "miR-targeted genes in epithelium": [
+      "EGFR"
+    ],
+    "Glioblastoma signaling": [
+      "PTEN",
+      "EGFR"
+    ],
+    "Photodynamic therapy-induced AP-1 survival signaling": [
+      "EGFR"
+    ],
+    "Pleural mesothelioma": [
+      "PTEN",
+      "EGFR"
+    ],
+    "Targeted therapy in breast cancer": [
+      "EGFR"
+    ],
+    "Nuclear receptors meta-pathway": [
+      "EGFR"
+    ],
+    "Extracellular vesicle-mediated signaling in recipient cells": [
+      "EGFR"
+    ],
+    "miR-targeted genes in muscle cell": [
+      "EGFR"
+    ],
+    "Transcriptional regulation by the AP-2 (TFAP2) family of transcription factors": [
+      "EGFR"
+    ],
+    "Gastrin-CREB signaling via PKC and MAPK": [
+      "EGFR"
+    ],
+    "Hippo signaling regulation": [
+      "EGFR"
+    ],
+    "Integrative Analysis of  Treg-Glial Interactions": [
+      "EGFR"
+    ],
+    "Endometrial cancer": [
+      "PTEN",
+      "EGFR"
+    ],
+    "Embryonic stem cell pluripotency pathways": [
+      "PTEN",
+      "EGFR"
+    ],
+    "Opioid receptor pathways": [
+      "EGFR"
+    ],
+    "ErbB signaling": [
+      "EGFR"
+    ],
+    "Signaling by ERBB2": [
+      "EGFR"
+    ],
+    "BMP signaling in eyelid development": [
+      "EGFR"
+    ],
+    "Extracellular vesicles in the crosstalk of cardiac cells": [
+      "PTEN",
+      "EGFR"
+    ],
+    "NRP1-triggered signaling in pancreatic cancer": [
+      "EGFR"
+    ],
+    "Signaling by PTK6": [
+      "EGFR"
+    ],
+    "Modular map of bradykinin signaling network": [
+      "EGFR"
+    ],
+    "PIP3 activates AKT signaling": [
+      "PTEN",
+      "EGFR"
+    ],
+    "Ras signaling": [
+      "EGFR"
+    ],
+    "Fanconi anemia": [
+      "PTEN",
+      "EGFR"
+    ],
+    "Hair follicle development: cytodifferentiation": [
+      "EGFR"
+    ],
+    "Endothelin pathway": [
+      "EGFR"
+    ],
+    "FCGR3A-mediated phagocytosis": [
+      "AR"
+    ],
+    "Signaling by the B Cell Receptor (BCR)": [
+      "AR"
+    ],
+    "Fcgamma receptor (FCGR) dependent phagocytosis": [
+      "AR"
+    ],
+    "Sudden infant death syndrome (SIDS) susceptibility pathways": [
+      "AR"
+    ],
+    "RHO GTPases activate PKNs": [
+      "AR"
+    ],
+    "Targeted agents in triple negative breast cancer": [
+      "PTEN",
+      "AR"
+    ],
+    "Activated PKN1 stimulates transcription of AR-regulated genes KLK2 and KLK3": [
+      "AR"
+    ],
+    "Anti-inflammatory response favouring Leishmania parasite infection": [
+      "AR"
+    ],
+    "Biosynthesis and regeneration of tetrahydrobiopterin and catabolism of phenylalanine": [
+      "AR"
+    ],
+    "Androgen receptor network in prostate cancer": [
+      "PTEN",
+      "AR"
+    ],
+    "miRNA regulation of prostate cancer signaling": [
+      "AR"
+    ],
+    "SUMOylation of intracellular receptors": [
+      "AR"
+    ],
+    "Disorders of mitochondrial homeostatis, dynamics, protein import, and quality control": [
+      "AR"
+    ],
+    "Cell surface interactions at the vascular wall": [
+      "AR"
+    ],
+    "Male infertility": [
+      "AR"
+    ],
+    "Deubiquitination": [
+      "PTEN",
+      "AR"
+    ],
+    "HSP90 chaperone cycle for steroid hormone receptors (SHR)": [
+      "AR"
+    ],
+    "Complement cascade": [
+      "AR"
+    ],
+    "Primary ovarian insufficiency": [
+      "AR"
+    ],
+    "Fc epsilon receptor (FCERI) signaling": [
+      "AR"
+    ],
+    "Transcriptional regulation by RUNX2": [
+      "AR"
+    ],
+    "Generic transcription pathway": [
+      "AR"
+    ],
+    "GLP-1 secretion from intestine to portal vein": [
+      "AR"
+    ],
+    "Intracellular trafficking proteins involved in CMT neuropathy": [
+      "AR"
+    ],
+    "Immunoregulatory interactions between lymphoid and non-lymphoid cells": [
+      "AR"
+    ],
+    "Binding and uptake of ligands by scavenger receptors": [
+      "AR"
+    ],
+    "Thyroid hormones production and peripheral downstream signaling effects": [
+      "AR"
+    ],
+    "Nuclear receptors": [
+      "AR"
+    ],
+    "DNA damage response (only ATM dependent)": [
+      "PTEN"
+    ],
+    "miRNA regulation of p53 pathway in prostate cancer": [
+      "PTEN"
+    ],
+    "Pathways affected in adenoid cystic carcinoma": [
+      "PTEN"
+    ],
+    "GDNF signaling": [
+      "PTEN"
+    ],
+    "Melanoma": [
+      "PTEN"
+    ],
+    "IL18 signaling": [
+      "PTEN"
+    ],
+    "Senescence and autophagy in cancer": [
+      "PTEN"
+    ],
+    "Hematopoietic stem cell gene regulation by GABP alpha/beta complex": [
+      "PTEN"
+    ],
+    "TP53 Regulates Metabolic Genes": [
+      "PTEN"
+    ],
+    "Smith-Magenis and Potocki-Lupski syndrome copy number variation": [
+      "PTEN"
+    ],
+    "Hepatocyte growth factor receptor signaling": [
+      "PTEN"
+    ],
+    "Molecular pathway for oxidative stress": [
+      "PTEN"
+    ],
+    "Transcriptional regulation by MECP2": [
+      "PTEN"
+    ],
+    "TCR signaling": [
+      "PTEN"
+    ],
+    "Somatroph axis (GH) and its relationship to dietary restriction and aging": [
+      "PTEN"
+    ],
+    "Microtubule cytoskeleton regulation": [
+      "PTEN"
+    ],
+    "T cell receptor and co-stimulatory signaling": [
+      "PTEN"
+    ],
+    "Fragile X syndrome": [
+      "PTEN"
+    ],
+    "PTEN Regulation": [
+      "PTEN"
+    ],
+    "Insulin signaling": [
+      "PTEN"
+    ],
+    "16p11.2 proximal deletion syndrome": [
+      "PTEN"
+    ],
+    "PI3K-AKT-mTOR signaling and therapeutic opportunities in prostate cancer": [
+      "PTEN"
+    ],
+    "Small cell lung cancer": [
+      "PTEN"
+    ],
+    "Phosphatidyl inositol phosphate pathway": [
+      "PTEN"
+    ],
+    "Synaptic signaling associated with autism spectrum disorder": [
+      "PTEN"
+    ],
+    "p53 transcriptional gene network": [
+      "PTEN"
+    ],
+    "MECP2 and associated Rett syndrome": [
+      "PTEN"
+    ],
+    "Hallmark of Cancer: Avoiding immune destruction through non-genotoxic carcinogens": [
+      "PTEN"
+    ],
+    "Circadian rhythm genes": [
+      "PTEN"
+    ],
+    "Copper homeostasis": [
+      "PTEN"
+    ],
+    "Factors and pathways affecting insulin-like growth factor (IGF1)-Akt signaling": [
+      "PTEN"
+    ],
+    "Macrophage-stimulating protein (MSP) signaling": [
+      "PTEN"
+    ],
+    "Integrated cancer pathway": [
+      "PTEN"
+    ]
+  },
+  "documents": [
+    "20955148",
+    "34717976",
+    "31947962",
+    "31820492",
+    "38201900",
+    "38812161",
+    "37537138",
+    "32088363",
+    "28449676",
+    "41002416",
+    "17569218",
+    "31654258",
+    "37647442",
+    "20420526",
+    "39614566",
+    "32981501",
+    "34237598",
+    "37497225",
+    "39463225",
+    "25395833",
+    "31577640",
+    "37394650",
+    "38909404",
+    "33809891",
+    "39203857",
+    "30857125",
+    "35973294",
+    "18662800",
+    "40245976",
+    "30037344",
+    "26007179",
+    "25319056",
+    "35056657",
+    "36057221",
+    "36997729",
+    "36781592",
+    "30925757",
+    "31003422",
+    "36101515",
+    "37406950",
+    "23847105",
+    "37400988",
+    "36004614",
+    "20571541",
+    "29870054",
+    "31590042",
+    "32603817",
+    "35868051",
+    "32753008",
+    "28711364",
+    "35653021",
+    "37028867",
+    "25772169",
+    "34510720",
+    "21151942",
+    "40362738",
+    "38474160",
+    "38556563",
+    "38616356",
+    "36155114",
+    "21642934",
+    "38008819",
+    "31362244",
+    "37348593",
+    "28394628",
+    "36804260",
+    "31345163",
+    "34634654",
+    "26048786",
+    "25514226",
+    "21986478",
+    "36130650",
+    "29438458",
+    "39921492",
+    "28204864",
+    "35347555",
+    "34754179",
+    "28408820",
+    "32464325",
+    "37596598",
+    "39324614",
+    "31657968",
+    "26927041",
+    "40928616",
+    "32878407",
+    "36996692",
+    "20828642",
+    "28546962",
+    "31374813",
+    "28948084",
+    "38954936",
+    "29491072",
+    "32240451",
+    "36233038",
+    "22668065",
+    "36901908",
+    "30840308",
+    "32244563",
+    "36269798",
+    "21091916"
+  ],
+  "images": {
+    "graph": null
+  },
+  "job_id": "1771337134432",
+  "success": true,
+  "total_genes": 12,
+  "total_documents": 100,
+  "total_pathways": 196
+}
