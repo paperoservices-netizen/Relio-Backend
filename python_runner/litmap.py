@@ -9,11 +9,10 @@ import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 from Bio import Entrez
 
-import lxml.etree as ET
+import xml.etree.ElementTree as ET
 from tqdm import tqdm
 
 Entrez.email = "robio.ra.bt@gmail.com"
-Entrez.api_key = "0968ae56e9a676e026f2fd87dcc17a9f8009"
 Entrez.tool = "Relio_V0.1"
 NCBI_DELAY = 0.11
 
@@ -171,10 +170,10 @@ def mine_pmc_full(compound, outcome, genes, limit=100):
                             current_pmc = "PMC" + (article_id.text or "")
                             break
                     
-                    # Foolproof text stripping using itertext()
+                    # Foolproof text stripping using tostring
                     text_chunks = []
                     for section in article.findall('.//abstract') + article.findall('.//body'):
-                        text_chunks.append(" ".join(section.itertext()))
+                        text_chunks.append(ET.tostring(section, method='text', encoding='unicode').strip())
                         
                     clean_full_text = " ".join(text_chunks)
                     

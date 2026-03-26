@@ -3,4 +3,3 @@ requests
 networkx
 matplotlib
 tqdm
-lxml
