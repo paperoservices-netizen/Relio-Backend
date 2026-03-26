@@ -1,0 +1,663 @@
+{
+  "compound": "Turmeric",
+  "outcome": "Infection",
+  "mode": "FAST",
+  "mode_name": "FAST (Abstracts)",
+  "genes": {
+    "TNF": [
+      {
+        "id": "26404185",
+        "direction": "up"
+      },
+      {
+        "id": "34579443",
+        "direction": "neutral"
+      },
+      {
+        "id": "23566550",
+        "direction": "up"
+      },
+      {
+        "id": "23295981",
+        "direction": "neutral"
+      }
+    ],
+    "STAT3": [
+      {
+        "id": "29923222",
+        "direction": "neutral"
+      }
+    ],
+    "FOXP3": [
+      {
+        "id": "37314412",
+        "direction": "down"
+      }
+    ],
+    "CCR5": [
+      {
+        "id": "37314412",
+        "direction": "down"
+      }
+    ],
+    "ACE": [
+      {
+        "id": "33184809",
+        "direction": "down"
+      }
+    ]
+  },
+  "pathways": {
+    "EGF/EGFR signaling": [
+      "STAT3"
+    ],
+    "Estrogen receptor pathway": [
+      "STAT3"
+    ],
+    "Interleukin-9 signaling": [
+      "STAT3"
+    ],
+    "Neural crest cell migration in cancer": [
+      "STAT3"
+    ],
+    "Angiogenesis overview": [
+      "STAT3"
+    ],
+    "Hallmark of cancer: sustaining proliferative signaling": [
+      "STAT3"
+    ],
+    "JAK/STAT pathway": [
+      "STAT3"
+    ],
+    "Androgen receptor signaling": [
+      "STAT3"
+    ],
+    "CCL18 signaling": [
+      "CCR5",
+      "FOXP3",
+      "STAT3"
+    ],
+    "Protein folding": [
+      "STAT3"
+    ],
+    "Atopic dermatitis mechanism and therapies": [
+      "STAT3"
+    ],
+    "EPO receptor signaling": [
+      "STAT3"
+    ],
+    "Smith-Magenis and Potocki-Lupski syndrome copy number variation": [
+      "STAT3"
+    ],
+    "BDNF signaling in neurodevelopment": [
+      "STAT3"
+    ],
+    "Autophagy in pancreatic ductal adenocarcinoma": [
+      "STAT3"
+    ],
+    "Pancreatic adenocarcinoma pathway": [
+      "STAT3"
+    ],
+    "JAK-STAT signaling in the regulation of beta cells": [
+      "STAT3"
+    ],
+    "Integrative Analysis of  Treg-Glial Interactions": [
+      "FOXP3",
+      "STAT3"
+    ],
+    "Interferon type I signaling": [
+      "STAT3"
+    ],
+    "Prolactin signaling": [
+      "STAT3"
+    ],
+    "FGFR4 p.G388R signaling": [
+      "STAT3"
+    ],
+    "Th17 cell differentiation pathway": [
+      "FOXP3",
+      "STAT3"
+    ],
+    "Opioid receptor pathways": [
+      "CCR5",
+      "STAT3"
+    ],
+    "Hepatocyte growth factor receptor signaling": [
+      "STAT3"
+    ],
+    "Embryonic stem cell pluripotency pathways": [
+      "STAT3"
+    ],
+    "Signaling by SCF-KIT": [
+      "STAT3"
+    ],
+    "IL5 signaling": [
+      "STAT3"
+    ],
+    "Notch signaling": [
+      "STAT3"
+    ],
+    "Macrophage-stimulating protein (MSP) signaling": [
+      "STAT3"
+    ],
+    "Transcription factors regulate miRNAs related to cardiac hypertrophy": [
+      "STAT3"
+    ],
+    "Catabolism of skeletal muscle in cachexia": [
+      "STAT3"
+    ],
+    "FOXP3 in COVID-19": [
+      "FOXP3",
+      "STAT3"
+    ],
+    "PGK1, PKM2, KHKC/KHKA acting as protein kinases": [
+      "STAT3"
+    ],
+    "IL9 signaling": [
+      "STAT3"
+    ],
+    "Psoriasis mechanism and therapies": [
+      "STAT3"
+    ],
+    "IL10 anti-inflammatory signaling": [
+      "STAT3"
+    ],
+    "MicroRNAs in cardiomyocyte hypertrophy": [
+      "STAT3"
+    ],
+    "Androgen receptor network in prostate cancer": [
+      "STAT3"
+    ],
+    "IL18 signaling": [
+      "STAT3"
+    ],
+    "Regulatory circuits of STAT3 signaling": [
+      "STAT3"
+    ],
+    "Development of pulmonary dendritic cells and macrophage subsets": [
+      "STAT3"
+    ],
+    "Interleukin-2 family signaling": [
+      "STAT3"
+    ],
+    "IL2 signaling": [
+      "STAT3"
+    ],
+    "GABA and glutamate signalling in epileptogenesis": [
+      "STAT3"
+    ],
+    "Osteoarthritic chondrocyte hypertrophy": [
+      "STAT3"
+    ],
+    "Signaling by MET": [
+      "STAT3"
+    ],
+    "Endothelin pathway": [
+      "STAT3"
+    ],
+    "Interleukin-20 family signaling": [
+      "STAT3"
+    ],
+    "Extracellular vesicles in the crosstalk of cardiac cells": [
+      "STAT3"
+    ],
+    "IL19 signaling": [
+      "STAT3"
+    ],
+    "JAK/STAT signaling and ARTD family members": [
+      "STAT3"
+    ],
+    "Leptin-insulin signaling overlap": [
+      "STAT3"
+    ],
+    "Modular map of bradykinin signaling network": [
+      "STAT3"
+    ],
+    "Interleukin-1 family signaling": [
+      "STAT3"
+    ],
+    "Signaling by NTRK1": [
+      "STAT3"
+    ],
+    "Signaling by leptin": [
+      "STAT3"
+    ],
+    "TGF-beta receptor signaling in skeletal dysplasias": [
+      "STAT3"
+    ],
+    "A network map of RORgt mediated signaling pathway in inflammatory diseases": [
+      "FOXP3",
+      "STAT3"
+    ],
+    "IL7 signaling": [
+      "STAT3"
+    ],
+    "Thyroid stimulating hormone (TSH) signaling": [
+      "STAT3"
+    ],
+    "Nuclear receptors meta-pathway": [
+      "STAT3"
+    ],
+    "AGE/RAGE pathway": [
+      "STAT3"
+    ],
+    "mBDNF and proBDNF regulation of GABA neurotransmission": [
+      "STAT3"
+    ],
+    "IL4 signaling": [
+      "STAT3"
+    ],
+    "Chemokine signaling": [
+      "STAT3"
+    ],
+    "Tyrosine kinase inhibitors in glioblastoma": [
+      "STAT3"
+    ],
+    "ncRNAs involved in STAT3 signaling in hepatocellular carcinoma": [
+      "STAT3"
+    ],
+    "Cell differentiation": [
+      "STAT3"
+    ],
+    "Measles virus infection": [
+      "STAT3"
+    ],
+    "Neurogenesis regulation in the olfactory epithelium": [
+      "STAT3"
+    ],
+    "Hepatitis B infection": [
+      "STAT3"
+    ],
+    "Dopaminergic neurogenesis": [
+      "STAT3"
+    ],
+    "Cancer immunotherapy by PD-1 blockade": [
+      "STAT3"
+    ],
+    "2q11.2 copy number variation syndrome": [
+      "STAT3"
+    ],
+    "Acute viral myocarditis": [
+      "CCR5",
+      "STAT3"
+    ],
+    "POU5F1 (OCT4), SOX2, NANOG activate genes related to proliferation": [
+      "STAT3"
+    ],
+    "Hallmark of Cancer: Avoiding immune destruction through non-genotoxic carcinogens": [
+      "STAT3"
+    ],
+    "Oncostatin M signaling": [
+      "STAT3"
+    ],
+    "IL6 signaling": [
+      "STAT3"
+    ],
+    "Leptin signaling": [
+      "STAT3"
+    ],
+    "Acute myeloid leukemia": [
+      "STAT3"
+    ],
+    "Thymic stromal lymphopoietin (TSLP) signaling": [
+      "STAT3"
+    ],
+    "TGF-beta receptor signaling": [
+      "STAT3"
+    ],
+    "Serotonin HTR1 group and FOS pathway": [
+      "STAT3"
+    ],
+    "Neural crest cell migration during development": [
+      "STAT3"
+    ],
+    "Clear cell renal cell carcinoma pathways": [
+      "STAT3"
+    ],
+    "Neuroinflammation and glutamatergic signaling": [
+      "STAT3"
+    ],
+    "Signaling by PDGF": [
+      "STAT3"
+    ],
+    "Urotensin-II-mediated signaling": [
+      "STAT3"
+    ],
+    "Fibrotic response of trabecular meshwork cells to TGFB3 and ENPP2 in aqueous humor": [
+      "STAT3"
+    ],
+    "Signaling by PTK6": [
+      "STAT3"
+    ],
+    "Physiological and pathological hypertrophy of the heart": [
+      "STAT3"
+    ],
+    "FLT3 p.Gln640SerfsTer8 signaling": [
+      "CCR5",
+      "STAT3"
+    ],
+    "Brain-derived neurotrophic factor (BDNF) signaling": [
+      "STAT3"
+    ],
+    "TAR syndrome": [
+      "STAT3"
+    ],
+    "Orexin receptor pathway": [
+      "STAT3"
+    ],
+    "IL23 inhibitors in inflammatory bowel disease": [
+      "STAT3"
+    ],
+    "Interleukin-7 signaling": [
+      "STAT3"
+    ],
+    "PDGF pathway": [
+      "STAT3"
+    ],
+    "TCA cycle nutrient use and invasiveness of ovarian cancer": [
+      "STAT3"
+    ],
+    "IL3 signaling": [
+      "STAT3"
+    ],
+    "Interleukin-4 and Interleukin-13 signaling": [
+      "STAT3"
+    ],
+    "RAC1/PAK1/p38/MMP2 pathway": [
+      "STAT3"
+    ],
+    "Signaling by FGFR1": [
+      "STAT3"
+    ],
+    "Inflammatory bowel disease signaling": [
+      "FOXP3",
+      "STAT3"
+    ],
+    "Non-small cell lung cancer": [
+      "STAT3"
+    ],
+    "Interactions between immune cells and microRNAs in tumor microenvironment": [
+      "STAT3"
+    ],
+    "Transcriptional regulation of memory B cell differentiation": [
+      "STAT3"
+    ],
+    "TROP2 regulatory signaling": [
+      "STAT3"
+    ],
+    "Adipogenesis": [
+      "STAT3"
+    ],
+    "IL17 signaling": [
+      "STAT3"
+    ],
+    "PDGFR-beta pathway": [
+      "STAT3"
+    ],
+    "AXL signaling": [
+      "FOXP3",
+      "STAT3"
+    ],
+    "2q21.1 copy number variation syndrome": [
+      "STAT3"
+    ],
+    "IL26 signaling": [
+      "STAT3"
+    ],
+    "Gastrin signaling": [
+      "STAT3"
+    ],
+    "Transcriptional regulation of pluripotent stem cells": [
+      "STAT3"
+    ],
+    "Interleukin-15 signaling": [
+      "STAT3"
+    ],
+    "EGFR tyrosine kinase inhibitor resistance": [
+      "STAT3"
+    ],
+    "Interleukin-6 family signaling": [
+      "STAT3"
+    ],
+    "Hepatitis C and hepatocellular carcinoma": [
+      "STAT3"
+    ],
+    "Interleukin-10 signaling": [
+      "CCR5",
+      "STAT3"
+    ],
+    "Prion disease pathway": [
+      "STAT3"
+    ],
+    "IL11 signaling": [
+      "STAT3"
+    ],
+    "MET in type 1 papillary renal cell carcinoma": [
+      "STAT3"
+    ],
+    "Mammary gland development: involution": [
+      "STAT3"
+    ],
+    "VEGFA-VEGFR2 signaling": [
+      "STAT3"
+    ],
+    "Cancer pathways": [
+      "STAT3"
+    ],
+    "Interleukin-12 family signaling": [
+      "STAT3"
+    ],
+    "Microtubule cytoskeleton regulation": [
+      "STAT3"
+    ],
+    "Kit receptor signaling": [
+      "STAT3"
+    ],
+    "Growth hormone receptor signaling": [
+      "STAT3"
+    ],
+    "Transcriptional regulation by RUNX1": [
+      "FOXP3"
+    ],
+    "HDAC6 interactions in the central nervous system": [
+      "FOXP3"
+    ],
+    "Allograft rejection": [
+      "FOXP3"
+    ],
+    "Ulcerative colitis signaling": [
+      "FOXP3"
+    ],
+    "TGF-beta signaling": [
+      "FOXP3"
+    ],
+    "Leukocyte-intrinsic Hippo pathway functions": [
+      "FOXP3"
+    ],
+    "RUNX1 and FOXP3 control the development of regulatory T lymphocytes (Tregs)": [
+      "FOXP3"
+    ],
+    "Peptide GPCRs": [
+      "CCR5"
+    ],
+    "Network map of SARS-CoV-2 signaling": [
+      "CCR5"
+    ],
+    "GPCRs, class A rhodopsin-like": [
+      "CCR5"
+    ],
+    "T-cell receptor signaling": [
+      "CCR5"
+    ],
+    "Cytokine-cytokine receptor interaction": [
+      "CCR5"
+    ],
+    "GPCRs, other": [
+      "CCR5"
+    ],
+    "G alpha (i) signaling events": [
+      "CCR5"
+    ],
+    "Class A/1 (rhodopsin-like receptors)": [
+      "CCR5"
+    ],
+    "Cell interactions in pancreatic cancer microenvironment": [
+      "CCR5"
+    ],
+    "HIV Life Cycle": [
+      "CCR5"
+    ],
+    "Selective expression of chemokine receptors during T-cell polarization": [
+      "CCR5"
+    ],
+    "ADHD and autism (ASD) pathways": [
+      "ACE"
+    ],
+    "ACE inhibitor pathway": [
+      "ACE"
+    ],
+    "Conversion of angiotensinogen to angiotensin II": [
+      "ACE"
+    ],
+    "Renin-angiotensin-aldosterone system (RAAS)": [
+      "ACE"
+    ],
+    "Renin Angiotensin System and Bradykinin pathways in COVID-19": [
+      "ACE"
+    ],
+    "Mitochondrial immune response to SARS-CoV-2": [
+      "ACE"
+    ],
+    "Elabela signaling": [
+      "ACE"
+    ],
+    "SARS-CoV-2 and ACE2 receptor: molecular mechanisms": [
+      "ACE"
+    ],
+    "SARS-CoV-2 mitochondrial chronic oxidative stress and endothelial dysfunction": [
+      "ACE"
+    ],
+    "Non-classical role of vitamin D": [
+      "ACE"
+    ],
+    "COVID-19 adverse outcome pathway": [
+      "ACE"
+    ],
+    "Downregulation of ACE2 by SARS-CoV-2 spike protein": [
+      "ACE"
+    ],
+    "WikiPathways Test: Metabolites and Metabolic Interactions": [
+      "ACE"
+    ]
+  },
+  "documents": [
+    "41034312",
+    "36965256",
+    "24165896",
+    "29923222",
+    "30085362",
+    "26404185",
+    "36703758",
+    "36480131",
+    "36720711",
+    "29621160",
+    "36729019",
+    "35293297",
+    "23295981",
+    "28884496",
+    "35352306",
+    "27896883",
+    "39770516",
+    "38721680",
+    "34757887",
+    "37536946",
+    "16731272",
+    "34696344",
+    "41258635",
+    "38612606",
+    "36499036",
+    "20821233",
+    "38685809",
+    "40005051",
+    "35253616",
+    "26528921",
+    "35469998",
+    "29625661",
+    "41150115",
+    "32998270",
+    "39148307",
+    "40799052",
+    "21594675",
+    "36868489",
+    "35933899",
+    "37378778",
+    "38817411",
+    "36756300",
+    "34660038",
+    "40599653",
+    "39901813",
+    "38664750",
+    "1496714",
+    "36119096",
+    "39330180",
+    "26709650",
+    "40583343",
+    "26188032",
+    "33184809",
+    "25206217",
+    "37356247",
+    "28343845",
+    "37569540",
+    "33142686",
+    "34237598",
+    "38085369",
+    "38042387",
+    "34443248",
+    "40362617",
+    "35496320",
+    "23566550",
+    "19336870",
+    "32535791",
+    "37517298",
+    "36997729",
+    "34325638",
+    "18398870",
+    "40427672",
+    "38794899",
+    "28449595",
+    "32418527",
+    "27863601",
+    "32452193",
+    "36904331",
+    "32067524",
+    "36846914",
+    "27892897",
+    "31185140",
+    "39055752",
+    "22186854",
+    "35996526",
+    "36981935",
+    "25200875",
+    "29541936",
+    "37314412",
+    "39541651",
+    "37536430",
+    "34579443",
+    "38242053",
+    "38133257",
+    "36455820",
+    "32806984",
+    "33809891",
+    "41176175",
+    "29976394",
+    "41362433"
+  ],
+  "images": {
+    "graph": null
+  },
+  "job_id": "1774494109274",
+  "success": true,
+  "total_genes": 5,
+  "total_documents": 100,
+  "total_pathways": 163
+}
