@@ -1,0 +1,3393 @@
+{
+  "compound": "Turmeric",
+  "outcome": "Infection",
+  "mode": "FULL",
+  "mode_name": "FULL (PMC Full Text)",
+  "genes": {
+    "ACE": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "MET": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "TERT": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "ACE2": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "ATM": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "IL10": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "CD14": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "TLR4": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "F5": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "JUN": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "TNF": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "AGT": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "F2": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "CRP": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "FOXP3": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "NLRP3": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "CD4": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "MMP9": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "APC": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "AHR": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "FAS": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "ALB": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "STAT3": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "BIRC5": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "PARP1": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "MTOR": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "MYC": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "EGFR": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "CXCR4": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "BAX": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "SP1": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "WT1": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "E2F1": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "CYP2C19": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "MLH1": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "CYP2D6": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "CTLA4": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "HGF": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "SRC": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "BDNF": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "TLR2": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "PTGS2": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "ESR1": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "APP": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "LEP": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "HDAC1": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "MIF": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "LPL": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "ABCA1": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      }
+    ],
+    "CCL2": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "IGF1": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ],
+    "SIRT1": [
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "HMGB1": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ]
+  },
+  "pathways": {
+    "SARS-CoV-2 and ACE2 receptor: molecular mechanisms": [
+      "ACE2",
+      "AGT",
+      "ACE"
+    ],
+    "ACE inhibitor pathway": [
+      "ACE2",
+      "AGT",
+      "ACE"
+    ],
+    "Downregulation of ACE2 by SARS-CoV-2 spike protein": [
+      "ACE2",
+      "ACE"
+    ],
+    "Conversion of angiotensinogen to angiotensin II": [
+      "ACE"
+    ],
+    "WikiPathways Test: Metabolites and Metabolic Interactions": [
+      "ACE"
+    ],
+    "ADHD and autism (ASD) pathways": [
+      "APP",
+      "ACE",
+      "CYP2C19",
+      "MET",
+      "CYP2D6"
+    ],
+    "Renin-angiotensin-aldosterone system (RAAS)": [
+      "AGT",
+      "ACE"
+    ],
+    "Renin Angiotensin System and Bradykinin pathways in COVID-19": [
+      "ACE2",
+      "AGT",
+      "ACE"
+    ],
+    "SARS-CoV-2 mitochondrial chronic oxidative stress and endothelial dysfunction": [
+      "ACE2",
+      "AGT",
+      "ACE",
+      "NLRP3"
+    ],
+    "COVID-19 adverse outcome pathway": [
+      "CCL2",
+      "IL10",
+      "ACE",
+      "ACE2",
+      "AGT"
+    ],
+    "Non-classical role of vitamin D": [
+      "ACE2",
+      "AGT",
+      "ACE"
+    ],
+    "Mitochondrial immune response to SARS-CoV-2": [
+      "ACE2",
+      "AGT",
+      "ACE"
+    ],
+    "Elabela signaling": [
+      "CCL2",
+      "PARP1",
+      "NLRP3",
+      "ACE",
+      "BAX",
+      "MMP9",
+      "ACE2"
+    ],
+    "Kisspeptin/kisspeptin receptor system in the ovary": [
+      "MMP9",
+      "MET"
+    ],
+    "Focal adhesion: PI3K-Akt-mTOR-signaling": [
+      "IGF1",
+      "MET",
+      "HGF"
+    ],
+    "Eukaryotic translation initiation": [
+      "MET"
+    ],
+    "Eukaryotic translation elongation": [
+      "MET"
+    ],
+    "GDNF signaling": [
+      "APP",
+      "SRC",
+      "ESR1",
+      "MET"
+    ],
+    "miR-targeted genes in epithelium": [
+      "E2F1",
+      "TERT",
+      "MET"
+    ],
+    "Transport of inorganic cations/anions and amino acids/oligopeptides": [
+      "MET"
+    ],
+    "Signaling by MET": [
+      "MET",
+      "HGF"
+    ],
+    "Influenza Infection": [
+      "MET",
+      "PARP1"
+    ],
+    "Listeria monocytogenes entry into host cells": [
+      "SRC",
+      "MET"
+    ],
+    "miR-targeted genes in lymphocytes": [
+      "E2F1",
+      "LPL",
+      "TERT",
+      "MET",
+      "BDNF"
+    ],
+    "Biocrates metabolites overview": [
+      "MET"
+    ],
+    "TAR syndrome": [
+      "SIRT1",
+      "MET",
+      "CXCR4"
+    ],
+    "Synthesis of wybutosine at G37 of tRNA(Phe)": [
+      "MET"
+    ],
+    "Axon guidance": [
+      "SRC",
+      "MET",
+      "CXCR4"
+    ],
+    "Hepatocyte growth factor receptor signaling": [
+      "SRC",
+      "MET",
+      "HGF",
+      "PTGS2"
+    ],
+    "TGF-beta signaling": [
+      "SRC",
+      "APP",
+      "TERT",
+      "MET",
+      "HDAC1",
+      "FOXP3",
+      "APC"
+    ],
+    "EGFR tyrosine kinase inhibitor resistance": [
+      "SRC",
+      "IGF1",
+      "BAX",
+      "MET",
+      "HGF"
+    ],
+    "PodNet: protein-protein interactions in the podocyte": [
+      "WT1",
+      "SRC",
+      "IGF1",
+      "MET",
+      "BIRC5",
+      "PTGS2"
+    ],
+    "Protein repair": [
+      "MET"
+    ],
+    "Semaphorin interactions": [
+      "MET"
+    ],
+    "Choline catabolism": [
+      "MET"
+    ],
+    "NRP1-triggered signaling in pancreatic cancer": [
+      "SRC",
+      "MMP9",
+      "MET",
+      "HGF"
+    ],
+    "nsp1 from SARS-CoV-2 inhibits translation initiation in the host cell": [
+      "MET"
+    ],
+    "Focal adhesion": [
+      "IGF1",
+      "SRC",
+      "MET",
+      "HGF"
+    ],
+    "Ras signaling": [
+      "MET"
+    ],
+    "Tryptophan catabolism": [
+      "MET"
+    ],
+    "Hallmark of cancer: sustaining proliferative signaling": [
+      "SRC",
+      "MET",
+      "APC"
+    ],
+    "Pleural mesothelioma": [
+      "E2F1",
+      "CCL2",
+      "SRC",
+      "NLRP3",
+      "IGF1",
+      "IL10",
+      "BAX",
+      "TERT",
+      "MET",
+      "MMP9",
+      "BDNF",
+      "HMGB1",
+      "HGF",
+      "APC"
+    ],
+    "AXL signaling": [
+      "CCL2",
+      "FAS",
+      "CTLA4",
+      "PARP1",
+      "NLRP3",
+      "SRC",
+      "MMP9",
+      "MET",
+      "FOXP3",
+      "BIRC5"
+    ],
+    "Phase II": [
+      "MET"
+    ],
+    "MET in type 1 papillary renal cell carcinoma": [
+      "SRC",
+      "MET",
+      "HGF"
+    ],
+    "Mitochondrial translation": [
+      "MET"
+    ],
+    "miR-targeted genes in squamous cell": [
+      "MET"
+    ],
+    "Cancer pathways": [
+      "E2F1",
+      "MLH1",
+      "FAS",
+      "IGF1",
+      "HGF",
+      "BAX",
+      "ESR1",
+      "TERT",
+      "MET",
+      "HDAC1",
+      "F2",
+      "AGT",
+      "BIRC5",
+      "CXCR4",
+      "PTGS2",
+      "APC"
+    ],
+    "tRNA modification in the nucleus and cytosol": [
+      "MET"
+    ],
+    "Hippo-Merlin signaling dysregulation": [
+      "MET"
+    ],
+    "Non-small cell lung cancer": [
+      "E2F1",
+      "MET",
+      "HGF",
+      "BAX"
+    ],
+    "PIP3 activates AKT signaling": [
+      "SRC",
+      "ESR1",
+      "MET",
+      "HGF"
+    ],
+    "Visual phototransduction": [
+      "FAS",
+      "MET"
+    ],
+    "Pathways into methionine and folate cycles": [
+      "MET"
+    ],
+    "tRNA aminoacylation": [
+      "MET"
+    ],
+    "PI3K-Akt signaling": [
+      "IGF1",
+      "TLR4",
+      "TLR2",
+      "MET",
+      "BDNF",
+      "HGF"
+    ],
+    "Hippo signaling regulation": [
+      "MET"
+    ],
+    "Receptor tyrosine kinase (RTK) family": [
+      "MET"
+    ],
+    "miR-targeted genes in muscle cell": [
+      "E2F1",
+      "ESR1",
+      "LPL",
+      "MET"
+    ],
+    "RAF/MAP kinase cascade": [
+      "MET",
+      "HGF"
+    ],
+    "Transcriptional regulation by MECP2": [
+      "BDNF",
+      "MET",
+      "HDAC1"
+    ],
+    "Transport of bile salts and organic acids, metal ions and amine compounds": [
+      "MET"
+    ],
+    "Glioblastoma signaling": [
+      "E2F1",
+      "SRC",
+      "MET"
+    ],
+    "Androgen receptor network in prostate cancer": [
+      "E2F1",
+      "MET",
+      "HGF",
+      "BAX"
+    ],
+    "Hallmark of Cancer: Enabling replicative immortality through non-genotoxic carcinogens": [
+      "E2F1",
+      "TERT",
+      "ESR1"
+    ],
+    "Telomere Maintenance": [
+      "TERT"
+    ],
+    "8p23.1 copy number variation syndrome": [
+      "TLR2",
+      "TERT",
+      "TLR4"
+    ],
+    "Mammary gland development: embryonic development": [
+      "TERT"
+    ],
+    "Lung fibrosis": [
+      "CCL2",
+      "IGF1",
+      "TERT",
+      "MMP9",
+      "HGF"
+    ],
+    "Head and neck squamous cell carcinoma": [
+      "E2F1",
+      "TERT"
+    ],
+    "TCF dependent signaling in response to WNT": [
+      "HDAC1",
+      "TERT",
+      "APC"
+    ],
+    "Post-COVID neuroinflammation": [
+      "ACE2",
+      "IL10",
+      "HMGB1",
+      "TLR4"
+    ],
+    "ROS in COVID-19 endothelial dysfunction": [
+      "ACE2"
+    ],
+    "SARS-CoV-2 altering angiogenesis via NRP1": [
+      "ACE2"
+    ],
+    "COVID-19 structural coverage map": [
+      "ACE2"
+    ],
+    "SARS-CoV-1 Infection": [
+      "ACE2"
+    ],
+    "Soluble ACE2-mediated cell entry of SARS-CoV-2": [
+      "ACE2"
+    ],
+    "Physiopathology of endothelial dysfunction in COVID-19": [
+      "ACE2"
+    ],
+    "Physiopathology of endothelial dysfunction in coronavirus disease": [
+      "ACE2"
+    ],
+    "Type I interferon induction and signaling during SARS-CoV-2 infection": [
+      "ACE2",
+      "TLR2",
+      "TLR4"
+    ],
+    "SARS-CoV-2 innate immunity evasion and cell-specific immune response": [
+      "CCL2",
+      "ACE2"
+    ],
+    "Antiviral and anti-inflammatory effects of Nrf2 on SARS-CoV-2 pathway": [
+      "CCL2",
+      "ACE2"
+    ],
+    "Angiotensin II receptor type 1 pathway": [
+      "ACE2"
+    ],
+    "SARS coronavirus and innate immunity": [
+      "ACE2"
+    ],
+    "SARS-CoV-2 Infection": [
+      "ACE2"
+    ],
+    "Network map of SARS-CoV-2 signaling": [
+      "CCL2",
+      "AHR",
+      "NLRP3",
+      "PTGS2",
+      "CD4",
+      "IL10",
+      "ALB",
+      "ACE2",
+      "AGT",
+      "BIRC5",
+      "CD14",
+      "CRP"
+    ],
+    "ACE2 inhibition leads to pulmonary fibrosis": [
+      "ACE2"
+    ],
+    "SARS-CoV-2 and COVID-19 pathway": [
+      "ACE2",
+      "NLRP3"
+    ],
+    "Complement-mediated inflammation of pulmonary alveolus in COVID-19 (hypothetical pathway)": [
+      "ACE2"
+    ],
+    "Cytokine-cytokine receptor interaction": [
+      "CCL2",
+      "FAS",
+      "LEP",
+      "IL10",
+      "CXCR4"
+    ],
+    "Anti-inflammatory response favouring Leishmania parasite infection": [
+      "IL10",
+      "SRC"
+    ],
+    "PI3K/AKT/mTOR": [
+      "IL10"
+    ],
+    "Interleukin-4 and Interleukin-13 signaling": [
+      "CCL2",
+      "IL10",
+      "MMP9",
+      "BIRC5",
+      "HGF",
+      "PTGS2"
+    ],
+    "Allograft rejection": [
+      "FAS",
+      "IL10",
+      "FOXP3",
+      "CTLA4",
+      "APC"
+    ],
+    "Interleukin-10 signaling": [
+      "CCL2",
+      "IL10",
+      "PTGS2"
+    ],
+    "A network map of RORgt mediated signaling pathway in inflammatory diseases": [
+      "AHR",
+      "IL10",
+      "BAX",
+      "TLR2",
+      "FOXP3",
+      "CTLA4"
+    ],
+    "Modular map of bradykinin signaling network": [
+      "CCL2",
+      "SRC",
+      "IL10",
+      "BAX",
+      "MMP9",
+      "PTGS2"
+    ],
+    "Sudden infant death syndrome (SIDS) susceptibility pathways": [
+      "BDNF",
+      "IL10",
+      "HDAC1"
+    ],
+    "Ulcerative colitis signaling": [
+      "FOXP3",
+      "IL10",
+      "TLR2",
+      "APC"
+    ],
+    "Inflammatory bowel disease signaling": [
+      "IL10",
+      "TLR4",
+      "TLR2",
+      "FOXP3",
+      "APC"
+    ],
+    "Netrin-UNC5B signaling": [
+      "CCL2",
+      "IL10",
+      "SRC"
+    ],
+    "Immune infiltration in pancreatic cancer": [
+      "CCL2",
+      "IL10",
+      "MMP9"
+    ],
+    "FGFR4 p.G388R signaling": [
+      "IL10"
+    ],
+    "Acute viral myocarditis": [
+      "SRC",
+      "PARP1",
+      "NLRP3",
+      "CD4",
+      "IL10",
+      "TLR4",
+      "BAX",
+      "MMP9",
+      "CXCR4"
+    ],
+    "IL26 signaling": [
+      "IL10",
+      "MMP9",
+      "BAX"
+    ],
+    "Integrative Analysis of  Treg-Glial Interactions": [
+      "NLRP3",
+      "IGF1",
+      "CD4",
+      "IL10",
+      "TLR4",
+      "MMP9",
+      "FOXP3",
+      "CTLA4",
+      "APC"
+    ],
+    "T-cell antigen receptor (TCR) pathway during Staphylococcus aureus infection": [
+      "CD4",
+      "IL10",
+      "CTLA4"
+    ],
+    "Affected pathways in Duchenne muscular dystrophy": [
+      "IL10",
+      "MMP9"
+    ],
+    "Uterine natural killer cells and progesterone, estrogen, and chorionic gonadotropin": [
+      "CCL2",
+      "IL10",
+      "CXCR4"
+    ],
+    "LDL- influence on CD14 and TLR4": [
+      "CCL2",
+      "IL10",
+      "CD14",
+      "TLR4"
+    ],
+    "Gene and protein expression by JAK-STAT signaling after Interleukin-12 stimulation": [
+      "IL10",
+      "MIF"
+    ],
+    "Orexin receptor pathway": [
+      "LPL",
+      "IL10",
+      "SRC",
+      "LEP"
+    ],
+    "IL18 signaling": [
+      "CCL2",
+      "FAS",
+      "SRC",
+      "PARP1",
+      "IL10",
+      "BAX",
+      "MMP9",
+      "PTGS2"
+    ],
+    "miRNA role in immune response in sepsis": [
+      "IL10",
+      "TLR4"
+    ],
+    "Overview of proinflammatory and profibrotic mediators": [
+      "CCL2",
+      "IL10",
+      "MMP9"
+    ],
+    "T cell modulation and desmoplasia in pancreatic cancer": [
+      "IL10",
+      "CTLA4",
+      "CXCR4",
+      "FAS"
+    ],
+    "Selenium micronutrient network": [
+      "CCL2",
+      "IL10",
+      "ALB",
+      "ABCA1",
+      "CRP"
+    ],
+    "Cytokines and inflammatory response": [
+      "CD4",
+      "IL10"
+    ],
+    "Macrophage-stimulating protein (MSP) signaling": [
+      "CCL2",
+      "SRC",
+      "PARP1",
+      "IL10",
+      "MMP9"
+    ],
+    "Neuroinflammation and glutamatergic signaling": [
+      "BDNF",
+      "IL10",
+      "IGF1"
+    ],
+    "IL10 anti-inflammatory signaling": [
+      "IL10"
+    ],
+    "IL19 signaling": [
+      "CCL2",
+      "IL10",
+      "MMP9",
+      "CXCR4"
+    ],
+    "CCL18 signaling": [
+      "CCL2",
+      "SRC",
+      "CD4",
+      "IL10",
+      "MMP9",
+      "FOXP3",
+      "CXCR4"
+    ],
+    "Control of immune tolerance by vasoactive intestinal peptide": [
+      "IL10",
+      "CTLA4",
+      "APC"
+    ],
+    "Opioid receptor pathways": [
+      "E2F1",
+      "FAS",
+      "SRC",
+      "TLR4",
+      "BAX",
+      "MMP9",
+      "HDAC1",
+      "BDNF",
+      "CD14",
+      "PTGS2"
+    ],
+    "Class I MHC mediated antigen processing and presentation": [
+      "TLR2",
+      "CD14"
+    ],
+    "MAPK signaling": [
+      "BDNF",
+      "FAS",
+      "CD14"
+    ],
+    "MyD88:MAL(TIRAP) cascade initiated on plasma membrane": [
+      "TLR2",
+      "CD14",
+      "TLR4"
+    ],
+    "Regulation of TLR by endogenous ligand": [
+      "TLR2",
+      "HMGB1",
+      "CD14",
+      "TLR4"
+    ],
+    "Fibrin complement receptor 3 signaling": [
+      "CCL2",
+      "SRC",
+      "CD14",
+      "TLR4"
+    ],
+    "LTF danger signal response pathway": [
+      "TLR2",
+      "CD14",
+      "TLR4"
+    ],
+    "Psoriasis mechanism and therapies": [
+      "CD14"
+    ],
+    "Toll-like receptor signaling": [
+      "TLR2",
+      "CD14",
+      "TLR4"
+    ],
+    "Vitamin D receptor pathway": [
+      "CYP2D6",
+      "CTLA4",
+      "CD14"
+    ],
+    "Macrophage markers": [
+      "CD14"
+    ],
+    "MyD88-independent TLR4 cascade": [
+      "CD14",
+      "TLR4"
+    ],
+    "Toll-like receptor cascades": [
+      "TLR2",
+      "CD14",
+      "TLR4"
+    ],
+    "Regulation of actin cytoskeleton": [
+      "F2",
+      "CD14",
+      "APC"
+    ],
+    "Tissue fate map": [
+      "CD4",
+      "CD14"
+    ],
+    "Acute myeloid leukemia": [
+      "CD14"
+    ],
+    "Regulation of toll-like receptor signaling": [
+      "TLR2",
+      "CD14",
+      "TLR4"
+    ],
+    "Pathogenic Escherichia coli infection": [
+      "CD14",
+      "TLR4"
+    ],
+    "Sickle cell disease": [
+      "TLR4"
+    ],
+    "Non-genomic actions of 1,25-dihydroxyvitamin D3": [
+      "CCL2",
+      "TLR2",
+      "TLR4"
+    ],
+    "Ebola virus infection in host": [
+      "TLR4"
+    ],
+    "Toll-like receptor signaling related to MyD88": [
+      "TLR2",
+      "TLR4"
+    ],
+    "TLR4 signaling and tolerance": [
+      "TLR4"
+    ],
+    "MYD88 distinct input-output pathway": [
+      "TLR2",
+      "TLR4"
+    ],
+    "Spinal cord injury": [
+      "E2F1",
+      "CCL2",
+      "LEP",
+      "TLR4",
+      "MMP9",
+      "BDNF",
+      "MIF",
+      "PTGS2"
+    ],
+    "IL23 inhibitors in inflammatory bowel disease": [
+      "TLR4"
+    ],
+    "Measles virus infection": [
+      "TLR2",
+      "FAS",
+      "TLR4",
+      "BAX"
+    ],
+    "MyD88 dependent cascade initiated on endosome": [
+      "TLR4"
+    ],
+    "Nanomaterial-induced inflammasome activation": [
+      "TLR4",
+      "NLRP3"
+    ],
+    "Extracellular vesicles in the crosstalk of cardiac cells": [
+      "IGF1",
+      "MMP9",
+      "BIRC5",
+      "TLR4"
+    ],
+    "ApoE and miR-146 in inflammation and atherosclerosis": [
+      "TLR2",
+      "TLR4"
+    ],
+    "Primary focal segmental glomerulosclerosis (FSGS)": [
+      "WT1",
+      "TLR4"
+    ],
+    "Hepatitis B infection": [
+      "FAS",
+      "SRC",
+      "TLR4",
+      "BAX",
+      "MMP9",
+      "TLR2",
+      "BIRC5"
+    ],
+    "Caspase activation via death receptors in the presence of ligand": [
+      "FAS",
+      "TLR4"
+    ],
+    "Transcriptional regulation of memory B cell differentiation": [
+      "E2F1",
+      "TLR2",
+      "TLR4"
+    ],
+    "Platelet-mediated interactions with vascular and circulating cells": [
+      "CCL2",
+      "TLR2",
+      "TLR4"
+    ],
+    "COVID-19 and endothelial cell senescence": [
+      "TLR4"
+    ],
+    "Interactions between immune cells and microRNAs in tumor microenvironment": [
+      "CCL2",
+      "CTLA4",
+      "TLR4",
+      "APC"
+    ],
+    "Lupus pathogenesis": [
+      "TLR4"
+    ],
+    "Extrafollicular and follicular B cell activation by SARS-CoV-2": [
+      "CXCR4",
+      "TLR4",
+      "CRP"
+    ],
+    "Burn wound healing": [
+      "CCL2",
+      "CXCR4",
+      "TLR4",
+      "BAX",
+      "MMP9",
+      "TLR2",
+      "HMGB1",
+      "HGF"
+    ],
+    "Corticotropin-releasing hormone signaling": [
+      "PARP1",
+      "TLR4"
+    ],
+    "Nephrotoxcicity adverse outcome pathway": [
+      "TLR4"
+    ],
+    "Neuroinflammation": [
+      "TLR4"
+    ],
+    "Induction of autophagy and toll-like receptor signaling by graphene oxide": [
+      "TLR4"
+    ],
+    "Smith-Magenis and Potocki-Lupski syndrome copy number variation": [
+      "APP",
+      "TLR4",
+      "BAX"
+    ],
+    "Dengue-2 interactions with complement and coagulation cascades": [
+      "F2",
+      "F5"
+    ],
+    "Complement and coagulation cascades": [
+      "F2",
+      "F5"
+    ],
+    "Formation of Fibrin Clot and the Clotting Cascade": [
+      "F5"
+    ],
+    "Adipogenesis": [
+      "E2F1",
+      "AHR",
+      "FAS",
+      "LPL",
+      "LEP",
+      "IGF1",
+      "AGT",
+      "MIF"
+    ],
+    "G alpha (q) signaling events": [
+      "APP",
+      "AGT"
+    ],
+    "IL6 signaling": [
+      "AGT",
+      "CRP",
+      "HDAC1"
+    ],
+    "Monoamine transport and regulation": [
+      "AGT"
+    ],
+    "Class A/1 (rhodopsin-like receptors)": [
+      "APP",
+      "CCL2",
+      "AGT",
+      "CXCR4"
+    ],
+    "MicroRNAs in cardiomyocyte hypertrophy": [
+      "AGT"
+    ],
+    "Physiological and pathological hypertrophy of the heart": [
+      "AGT"
+    ],
+    "G alpha (i) signaling events": [
+      "APP",
+      "AGT",
+      "SRC",
+      "CXCR4"
+    ],
+    "Gamma carboxylation, hypusine formation and arylsulfatase activation": [
+      "F2"
+    ],
+    "Bempedoic acid therapy in atherosclerosis and metabolic syndrome": [
+      "CRP"
+    ],
+    "Complement system": [
+      "TLR2",
+      "ALB",
+      "CRP"
+    ],
+    "Blood-based neuroinflammation markers": [
+      "CCL2",
+      "BDNF",
+      "CRP"
+    ],
+    "Pathogenesis of SARS-CoV-2 mediated by nsp9-nsp10 complex": [
+      "CD4",
+      "CRP"
+    ],
+    "Galanin receptor pathway": [
+      "CRP"
+    ],
+    "Complement cascade": [
+      "CRP"
+    ],
+    "Transcriptional regulation by RUNX1": [
+      "FOXP3",
+      "ESR1"
+    ],
+    "RUNX1 and FOXP3 control the development of regulatory T lymphocytes (Tregs)": [
+      "FOXP3",
+      "CTLA4"
+    ],
+    "Leukocyte-intrinsic Hippo pathway functions": [
+      "FOXP3",
+      "LPL",
+      "CD4"
+    ],
+    "Th17 cell differentiation pathway": [
+      "FOXP3",
+      "AHR",
+      "CD4"
+    ],
+    "FOXP3 in COVID-19": [
+      "FOXP3",
+      "CD4"
+    ],
+    "HDAC6 interactions in the central nervous system": [
+      "MIF",
+      "BAX",
+      "FOXP3",
+      "BDNF",
+      "BIRC5",
+      "APC"
+    ],
+    "Nucleotide-binding oligomerization domain (NOD) pathway": [
+      "NLRP3"
+    ],
+    "EPAC1 and PKA reduction of retinal inflammation": [
+      "NLRP3"
+    ],
+    "Unfolded protein response": [
+      "NLRP3"
+    ],
+    "Activation of NLRP3 inflammasome by SARS-CoV-2": [
+      "NLRP3"
+    ],
+    "Nucleotide-binding domain, leucine rich repeat containing receptor (NLR) signaling": [
+      "APP",
+      "NLRP3"
+    ],
+    "Cell recruitment (pro-inflammatory response)": [
+      "NLRP3"
+    ],
+    "1p36 copy number variation syndrome": [
+      "ESR1",
+      "NLRP3"
+    ],
+    "Prostaglandin signaling": [
+      "CCL2",
+      "AHR",
+      "NLRP3",
+      "MMP9",
+      "PTGS2"
+    ],
+    "10q11.21q11.23 copy number variation syndrome": [
+      "SIRT1",
+      "NLRP3"
+    ],
+    "STING pathway in Kawasaki-like disease and COVID-19": [
+      "NLRP3"
+    ],
+    "Deubiquitination": [
+      "ESR1",
+      "NLRP3"
+    ],
+    "IL1 and megakaryocytes in obesity": [
+      "CCL2",
+      "TLR2",
+      "MMP9",
+      "NLRP3"
+    ],
+    "Cell interactions in pancreatic cancer microenvironment": [
+      "CCL2",
+      "FAS",
+      "CD4",
+      "CTLA4",
+      "CXCR4"
+    ],
+    "11p11.2 copy number variation syndrome": [
+      "CD4"
+    ],
+    "Defensins": [
+      "CD4",
+      "TLR2"
+    ],
+    "Selective expression of chemokine receptors during T-cell polarization": [
+      "CD4",
+      "CXCR4"
+    ],
+    "Calcium mediated T-cell apoptosis involved in inclusion body myositis": [
+      "CD4",
+      "HDAC1"
+    ],
+    "Other interleukin signaling": [
+      "CD4"
+    ],
+    "Oxysterols derived from cholesterol": [
+      "CD4"
+    ],
+    "Development and heterogeneity of the ILC family": [
+      "CD4",
+      "AHR"
+    ],
+    "Host Interactions of HIV factors": [
+      "CD4"
+    ],
+    "mRNA vaccine activation of dendritic cell and induction of IFN-1": [
+      "CD4"
+    ],
+    "IL11 signaling": [
+      "SRC",
+      "CD4",
+      "BIRC5"
+    ],
+    "Cytokine storm syndrome": [
+      "CD4"
+    ],
+    "TYROBP causal network in microglia": [
+      "CD4"
+    ],
+    "T-cell activation SARS-CoV-2": [
+      "BAX",
+      "CD4",
+      "CTLA4",
+      "APC"
+    ],
+    "Costimulation by the CD28 family": [
+      "SRC",
+      "CD4",
+      "CTLA4"
+    ],
+    "TCR signaling": [
+      "CD4"
+    ],
+    "T-cell receptor signaling": [
+      "CD4",
+      "FAS"
+    ],
+    "Celiac disease mechanism and therapies": [
+      "CD4"
+    ],
+    "HIV Life Cycle": [
+      "CD4",
+      "CXCR4"
+    ],
+    "Urotensin-II-mediated signaling": [
+      "ABCA1",
+      "MMP9",
+      "BAX"
+    ],
+    "AGE/RAGE pathway": [
+      "MMP9",
+      "SRC"
+    ],
+    "Neural crest cell migration in cancer": [
+      "BDNF",
+      "MMP9"
+    ],
+    "Male infertility": [
+      "MLH1",
+      "AHR",
+      "FAS",
+      "PARP1",
+      "MMP9",
+      "ESR1"
+    ],
+    "Mammary gland development: involution": [
+      "E2F1",
+      "MMP9",
+      "BAX"
+    ],
+    "DDR1-mediated signaling": [
+      "CCL2",
+      "SRC",
+      "IGF1",
+      "MMP9",
+      "PTGS2"
+    ],
+    "Endochondral ossification with skeletal dysplasias": [
+      "IGF1",
+      "MMP9"
+    ],
+    "Angiogenesis overview": [
+      "MMP9",
+      "SRC",
+      "APC"
+    ],
+    "Assembly of collagen fibrils and other multimeric structures": [
+      "MMP9"
+    ],
+    "Angiogenesis": [
+      "MMP9",
+      "SRC"
+    ],
+    "Matrix metalloproteinases": [
+      "MMP9"
+    ],
+    "Chronic hyperglycemia impairment of neuron function": [
+      "BDNF",
+      "MMP9"
+    ],
+    "Neovascularization processes": [
+      "MMP9",
+      "CXCR4"
+    ],
+    "TNF-related weak inducer of apoptosis (TWEAK) signaling": [
+      "CCL2",
+      "MMP9",
+      "HDAC1"
+    ],
+    "Bladder cancer": [
+      "E2F1",
+      "MMP9",
+      "SRC"
+    ],
+    "Fragile X syndrome": [
+      "BDNF",
+      "APP",
+      "MMP9",
+      "SRC"
+    ],
+    "EPH-Ephrin signaling": [
+      "MMP9",
+      "SRC"
+    ],
+    "Photodynamic therapy-induced NF-kB survival signaling": [
+      "MMP9",
+      "BIRC5",
+      "PTGS2"
+    ],
+    "Endochondral ossification": [
+      "IGF1",
+      "MMP9"
+    ],
+    "Collagen degradation": [
+      "MMP9"
+    ],
+    "Neutrophil degranulation": [
+      "HMGB1",
+      "TLR2",
+      "MMP9",
+      "MIF"
+    ],
+    "Signaling by SCF-KIT": [
+      "MMP9",
+      "SRC"
+    ],
+    "PPAR Beta/Delta pathway": [
+      "LPL",
+      "CCL2",
+      "MMP9",
+      "PTGS2"
+    ],
+    "Epithelial to mesenchymal transition in colorectal cancer": [
+      "MMP9"
+    ],
+    "Pathophysiology of age-related macular degeneration": [
+      "MMP9"
+    ],
+    "Activation of Matrix Metalloproteinases": [
+      "MMP9"
+    ],
+    "Extra-nuclear estrogen signaling": [
+      "ESR1",
+      "MMP9",
+      "SRC"
+    ],
+    "Degradation of the extracellular matrix": [
+      "MMP9"
+    ],
+    "Neural crest cell migration during development": [
+      "BDNF",
+      "MMP9"
+    ],
+    "Endothelin pathway": [
+      "CCL2",
+      "MMP9",
+      "SRC",
+      "PTGS2"
+    ],
+    "Embryonic stem cell pluripotency pathways": [
+      "APC"
+    ],
+    "Physico-chemical features and toxicity-associated pathways": [
+      "SRC",
+      "APC"
+    ],
+    "Mitotic Metaphase and Anaphase": [
+      "BIRC5",
+      "APC"
+    ],
+    "Transcriptional regulation by VENTX": [
+      "APC"
+    ],
+    "Regulation of Wnt / B-catenin signaling by small molecule compounds": [
+      "APC"
+    ],
+    "Influence of laminopathies on Wnt signaling": [
+      "APC"
+    ],
+    "Wnt/Beta-catenin signaling inhibitors in current and past clinical trials": [
+      "APC"
+    ],
+    "Multiple sclerosis mechanism and therapies": [
+      "APC"
+    ],
+    "ncRNAs in Wnt signaling in hepatocellular carcinoma": [
+      "APC"
+    ],
+    "Wnt signaling": [
+      "APC"
+    ],
+    "DNA damage response (only ATM dependent)": [
+      "BAX",
+      "HMGB1",
+      "APC"
+    ],
+    "Ciliary landscape": [
+      "HDAC1",
+      "APC"
+    ],
+    "Overlap between signal transduction pathways contributing to LMNA laminopathies": [
+      "E2F1",
+      "HDAC1",
+      "APC"
+    ],
+    "Alzheimer's disease": [
+      "LPL",
+      "FAS",
+      "APP",
+      "PTGS2",
+      "APC"
+    ],
+    "Senescence-associated secretory phenotype (SASP)": [
+      "APC"
+    ],
+    "Synthesis of DNA": [
+      "APC"
+    ],
+    "Cell cycle checkpoints": [
+      "BIRC5",
+      "APC"
+    ],
+    "Wnt signaling and pluripotency": [
+      "APC"
+    ],
+    "Regulation of sister chromatid separation at the metaphase-anaphase transition": [
+      "APC"
+    ],
+    "Regulation of mitotic cell cycle": [
+      "APC"
+    ],
+    "lncRNA in canonical Wnt signaling and colorectal cancer": [
+      "APC"
+    ],
+    "Apoptotic execution phase": [
+      "HMGB1",
+      "APC"
+    ],
+    "Extracellular vesicle-mediated signaling in recipient cells": [
+      "HGF",
+      "APC"
+    ],
+    "Alzheimer's disease and miRNA effects": [
+      "LPL",
+      "FAS",
+      "APP",
+      "PTGS2",
+      "APC"
+    ],
+    "Copper homeostasis": [
+      "APP",
+      "APC"
+    ],
+    "Cohesin complex": [
+      "APC"
+    ],
+    "Endometrial cancer": [
+      "BAX",
+      "APC"
+    ],
+    "Brain-derived neurotrophic factor (BDNF) signaling": [
+      "BDNF",
+      "SRC",
+      "APC"
+    ],
+    "2q21.1 copy number variation syndrome": [
+      "APC"
+    ],
+    "Irinotecan pathway": [
+      "APC"
+    ],
+    "Gastric cancer network 1": [
+      "APC"
+    ],
+    "Chromosomal and microsatellite instability in colorectal cancer": [
+      "MLH1",
+      "BAX",
+      "BIRC5",
+      "PTGS2",
+      "APC"
+    ],
+    "Breast cancer pathway": [
+      "E2F1",
+      "PARP1",
+      "IGF1",
+      "BAX",
+      "ESR1",
+      "APC"
+    ],
+    "Wnt/beta-catenin signaling in leukemia": [
+      "APC"
+    ],
+    "Cell division cycle 27": [
+      "APC"
+    ],
+    "Endoderm differentiation": [
+      "APP",
+      "APC"
+    ],
+    "Microtubule cytoskeleton regulation": [
+      "SRC",
+      "APC"
+    ],
+    "2q13 copy number variation syndrome": [
+      "APC"
+    ],
+    "Wnt/Beta-catenin signaling and ARTD family members": [
+      "PARP1",
+      "APC"
+    ],
+    "Degradation of beta-catenin by the destruction complex": [
+      "HDAC1",
+      "APC"
+    ],
+    "Wnt signaling, NetPath": [
+      "APC"
+    ],
+    "Phase I": [
+      "CYP2C19",
+      "CYP2D6",
+      "AHR"
+    ],
+    "AOP416 KEs": [
+      "AHR"
+    ],
+    "AOP420 KE": [
+      "AHR"
+    ],
+    "Cannabinoid receptor signaling": [
+      "CYP2C19",
+      "AHR"
+    ],
+    "Liver steatosis adverse outcome pathway": [
+      "AHR",
+      "FAS"
+    ],
+    "Nuclear receptors meta-pathway": [
+      "CCL2",
+      "AHR",
+      "SRC",
+      "BAX",
+      "CYP2C19",
+      "ESR1",
+      "HGF",
+      "PTGS2"
+    ],
+    "Tryptophan kynurenine pathway in post-COVID syndrome": [
+      "AHR"
+    ],
+    "Integrated breast cancer pathway": [
+      "E2F1",
+      "AHR",
+      "BAX",
+      "SIRT1",
+      "HDAC1",
+      "ESR1"
+    ],
+    "AOP417 KE": [
+      "AHR"
+    ],
+    "Aryl hydrocarbon receptor response to main mediators PAH and TCDD": [
+      "E2F1",
+      "AHR",
+      "SRC",
+      "FAS",
+      "LPL",
+      "ESR1",
+      "PTGS2"
+    ],
+    "Circadian rhythm genes": [
+      "AHR",
+      "FAS",
+      "LEP",
+      "SIRT1",
+      "HDAC1"
+    ],
+    "Aryl hydrocarbon receptor signaling": [
+      "AHR"
+    ],
+    "Aryl hydrocarbon receptor pathway": [
+      "AHR",
+      "SRC",
+      "BAX"
+    ],
+    "Kynurenine pathway and links to cell senescence": [
+      "AHR"
+    ],
+    "Fas ligand pathway and stress induction of heat shock proteins": [
+      "FAS",
+      "PARP1"
+    ],
+    "VEGFA-VEGFR2 signaling": [
+      "CCL2",
+      "HMGB1",
+      "FAS",
+      "SRC",
+      "ALB",
+      "HDAC1",
+      "BIRC5",
+      "PTGS2"
+    ],
+    "FasL/ CD95L signaling": [
+      "FAS"
+    ],
+    "Mitochondrial fatty acid oxidation disorders": [
+      "FAS"
+    ],
+    "Photodynamic therapy-induced AP-1 survival signaling": [
+      "FAS",
+      "BAX"
+    ],
+    "miRNA regulation of DNA damage response": [
+      "E2F1",
+      "FAS",
+      "BAX"
+    ],
+    "Synthesis, secretion, and deacylation of Ghrelin": [
+      "IGF1",
+      "FAS",
+      "LEP"
+    ],
+    "DNA damage response": [
+      "E2F1",
+      "FAS",
+      "BAX"
+    ],
+    "p53 transcriptional gene network": [
+      "MLH1",
+      "CCL2",
+      "FAS",
+      "BAX"
+    ],
+    "PPARA activation leading to hepatocellular steatosis and carcinomas": [
+      "FAS"
+    ],
+    "Erythropoiesis": [
+      "FAS"
+    ],
+    "Complement system in neuronal development and plasticity": [
+      "FAS",
+      "BAX"
+    ],
+    "Neurotransmitter release cycle": [
+      "FAS"
+    ],
+    "Apoptosis modulation and signaling": [
+      "FAS",
+      "BIRC5",
+      "BAX"
+    ],
+    "Familial hyperlipidemia type 4": [
+      "LPL",
+      "FAS"
+    ],
+    "RIPK1-mediated regulated necrosis": [
+      "FAS"
+    ],
+    "Apoptosis modulation by HSP70": [
+      "FAS"
+    ],
+    "Nanomaterial induced apoptosis": [
+      "FAS",
+      "BAX"
+    ],
+    "7q11.23 copy number variation syndrome": [
+      "FAS"
+    ],
+    "Apoptosis": [
+      "IGF1",
+      "FAS",
+      "BIRC5",
+      "BAX"
+    ],
+    "TP53 Regulates Transcription of Cell Death Genes": [
+      "FAS",
+      "BIRC5",
+      "BAX"
+    ],
+    "Plasma lipoprotein assembly, remodeling, and clearance": [
+      "LPL",
+      "ABCA1",
+      "FAS",
+      "ALB"
+    ],
+    "Nonalcoholic fatty liver disease": [
+      "CCL2",
+      "FAS",
+      "LEP",
+      "BAX"
+    ],
+    "Response to elevated platelet cytosolic Ca ions": [
+      "APP",
+      "HGF",
+      "ALB"
+    ],
+    "Transport of vitamins, nucleosides, and related molecules": [
+      "ALB"
+    ],
+    "Post-translational protein phosphorylation": [
+      "APP",
+      "ALB"
+    ],
+    "Binding and uptake of ligands by scavenger receptors": [
+      "ALB"
+    ],
+    "Regulation of IGF transport and uptake by IGF binding proteins": [
+      "IGF1",
+      "APP",
+      "ALB"
+    ],
+    "Mitotic Prometaphase": [
+      "BIRC5"
+    ],
+    "Apoptosis-related network due to altered Notch3 in ovarian cancer": [
+      "APP",
+      "BIRC5",
+      "HDAC1"
+    ],
+    "SUMOylation of DNA replication proteins": [
+      "BIRC5"
+    ],
+    "Neddylation": [
+      "BIRC5"
+    ],
+    "Hepatitis C and hepatocellular carcinoma": [
+      "BIRC5",
+      "PTGS2"
+    ],
+    "IL4 signaling": [
+      "BIRC5"
+    ],
+    "Photodynamic therapy-induced HIF-1 survival signaling": [
+      "BIRC5",
+      "PTGS2",
+      "BAX"
+    ],
+    "Gastrin signaling": [
+      "SRC",
+      "BIRC5",
+      "PTGS2"
+    ],
+    "RHO GTPases activate formins": [
+      "BIRC5"
+    ],
+    "Nucleotide excision repair in xeroderma pigmentosum": [
+      "PARP1"
+    ],
+    "Resolution of Abasic Sites (AP sites)": [
+      "PARP1"
+    ],
+    "Progeria-associated lipodystrophy": [
+      "PARP1"
+    ],
+    "Base excision repair": [
+      "HMGB1",
+      "PARP1"
+    ],
+    "MAPK signaling and ARTD family members": [
+      "PARP1"
+    ],
+    "Joubert syndrome": [
+      "PARP1"
+    ],
+    "CAMKK2 pathway": [
+      "ABCA1",
+      "SIRT1",
+      "PARP1"
+    ],
+    "HDR through MMEJ (alt-NHEJ)": [
+      "PARP1"
+    ],
+    "DNA IR-double strand breaks and cellular response via ATM": [
+      "E2F1",
+      "PARP1",
+      "BAX"
+    ],
+    "Genes and complexes involved in the DNA repair pathways": [
+      "MLH1",
+      "HMGB1",
+      "PARP1"
+    ],
+    "Targeted agents in triple negative breast cancer": [
+      "PARP1"
+    ],
+    "DNA IR-damage and cellular response via ATR": [
+      "E2F1",
+      "MLH1",
+      "PARP1"
+    ],
+    "NF-kB signaling and ARTD family members": [
+      "PARP1"
+    ],
+    "Parthanatos cell death signaling pathway": [
+      "MIF",
+      "PARP1"
+    ],
+    "TROP2 regulatory signaling": [
+      "IGF1",
+      "SRC",
+      "PARP1",
+      "BAX"
+    ],
+    "SUMOylation of DNA damage response and repair proteins": [
+      "PARP1"
+    ],
+    "Transcriptional activity of SMAD2/SMAD3:SMAD4 heterotrimer": [
+      "PARP1",
+      "HDAC1"
+    ],
+    "AKT signaling and ARTD family members": [
+      "SIRT1",
+      "PARP1"
+    ],
+    "JAK/STAT signaling and ARTD family members": [
+      "PARP1"
+    ],
+    "Nanoparticle triggered regulated necrosis": [
+      "PARP1"
+    ],
+    "NAD+ biosynthetic pathways": [
+      "SIRT1",
+      "PARP1"
+    ],
+    "Nucleotide Excision Repair": [
+      "PARP1"
+    ],
+    "Amplification and expansion of oncogenic pathways as metastatic traits": [
+      "SRC",
+      "CXCR4"
+    ],
+    "Hematopoietic stem cell differentiation": [
+      "CXCR4"
+    ],
+    "Peptide GPCRs": [
+      "CXCR4"
+    ],
+    "Genes controlling nephrogenesis": [
+      "WT1",
+      "CXCR4"
+    ],
+    "GPCRs, class A rhodopsin-like": [
+      "CXCR4"
+    ],
+    "2q37 copy number variation syndrome": [
+      "ABCA1",
+      "CXCR4",
+      "IGF1"
+    ],
+    "5q35 copy number variation": [
+      "SRC",
+      "CXCR4"
+    ],
+    "Cardiac progenitor differentiation": [
+      "IGF1",
+      "CXCR4"
+    ],
+    "Signaling by ROBO receptors": [
+      "CXCR4"
+    ],
+    "Chemokine signaling": [
+      "CCL2",
+      "CXCR4"
+    ],
+    "Transcriptional regulation by RUNX2": [
+      "BAX"
+    ],
+    "Small cell lung cancer": [
+      "E2F1",
+      "PTGS2",
+      "BAX"
+    ],
+    "Integrated cancer pathway": [
+      "BAX"
+    ],
+    "Effect of omega-3 PUFA on Huntington's disease pathways": [
+      "HDAC1",
+      "ABCA1",
+      "BDNF",
+      "BAX"
+    ],
+    "TP53 network": [
+      "BAX"
+    ],
+    "Overview of nanoparticle effects": [
+      "PTGS2",
+      "BAX"
+    ],
+    "BDNF signaling in neurodevelopment": [
+      "BDNF",
+      "BAX"
+    ],
+    "JAK/STAT pathway": [
+      "SRC",
+      "LEP",
+      "IGF1",
+      "BAX",
+      "ESR1"
+    ],
+    "Regucalcin in proximal tubule epithelial kidney cells": [
+      "BAX"
+    ],
+    "miRNA regulation of p53 pathway in prostate cancer": [
+      "BAX"
+    ],
+    "TNF-alpha signaling": [
+      "CCL2",
+      "BAX"
+    ],
+    "Melanoma": [
+      "E2F1",
+      "BAX"
+    ],
+    "Pro-survival signaling of neuroprotectin D1": [
+      "BAX"
+    ],
+    "Host-pathogen interaction of human coronaviruses": [
+      "BAX"
+    ],
+    "Hallmark of Cancer: Resisting cell death through non-genotoxic carcinogenic ROS": [
+      "BAX"
+    ],
+    "Apoptosis regulation by parathyroid hormone-related protein": [
+      "BAX"
+    ],
+    "Amyotrophic lateral sclerosis (ALS)": [
+      "BAX"
+    ],
+    "Leptin signaling": [
+      "ESR1",
+      "LEP",
+      "SRC",
+      "BAX"
+    ],
+    "Mitochondrial fission and fusion": [
+      "BAX"
+    ],
+    "TP53 regulates transcription of cell cycle genes": [
+      "E2F1",
+      "BAX"
+    ],
+    "Effects of MFN2 mutation": [
+      "BAX"
+    ],
+    "Peroxiredoxin 2 induced ovarian failure": [
+      "BAX"
+    ],
+    "RAC1/PAK1/p38/MMP2 pathway": [
+      "SRC",
+      "BAX"
+    ],
+    "Signaling by NTRK3 (TRKC)": [
+      "SRC",
+      "BAX"
+    ],
+    "Pancreatic adenocarcinoma pathway": [
+      "E2F1",
+      "BAX"
+    ],
+    "Intrinsic Pathway for Apoptosis": [
+      "E2F1",
+      "BAX"
+    ],
+    "Transcriptional regulation of testis differentiation": [
+      "WT1"
+    ],
+    "Mammalian disorder of sexual development": [
+      "WT1"
+    ],
+    "GDNF/RET signaling axis": [
+      "WT1"
+    ],
+    "Primary ovarian insufficiency": [
+      "MLH1",
+      "WT1",
+      "ESR1"
+    ],
+    "Somatic sex determination": [
+      "WT1"
+    ],
+    "Nephrotic syndrome": [
+      "WT1"
+    ],
+    "Markers of kidney cell lineage": [
+      "WT1"
+    ],
+    "Prader-Willi and Angelman syndrome": [
+      "E2F1",
+      "BDNF"
+    ],
+    "DNA Replication Pre-Initiation": [
+      "E2F1"
+    ],
+    "miRNAs involved in DNA damage response": [
+      "E2F1"
+    ],
+    "Pre-NOTCH Expression and Processing": [
+      "E2F1"
+    ],
+    "S Phase": [
+      "E2F1"
+    ],
+    "MECP2 and associated Rett syndrome": [
+      "E2F1",
+      "BDNF",
+      "IGF1",
+      "HDAC1"
+    ],
+    "Effect of progerin on genes involved in progeria": [
+      "E2F1",
+      "HDAC1"
+    ],
+    "Oncogene Induced Senescence": [
+      "E2F1"
+    ],
+    "Retinoblastoma gene in cancer": [
+      "E2F1",
+      "HMGB1",
+      "HDAC1"
+    ],
+    "Mitotic G2-G2/M phases": [
+      "E2F1"
+    ],
+    "Thyroid stimulating hormone (TSH) signaling": [
+      "E2F1",
+      "SRC"
+    ],
+    "Senescence and autophagy in cancer": [
+      "E2F1",
+      "SRC",
+      "IGF1"
+    ],
+    "Oxidative Stress Induced Senescence": [
+      "E2F1"
+    ],
+    "Lung adenocarcinoma (1)": [
+      "E2F1"
+    ],
+    "Transcriptional regulation of granulopoiesis": [
+      "E2F1"
+    ],
+    "Transcriptional regulation by E2F6": [
+      "E2F1"
+    ],
+    "EGF/EGFR signaling": [
+      "E2F1",
+      "SRC"
+    ],
+    "Mitotic G1 phase and G1/S transition": [
+      "E2F1",
+      "HDAC1"
+    ],
+    "H19, Rb-E2F1, and CDK-beta-catenin in colorectal cancer": [
+      "E2F1"
+    ],
+    "Cell cycle": [
+      "E2F1",
+      "HDAC1"
+    ],
+    "G1 to S cell cycle control": [
+      "E2F1"
+    ],
+    "Diclofenac metabolic pathway": [
+      "CYP2C19"
+    ],
+    "Octadecanoid formation from linoleic acid": [
+      "CYP2C19"
+    ],
+    "Metapathway biotransformation Phase I and II": [
+      "CYP2C19",
+      "CYP2D6"
+    ],
+    "Oxidation by cytochrome P450": [
+      "CYP2C19",
+      "CYP2D6"
+    ],
+    "Constitutive androstane receptor pathway": [
+      "CYP2C19"
+    ],
+    "Pregnane X receptor pathway": [
+      "CYP2C19",
+      "SRC"
+    ],
+    "Mismatch Repair": [
+      "MLH1"
+    ],
+    "DNA mismatch repair": [
+      "MLH1"
+    ],
+    "TP53 Regulates Transcription of DNA Repair Genes": [
+      "MLH1"
+    ],
+    "Ovarian infertility": [
+      "MLH1"
+    ],
+    "Meiotic recombination": [
+      "MLH1"
+    ],
+    "Biosynthesis of DHA-derived SPMs": [
+      "CYP2D6",
+      "PTGS2"
+    ],
+    "Fatty acid omega-oxidation": [
+      "CYP2D6"
+    ],
+    "Aripiprazole metabolic pathway": [
+      "CYP2D6"
+    ],
+    "Omega-3-fatty acids in senescence": [
+      "CYP2D6",
+      "PTGS2"
+    ],
+    "Genes associated with the development of rheumatoid arthritis": [
+      "CTLA4"
+    ],
+    "T cell receptor and co-stimulatory signaling": [
+      "CTLA4"
+    ],
+    "Cancer immunotherapy by CTLA4 blockade": [
+      "CTLA4"
+    ],
+    "NRF2 pathway": [
+      "HGF"
+    ],
+    "Pluripotent stem cell differentiation pathway": [
+      "IGF1",
+      "HGF"
+    ],
+    "Interleukin-7 signaling": [
+      "HGF"
+    ],
+    "IL3 signaling": [
+      "SRC"
+    ],
+    "RANKL/RANK signaling": [
+      "SRC"
+    ],
+    "Androgen receptor signaling": [
+      "SIRT1",
+      "SRC",
+      "HDAC1"
+    ],
+    "Prolactin signaling": [
+      "SRC"
+    ],
+    "PDGF pathway": [
+      "SRC"
+    ],
+    "Integrin signaling": [
+      "SRC"
+    ],
+    "EPO receptor signaling": [
+      "SRC"
+    ],
+    "Signaling by PDGF": [
+      "SRC"
+    ],
+    "Thyroid hormones production and peripheral downstream signaling effects": [
+      "SRC"
+    ],
+    "Integrin-mediated cell adhesion": [
+      "SRC"
+    ],
+    "Cell surface interactions at the vascular wall": [
+      "MIF",
+      "SRC"
+    ],
+    "ErbB signaling": [
+      "SRC"
+    ],
+    "17q12 copy number variation syndrome": [
+      "IGF1",
+      "CCL2",
+      "BDNF",
+      "SRC"
+    ],
+    "Signaling by ERBB2": [
+      "SRC"
+    ],
+    "Gap junction trafficking and regulation": [
+      "SRC"
+    ],
+    "RHO GTPases activate WASPs and WAVEs": [
+      "SRC"
+    ],
+    "Thrombin signaling through proteinase activated receptors (PARs)": [
+      "SRC"
+    ],
+    "Oncostatin M signaling": [
+      "CCL2",
+      "SRC"
+    ],
+    "NRF2-ARE regulation": [
+      "SRC"
+    ],
+    "Relationship between inflammation, COX-2 and EGFR": [
+      "ESR1",
+      "SRC"
+    ],
+    "Nanoparticle-mediated activation of receptor signaling": [
+      "SRC"
+    ],
+    "Follicle stimulating hormone (FSH) signaling": [
+      "BDNF",
+      "SRC"
+    ],
+    "Effect of dasatinib on the BCR-ABL signaling pathway": [
+      "SRC"
+    ],
+    "Regulatory circuits of STAT3 signaling": [
+      "SRC"
+    ],
+    "Alpha 6 beta 4 signaling": [
+      "SRC"
+    ],
+    "Mechanoregulation and pathology of YAP/TAZ via Hippo and non-Hippo mechanisms": [
+      "SRC"
+    ],
+    "GABA and glutamate signalling in epileptogenesis": [
+      "SRC",
+      "HDAC1"
+    ],
+    "Notch signaling": [
+      "SRC",
+      "HDAC1"
+    ],
+    "Kit receptor signaling": [
+      "SRC"
+    ],
+    "GP1b-IX-V activation signaling": [
+      "SRC"
+    ],
+    "G alpha (s) signaling events": [
+      "SRC"
+    ],
+    "FCGR3A-mediated phagocytosis": [
+      "SRC"
+    ],
+    "Polycystic kidney disease pathway": [
+      "IGF1",
+      "SRC"
+    ],
+    "Signaling by EGFR": [
+      "SRC"
+    ],
+    "Thymic stromal lymphopoietin (TSLP) signaling": [
+      "SRC"
+    ],
+    "ROBO4 and VEGF signaling crosstalk": [
+      "SRC"
+    ],
+    "Fcgamma receptor (FCGR) dependent phagocytosis": [
+      "SRC"
+    ],
+    "Signaling by NTRK2 (TRKB)": [
+      "BDNF"
+    ],
+    "Thyroid hormone imbalance leading to neurodevelopmental abnormalities": [
+      "BDNF"
+    ],
+    "BDNF-TrkB signaling": [
+      "BDNF"
+    ],
+    "Neurogenesis regulation in the olfactory epithelium": [
+      "APP",
+      "BDNF"
+    ],
+    "Synaptic signaling associated with autism spectrum disorder": [
+      "BDNF"
+    ],
+    "6q16 copy number variation": [
+      "BDNF",
+      "LEP"
+    ],
+    "Involvement of &delta;-secretase in neurodegenerative diseases": [
+      "APP",
+      "BDNF"
+    ],
+    "ERK pathway in Huntington's disease": [
+      "BDNF"
+    ],
+    "Perturbed thyroid hormone homeostasis leading to developmental neurotoxicity": [
+      "BDNF"
+    ],
+    "Hippocampal synaptogenesis and neurogenesis": [
+      "BDNF"
+    ],
+    "Eicosanoid synthesis": [
+      "PTGS2"
+    ],
+    "Biosynthesis of EPA-derived SPMs": [
+      "PTGS2"
+    ],
+    "Aspirin and miRNAs": [
+      "PTGS2"
+    ],
+    "Biosynthesis of electrophilic omega-3 PUFA oxo-derivatives": [
+      "PTGS2"
+    ],
+    "PPAR-gamma pathway": [
+      "LPL",
+      "PTGS2"
+    ],
+    "Acetaminophen in analgesia and antipyresis": [
+      "PTGS2"
+    ],
+    "Omega-6-fatty acids in senescence": [
+      "SIRT1",
+      "PTGS2"
+    ],
+    "Prostaglandin synthesis and regulation": [
+      "PTGS2"
+    ],
+    "Glucocorticoid receptor pathway": [
+      "CCL2",
+      "PTGS2"
+    ],
+    "Biosynthesis of DPA-derived SPMs": [
+      "PTGS2"
+    ],
+    "NSAIDs mechanism of action": [
+      "PTGS2"
+    ],
+    "Regulation of RUNX2 expression and activity": [
+      "ESR1"
+    ],
+    "Signaling by ERBB4": [
+      "ESR1"
+    ],
+    "Estrogen signaling": [
+      "ESR1"
+    ],
+    "Mammary gland development: pregnancy and lactation": [
+      "ESR1"
+    ],
+    "Sulfatase and aromatase pathway": [
+      "ESR1"
+    ],
+    "Nuclear receptors": [
+      "ESR1"
+    ],
+    "Estradiol regulation in porto-sinusoidal vascular disease": [
+      "ESR1"
+    ],
+    "SUMOylation of intracellular receptors": [
+      "ESR1"
+    ],
+    "Estrogen receptor pathway": [
+      "ESR1"
+    ],
+    "Transcriptional regulation by the AP-2 (TFAP2) family of transcription factors": [
+      "ESR1"
+    ],
+    "16p11.2 proximal deletion syndrome": [
+      "ESR1"
+    ],
+    "Generic transcription pathway": [
+      "ESR1",
+      "HDAC1"
+    ],
+    "Cyclin-dependent kinase 4/6 inhibitors in breast cancer": [
+      "ESR1"
+    ],
+    "Mammary gland development: puberty": [
+      "ESR1"
+    ],
+    "ESR-mediated signaling": [
+      "ESR1",
+      "HDAC1"
+    ],
+    "Deregulated CDK5 triggers multiple neurodegenerative pathways in Alzheimer's disease models": [
+      "APP"
+    ],
+    "15q11q13 copy number variation": [
+      "APP",
+      "HDAC1"
+    ],
+    "Advanced glycosylation endproduct receptor signaling": [
+      "APP",
+      "HMGB1"
+    ],
+    "Amyloid fiber formation": [
+      "APP"
+    ],
+    "Inclusion body myositis": [
+      "APP",
+      "SIRT1"
+    ],
+    "DDX58/IFIH1-mediated induction of interferon-alpha/beta": [
+      "APP",
+      "HMGB1"
+    ],
+    "trans-Golgi Network Vesicle Budding": [
+      "APP"
+    ],
+    "TAK1 activates NF-kB by phosphorylation and activation of IKK complex": [
+      "APP",
+      "HMGB1"
+    ],
+    "Incretin synthesis, secretion, and inactivation": [
+      "LEP"
+    ],
+    "Signaling by leptin": [
+      "LEP"
+    ],
+    "Differentiation of white and brown adipocyte": [
+      "LEP"
+    ],
+    "Hunger and satiety": [
+      "LEP"
+    ],
+    "Leptin and adiponectin": [
+      "LEP"
+    ],
+    "Leptin-insulin signaling overlap": [
+      "LEP"
+    ],
+    "Transcription factor regulation in adipogenesis": [
+      "LEP"
+    ],
+    "Transcriptional regulation of white adipocyte differentiation": [
+      "LPL",
+      "LEP"
+    ],
+    "AMP-activated protein kinase signaling": [
+      "LEP"
+    ],
+    "Transcription activation (RNA-polymerase I and KAT2A/B) and inhibition (NuRD complex)": [
+      "HDAC1"
+    ],
+    "p75 NTR receptor-mediated signaling": [
+      "HDAC1"
+    ],
+    "Factors involved in megakaryocyte development and platelet production": [
+      "HDAC1"
+    ],
+    "PTEN Regulation": [
+      "HDAC1"
+    ],
+    "SUMOylation of chromatin organization proteins": [
+      "HDAC1"
+    ],
+    "RUNX1 regulates genes involved in megakaryocyte differentiation and platelet function": [
+      "HDAC1"
+    ],
+    "Chromatin organization": [
+      "HDAC1"
+    ],
+    "ERCC6 (CSB) and EHMT2 (G9a) positively regulate rRNA expression": [
+      "HDAC1"
+    ],
+    "Beta-globin gene expression regulation": [
+      "HDAC1"
+    ],
+    "Transcription co-factors SKI and SKIL protein partners": [
+      "HDAC1"
+    ],
+    "RNA Polymerase I Transcription": [
+      "HDAC1"
+    ],
+    "Signaling by NOTCH1": [
+      "HDAC1"
+    ],
+    "Ethanol effects on histone modifications": [
+      "HDAC1"
+    ],
+    "Initiation of transcription and translation elongation at the HIV-1 LTR": [
+      "HDAC1"
+    ],
+    "NoRC negatively regulates rRNA expression": [
+      "HDAC1"
+    ],
+    "Neural crest differentiation": [
+      "HDAC1"
+    ],
+    "Hallmark of cancer: metastasis and epithelial-to-mesenchymal transition": [
+      "SIRT1",
+      "HDAC1"
+    ],
+    "Hallmark of cancer: non-mutational epigenetic reprogramming": [
+      "HDAC1"
+    ],
+    "Regulation of TP53 Activity through Acetylation": [
+      "HDAC1"
+    ],
+    "FOXO-mediated transcription of oxidative stress, metabolic and neuronal genes": [
+      "HDAC1"
+    ],
+    "Valproic acid pathway": [
+      "HDAC1"
+    ],
+    "Rett syndrome": [
+      "HDAC1"
+    ],
+    "Sterol regulatory element-binding proteins (SREBP) signaling": [
+      "SIRT1",
+      "LPL"
+    ],
+    "Fatty acid beta-oxidation": [
+      "LPL"
+    ],
+    "Familial hyperlipidemia type 3": [
+      "LPL"
+    ],
+    "Triacylglyceride synthesis": [
+      "LPL"
+    ],
+    "Familial  hyperlipidemia type 1": [
+      "LPL"
+    ],
+    "Statin inhibition of cholesterol production": [
+      "ABCA1",
+      "LPL"
+    ],
+    "Familial hyperlipidemia type 5": [
+      "LPL"
+    ],
+    "Angiopoietin-like protein 8 regulatory pathway": [
+      "LPL"
+    ],
+    "Metabolic pathway of LDL, HDL and TG, including diseases": [
+      "ABCA1",
+      "LPL"
+    ],
+    "miR-targeted genes in leukocytes": [
+      "LPL"
+    ],
+    "Lipid particles composition": [
+      "LPL"
+    ],
+    "Meta pathway lipodystrophy, dyslipidemia and hyperlipidemia": [
+      "LPL"
+    ],
+    "PPAR signaling": [
+      "LPL"
+    ],
+    "Familial partial lipodystrophy": [
+      "LPL"
+    ],
+    "miR-targeted genes in adipocytes": [
+      "LPL"
+    ],
+    "Familial hyperlipidemia type 2": [
+      "LPL"
+    ],
+    "Cholesterol biosynthesis pathway in hepatocytes": [
+      "ABCA1"
+    ],
+    "SREBF and miR33 in cholesterol and lipid homeostasis": [
+      "ABCA1",
+      "SIRT1"
+    ],
+    "Fatty acid and lipoprotein transport in hepatocytes": [
+      "ABCA1"
+    ],
+    "NR1H2 and NR1H3-mediated signaling": [
+      "ABCA1"
+    ],
+    "ATF4 activates genes in response to endoplasmic reticulum  stress": [
+      "CCL2"
+    ],
+    "Interactions of natural killer cells in pancreatic cancer": [
+      "CCL2"
+    ],
+    "IL1 signaling": [
+      "CCL2"
+    ],
+    "Ectoderm differentiation": [
+      "CCL2"
+    ],
+    "Lung pathology of COVID-19": [
+      "CCL2"
+    ],
+    "Hallmark of Cancer: Avoiding immune destruction through non-genotoxic carcinogens": [
+      "CCL2"
+    ],
+    "Catabolism of skeletal muscle in cachexia": [
+      "IGF1"
+    ],
+    "Signaling by type 1 insulin-like growth factor 1 receptor (IGF1R)": [
+      "IGF1"
+    ],
+    "Factors and pathways affecting insulin-like growth factor (IGF1)-Akt signaling": [
+      "IGF1"
+    ],
+    "Genes targeted by miRNAs in adipocytes": [
+      "IGF1"
+    ],
+    "Hormonal control of pubertal growth spurt": [
+      "IGF1"
+    ],
+    "Caloric restriction and aging": [
+      "SIRT1"
+    ],
+    "3q29 copy number variation syndrome": [
+      "SIRT1"
+    ],
+    "Somatroph axis (GH) and its relationship to dietary restriction and aging": [
+      "SIRT1"
+    ],
+    "FOXO-mediated transcription": [
+      "SIRT1"
+    ],
+    "Circadian Clock": [
+      "SIRT1"
+    ],
+    "Cellular response to heat stress": [
+      "SIRT1"
+    ],
+    "Interactions between LOXL4 and oxidative stress pathway": [
+      "SIRT1"
+    ],
+    "Molecular pathway for oxidative stress": [
+      "SIRT1"
+    ],
+    "SIRT1 negatively regulates rRNA expression": [
+      "SIRT1"
+    ],
+    "Age-related macular degeneration": [
+      "SIRT1"
+    ],
+    "Autophagy in pancreatic ductal adenocarcinoma": [
+      "HMGB1"
+    ],
+    "Suppression of HMGB1-mediated inflammation by THBD": [
+      "HMGB1"
+    ]
+  },
+  "documents": [
+    "12205050",
+    "10606746",
+    "10824080",
+    "8521574",
+    "8590273",
+    "11087556",
+    "4210912",
+    "9864671",
+    "3898719",
+    "11137484",
+    "9353077",
+    "3893568",
+    "7495442",
+    "6723939",
+    "7266028",
+    "7355898",
+    "6412823",
+    "6540245",
+    "11996126",
+    "12954815",
+    "10647697",
+    "7366002",
+    "7973764",
+    "10831264",
+    "9376628",
+    "4087288",
+    "9414992",
+    "7287160",
+    "7331668",
+    "11215520",
+    "12918580",
+    "6691850",
+    "5756309",
+    "10255361",
+    "10073709",
+    "7693600",
+    "12403855",
+    "11268915",
+    "9422945",
+    "12108673",
+    "11910616",
+    "8037095",
+    "8191517",
+    "12682302",
+    "5854386",
+    "5003001",
+    "8115291",
+    "12667007",
+    "10281727",
+    "10695572",
+    "5133244",
+    "6643110",
+    "12677443",
+    "11641031",
+    "9478419",
+    "6471621",
+    "6929647",
+    "11561237",
+    "8347393",
+    "11858738",
+    "11124197",
+    "11568328",
+    "12295988",
+    "5415125",
+    "4154301",
+    "4511036",
+    "12209257",
+    "4525408",
+    "10757808",
+    "12371096",
+    "11732890",
+    "11549377",
+    "3585318",
+    "6660933",
+    "8537626",
+    "8001478",
+    "10214415",
+    "12960772",
+    "12709529",
+    "9427320",
+    "12538534",
+    "7912164",
+    "7847013",
+    "6469369",
+    "11206846",
+    "11100965",
+    "9047796",
+    "7795868",
+    "9871392",
+    "8541669",
+    "8482695",
+    "3249972",
+    "12518559",
+    "11189596",
+    "11532394",
+    "6509173",
+    "6723242",
+    "4392299",
+    "6264403",
+    "7841903"
+  ],
+  "images": {
+    "graph": "1774495519632_graph.png"
+  },
+  "job_id": "1774495519632",
+  "success": true,
+  "total_genes": 53,
+  "total_documents": 100,
+  "total_pathways": 609
+}
