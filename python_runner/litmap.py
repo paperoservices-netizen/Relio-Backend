@@ -254,7 +254,14 @@ def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome, img_dir
         plt.figure(figsize=(20, 16))
         
         # MAZE LAYOUT
-        pos = nx.kamada_kawai_layout(G) 
+        try:
+            pos = nx.kamada_kawai_layout(G)
+        except (ModuleNotFoundError, ImportError):
+            print("    ⚠️ scipy is not installed; falling back to spring_layout for graph positioning.")
+            pos = nx.spring_layout(G, seed=42)
+        except Exception as e:
+            print(f"    ⚠️ Layout generation failed ({e}); using spring_layout fallback.")
+            pos = nx.spring_layout(G, seed=42)
         
         # PLOT NODES
         nx.draw_networkx_nodes(G, pos, nodelist=list(pathway_nodes), node_color='#7ED957', node_size=2800)
