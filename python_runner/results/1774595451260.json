@@ -1,0 +1,952 @@
+{
+  "compound": "Strontium",
+  "outcome": "Wound healing",
+  "mode": "FAST",
+  "mode_name": "FAST (Abstracts)",
+  "genes": {
+    "TNF": [
+      {
+        "id": "28468507",
+        "direction": "up"
+      },
+      {
+        "id": "39396587",
+        "direction": "up"
+      },
+      {
+        "id": "41716343",
+        "direction": "up"
+      },
+      {
+        "id": "33125972",
+        "direction": "up"
+      },
+      {
+        "id": "24376855",
+        "direction": "neutral"
+      }
+    ],
+    "TLR4": [
+      {
+        "id": "41142414",
+        "direction": "down"
+      }
+    ],
+    "BMP2": [
+      {
+        "id": "29216500",
+        "direction": "up"
+      },
+      {
+        "id": "33125972",
+        "direction": "up"
+      },
+      {
+        "id": "31472679",
+        "direction": "neutral"
+      }
+    ],
+    "CCL2": [
+      {
+        "id": "39777561",
+        "direction": "neutral"
+      }
+    ],
+    "AHSG": [
+      {
+        "id": "27238458",
+        "direction": "up"
+      }
+    ],
+    "EGF": [
+      {
+        "id": "27238458",
+        "direction": "up"
+      }
+    ]
+  },
+  "pathways": {
+    "T-cell antigen receptor (TCR) pathway during Staphylococcus aureus infection": [
+      "TNF"
+    ],
+    "AXL signaling": [
+      "CCL2",
+      "TNF"
+    ],
+    "Renin Angiotensin System and Bradykinin pathways in COVID-19": [
+      "TNF"
+    ],
+    "Neuroinflammation and glutamatergic signaling": [
+      "TNF"
+    ],
+    "Roles of ceramides in development of insulin resistance": [
+      "TNF"
+    ],
+    "Altered glycosylation of MUC1 in tumor microenvironment": [
+      "TNF"
+    ],
+    "Endothelin pathway": [
+      "CCL2",
+      "TNF"
+    ],
+    "Integrative Analysis of  Treg-Glial Interactions": [
+      "TLR4",
+      "TNF"
+    ],
+    "Blood-based neuroinflammation markers": [
+      "CCL2",
+      "TNF"
+    ],
+    "IL10 anti-inflammatory signaling": [
+      "TNF"
+    ],
+    "HLA-C allotypes interactions with KIR on dNK cells": [
+      "TNF"
+    ],
+    "Vitamin D in inflammatory diseases": [
+      "TNF"
+    ],
+    "Host-pathogen interaction of human coronaviruses": [
+      "TNF"
+    ],
+    "p53 transcriptional gene network": [
+      "CCL2",
+      "TNF"
+    ],
+    "Toll-like receptor signaling": [
+      "TLR4",
+      "TNF"
+    ],
+    "Dravet syndrome": [
+      "TNF"
+    ],
+    "8q11.23 (RB1CC1) copy number variation": [
+      "TNF"
+    ],
+    "COVID-19 adverse outcome pathway": [
+      "CCL2",
+      "TNF"
+    ],
+    "Monoamine transport and regulation": [
+      "TNF"
+    ],
+    "PPAR-gamma pathway": [
+      "TNF"
+    ],
+    "Psoriasis mechanism and therapies": [
+      "TNF"
+    ],
+    "miRNA role in immune response in sepsis": [
+      "TLR4",
+      "TNF"
+    ],
+    "Apoptosis modulation by HSP70": [
+      "TNF"
+    ],
+    "Overview of proinflammatory and profibrotic mediators": [
+      "CCL2",
+      "TNF"
+    ],
+    "Macrophage-stimulating protein (MSP) signaling": [
+      "CCL2",
+      "TNF"
+    ],
+    "Tryptophan kynurenine pathway in post-COVID syndrome": [
+      "TNF"
+    ],
+    "Aryl hydrocarbon receptor pathway": [
+      "TNF"
+    ],
+    "Non-genomic actions of 1,25-dihydroxyvitamin D3": [
+      "CCL2",
+      "TLR4",
+      "TNF"
+    ],
+    "Sudden infant death syndrome (SIDS) susceptibility pathways": [
+      "TNF"
+    ],
+    "Hepatitis B infection": [
+      "TLR4",
+      "TNF"
+    ],
+    "Alzheimer's disease": [
+      "TNF"
+    ],
+    "Burn wound healing": [
+      "CCL2",
+      "TLR4",
+      "TNF",
+      "EGF"
+    ],
+    "TNF-related weak inducer of apoptosis (TWEAK) signaling": [
+      "CCL2",
+      "TNF"
+    ],
+    "TNFR2 non-canonical NF-kB pathway": [
+      "TNF"
+    ],
+    "Affected pathways in Duchenne muscular dystrophy": [
+      "TNF"
+    ],
+    "MAPK signaling": [
+      "TNF",
+      "EGF"
+    ],
+    "Induction of autophagy and toll-like receptor signaling by graphene oxide": [
+      "TLR4",
+      "TNF"
+    ],
+    "IL18 signaling": [
+      "CCL2",
+      "BMP2",
+      "TNF"
+    ],
+    "Allograft rejection": [
+      "TNF"
+    ],
+    "Resistin as a regulator of inflammation": [
+      "TNF"
+    ],
+    "DNA adduct formation leading to kidney failure": [
+      "TNF"
+    ],
+    "Orexin receptor pathway": [
+      "TNF"
+    ],
+    "Mammary gland development: embryonic development": [
+      "TNF"
+    ],
+    "TGF-beta receptor signaling in skeletal dysplasias": [
+      "TNF",
+      "EGF"
+    ],
+    "TNF signaling": [
+      "TNF"
+    ],
+    "2q37 copy number variation syndrome": [
+      "TNF"
+    ],
+    "MicroRNAs in cardiomyocyte hypertrophy": [
+      "TNF",
+      "EGF"
+    ],
+    "Cytokine storm syndrome": [
+      "TNF"
+    ],
+    "Hallmark of Cancer: Enabling replicative immortality through non-genotoxic carcinogens": [
+      "TNF"
+    ],
+    "Transcription factor regulation in adipogenesis": [
+      "TNF"
+    ],
+    "Lung fibrosis": [
+      "CCL2",
+      "TNF",
+      "EGF"
+    ],
+    "Ebstein-Barr virus LMP1 signaling": [
+      "TNF"
+    ],
+    "Cytokines and inflammatory response": [
+      "TNF"
+    ],
+    "TLR4 signaling and tolerance": [
+      "TLR4",
+      "TNF"
+    ],
+    "Interleukin-10 signaling": [
+      "CCL2",
+      "TNF"
+    ],
+    "Regulation of toll-like receptor signaling": [
+      "TLR4",
+      "TNF"
+    ],
+    "Factors and pathways affecting insulin-like growth factor (IGF1)-Akt signaling": [
+      "TNF"
+    ],
+    "Nuclear receptors meta-pathway": [
+      "CCL2",
+      "TNF"
+    ],
+    "Kynurenine pathway and links to cell senescence": [
+      "TNF"
+    ],
+    "Post-COVID neuroinflammation": [
+      "TLR4",
+      "TNF"
+    ],
+    "Killer cell immunoglobulin-like receptors and human leukocyte antigen C pathway": [
+      "TNF"
+    ],
+    "TNF-alpha signaling": [
+      "CCL2",
+      "TNF"
+    ],
+    "IL23 inhibitors in inflammatory bowel disease": [
+      "TLR4",
+      "TNF"
+    ],
+    "Cardiac hypertrophic response": [
+      "TNF",
+      "EGF"
+    ],
+    "Resolvin E1 and resolvin D1 signaling decrease inflammation": [
+      "TNF"
+    ],
+    "Physiopathology of endothelial dysfunction in coronavirus disease": [
+      "TNF"
+    ],
+    "Acute viral myocarditis": [
+      "TLR4",
+      "TNF"
+    ],
+    "Ulcerative colitis signaling": [
+      "TNF"
+    ],
+    "Cells and molecules involved in local acute inflammatory response": [
+      "TNF"
+    ],
+    "T-cell activation SARS-CoV-2": [
+      "TNF"
+    ],
+    "Smith-Magenis and Potocki-Lupski syndrome copy number variation": [
+      "TLR4",
+      "TNF"
+    ],
+    "Overview of nanoparticle effects": [
+      "TNF"
+    ],
+    "PPAR Beta/Delta pathway": [
+      "CCL2",
+      "TNF"
+    ],
+    "Adipogenesis": [
+      "BMP2",
+      "TNF"
+    ],
+    "Aryl hydrocarbon receptor response to main mediators PAH and TCDD": [
+      "TNF"
+    ],
+    "Interactions of natural killer cells in pancreatic cancer": [
+      "CCL2",
+      "TNF"
+    ],
+    "Prostaglandin signaling": [
+      "CCL2",
+      "TNF"
+    ],
+    "Notch signaling": [
+      "TNF"
+    ],
+    "Netrin-UNC5B signaling": [
+      "CCL2",
+      "TNF"
+    ],
+    "Urotensin-II-mediated signaling": [
+      "TNF"
+    ],
+    "Immune infiltration in pancreatic cancer": [
+      "CCL2",
+      "TNF"
+    ],
+    "Neuroinflammation": [
+      "TLR4",
+      "TNF"
+    ],
+    "Fas ligand pathway and stress induction of heat shock proteins": [
+      "TNF"
+    ],
+    "Lung pathology of COVID-19": [
+      "CCL2",
+      "TNF"
+    ],
+    "Apoptosis-related network due to altered Notch3 in ovarian cancer": [
+      "TNF"
+    ],
+    "Sodium channel in epilepsy": [
+      "TNF"
+    ],
+    "Male infertility": [
+      "TNF"
+    ],
+    "Antiviral and anti-inflammatory effects of Nrf2 on SARS-CoV-2 pathway": [
+      "CCL2",
+      "TNF"
+    ],
+    "Nanoparticle triggered regulated necrosis": [
+      "TNF"
+    ],
+    "Photodynamic therapy-induced AP-1 survival signaling": [
+      "TNF"
+    ],
+    "NO/cGMP/PKG mediated neuroprotection": [
+      "TNF"
+    ],
+    "Nonalcoholic fatty liver disease": [
+      "CCL2",
+      "TNF"
+    ],
+    "Molecular pathway for oxidative stress": [
+      "TNF"
+    ],
+    "Cytokine-cytokine receptor interaction": [
+      "CCL2",
+      "BMP2",
+      "TNF"
+    ],
+    "Spinal cord injury": [
+      "CCL2",
+      "TLR4",
+      "TNF"
+    ],
+    "Matrix metalloproteinases": [
+      "TNF"
+    ],
+    "ROS in COVID-19 endothelial dysfunction": [
+      "TNF"
+    ],
+    "SARS-CoV-2 innate immunity evasion and cell-specific immune response": [
+      "CCL2",
+      "TNF"
+    ],
+    "TGF-beta receptor signaling": [
+      "TNF",
+      "EGF"
+    ],
+    "SARS-CoV-2 mitochondrial chronic oxidative stress and endothelial dysfunction": [
+      "TNF"
+    ],
+    "Pathophysiological roles of DUX4 in FSHD1": [
+      "TNF"
+    ],
+    "Modular map of bradykinin signaling network": [
+      "CCL2",
+      "TNF"
+    ],
+    "Interleukin-4 and Interleukin-13 signaling": [
+      "CCL2",
+      "TNF"
+    ],
+    "Opioid receptor pathways": [
+      "TLR4",
+      "TNF"
+    ],
+    "CAMKK2 pathway": [
+      "TNF"
+    ],
+    "Oxidative damage response": [
+      "TNF"
+    ],
+    "Arsenic liver toxicity pathway": [
+      "TNF"
+    ],
+    "Alzheimer's disease and miRNA effects": [
+      "TNF"
+    ],
+    "Inflammatory bowel disease signaling": [
+      "TLR4",
+      "TNF"
+    ],
+    "LTF danger signal response pathway": [
+      "TLR4",
+      "TNF"
+    ],
+    "Physiopathology of endothelial dysfunction in COVID-19": [
+      "TNF"
+    ],
+    "Pro-inflammatory cytokines": [
+      "TNF"
+    ],
+    "Uterine natural killer cells and progesterone, estrogen, and chorionic gonadotropin": [
+      "CCL2",
+      "TNF"
+    ],
+    "Development and heterogeneity of the ILC family": [
+      "TNF"
+    ],
+    "Pro-survival signaling of neuroprotectin D1": [
+      "TNF"
+    ],
+    "Protein alkylation leading to liver fibrosis": [
+      "TNF"
+    ],
+    "Photodynamic therapy-induced NF-kB survival signaling": [
+      "TNF"
+    ],
+    "Signal transduction through IL1R": [
+      "TNF"
+    ],
+    "NF-kB signaling and ARTD family members": [
+      "TNF"
+    ],
+    "Effect of omega-3 PUFA on Huntington's disease pathways": [
+      "TNF",
+      "EGF"
+    ],
+    "Catabolism of skeletal muscle in cachexia": [
+      "TNF"
+    ],
+    "Transcriptional regulation of white adipocyte differentiation": [
+      "TNF"
+    ],
+    "Fibrin complement receptor 3 signaling": [
+      "CCL2",
+      "TLR4",
+      "TNF"
+    ],
+    "Network map of SARS-CoV-2 signaling": [
+      "CCL2",
+      "TNF"
+    ],
+    "Elabela signaling": [
+      "CCL2",
+      "TNF"
+    ],
+    "Polycystic kidney disease pathway": [
+      "TNF",
+      "EGF"
+    ],
+    "Extrafollicular and follicular B cell activation by SARS-CoV-2": [
+      "TLR4",
+      "TNF"
+    ],
+    "Type II diabetes mellitus": [
+      "TNF"
+    ],
+    "Apoptosis": [
+      "TNF"
+    ],
+    "IL26 signaling": [
+      "TNF"
+    ],
+    "Toll-like receptor signaling related to MyD88": [
+      "TLR4"
+    ],
+    "Interactions between immune cells and microRNAs in tumor microenvironment": [
+      "CCL2",
+      "TLR4"
+    ],
+    "Regulation of TLR by endogenous ligand": [
+      "TLR4"
+    ],
+    "PI3K-Akt signaling": [
+      "TLR4",
+      "EGF"
+    ],
+    "Corticotropin-releasing hormone signaling": [
+      "TLR4"
+    ],
+    "Nephrotoxcicity adverse outcome pathway": [
+      "TLR4"
+    ],
+    "MyD88-independent TLR4 cascade": [
+      "TLR4"
+    ],
+    "ApoE and miR-146 in inflammation and atherosclerosis": [
+      "TLR4"
+    ],
+    "MyD88:MAL(TIRAP) cascade initiated on plasma membrane": [
+      "TLR4"
+    ],
+    "Platelet-mediated interactions with vascular and circulating cells": [
+      "CCL2",
+      "TLR4"
+    ],
+    "Primary focal segmental glomerulosclerosis (FSGS)": [
+      "TLR4"
+    ],
+    "Extracellular vesicles in the crosstalk of cardiac cells": [
+      "TLR4",
+      "EGF"
+    ],
+    "Toll-like receptor cascades": [
+      "TLR4"
+    ],
+    "Sickle cell disease": [
+      "TLR4"
+    ],
+    "Lupus pathogenesis": [
+      "TLR4"
+    ],
+    "COVID-19 and endothelial cell senescence": [
+      "TLR4"
+    ],
+    "Pathogenic Escherichia coli infection": [
+      "TLR4"
+    ],
+    "LDL- influence on CD14 and TLR4": [
+      "CCL2",
+      "TLR4"
+    ],
+    "Type I interferon induction and signaling during SARS-CoV-2 infection": [
+      "TLR4"
+    ],
+    "MyD88 dependent cascade initiated on endosome": [
+      "TLR4"
+    ],
+    "Nanomaterial-induced inflammasome activation": [
+      "TLR4"
+    ],
+    "Ebola virus infection in host": [
+      "TLR4"
+    ],
+    "Caspase activation via death receptors in the presence of ligand": [
+      "TLR4"
+    ],
+    "MYD88 distinct input-output pathway": [
+      "TLR4"
+    ],
+    "Transcriptional regulation of memory B cell differentiation": [
+      "TLR4"
+    ],
+    "Measles virus infection": [
+      "TLR4"
+    ],
+    "8p23.1 copy number variation syndrome": [
+      "TLR4"
+    ],
+    "10q22q23 copy number variation": [
+      "BMP2"
+    ],
+    "Senescence and autophagy in cancer": [
+      "BMP2"
+    ],
+    "Interactions between LOXL4 and oxidative stress pathway": [
+      "BMP2"
+    ],
+    "Signaling by BMP": [
+      "BMP2"
+    ],
+    "Brain-derived neurotrophic factor (BDNF) signaling": [
+      "BMP2"
+    ],
+    "Gastrin signaling": [
+      "BMP2"
+    ],
+    "Oligodendrocyte specification and differentiation, leading to myelin components for CNS": [
+      "BMP2"
+    ],
+    "Elastic fibre formation": [
+      "BMP2"
+    ],
+    "Bone morphogenic protein signaling and regulation": [
+      "BMP2"
+    ],
+    "Osteoblast differentiation and related diseases": [
+      "BMP2"
+    ],
+    "FGFR3 signaling in chondrocyte proliferation and terminal differentiation": [
+      "BMP2"
+    ],
+    "Heart development": [
+      "BMP2"
+    ],
+    "15q24 copy number variation": [
+      "BMP2"
+    ],
+    "Cancer pathways": [
+      "BMP2",
+      "EGF"
+    ],
+    "Differentiation of white and brown adipocyte": [
+      "BMP2"
+    ],
+    "Overlap between signal transduction pathways contributing to LMNA laminopathies": [
+      "BMP2"
+    ],
+    "BMP2-WNT4-FOXO1 pathway in primary endometrial stromal cell differentiation": [
+      "BMP2"
+    ],
+    "VEGFA-VEGFR2 signaling": [
+      "CCL2",
+      "BMP2"
+    ],
+    "Development of ureteric derived collecting system": [
+      "BMP2"
+    ],
+    "Transcriptional regulation by RUNX2": [
+      "BMP2"
+    ],
+    "Regulation of RUNX2 expression and activity": [
+      "BMP2"
+    ],
+    "10q11.21q11.23 copy number variation syndrome": [
+      "BMP2"
+    ],
+    "IL1 signaling": [
+      "CCL2"
+    ],
+    "Oncostatin M signaling": [
+      "CCL2"
+    ],
+    "17q12 copy number variation syndrome": [
+      "CCL2"
+    ],
+    "Pleural mesothelioma": [
+      "CCL2",
+      "EGF"
+    ],
+    "CCL18 signaling": [
+      "CCL2"
+    ],
+    "IL19 signaling": [
+      "CCL2"
+    ],
+    "Chemokine signaling": [
+      "CCL2"
+    ],
+    "Selenium micronutrient network": [
+      "CCL2"
+    ],
+    "DDR1-mediated signaling": [
+      "CCL2"
+    ],
+    "Class A/1 (rhodopsin-like receptors)": [
+      "CCL2"
+    ],
+    "Hallmark of Cancer: Avoiding immune destruction through non-genotoxic carcinogens": [
+      "CCL2"
+    ],
+    "ATF4 activates genes in response to endoplasmic reticulum  stress": [
+      "CCL2"
+    ],
+    "Ectoderm differentiation": [
+      "CCL2"
+    ],
+    "IL1 and megakaryocytes in obesity": [
+      "CCL2"
+    ],
+    "Glucocorticoid receptor pathway": [
+      "CCL2"
+    ],
+    "Cell interactions in pancreatic cancer microenvironment": [
+      "CCL2"
+    ],
+    "Neutrophil degranulation": [
+      "AHSG"
+    ],
+    "Post-translational protein phosphorylation": [
+      "AHSG"
+    ],
+    "Response to elevated platelet cytosolic Ca ions": [
+      "AHSG",
+      "EGF"
+    ],
+    "Regulation of IGF transport and uptake by IGF binding proteins": [
+      "AHSG"
+    ],
+    "NRP1-triggered signaling in pancreatic cancer": [
+      "EGF"
+    ],
+    "JAK/STAT pathway": [
+      "EGF"
+    ],
+    "Hair follicle development: induction": [
+      "EGF"
+    ],
+    "ErbB signaling": [
+      "EGF"
+    ],
+    "Embryonic stem cell pluripotency pathways": [
+      "EGF"
+    ],
+    "Focal adhesion: PI3K-Akt-mTOR-signaling": [
+      "EGF"
+    ],
+    "Regulation of actin cytoskeleton": [
+      "EGF"
+    ],
+    "EGF/EGFR signaling": [
+      "EGF"
+    ],
+    "Focal adhesion": [
+      "EGF"
+    ],
+    "Pluripotent stem cell differentiation pathway": [
+      "EGF"
+    ],
+    "Signaling by EGFR": [
+      "EGF"
+    ],
+    "Endometrial cancer": [
+      "EGF"
+    ],
+    "Exercise and hypertrophy in skeletal muscle": [
+      "EGF"
+    ],
+    "Tyrosine kinase inhibitors in glioblastoma": [
+      "EGF"
+    ],
+    "Relationship between inflammation, COX-2 and EGFR": [
+      "EGF"
+    ],
+    "Bladder cancer": [
+      "EGF"
+    ],
+    "ERK pathway in Huntington's disease": [
+      "EGF"
+    ],
+    "Breast cancer pathway": [
+      "EGF"
+    ],
+    "Extra-nuclear estrogen signaling": [
+      "EGF"
+    ],
+    "Clathrin-mediated endocytosis": [
+      "EGF"
+    ],
+    "Signaling by ERBB4": [
+      "EGF"
+    ],
+    "Mammary gland development: puberty": [
+      "EGF"
+    ],
+    "Non-small cell lung cancer": [
+      "EGF"
+    ],
+    "Pancreatic adenocarcinoma pathway": [
+      "EGF"
+    ],
+    "Gastrin-CREB signaling via PKC and MAPK": [
+      "EGF"
+    ],
+    "NF1 copy number variation syndrome": [
+      "EGF"
+    ],
+    "PIP3 activates AKT signaling": [
+      "EGF"
+    ],
+    "Signaling by ERBB2": [
+      "EGF"
+    ],
+    "RAF/MAP kinase cascade": [
+      "EGF"
+    ],
+    "Signaling by NOTCH3": [
+      "EGF"
+    ],
+    "Signaling by NODAL": [
+      "EGF"
+    ],
+    "EGFR tyrosine kinase inhibitor resistance": [
+      "EGF"
+    ],
+    "Hematopoietic stem cell differentiation": [
+      "EGF"
+    ],
+    "15q25 copy number variation": [
+      "EGF"
+    ]
+  },
+  "documents": [
+    "31472679",
+    "19960189",
+    "39577481",
+    "21970928",
+    "22684739",
+    "20726035",
+    "37740660",
+    "29554840",
+    "21698357",
+    "40158582",
+    "12640408",
+    "1139088",
+    "19957162",
+    "40805445",
+    "39215266",
+    "39777561",
+    "40306773",
+    "26205360",
+    "26419471",
+    "22451221",
+    "28468507",
+    "26768282",
+    "26294293",
+    "41418968",
+    "41823755",
+    "6182674",
+    "26807875",
+    "39544394",
+    "33506016",
+    "23814244",
+    "37212747",
+    "40433028",
+    "27238458",
+    "40968665",
+    "24376855",
+    "27272029",
+    "39713681",
+    "35816417",
+    "29211352",
+    "38450650",
+    "30925575",
+    "25891947",
+    "32715200",
+    "39922345",
+    "40409650",
+    "33656279",
+    "33963672",
+    "21153023",
+    "33142654",
+    "33125972",
+    "30221634",
+    "26084691",
+    "5057019",
+    "26543033",
+    "39396587",
+    "25243150",
+    "20244271",
+    "34491876",
+    "29248806",
+    "36341743",
+    "27604654",
+    "1441940",
+    "39978904",
+    "28539734",
+    "40761155",
+    "30091422",
+    "14277445",
+    "38591855",
+    "26521993",
+    "41116552",
+    "38946883",
+    "37431606",
+    "31994184",
+    "17967557",
+    "38399862",
+    "34391168",
+    "33415138",
+    "35875505",
+    "38885867",
+    "24046046",
+    "9646767",
+    "31876405",
+    "28687393",
+    "36929408",
+    "21132409",
+    "35929301",
+    "29908343",
+    "29216500",
+    "23835021",
+    "39794924",
+    "31753379",
+    "14736764",
+    "27307015",
+    "28956091",
+    "32131378",
+    "22941787",
+    "41142414",
+    "40154687",
+    "30007617",
+    "41716343"
+  ],
+  "images": {
+    "graph": null
+  },
+  "job_id": "1774595451260",
+  "success": true,
+  "total_genes": 6,
+  "total_documents": 100,
+  "total_pathways": 233
+}

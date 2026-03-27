@@ -1,121 +1,122 @@
 ================================================================================
-RELIO V0.1 REPORT: TURMERIC + INFECTION
+RELIO V0.1 REPORT: STRONTIUM + WOUND HEALING
 ================================================================================
 Mode             : FAST (Abstracts)
 Docs Analyzed    : 100 (Strict Limit: 100)
-Net Direction    : Balanced Modulation
+Net Direction    : Predominant Activation
 --------------------------------------------------------------------------------
 
 2. GENE ASSOCIATION LIST (Complete Pathway Mapping)
 --------------------------------------------------------------------------------
 GENE     | HITS | DIR     | FULL PATHWAY LIST
 --------------------------------------------------------------------------------
-TNF      | 4    | up      | No specific pathways mapped
-STAT3    | 1    | neutral | No specific pathways mapped
-CCR5     | 1    | down    | Class A/1 (rhodopsin-like receptors), Cell interactions in pancreatic cancer microenvironment, Selective expression of chemokine receptors during T-cell polarization, Cytokine-cytokine receptor interaction, Interleukin-10 signaling, Network map of SARS-CoV-2 signaling, G alpha (i) signaling events, HIV Life Cycle, Acute viral myocarditis, GPCRs, class A rhodopsin-like, Peptide GPCRs, CCL18 signaling, FLT3 p.Gln640SerfsTer8 signaling, GPCRs, other, T-cell receptor signaling, Opioid receptor pathways
-FOXP3    | 1    | down    | CCL18 signaling, RUNX1 and FOXP3 control the development of regulatory T lymphocytes (Tregs), A network map of RORgt mediated signaling pathway in inflammatory diseases, Integrative Analysis of  Treg-Glial Interactions, Transcriptional regulation by RUNX1, FOXP3 in COVID-19, Th17 cell differentiation pathway, HDAC6 interactions in the central nervous system, TGF-beta signaling, AXL signaling, Leukocyte-intrinsic Hippo pathway functions, Allograft rejection, Inflammatory bowel disease signaling, Ulcerative colitis signaling
-ACE      | 1    | down    | SARS-CoV-2 and ACE2 receptor: molecular mechanisms, Downregulation of ACE2 by SARS-CoV-2 spike protein, Non-classical role of vitamin D, COVID-19 adverse outcome pathway, ACE inhibitor pathway, Renin Angiotensin System and Bradykinin pathways in COVID-19, ADHD and autism (ASD) pathways, SARS-CoV-2 mitochondrial chronic oxidative stress and endothelial dysfunction, Renin-angiotensin-aldosterone system (RAAS), WikiPathways Test: Metabolites and Metabolic Interactions, Elabela signaling, Conversion of angiotensinogen to angiotensin II, Mitochondrial immune response to SARS-CoV-2
+TNF      | 5    | up      | T-cell antigen receptor (TCR) pathway during Staphylococcus aureus infection, AXL signaling, Renin Angiotensin System and Bradykinin pathways in COVID-19, Neuroinflammation and glutamatergic signaling, Roles of ceramides in development of insulin resistance, Altered glycosylation of MUC1 in tumor microenvironment, Endothelin pathway, Integrative Analysis of  Treg-Glial Interactions, Blood-based neuroinflammation markers, IL10 anti-inflammatory signaling, HLA-C allotypes interactions with KIR on dNK cells, Vitamin D in inflammatory diseases, Host-pathogen interaction of human coronaviruses, p53 transcriptional gene network, Toll-like receptor signaling, Dravet syndrome, 8q11.23 (RB1CC1) copy number variation, COVID-19 adverse outcome pathway, Monoamine transport and regulation, PPAR-gamma pathway, Psoriasis mechanism and therapies, miRNA role in immune response in sepsis, Apoptosis modulation by HSP70, Overview of proinflammatory and profibrotic mediators, Macrophage-stimulating protein (MSP) signaling, Tryptophan kynurenine pathway in post-COVID syndrome, Aryl hydrocarbon receptor pathway, Non-genomic actions of 1,25-dihydroxyvitamin D3, Sudden infant death syndrome (SIDS) susceptibility pathways, Hepatitis B infection, Alzheimer's disease, Burn wound healing, TNF-related weak inducer of apoptosis (TWEAK) signaling, TNFR2 non-canonical NF-kB pathway, Affected pathways in Duchenne muscular dystrophy, MAPK signaling, Induction of autophagy and toll-like receptor signaling by graphene oxide, IL18 signaling, Allograft rejection, Resistin as a regulator of inflammation, DNA adduct formation leading to kidney failure, Orexin receptor pathway, Mammary gland development: embryonic development, TGF-beta receptor signaling in skeletal dysplasias, TNF signaling, 2q37 copy number variation syndrome, MicroRNAs in cardiomyocyte hypertrophy, Cytokine storm syndrome, Hallmark of Cancer: Enabling replicative immortality through non-genotoxic carcinogens, Transcription factor regulation in adipogenesis, Lung fibrosis, Ebstein-Barr virus LMP1 signaling, Cytokines and inflammatory response, TLR4 signaling and tolerance, Interleukin-10 signaling, Regulation of toll-like receptor signaling, Factors and pathways affecting insulin-like growth factor (IGF1)-Akt signaling, Nuclear receptors meta-pathway, Kynurenine pathway and links to cell senescence, Post-COVID neuroinflammation, Killer cell immunoglobulin-like receptors and human leukocyte antigen C pathway, TNF-alpha signaling, IL23 inhibitors in inflammatory bowel disease, Cardiac hypertrophic response, Resolvin E1 and resolvin D1 signaling decrease inflammation, Physiopathology of endothelial dysfunction in coronavirus disease, Acute viral myocarditis, Ulcerative colitis signaling, Cells and molecules involved in local acute inflammatory response, T-cell activation SARS-CoV-2, Smith-Magenis and Potocki-Lupski syndrome copy number variation, Overview of nanoparticle effects, PPAR Beta/Delta pathway, Adipogenesis, Aryl hydrocarbon receptor response to main mediators PAH and TCDD, Interactions of natural killer cells in pancreatic cancer, Prostaglandin signaling, Notch signaling, Netrin-UNC5B signaling, Urotensin-II-mediated signaling, Immune infiltration in pancreatic cancer, Neuroinflammation, Fas ligand pathway and stress induction of heat shock proteins, Lung pathology of COVID-19, Apoptosis-related network due to altered Notch3 in ovarian cancer, Sodium channel in epilepsy, Male infertility, Antiviral and anti-inflammatory effects of Nrf2 on SARS-CoV-2 pathway, Nanoparticle triggered regulated necrosis, Photodynamic therapy-induced AP-1 survival signaling, NO/cGMP/PKG mediated neuroprotection, Nonalcoholic fatty liver disease, Molecular pathway for oxidative stress, Cytokine-cytokine receptor interaction, Spinal cord injury, Matrix metalloproteinases, ROS in COVID-19 endothelial dysfunction, SARS-CoV-2 innate immunity evasion and cell-specific immune response, TGF-beta receptor signaling, SARS-CoV-2 mitochondrial chronic oxidative stress and endothelial dysfunction, Pathophysiological roles of DUX4 in FSHD1, Modular map of bradykinin signaling network, Interleukin-4 and Interleukin-13 signaling, Opioid receptor pathways, CAMKK2 pathway, Oxidative damage response, Arsenic liver toxicity pathway, Alzheimer's disease and miRNA effects, Inflammatory bowel disease signaling, LTF danger signal response pathway, Physiopathology of endothelial dysfunction in COVID-19, Pro-inflammatory cytokines, Uterine natural killer cells and progesterone, estrogen, and chorionic gonadotropin, Development and heterogeneity of the ILC family, Pro-survival signaling of neuroprotectin D1, Protein alkylation leading to liver fibrosis, Photodynamic therapy-induced NF-kB survival signaling, Signal transduction through IL1R, NF-kB signaling and ARTD family members, Effect of omega-3 PUFA on Huntington's disease pathways, Catabolism of skeletal muscle in cachexia, Transcriptional regulation of white adipocyte differentiation, Fibrin complement receptor 3 signaling, Network map of SARS-CoV-2 signaling, Elabela signaling, Polycystic kidney disease pathway, Extrafollicular and follicular B cell activation by SARS-CoV-2, Type II diabetes mellitus, Apoptosis, IL26 signaling
+BMP2     | 3    | up      | IL18 signaling, Adipogenesis, Cytokine-cytokine receptor interaction, 10q22q23 copy number variation, Senescence and autophagy in cancer, Interactions between LOXL4 and oxidative stress pathway, Signaling by BMP, Brain-derived neurotrophic factor (BDNF) signaling, Gastrin signaling, Oligodendrocyte specification and differentiation, leading to myelin components for CNS, Elastic fibre formation, Bone morphogenic protein signaling and regulation, Osteoblast differentiation and related diseases, FGFR3 signaling in chondrocyte proliferation and terminal differentiation, Heart development, 15q24 copy number variation, Cancer pathways, Differentiation of white and brown adipocyte, Overlap between signal transduction pathways contributing to LMNA laminopathies, BMP2-WNT4-FOXO1 pathway in primary endometrial stromal cell differentiation, VEGFA-VEGFR2 signaling, Development of ureteric derived collecting system, Transcriptional regulation by RUNX2, Regulation of RUNX2 expression and activity, 10q11.21q11.23 copy number variation syndrome
+TLR4     | 1    | down    | Integrative Analysis of  Treg-Glial Interactions, Toll-like receptor signaling, miRNA role in immune response in sepsis, Non-genomic actions of 1,25-dihydroxyvitamin D3, Hepatitis B infection, Burn wound healing, Induction of autophagy and toll-like receptor signaling by graphene oxide, TLR4 signaling and tolerance, Regulation of toll-like receptor signaling, Post-COVID neuroinflammation, IL23 inhibitors in inflammatory bowel disease, Acute viral myocarditis, Smith-Magenis and Potocki-Lupski syndrome copy number variation, Neuroinflammation, Spinal cord injury, Opioid receptor pathways, Inflammatory bowel disease signaling, LTF danger signal response pathway, Fibrin complement receptor 3 signaling, Extrafollicular and follicular B cell activation by SARS-CoV-2, Toll-like receptor signaling related to MyD88, Interactions between immune cells and microRNAs in tumor microenvironment, Regulation of TLR by endogenous ligand, PI3K-Akt signaling, Corticotropin-releasing hormone signaling, Nephrotoxcicity adverse outcome pathway, MyD88-independent TLR4 cascade, ApoE and miR-146 in inflammation and atherosclerosis, MyD88:MAL(TIRAP) cascade initiated on plasma membrane, Platelet-mediated interactions with vascular and circulating cells, Primary focal segmental glomerulosclerosis (FSGS), Extracellular vesicles in the crosstalk of cardiac cells, Toll-like receptor cascades, Sickle cell disease, Lupus pathogenesis, COVID-19 and endothelial cell senescence, Pathogenic Escherichia coli infection, LDL- influence on CD14 and TLR4, Type I interferon induction and signaling during SARS-CoV-2 infection, MyD88 dependent cascade initiated on endosome, Nanomaterial-induced inflammasome activation, Ebola virus infection in host, Caspase activation via death receptors in the presence of ligand, MYD88 distinct input-output pathway, Transcriptional regulation of memory B cell differentiation, Measles virus infection, 8p23.1 copy number variation syndrome
+CCL2     | 1    | neutral | AXL signaling, Endothelin pathway, Blood-based neuroinflammation markers, p53 transcriptional gene network, COVID-19 adverse outcome pathway, Overview of proinflammatory and profibrotic mediators, Macrophage-stimulating protein (MSP) signaling, Non-genomic actions of 1,25-dihydroxyvitamin D3, Burn wound healing, TNF-related weak inducer of apoptosis (TWEAK) signaling, IL18 signaling, Lung fibrosis, Interleukin-10 signaling, Nuclear receptors meta-pathway, TNF-alpha signaling, PPAR Beta/Delta pathway, Interactions of natural killer cells in pancreatic cancer, Prostaglandin signaling, Netrin-UNC5B signaling, Immune infiltration in pancreatic cancer, Lung pathology of COVID-19, Antiviral and anti-inflammatory effects of Nrf2 on SARS-CoV-2 pathway, Nonalcoholic fatty liver disease, Cytokine-cytokine receptor interaction, Spinal cord injury, SARS-CoV-2 innate immunity evasion and cell-specific immune response, Modular map of bradykinin signaling network, Interleukin-4 and Interleukin-13 signaling, Uterine natural killer cells and progesterone, estrogen, and chorionic gonadotropin, Fibrin complement receptor 3 signaling, Network map of SARS-CoV-2 signaling, Elabela signaling, Interactions between immune cells and microRNAs in tumor microenvironment, Platelet-mediated interactions with vascular and circulating cells, LDL- influence on CD14 and TLR4, VEGFA-VEGFR2 signaling, IL1 signaling, Oncostatin M signaling, 17q12 copy number variation syndrome, Pleural mesothelioma, CCL18 signaling, IL19 signaling, Chemokine signaling, Selenium micronutrient network, DDR1-mediated signaling, Class A/1 (rhodopsin-like receptors), Hallmark of Cancer: Avoiding immune destruction through non-genotoxic carcinogens, ATF4 activates genes in response to endoplasmic reticulum  stress, Ectoderm differentiation, IL1 and megakaryocytes in obesity, Glucocorticoid receptor pathway, Cell interactions in pancreatic cancer microenvironment
+AHSG     | 1    | up      | Neutrophil degranulation, Post-translational protein phosphorylation, Response to elevated platelet cytosolic Ca ions, Regulation of IGF transport and uptake by IGF binding proteins
+EGF      | 1    | up      | Burn wound healing, MAPK signaling, TGF-beta receptor signaling in skeletal dysplasias, MicroRNAs in cardiomyocyte hypertrophy, Lung fibrosis, Cardiac hypertrophic response, TGF-beta receptor signaling, Effect of omega-3 PUFA on Huntington's disease pathways, Polycystic kidney disease pathway, PI3K-Akt signaling, Extracellular vesicles in the crosstalk of cardiac cells, Cancer pathways, Pleural mesothelioma, Response to elevated platelet cytosolic Ca ions, NRP1-triggered signaling in pancreatic cancer, JAK/STAT pathway, Hair follicle development: induction, ErbB signaling, Embryonic stem cell pluripotency pathways, Focal adhesion: PI3K-Akt-mTOR-signaling, Regulation of actin cytoskeleton, EGF/EGFR signaling, Focal adhesion, Pluripotent stem cell differentiation pathway, Signaling by EGFR, Endometrial cancer, Exercise and hypertrophy in skeletal muscle, Tyrosine kinase inhibitors in glioblastoma, Relationship between inflammation, COX-2 and EGFR, Bladder cancer, ERK pathway in Huntington's disease, Breast cancer pathway, Extra-nuclear estrogen signaling, Clathrin-mediated endocytosis, Signaling by ERBB4, Mammary gland development: puberty, Non-small cell lung cancer, Pancreatic adenocarcinoma pathway, Gastrin-CREB signaling via PKC and MAPK, NF1 copy number variation syndrome, PIP3 activates AKT signaling, Signaling by ERBB2, RAF/MAP kinase cascade, Signaling by NOTCH3, Signaling by NODAL, EGFR tyrosine kinase inhibitor resistance, Hematopoietic stem cell differentiation, 15q25 copy number variation
 --------------------------------------------------------------------------------
 
 3. SOURCE DOCUMENT LIST (Clickable Links)
 ----------------------------------------
-- https://pubmed.ncbi.nlm.nih.gov/1496714/
-- https://pubmed.ncbi.nlm.nih.gov/16731272/
-- https://pubmed.ncbi.nlm.nih.gov/18398870/
-- https://pubmed.ncbi.nlm.nih.gov/19336870/
-- https://pubmed.ncbi.nlm.nih.gov/20821233/
-- https://pubmed.ncbi.nlm.nih.gov/21594675/
-- https://pubmed.ncbi.nlm.nih.gov/22186854/
-- https://pubmed.ncbi.nlm.nih.gov/23295981/
-- https://pubmed.ncbi.nlm.nih.gov/23566550/
-- https://pubmed.ncbi.nlm.nih.gov/24165896/
-- https://pubmed.ncbi.nlm.nih.gov/25200875/
-- https://pubmed.ncbi.nlm.nih.gov/25206217/
-- https://pubmed.ncbi.nlm.nih.gov/26188032/
-- https://pubmed.ncbi.nlm.nih.gov/26404185/
-- https://pubmed.ncbi.nlm.nih.gov/26528921/
-- https://pubmed.ncbi.nlm.nih.gov/26709650/
-- https://pubmed.ncbi.nlm.nih.gov/27863601/
-- https://pubmed.ncbi.nlm.nih.gov/27892897/
-- https://pubmed.ncbi.nlm.nih.gov/27896883/
-- https://pubmed.ncbi.nlm.nih.gov/28343845/
-- https://pubmed.ncbi.nlm.nih.gov/28449595/
-- https://pubmed.ncbi.nlm.nih.gov/28884496/
-- https://pubmed.ncbi.nlm.nih.gov/29541936/
-- https://pubmed.ncbi.nlm.nih.gov/29621160/
-- https://pubmed.ncbi.nlm.nih.gov/29625661/
-- https://pubmed.ncbi.nlm.nih.gov/29923222/
-- https://pubmed.ncbi.nlm.nih.gov/29976394/
-- https://pubmed.ncbi.nlm.nih.gov/30085362/
-- https://pubmed.ncbi.nlm.nih.gov/31185140/
-- https://pubmed.ncbi.nlm.nih.gov/32067524/
-- https://pubmed.ncbi.nlm.nih.gov/32418527/
-- https://pubmed.ncbi.nlm.nih.gov/32452193/
-- https://pubmed.ncbi.nlm.nih.gov/32535791/
-- https://pubmed.ncbi.nlm.nih.gov/32806984/
-- https://pubmed.ncbi.nlm.nih.gov/32998270/
-- https://pubmed.ncbi.nlm.nih.gov/33142686/
-- https://pubmed.ncbi.nlm.nih.gov/33184809/
-- https://pubmed.ncbi.nlm.nih.gov/33809891/
-- https://pubmed.ncbi.nlm.nih.gov/34237598/
-- https://pubmed.ncbi.nlm.nih.gov/34325638/
-- https://pubmed.ncbi.nlm.nih.gov/34443248/
-- https://pubmed.ncbi.nlm.nih.gov/34579443/
-- https://pubmed.ncbi.nlm.nih.gov/34660038/
-- https://pubmed.ncbi.nlm.nih.gov/34696344/
-- https://pubmed.ncbi.nlm.nih.gov/34757887/
-- https://pubmed.ncbi.nlm.nih.gov/35253616/
-- https://pubmed.ncbi.nlm.nih.gov/35293297/
-- https://pubmed.ncbi.nlm.nih.gov/35352306/
-- https://pubmed.ncbi.nlm.nih.gov/35469998/
-- https://pubmed.ncbi.nlm.nih.gov/35496320/
-- https://pubmed.ncbi.nlm.nih.gov/35933899/
-- https://pubmed.ncbi.nlm.nih.gov/35996526/
-- https://pubmed.ncbi.nlm.nih.gov/36119096/
-- https://pubmed.ncbi.nlm.nih.gov/36455820/
-- https://pubmed.ncbi.nlm.nih.gov/36480131/
-- https://pubmed.ncbi.nlm.nih.gov/36499036/
-- https://pubmed.ncbi.nlm.nih.gov/36703758/
-- https://pubmed.ncbi.nlm.nih.gov/36720711/
-- https://pubmed.ncbi.nlm.nih.gov/36729019/
-- https://pubmed.ncbi.nlm.nih.gov/36756300/
-- https://pubmed.ncbi.nlm.nih.gov/36846914/
-- https://pubmed.ncbi.nlm.nih.gov/36868489/
-- https://pubmed.ncbi.nlm.nih.gov/36904331/
-- https://pubmed.ncbi.nlm.nih.gov/36965256/
-- https://pubmed.ncbi.nlm.nih.gov/36981935/
-- https://pubmed.ncbi.nlm.nih.gov/36997729/
-- https://pubmed.ncbi.nlm.nih.gov/37314412/
-- https://pubmed.ncbi.nlm.nih.gov/37356247/
-- https://pubmed.ncbi.nlm.nih.gov/37378778/
-- https://pubmed.ncbi.nlm.nih.gov/37517298/
-- https://pubmed.ncbi.nlm.nih.gov/37536430/
-- https://pubmed.ncbi.nlm.nih.gov/37536946/
-- https://pubmed.ncbi.nlm.nih.gov/37569540/
-- https://pubmed.ncbi.nlm.nih.gov/38042387/
-- https://pubmed.ncbi.nlm.nih.gov/38085369/
-- https://pubmed.ncbi.nlm.nih.gov/38133257/
-- https://pubmed.ncbi.nlm.nih.gov/38242053/
-- https://pubmed.ncbi.nlm.nih.gov/38612606/
-- https://pubmed.ncbi.nlm.nih.gov/38664750/
-- https://pubmed.ncbi.nlm.nih.gov/38685809/
-- https://pubmed.ncbi.nlm.nih.gov/38721680/
-- https://pubmed.ncbi.nlm.nih.gov/38794899/
-- https://pubmed.ncbi.nlm.nih.gov/38817411/
-- https://pubmed.ncbi.nlm.nih.gov/39055752/
-- https://pubmed.ncbi.nlm.nih.gov/39148307/
-- https://pubmed.ncbi.nlm.nih.gov/39330180/
-- https://pubmed.ncbi.nlm.nih.gov/39541651/
-- https://pubmed.ncbi.nlm.nih.gov/39770516/
-- https://pubmed.ncbi.nlm.nih.gov/39901813/
-- https://pubmed.ncbi.nlm.nih.gov/40005051/
-- https://pubmed.ncbi.nlm.nih.gov/40362617/
-- https://pubmed.ncbi.nlm.nih.gov/40427672/
-- https://pubmed.ncbi.nlm.nih.gov/40583343/
-- https://pubmed.ncbi.nlm.nih.gov/40599653/
-- https://pubmed.ncbi.nlm.nih.gov/40799052/
-- https://pubmed.ncbi.nlm.nih.gov/41034312/
-- https://pubmed.ncbi.nlm.nih.gov/41150115/
-- https://pubmed.ncbi.nlm.nih.gov/41176175/
-- https://pubmed.ncbi.nlm.nih.gov/41258635/
-- https://pubmed.ncbi.nlm.nih.gov/41362433/
+- https://pubmed.ncbi.nlm.nih.gov/1139088/
+- https://pubmed.ncbi.nlm.nih.gov/12640408/
+- https://pubmed.ncbi.nlm.nih.gov/14277445/
+- https://pubmed.ncbi.nlm.nih.gov/1441940/
+- https://pubmed.ncbi.nlm.nih.gov/14736764/
+- https://pubmed.ncbi.nlm.nih.gov/17967557/
+- https://pubmed.ncbi.nlm.nih.gov/19957162/
+- https://pubmed.ncbi.nlm.nih.gov/19960189/
+- https://pubmed.ncbi.nlm.nih.gov/20244271/
+- https://pubmed.ncbi.nlm.nih.gov/20726035/
+- https://pubmed.ncbi.nlm.nih.gov/21132409/
+- https://pubmed.ncbi.nlm.nih.gov/21153023/
+- https://pubmed.ncbi.nlm.nih.gov/21698357/
+- https://pubmed.ncbi.nlm.nih.gov/21970928/
+- https://pubmed.ncbi.nlm.nih.gov/22451221/
+- https://pubmed.ncbi.nlm.nih.gov/22684739/
+- https://pubmed.ncbi.nlm.nih.gov/22941787/
+- https://pubmed.ncbi.nlm.nih.gov/23814244/
+- https://pubmed.ncbi.nlm.nih.gov/23835021/
+- https://pubmed.ncbi.nlm.nih.gov/24046046/
+- https://pubmed.ncbi.nlm.nih.gov/24376855/
+- https://pubmed.ncbi.nlm.nih.gov/25243150/
+- https://pubmed.ncbi.nlm.nih.gov/25891947/
+- https://pubmed.ncbi.nlm.nih.gov/26084691/
+- https://pubmed.ncbi.nlm.nih.gov/26205360/
+- https://pubmed.ncbi.nlm.nih.gov/26294293/
+- https://pubmed.ncbi.nlm.nih.gov/26419471/
+- https://pubmed.ncbi.nlm.nih.gov/26521993/
+- https://pubmed.ncbi.nlm.nih.gov/26543033/
+- https://pubmed.ncbi.nlm.nih.gov/26768282/
+- https://pubmed.ncbi.nlm.nih.gov/26807875/
+- https://pubmed.ncbi.nlm.nih.gov/27238458/
+- https://pubmed.ncbi.nlm.nih.gov/27272029/
+- https://pubmed.ncbi.nlm.nih.gov/27307015/
+- https://pubmed.ncbi.nlm.nih.gov/27604654/
+- https://pubmed.ncbi.nlm.nih.gov/28468507/
+- https://pubmed.ncbi.nlm.nih.gov/28539734/
+- https://pubmed.ncbi.nlm.nih.gov/28687393/
+- https://pubmed.ncbi.nlm.nih.gov/28956091/
+- https://pubmed.ncbi.nlm.nih.gov/29211352/
+- https://pubmed.ncbi.nlm.nih.gov/29216500/
+- https://pubmed.ncbi.nlm.nih.gov/29248806/
+- https://pubmed.ncbi.nlm.nih.gov/29554840/
+- https://pubmed.ncbi.nlm.nih.gov/29908343/
+- https://pubmed.ncbi.nlm.nih.gov/30007617/
+- https://pubmed.ncbi.nlm.nih.gov/30091422/
+- https://pubmed.ncbi.nlm.nih.gov/30221634/
+- https://pubmed.ncbi.nlm.nih.gov/30925575/
+- https://pubmed.ncbi.nlm.nih.gov/31472679/
+- https://pubmed.ncbi.nlm.nih.gov/31753379/
+- https://pubmed.ncbi.nlm.nih.gov/31876405/
+- https://pubmed.ncbi.nlm.nih.gov/31994184/
+- https://pubmed.ncbi.nlm.nih.gov/32131378/
+- https://pubmed.ncbi.nlm.nih.gov/32715200/
+- https://pubmed.ncbi.nlm.nih.gov/33125972/
+- https://pubmed.ncbi.nlm.nih.gov/33142654/
+- https://pubmed.ncbi.nlm.nih.gov/33415138/
+- https://pubmed.ncbi.nlm.nih.gov/33506016/
+- https://pubmed.ncbi.nlm.nih.gov/33656279/
+- https://pubmed.ncbi.nlm.nih.gov/33963672/
+- https://pubmed.ncbi.nlm.nih.gov/34391168/
+- https://pubmed.ncbi.nlm.nih.gov/34491876/
+- https://pubmed.ncbi.nlm.nih.gov/35816417/
+- https://pubmed.ncbi.nlm.nih.gov/35875505/
+- https://pubmed.ncbi.nlm.nih.gov/35929301/
+- https://pubmed.ncbi.nlm.nih.gov/36341743/
+- https://pubmed.ncbi.nlm.nih.gov/36929408/
+- https://pubmed.ncbi.nlm.nih.gov/37212747/
+- https://pubmed.ncbi.nlm.nih.gov/37431606/
+- https://pubmed.ncbi.nlm.nih.gov/37740660/
+- https://pubmed.ncbi.nlm.nih.gov/38399862/
+- https://pubmed.ncbi.nlm.nih.gov/38450650/
+- https://pubmed.ncbi.nlm.nih.gov/38591855/
+- https://pubmed.ncbi.nlm.nih.gov/38885867/
+- https://pubmed.ncbi.nlm.nih.gov/38946883/
+- https://pubmed.ncbi.nlm.nih.gov/39215266/
+- https://pubmed.ncbi.nlm.nih.gov/39396587/
+- https://pubmed.ncbi.nlm.nih.gov/39544394/
+- https://pubmed.ncbi.nlm.nih.gov/39577481/
+- https://pubmed.ncbi.nlm.nih.gov/39713681/
+- https://pubmed.ncbi.nlm.nih.gov/39777561/
+- https://pubmed.ncbi.nlm.nih.gov/39794924/
+- https://pubmed.ncbi.nlm.nih.gov/39922345/
+- https://pubmed.ncbi.nlm.nih.gov/39978904/
+- https://pubmed.ncbi.nlm.nih.gov/40154687/
+- https://pubmed.ncbi.nlm.nih.gov/40158582/
+- https://pubmed.ncbi.nlm.nih.gov/40306773/
+- https://pubmed.ncbi.nlm.nih.gov/40409650/
+- https://pubmed.ncbi.nlm.nih.gov/40433028/
+- https://pubmed.ncbi.nlm.nih.gov/40761155/
+- https://pubmed.ncbi.nlm.nih.gov/40805445/
+- https://pubmed.ncbi.nlm.nih.gov/40968665/
+- https://pubmed.ncbi.nlm.nih.gov/41116552/
+- https://pubmed.ncbi.nlm.nih.gov/41142414/
+- https://pubmed.ncbi.nlm.nih.gov/41418968/
+- https://pubmed.ncbi.nlm.nih.gov/41716343/
+- https://pubmed.ncbi.nlm.nih.gov/41823755/
+- https://pubmed.ncbi.nlm.nih.gov/5057019/
+- https://pubmed.ncbi.nlm.nih.gov/6182674/
+- https://pubmed.ncbi.nlm.nih.gov/9646767/
