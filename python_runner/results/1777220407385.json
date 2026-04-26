@@ -1,0 +1,259 @@
+{
+  "compound": "Curcumin",
+  "outcome": "Turmeric",
+  "mode": "FULL",
+  "mode_name": "FULL (PMC Full Text)",
+  "genes": {
+    "STAT3": [
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "down"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      },
+      {
+        "id": "Unknown",
+        "direction": "up"
+      }
+    ],
+    "NFKB1": [
+      {
+        "id": "Unknown",
+        "direction": "neutral"
+      }
+    ]
+  },
+  "pathways": {},
+  "documents": [
+    "6567096",
+    "13074675",
+    "11596437",
+    "6950067",
+    "12430471",
+    "12413726",
+    "7698610",
+    "8659038",
+    "9976389",
+    "11722367",
+    "11100965",
+    "7603145",
+    "7448442",
+    "12678360",
+    "6770633",
+    "9376628",
+    "6851106",
+    "12317048",
+    "12346948",
+    "12047230",
+    "6950673",
+    "12894154",
+    "7019345",
+    "12548870",
+    "6429141",
+    "11959387",
+    "7072416",
+    "11172464",
+    "10932100",
+    "8161296",
+    "11087556",
+    "12326297",
+    "11679877",
+    "7496454",
+    "7083314",
+    "12278600",
+    "11976684",
+    "6013419",
+    "6696485",
+    "10062691",
+    "6720683",
+    "12295257",
+    "12310316",
+    "3418106",
+    "3249972",
+    "12696035",
+    "9881416",
+    "8537626",
+    "4066676",
+    "10218501",
+    "7763573",
+    "6270664",
+    "8497115",
+    "8202067",
+    "9003445",
+    "12525209",
+    "12411784",
+    "6681384",
+    "9353077",
+    "11820683",
+    "5078657",
+    "11275093",
+    "11432846",
+    "5000414",
+    "12408333",
+    "6520588",
+    "11203963",
+    "8692024",
+    "9268477",
+    "11206846",
+    "8126655",
+    "6691850",
+    "9391931",
+    "4210912",
+    "12939168",
+    "12295988",
+    "11673403",
+    "10229698",
+    "11561237",
+    "7690450",
+    "12709529",
+    "12931325",
+    "6524349",
+    "7037262",
+    "12657484",
+    "12967660",
+    "11357524",
+    "7522354",
+    "11549377",
+    "12090238",
+    "12261056",
+    "5003001",
+    "6723242",
+    "1434783",
+    "3834320",
+    "9936197",
+    "12715913",
+    "9599178",
+    "9659251",
+    "10625731"
+  ],
+  "images": {
+    "graph": "1777220407385_graph.png"
+  },
+  "job_id": "1777220407385",
+  "success": true,
+  "total_genes": 2,
+  "total_documents": 100,
+  "total_pathways": 0
+}
