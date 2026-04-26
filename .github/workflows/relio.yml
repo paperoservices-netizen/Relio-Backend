@@ -1,5 +1,5 @@
 name: Relio Job Runner
- 
+
 on:
   workflow_dispatch:
     inputs:
@@ -11,24 +11,24 @@ on:
         required: true
       job_id:
         required: true
- 
+
 permissions:
   contents: write
- 
+
 jobs:
   run-relio:
     runs-on: ubuntu-latest
- 
+
     steps:
       - uses: actions/checkout@v4
- 
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.10"
- 
+
       - name: Install dependencies
         run: pip install -r requirements.txt
- 
+
       - name: Run Relio
         run: |
           python -m python_runner.relio_job \
@@ -36,7 +36,7 @@ jobs:
             "${{ github.event.inputs.outcome }}" \
             "${{ github.event.inputs.mode }}" \
             "${{ github.event.inputs.job_id }}"
- 
+
       - name: Commit results
         run: |
           git config user.name github-actions
