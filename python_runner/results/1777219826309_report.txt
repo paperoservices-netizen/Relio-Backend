@@ -1,0 +1,130 @@
+================================================================================
+RELIO V0.1 REPORT: CURCUMIN + INFECTION
+================================================================================
+Mode             : FAST (Abstracts)
+Docs Analyzed    : 100 (Strict Limit: 100)
+Net Direction    : Balanced Modulation
+--------------------------------------------------------------------------------
+
+2. GENE ASSOCIATION LIST (Complete Pathway Mapping)
+--------------------------------------------------------------------------------
+GENE     | HITS | DIR     | FULL PATHWAY LIST
+--------------------------------------------------------------------------------
+TNF      | 14   | up      | No specific pathways mapped
+STAT3    | 2    | neutral | No specific pathways mapped
+ACE      | 1    | down    | No specific pathways mapped
+BAX      | 1    | neutral | No specific pathways mapped
+ACE2     | 1    | down    | No specific pathways mapped
+TLR2     | 1    | up      | No specific pathways mapped
+TLR9     | 1    | down    | No specific pathways mapped
+CASP3    | 1    | neutral | No specific pathways mapped
+SERPINE1 | 1    | neutral | No specific pathways mapped
+ALB      | 1    | neutral | No specific pathways mapped
+PTGS2    | 1    | neutral | No specific pathways mapped
+EGFR     | 1    | neutral | No specific pathways mapped
+AKT1     | 1    | neutral | No specific pathways mapped
+HSP90AA1 | 1    | down    | No specific pathways mapped
+--------------------------------------------------------------------------------
+
+3. SOURCE DOCUMENT LIST (Clickable Links)
+----------------------------------------
+- https://pubmed.ncbi.nlm.nih.gov/20056776/
+- https://pubmed.ncbi.nlm.nih.gov/21283694/
+- https://pubmed.ncbi.nlm.nih.gov/23305394/
+- https://pubmed.ncbi.nlm.nih.gov/24289574/
+- https://pubmed.ncbi.nlm.nih.gov/24802527/
+- https://pubmed.ncbi.nlm.nih.gov/25137643/
+- https://pubmed.ncbi.nlm.nih.gov/25240595/
+- https://pubmed.ncbi.nlm.nih.gov/25484584/
+- https://pubmed.ncbi.nlm.nih.gov/25893983/
+- https://pubmed.ncbi.nlm.nih.gov/26278542/
+- https://pubmed.ncbi.nlm.nih.gov/26404185/
+- https://pubmed.ncbi.nlm.nih.gov/26542278/
+- https://pubmed.ncbi.nlm.nih.gov/26723514/
+- https://pubmed.ncbi.nlm.nih.gov/27380582/
+- https://pubmed.ncbi.nlm.nih.gov/27896883/
+- https://pubmed.ncbi.nlm.nih.gov/28070848/
+- https://pubmed.ncbi.nlm.nih.gov/28228072/
+- https://pubmed.ncbi.nlm.nih.gov/28343845/
+- https://pubmed.ncbi.nlm.nih.gov/28492711/
+- https://pubmed.ncbi.nlm.nih.gov/28646616/
+- https://pubmed.ncbi.nlm.nih.gov/28677499/
+- https://pubmed.ncbi.nlm.nih.gov/28884090/
+- https://pubmed.ncbi.nlm.nih.gov/29017487/
+- https://pubmed.ncbi.nlm.nih.gov/29153953/
+- https://pubmed.ncbi.nlm.nih.gov/29329627/
+- https://pubmed.ncbi.nlm.nih.gov/29438458/
+- https://pubmed.ncbi.nlm.nih.gov/29923222/
+- https://pubmed.ncbi.nlm.nih.gov/29976394/
+- https://pubmed.ncbi.nlm.nih.gov/30385266/
+- https://pubmed.ncbi.nlm.nih.gov/30440021/
+- https://pubmed.ncbi.nlm.nih.gov/30528634/
+- https://pubmed.ncbi.nlm.nih.gov/30623441/
+- https://pubmed.ncbi.nlm.nih.gov/30660832/
+- https://pubmed.ncbi.nlm.nih.gov/30887519/
+- https://pubmed.ncbi.nlm.nih.gov/31374813/
+- https://pubmed.ncbi.nlm.nih.gov/31482407/
+- https://pubmed.ncbi.nlm.nih.gov/31509968/
+- https://pubmed.ncbi.nlm.nih.gov/31881329/
+- https://pubmed.ncbi.nlm.nih.gov/31930829/
+- https://pubmed.ncbi.nlm.nih.gov/31947962/
+- https://pubmed.ncbi.nlm.nih.gov/32430996/
+- https://pubmed.ncbi.nlm.nih.gov/32868444/
+- https://pubmed.ncbi.nlm.nih.gov/32948186/
+- https://pubmed.ncbi.nlm.nih.gov/32998270/
+- https://pubmed.ncbi.nlm.nih.gov/33378995/
+- https://pubmed.ncbi.nlm.nih.gov/33660529/
+- https://pubmed.ncbi.nlm.nih.gov/34013606/
+- https://pubmed.ncbi.nlm.nih.gov/34237598/
+- https://pubmed.ncbi.nlm.nih.gov/34331685/
+- https://pubmed.ncbi.nlm.nih.gov/34443457/
+- https://pubmed.ncbi.nlm.nih.gov/35041229/
+- https://pubmed.ncbi.nlm.nih.gov/35092833/
+- https://pubmed.ncbi.nlm.nih.gov/35166997/
+- https://pubmed.ncbi.nlm.nih.gov/35225298/
+- https://pubmed.ncbi.nlm.nih.gov/35293297/
+- https://pubmed.ncbi.nlm.nih.gov/35322691/
+- https://pubmed.ncbi.nlm.nih.gov/35389989/
+- https://pubmed.ncbi.nlm.nih.gov/35430990/
+- https://pubmed.ncbi.nlm.nih.gov/35809560/
+- https://pubmed.ncbi.nlm.nih.gov/35952613/
+- https://pubmed.ncbi.nlm.nih.gov/35996526/
+- https://pubmed.ncbi.nlm.nih.gov/36155114/
+- https://pubmed.ncbi.nlm.nih.gov/36206994/
+- https://pubmed.ncbi.nlm.nih.gov/36282319/
+- https://pubmed.ncbi.nlm.nih.gov/36296729/
+- https://pubmed.ncbi.nlm.nih.gov/36341845/
+- https://pubmed.ncbi.nlm.nih.gov/36402615/
+- https://pubmed.ncbi.nlm.nih.gov/36625029/
+- https://pubmed.ncbi.nlm.nih.gov/36720711/
+- https://pubmed.ncbi.nlm.nih.gov/36729019/
+- https://pubmed.ncbi.nlm.nih.gov/36905112/
+- https://pubmed.ncbi.nlm.nih.gov/36965256/
+- https://pubmed.ncbi.nlm.nih.gov/36997729/
+- https://pubmed.ncbi.nlm.nih.gov/37033493/
+- https://pubmed.ncbi.nlm.nih.gov/37378742/
+- https://pubmed.ncbi.nlm.nih.gov/37523195/
+- https://pubmed.ncbi.nlm.nih.gov/37625648/
+- https://pubmed.ncbi.nlm.nih.gov/37881069/
+- https://pubmed.ncbi.nlm.nih.gov/37964023/
+- https://pubmed.ncbi.nlm.nih.gov/37986579/
+- https://pubmed.ncbi.nlm.nih.gov/38263162/
+- https://pubmed.ncbi.nlm.nih.gov/38580024/
+- https://pubmed.ncbi.nlm.nih.gov/38615970/
+- https://pubmed.ncbi.nlm.nih.gov/38730068/
+- https://pubmed.ncbi.nlm.nih.gov/38794899/
+- https://pubmed.ncbi.nlm.nih.gov/38838691/
+- https://pubmed.ncbi.nlm.nih.gov/39082882/
+- https://pubmed.ncbi.nlm.nih.gov/39121609/
+- https://pubmed.ncbi.nlm.nih.gov/39395148/
+- https://pubmed.ncbi.nlm.nih.gov/39439502/
+- https://pubmed.ncbi.nlm.nih.gov/39890088/
+- https://pubmed.ncbi.nlm.nih.gov/40089540/
+- https://pubmed.ncbi.nlm.nih.gov/40099879/
+- https://pubmed.ncbi.nlm.nih.gov/40286548/
+- https://pubmed.ncbi.nlm.nih.gov/40426123/
+- https://pubmed.ncbi.nlm.nih.gov/40968134/
+- https://pubmed.ncbi.nlm.nih.gov/40989600/
+- https://pubmed.ncbi.nlm.nih.gov/41226452/
+- https://pubmed.ncbi.nlm.nih.gov/41285946/
+- https://pubmed.ncbi.nlm.nih.gov/41545834/
