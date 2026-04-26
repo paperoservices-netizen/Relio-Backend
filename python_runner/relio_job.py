@@ -47,25 +47,25 @@ if whitelist:
 
     if ev:
         pmap = build_pathway_map(ev)
-        # Exact same signatures as RELIO.py — saves Relio_maze.png / Relio_report.txt to CWD
-        draw_graph(compound, ev, pmap, mode_name, outcome)
-        generate_full_report(compound, outcome, ev, pmap, ids, mode_name)
+        # Pass IMG_DIR — litmap.py saves litmap_maze.png and litmap_report.txt into it
+        draw_graph(compound, ev, pmap, mode_name, outcome, IMG_DIR)
+        generate_full_report(compound, outcome, ev, pmap, ids, mode_name, IMG_DIR)
     else:
         print("❌ No evidence found.")
 else:
     print("❌ Whitelist failed.")
 
-# Move graph: Relio_maze.png (CWD) -> images/<job_id>_graph.png
-dst_img    = os.path.join(IMG_DIR, f"{job_id}_graph.png")
-graph_path = os.path.join(os.getcwd(), "Relio_maze.png")
-if os.path.exists(graph_path):
-    shutil.move(graph_path, dst_img)
+# Move graph: IMG_DIR/litmap_maze.png → IMG_DIR/<job_id>_graph.png
+src_img = os.path.join(IMG_DIR, "litmap_maze.png")
+dst_img = os.path.join(IMG_DIR, f"{job_id}_graph.png")
+if os.path.exists(src_img):
+    shutil.move(src_img, dst_img)
 
-# Move report: Relio_report.txt (CWD) -> results/<job_id>_report.txt
-dst_rep     = os.path.join(RES_DIR, f"{job_id}_report.txt")
-report_path = os.path.join(os.getcwd(), "Relio_report.txt")
-if os.path.exists(report_path):
-    shutil.move(report_path, dst_rep)
+# Move report: IMG_DIR/litmap_report.txt → RES_DIR/<job_id>_report.txt
+src_rep = os.path.join(IMG_DIR, "litmap_report.txt")
+dst_rep = os.path.join(RES_DIR, f"{job_id}_report.txt")
+if os.path.exists(src_rep):
+    shutil.move(src_rep, dst_rep)
 
 # Serialize pathways safely
 pathways_serializable = {p: list(genes) for p, genes in pmap.items()}
