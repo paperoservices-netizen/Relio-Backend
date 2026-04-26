@@ -21,11 +21,9 @@ def sleep():
 
 def get_context_direction(text, gene):
     """Scans for up/down regulation keywords around the gene."""
-    # Added IGNORECASE to match the new text search
     starts = [m.start() for m in re.finditer(rf"\b{re.escape(gene)}\b", text, re.IGNORECASE)]
     if not starts: return "neutral"
     idx = starts[0]
-    # Widened the snippet window to 150 characters for complex full-text sentences
     snippet = text[max(0, idx-150): min(len(text), idx+150)].lower()
     
     up_words = ["increase", "induce", "upregulat", "activat", "stimulat", "enhance", "promot", "up-regulat", "elevat"]
@@ -99,7 +97,6 @@ def mine_abstracts_fast(compound, outcome, genes, limit=100):
         print(f"    → Found {len(ids)} abstracts. Downloading...")
 
         sleep()
-        # Fetch as XML instead of raw text
         h = Entrez.efetch(db="pubmed", id=",".join(ids), retmode="xml")
         records = Entrez.read(h)
         h.close()
@@ -107,7 +104,6 @@ def mine_abstracts_fast(compound, outcome, genes, limit=100):
         for article in records.get('PubmedArticle', []):
             try:
                 pid = str(article['MedlineCitation']['PMID'])
-                # Join all parts of a structured abstract safely
                 abstract_parts = article['MedlineCitation']['Article'].get('Abstract', {}).get('AbstractText', [])
                 full_abstract = " ".join([str(part) for part in abstract_parts])
                 
@@ -137,26 +133,22 @@ def mine_pmc_full(compound, outcome, genes, limit=100):
         if not ids: return {}, []
         print(f"    → Found {len(ids)} full-text XMLs. Downloading in safe batches...")
         
-        # LOWER BATCH SIZE to prevent NCBI payload truncation
-        batch_size = 5 
+        batch_size = 5
         articles_processed = 0
         
-        # Wrap the range() function in tqdm()
         for i in tqdm(range(0, len(ids), batch_size), desc="Mining PMC XMLs", unit="batch", colour="green"):
             batch_ids = ids[i:i+batch_size]
             try:
-                sleep() 
+                sleep()
                 h = Entrez.efetch(db="pmc", id=",".join(batch_ids), retmode="xml")
                 xml_data = h.read()
                 h.close()
                 
-                # Ensure it is a string for ElementTree parsing
                 if isinstance(xml_data, bytes):
                     xml_data = xml_data.decode('utf-8', errors='ignore')
                     
                 root = ET.fromstring(xml_data)
                 
-                # Catch silent NCBI API errors (e.g., rate limits, invalid email)
                 if root.tag == 'ERROR' or root.find('.//ERROR') is not None:
                     err_msg = "".join(root.itertext())
                     print(f"    ⚠️ NCBI API Warning: {err_msg.strip()}")
@@ -170,7 +162,6 @@ def mine_pmc_full(compound, outcome, genes, limit=100):
                             current_pmc = "PMC" + (article_id.text or "")
                             break
                     
-                    # Foolproof text stripping using tostring
                     text_chunks = []
                     for section in article.findall('.//abstract') + article.findall('.//body'):
                         text_chunks.append(ET.tostring(section, method='text', encoding='unicode').strip())
@@ -180,13 +171,11 @@ def mine_pmc_full(compound, outcome, genes, limit=100):
                     if not clean_full_text.strip():
                         continue
                         
-                    # Search for genes cleanly (Case-Insensitive)
                     for g in genes:
                         if re.search(rf"\b{re.escape(g)}\b", clean_full_text, re.IGNORECASE):
                             direction = get_context_direction(clean_full_text, g)
                             gene_evidence[g].append({"id": current_pmc, "direction": direction})
                             
-                # Terminal update so you know it hasn't frozen
                 print(f"    ⏳ Parsed {articles_processed}/{len(ids)} articles...")
                             
             except ET.ParseError as e:
@@ -198,7 +187,7 @@ def mine_pmc_full(compound, outcome, genes, limit=100):
                 
         return gene_evidence, pmc_list
         
-    except Exception as e: 
+    except Exception as e:
         print(f"    ❌ Fatal error in full mode: {e}")
         return {}, []
 
@@ -208,7 +197,7 @@ def fetch_live_pathways(gene):
         r = requests.get("https://reactome.org/ContentService/search/query", 
                        params={"query": gene, "species": "Homo sapiens", "types": "Pathway"}, timeout=2)
         if r.ok:
-            for res in r.json().get("results", []): 
+            for res in r.json().get("results", []):
                 paths.add(res["name"])
     except: pass
     try:
@@ -253,7 +242,6 @@ def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome, img_dir
         
         plt.figure(figsize=(20, 16))
         
-        # MAZE LAYOUT
         try:
             pos = nx.kamada_kawai_layout(G)
         except (ModuleNotFoundError, ImportError):
@@ -263,7 +251,6 @@ def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome, img_dir
             print(f"    ⚠️ Layout generation failed ({e}); using spring_layout fallback.")
             pos = nx.spring_layout(G, seed=42)
         
-        # PLOT NODES
         nx.draw_networkx_nodes(G, pos, nodelist=list(pathway_nodes), node_color='#7ED957', node_size=2800)
         nx.draw_networkx_nodes(G, pos, nodelist=list(gene_nodes), node_color='#6EC1E4', node_size=1400)
         nx.draw_networkx_edges(G, pos, alpha=0.3, width=1.5)
@@ -271,7 +258,6 @@ def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome, img_dir
         labels = {n: n.replace(" ", "\n", 2) if len(n)>15 else n for n in G.nodes()}
         nx.draw_networkx_labels(G, pos, labels, font_size=8, font_weight="bold")
 
-        # --- LEGEND ---
         legend_elements = [
             Line2D([0], [0], marker='o', color='w', label='Target Gene', markerfacecolor='#6EC1E4', markersize=15),
             Line2D([0], [0], marker='o', color='w', label='Biological Pathway', markerfacecolor='#7ED957', markersize=15)
@@ -279,7 +265,7 @@ def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome, img_dir
         plt.legend(handles=legend_elements, loc='upper left', fontsize=12, frameon=True)
         plt.suptitle(f"RELIO Analysis: {compound} + {outcome}", fontsize=16, fontweight='bold', y=0.95)
 
-    else: 
+    else:
         print("    ⚠️ Using Gene-Star Graph (No pathways found)")
         top_genes = sorted(gene_evidence.keys(), key=lambda g: len(gene_evidence[g]), reverse=True)[:20]
         G.add_node(compound, color='red')
@@ -302,6 +288,7 @@ def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome, img_dir
     plt.axis('off')
     plt.tight_layout()
     plt.savefig(os.path.join(img_dir, "litmap_maze.png"), dpi=300, bbox_inches='tight', facecolor='white')
+    plt.close()  # free memory
     print("    ✔ Graph saved as 'litmap_maze.png'")
 
 def generate_full_report(compound, outcome, gene_evidence, pathway_map, paper_ids, mode_name, img_dir):
