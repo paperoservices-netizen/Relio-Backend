@@ -16,7 +16,7 @@ import base64
 import requests
 import networkx as nx
 import matplotlib
-matplotlib.use("Agg")  # headless — no display needed in GitHub Actions
+matplotlib.use("Agg")  # headless — must be before any other matplotlib import
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 from collections import Counter, defaultdict
@@ -27,7 +27,7 @@ from tqdm import tqdm
 try:
     from Bio import Entrez
 except ImportError:
-    print("CRITICAL: Install biopython: pip install biopython networkx matplotlib requests")
+    print("CRITICAL: Install biopython: pip install biopython networkx matplotlib requests scipy")
     sys.exit(1)
 
 # =========================
@@ -49,6 +49,17 @@ os.makedirs(IMAGES_DIR,  exist_ok=True)
 # =========================
 def sleep_safe():
     time.sleep(NCBI_DELAY)
+
+def safe_layout(G):
+    """
+    Use kamada_kawai_layout (needs scipy) with spring_layout as fallback.
+    This prevents the 'No module named scipy' crash even if scipy is missing.
+    """
+    try:
+        return nx.kamada_kawai_layout(G)
+    except Exception:
+        print("    ⚠️  kamada_kawai_layout failed, falling back to spring_layout")
+        return nx.spring_layout(G, seed=42)
 
 def get_context_direction(text, gene):
     starts = [m.start() for m in re.finditer(rf"\b{re.escape(gene)}\b", text, re.IGNORECASE)]
@@ -271,7 +282,9 @@ def build_pathway_map(gene_evidence):
 def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome):
     """
     Generate maze-like graph (FULL mode only).
-    Saves PNG locally AND encodes it as a base64 data URI.
+    - Uses kamada_kawai_layout (scipy) with spring_layout fallback.
+    - When pathway_map is empty, draws a compound→gene star graph instead.
+    - Saves PNG locally and encodes it as a base64 data URI for the JSON.
     Returns (filename, base64_data_uri).
     """
     if "FAST" in mode_name:
@@ -286,6 +299,7 @@ def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome):
         G = nx.Graph()
 
         if pathway_map:
+            # ── Pathway-gene network ──────────────────────────────────────
             top_paths     = sorted(pathway_map.items(),
                                    key=lambda x: len(x[1]), reverse=True)[:20]
             pathway_nodes = set()
@@ -297,7 +311,8 @@ def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome):
                     G.add_edge(g, p)
 
             plt.figure(figsize=(20, 16))
-            pos = nx.kamada_kawai_layout(G)
+            pos = safe_layout(G)
+
             nx.draw_networkx_nodes(G, pos, nodelist=list(pathway_nodes),
                                    node_color="#7ED957", node_size=2800)
             nx.draw_networkx_nodes(G, pos, nodelist=list(gene_nodes),
@@ -306,6 +321,7 @@ def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome):
             labels = {n: n.replace(" ", "\n", 2) if len(n) > 15 else n
                       for n in G.nodes()}
             nx.draw_networkx_labels(G, pos, labels, font_size=8, font_weight="bold")
+
             legend_elements = [
                 Line2D([0], [0], marker="o", color="w", label="Target Gene",
                        markerfacecolor="#6EC1E4", markersize=15),
@@ -318,20 +334,25 @@ def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome):
                          fontsize=16, fontweight="bold", y=0.95)
 
         else:
+            # ── Gene-star graph (no pathways found) ───────────────────────
             print("    ⚠️ Using Gene-Star Graph (No pathways found)")
             top_genes = sorted(gene_evidence.keys(),
                                key=lambda g: len(gene_evidence[g]), reverse=True)[:20]
+
             G.add_node(compound)
             for g in top_genes:
                 G.add_edge(compound, g)
+
             plt.figure(figsize=(14, 12))
-            pos = nx.kamada_kawai_layout(G)
+            pos = safe_layout(G)  # spring_layout fallback works here too
+
             nx.draw_networkx_nodes(G, pos, nodelist=[compound],
                                    node_color="#FF6B6B", node_size=3000)
             nx.draw_networkx_nodes(G, pos, nodelist=top_genes,
                                    node_color="#6EC1E4", node_size=1500)
             nx.draw_networkx_edges(G, pos, alpha=0.4)
             nx.draw_networkx_labels(G, pos, font_size=9, font_weight="bold")
+
             legend_elements = [
                 Line2D([0], [0], marker="o", color="w", label="Compound",
                        markerfacecolor="#FF6B6B", markersize=15),
@@ -339,14 +360,16 @@ def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome):
                        markerfacecolor="#6EC1E4", markersize=15),
             ]
             plt.legend(handles=legend_elements, loc="lower right", fontsize=12)
+            plt.suptitle(f"RELIO Analysis: {compound} + {outcome}",
+                         fontsize=14, fontweight="bold", y=0.98)
 
         plt.axis("off")
         plt.tight_layout()
-        plt.savefig(graph_path, dpi=150, bbox_inches="tight")  # 150 dpi keeps file size reasonable
+        plt.savefig(graph_path, dpi=150, bbox_inches="tight")
         plt.close()
         print(f"    ✔ Graph saved locally: {graph_path}")
 
-        # Encode to base64 data URI so the frontend can display it directly
+        # Encode PNG to base64 data URI — works directly as <img src="..."> or MUI CardMedia
         with open(graph_path, "rb") as f:
             b64 = base64.b64encode(f.read()).decode("utf-8")
         data_uri = f"data:image/png;base64,{b64}"
@@ -541,22 +564,22 @@ def main():
     # Step 3
     pathway_map = build_pathway_map(gene_evidence)
 
-    # Step 4 — graph (FULL only); returns base64 data URI
+    # Step 4 — graph (FULL only); returns (filename, base64 data URI)
     graph_filename, graph_data_uri = draw_graph(
         compound, gene_evidence, pathway_map, mode_name, outcome
     )
 
-    # Step 5 — report
+    # Step 5 — report + JSON
     json_report = generate_full_report(
         compound, outcome, gene_evidence, pathway_map, paper_ids, mode_name
     )
 
-    # Attach image: graph_url holds the base64 data URI
-    # LitmapResults.js uses images.graph_url for <CardMedia image={...} />
-    # A data URI works exactly like a regular URL there.
+    # Attach graph as base64 data URI
+    # LitmapResults.js uses images.graph_url → <CardMedia image={graph_url} />
+    # A data URI works there identically to a regular http URL.
     if graph_filename and graph_data_uri:
-        json_report["images"]["graph"]     = graph_filename   # filename for reference
-        json_report["images"]["graph_url"] = graph_data_uri   # data URI → displays in browser
+        json_report["images"]["graph"]     = graph_filename   # filename (reference only)
+        json_report["images"]["graph_url"] = graph_data_uri   # data URI for frontend display
 
     save_result(json_report)
     print("\n✅ Analysis complete!")
