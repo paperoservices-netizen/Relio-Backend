@@ -1,4 +1,4 @@
-name: Run Relio Analysis
+name: Relio Analysis Workflow
 
 on:
   workflow_dispatch:
@@ -6,54 +6,72 @@ on:
       compound:
         description: 'Compound name'
         required: true
-        default: 'Turmeric'
+        type: string
       outcome:
         description: 'Biological outcome'
         required: true
-        default: 'Infection'
+        type: string
       mode:
-        description: 'Mode: 1 for FAST, 2 for FULL'
+        description: 'Analysis mode (FAST or FULL)'
         required: true
-        default: '1'
+        type: choice
+        options:
+          - FAST
+          - FULL
       job_id:
-        description: 'Job ID'
-        required: false
+        description: 'Unique job identifier'
+        required: true
+        type: string
 
 jobs:
-  run-relio:
+  relio-analysis:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: '3.11'
+          cache: 'pip'
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: |
-          pip install --upgrade pip
-          pip install requests networkx matplotlib tqdm lxml biopython
+          python -m pip install --upgrade pip
+          pip install biopython networkx matplotlib requests lxml tqdm Pillow
 
-      - name: Run Relio analysis
+      - name: Create Results Directory
         run: |
-          python relio_job.py "${{ github.event.inputs.compound }}" "${{ github.event.inputs.outcome }}" "${{ github.event.inputs.mode }}" "${{ github.event.inputs.job_id }}"
+          mkdir -p python_runner/results
+          mkdir -p python_runner/images
 
-      - name: Save results
+      - name: Run Relio Analysis
+        env:
+          COMPOUND: ${{ github.event.inputs.compound }}
+          OUTCOME: ${{ github.event.inputs.outcome }}
+          MODE: ${{ github.event.inputs.mode }}
+          JOB_ID: ${{ github.event.inputs.job_id }}
         run: |
-          mkdir -p results
-          python -c "
-import json, sys, os
-job_id = sys.argv[4]
-results_data = {'status': 'done', 'images': {'maze': 'maze.png'}}
-with open(f'results/{job_id}.json', 'w') as f:
-    json.dump(results_data, f)
-" "${{ github.event.inputs.compound }}" "${{ github.event.inputs.outcome }}" "${{ github.event.inputs.mode }}" "${{ github.event.inputs.job_id }}"
+          cd python_runner
+          python relio_runner.py
 
-      - name: Upload results
+      - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: relio-results
-          path: results/
+          name: relio-results-${{ github.event.inputs.job_id }}
+          path: |
+            python_runner/results/
+            python_runner/images/
+          retention-days: 1
+
+      - name: Commit Results to Repository
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add python_runner/results/ python_runner/images/ || true
+          git commit -m "Relio results for job ${{ github.event.inputs.job_id }}" || true
+          git push || true
