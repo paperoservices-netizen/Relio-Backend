@@ -1,0 +1,125 @@
+================================================================================
+RELIO V0.1 REPORT: CALCIUM + WOUND HEALING
+================================================================================
+Mode             : FAST (Abstracts)
+Docs Analyzed    : 100 (Strict Limit: 100)
+Net Direction    : Predominant Activation
+--------------------------------------------------------------------------------
+
+2. GENE ASSOCIATION LIST (Complete Pathway Mapping)
+--------------------------------------------------------------------------------
+GENE     | HITS | DIR     | FULL PATHWAY LIST
+--------------------------------------------------------------------------------
+TRPV1    | 2    | up      | No specific pathways mapped
+EGFR     | 2    | up      | No specific pathways mapped
+TNF      | 1    | up      | No specific pathways mapped
+STAT3    | 1    | up      | No specific pathways mapped
+EGF      | 1    | up      | No specific pathways mapped
+AKT1     | 1    | up      | No specific pathways mapped
+MMP9     | 1    | up      | No specific pathways mapped
+MTOR     | 1    | up      | No specific pathways mapped
+JUN      | 1    | up      | No specific pathways mapped
+--------------------------------------------------------------------------------
+
+3. SOURCE DOCUMENT LIST (Clickable Links)
+----------------------------------------
+- https://pubmed.ncbi.nlm.nih.gov/10712250/
+- https://pubmed.ncbi.nlm.nih.gov/10964466/
+- https://pubmed.ncbi.nlm.nih.gov/12406163/
+- https://pubmed.ncbi.nlm.nih.gov/14236299/
+- https://pubmed.ncbi.nlm.nih.gov/14506282/
+- https://pubmed.ncbi.nlm.nih.gov/1465568/
+- https://pubmed.ncbi.nlm.nih.gov/15840779/
+- https://pubmed.ncbi.nlm.nih.gov/16303847/
+- https://pubmed.ncbi.nlm.nih.gov/17359337/
+- https://pubmed.ncbi.nlm.nih.gov/18818677/
+- https://pubmed.ncbi.nlm.nih.gov/19267882/
+- https://pubmed.ncbi.nlm.nih.gov/19793539/
+- https://pubmed.ncbi.nlm.nih.gov/20381461/
+- https://pubmed.ncbi.nlm.nih.gov/20549944/
+- https://pubmed.ncbi.nlm.nih.gov/2073491/
+- https://pubmed.ncbi.nlm.nih.gov/21211559/
+- https://pubmed.ncbi.nlm.nih.gov/22073267/
+- https://pubmed.ncbi.nlm.nih.gov/22240471/
+- https://pubmed.ncbi.nlm.nih.gov/23109509/
+- https://pubmed.ncbi.nlm.nih.gov/23321922/
+- https://pubmed.ncbi.nlm.nih.gov/23443750/
+- https://pubmed.ncbi.nlm.nih.gov/23776233/
+- https://pubmed.ncbi.nlm.nih.gov/23819987/
+- https://pubmed.ncbi.nlm.nih.gov/2432302/
+- https://pubmed.ncbi.nlm.nih.gov/24671101/
+- https://pubmed.ncbi.nlm.nih.gov/24801267/
+- https://pubmed.ncbi.nlm.nih.gov/24978153/
+- https://pubmed.ncbi.nlm.nih.gov/2555928/
+- https://pubmed.ncbi.nlm.nih.gov/25813429/
+- https://pubmed.ncbi.nlm.nih.gov/25863514/
+- https://pubmed.ncbi.nlm.nih.gov/26133716/
+- https://pubmed.ncbi.nlm.nih.gov/26282157/
+- https://pubmed.ncbi.nlm.nih.gov/26505315/
+- https://pubmed.ncbi.nlm.nih.gov/26514621/
+- https://pubmed.ncbi.nlm.nih.gov/26987821/
+- https://pubmed.ncbi.nlm.nih.gov/27004753/
+- https://pubmed.ncbi.nlm.nih.gov/28412298/
+- https://pubmed.ncbi.nlm.nih.gov/28867725/
+- https://pubmed.ncbi.nlm.nih.gov/29376892/
+- https://pubmed.ncbi.nlm.nih.gov/29689221/
+- https://pubmed.ncbi.nlm.nih.gov/29777169/
+- https://pubmed.ncbi.nlm.nih.gov/30039802/
+- https://pubmed.ncbi.nlm.nih.gov/30463067/
+- https://pubmed.ncbi.nlm.nih.gov/30754672/
+- https://pubmed.ncbi.nlm.nih.gov/30854480/
+- https://pubmed.ncbi.nlm.nih.gov/30915363/
+- https://pubmed.ncbi.nlm.nih.gov/30979919/
+- https://pubmed.ncbi.nlm.nih.gov/31017899/
+- https://pubmed.ncbi.nlm.nih.gov/31610865/
+- https://pubmed.ncbi.nlm.nih.gov/32035001/
+- https://pubmed.ncbi.nlm.nih.gov/32184231/
+- https://pubmed.ncbi.nlm.nih.gov/32328635/
+- https://pubmed.ncbi.nlm.nih.gov/32340342/
+- https://pubmed.ncbi.nlm.nih.gov/32422624/
+- https://pubmed.ncbi.nlm.nih.gov/34180060/
+- https://pubmed.ncbi.nlm.nih.gov/34204292/
+- https://pubmed.ncbi.nlm.nih.gov/34688406/
+- https://pubmed.ncbi.nlm.nih.gov/35066024/
+- https://pubmed.ncbi.nlm.nih.gov/35868789/
+- https://pubmed.ncbi.nlm.nih.gov/35930985/
+- https://pubmed.ncbi.nlm.nih.gov/35963983/
+- https://pubmed.ncbi.nlm.nih.gov/36067644/
+- https://pubmed.ncbi.nlm.nih.gov/3610030/
+- https://pubmed.ncbi.nlm.nih.gov/36226993/
+- https://pubmed.ncbi.nlm.nih.gov/36690845/
+- https://pubmed.ncbi.nlm.nih.gov/37128180/
+- https://pubmed.ncbi.nlm.nih.gov/3731877/
+- https://pubmed.ncbi.nlm.nih.gov/38014941/
+- https://pubmed.ncbi.nlm.nih.gov/38290527/
+- https://pubmed.ncbi.nlm.nih.gov/38387060/
+- https://pubmed.ncbi.nlm.nih.gov/38534335/
+- https://pubmed.ncbi.nlm.nih.gov/38558255/
+- https://pubmed.ncbi.nlm.nih.gov/38841831/
+- https://pubmed.ncbi.nlm.nih.gov/38849425/
+- https://pubmed.ncbi.nlm.nih.gov/39042709/
+- https://pubmed.ncbi.nlm.nih.gov/39129489/
+- https://pubmed.ncbi.nlm.nih.gov/39141725/
+- https://pubmed.ncbi.nlm.nih.gov/39778990/
+- https://pubmed.ncbi.nlm.nih.gov/39819400/
+- https://pubmed.ncbi.nlm.nih.gov/39914948/
+- https://pubmed.ncbi.nlm.nih.gov/40100101/
+- https://pubmed.ncbi.nlm.nih.gov/40128127/
+- https://pubmed.ncbi.nlm.nih.gov/40558536/
+- https://pubmed.ncbi.nlm.nih.gov/40761145/
+- https://pubmed.ncbi.nlm.nih.gov/40947937/
+- https://pubmed.ncbi.nlm.nih.gov/41137798/
+- https://pubmed.ncbi.nlm.nih.gov/41251424/
+- https://pubmed.ncbi.nlm.nih.gov/41418972/
+- https://pubmed.ncbi.nlm.nih.gov/4156303/
+- https://pubmed.ncbi.nlm.nih.gov/41571123/
+- https://pubmed.ncbi.nlm.nih.gov/4216096/
+- https://pubmed.ncbi.nlm.nih.gov/464368/
+- https://pubmed.ncbi.nlm.nih.gov/6413800/
+- https://pubmed.ncbi.nlm.nih.gov/6806425/
+- https://pubmed.ncbi.nlm.nih.gov/6886607/
+- https://pubmed.ncbi.nlm.nih.gov/7814620/
+- https://pubmed.ncbi.nlm.nih.gov/8016558/
+- https://pubmed.ncbi.nlm.nih.gov/8449984/
+- https://pubmed.ncbi.nlm.nih.gov/9260463/
+- https://pubmed.ncbi.nlm.nih.gov/982280/
