@@ -57,7 +57,7 @@ jobs:
           JOB_ID: ${{ github.event.inputs.job_id }}
         run: |
           cd python_runner
-          python relio_runner.py
+          python relio_job.py
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
