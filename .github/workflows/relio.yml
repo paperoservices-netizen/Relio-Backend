@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -42,9 +42,23 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install biopython networkx matplotlib requests lxml tqdm Pillow
+          pip install \
+            biopython \
+            networkx \
+            matplotlib \
+            requests \
+            lxml \
+            tqdm \
+            Pillow
 
-      - name: Create Results Directory
+      # matplotlib needs a virtual display on headless Ubuntu.
+      # The Agg backend (set in relio_job.py) handles this,
+      # but installing this package makes it bulletproof.
+      - name: Install virtual display support
+        run: |
+          sudo apt-get install -y python3-tk
+
+      - name: Create Output Directories
         run: |
           mkdir -p python_runner/results
           mkdir -p python_runner/images
@@ -52,12 +66,36 @@ jobs:
       - name: Run Relio Analysis
         env:
           COMPOUND: ${{ github.event.inputs.compound }}
-          OUTCOME: ${{ github.event.inputs.outcome }}
-          MODE: ${{ github.event.inputs.mode }}
-          JOB_ID: ${{ github.event.inputs.job_id }}
+          OUTCOME:  ${{ github.event.inputs.outcome }}
+          MODE:     ${{ github.event.inputs.mode }}
+          JOB_ID:   ${{ github.event.inputs.job_id }}
+          MPLBACKEND: Agg
         run: |
           cd python_runner
           python relio_job.py
+
+      - name: Verify Output Files
+        run: |
+          echo "=== RESULTS DIR ==="
+          ls -lh python_runner/results/ || echo "results/ is empty"
+          echo "=== IMAGES DIR ==="
+          ls -lh python_runner/images/ || echo "images/ is empty"
+          echo "=== JSON CONTENT (images field only) ==="
+          python3 -c "
+          import json, glob
+          files = glob.glob('python_runner/results/*.json')
+          for f in files:
+              with open(f) as fp:
+                  d = json.load(fp)
+              imgs = d.get('images', {})
+              # Print everything except the base64 blob itself
+              summary = {k: (v[:80] + '...') if isinstance(v, str) and len(v) > 80 else v
+                         for k, v in imgs.items()}
+              print(f'{f}: images = {summary}')
+              print(f'  genes count : {len(d.get(\"genes\", []))}')
+              print(f'  sources count: {len(d.get(\"sources\", []))}')
+              print(f'  status      : {d.get(\"status\")}')
+          "
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
@@ -66,12 +104,12 @@ jobs:
           path: |
             python_runner/results/
             python_runner/images/
-          retention-days: 1
+          retention-days: 7
 
       - name: Commit Results to Repository
         run: |
-          git config user.name "GitHub Actions"
+          git config user.name  "GitHub Actions"
           git config user.email "actions@github.com"
           git add python_runner/results/ python_runner/images/ || true
-          git commit -m "Relio results for job ${{ github.event.inputs.job_id }}" || true
+          git diff --cached --quiet || git commit -m "Relio results: ${{ github.event.inputs.compound }} + ${{ github.event.inputs.outcome }} [job ${{ github.event.inputs.job_id }}]"
           git push || true
