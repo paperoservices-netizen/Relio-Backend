@@ -3,6 +3,7 @@ RELIO V0.1 - GITHUB ACTIONS RUNNER
 ==================================
 Executes the same analysis as Collab code
 Outputs JSON results for Cloudflare Worker consumption
+Image is base64-encoded directly into the JSON — no R2 / S3 needed.
 """
 
 import time
@@ -11,8 +12,11 @@ import math
 import json
 import os
 import sys
+import base64
 import requests
 import networkx as nx
+import matplotlib
+matplotlib.use("Agg")  # headless — no display needed in GitHub Actions
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 from collections import Counter, defaultdict
@@ -29,28 +33,16 @@ except ImportError:
 # =========================
 # CONFIGURATION
 # =========================
-Entrez.email = "robio.ra.bt@gmail.com"
+Entrez.email   = "robio.ra.bt@gmail.com"
 Entrez.api_key = "0968ae56e9a676e026f2fd87dcc17a9f8009"
-Entrez.tool = "Relio_V0.1_GithubActions"
-NCBI_DELAY = 0.11
+Entrez.tool    = "Relio_V0.1_GithubActions"
+NCBI_DELAY     = 0.11
 
-JOB_ID = os.environ.get("JOB_ID", "unknown")
+JOB_ID      = os.environ.get("JOB_ID", "unknown")
 RESULTS_DIR = os.path.abspath("./results")
-IMAGES_DIR = os.path.abspath("./images")
+IMAGES_DIR  = os.path.abspath("./images")
 os.makedirs(RESULTS_DIR, exist_ok=True)
-os.makedirs(IMAGES_DIR, exist_ok=True)
-
-# Cloudflare R2 / S3-compatible image hosting
-# Set these as GitHub Actions secrets:
-#   R2_ENDPOINT  → e.g. https://<account>.r2.cloudflarestorage.com
-#   R2_BUCKET    → your bucket name
-#   R2_ACCESS_KEY, R2_SECRET_KEY
-#   R2_PUBLIC_URL → public base URL for the bucket, e.g. https://images.yourdomain.com
-R2_ENDPOINT   = os.environ.get("R2_ENDPOINT", "")
-R2_BUCKET     = os.environ.get("R2_BUCKET", "")
-R2_ACCESS_KEY = os.environ.get("R2_ACCESS_KEY", "")
-R2_SECRET_KEY = os.environ.get("R2_SECRET_KEY", "")
-R2_PUBLIC_URL = os.environ.get("R2_PUBLIC_URL", "")  # no trailing slash
+os.makedirs(IMAGES_DIR,  exist_ok=True)
 
 # =========================
 # UTILITIES
@@ -62,10 +54,12 @@ def get_context_direction(text, gene):
     starts = [m.start() for m in re.finditer(rf"\b{re.escape(gene)}\b", text, re.IGNORECASE)]
     if not starts:
         return "neutral"
-    idx = starts[0]
+    idx     = starts[0]
     snippet = text[max(0, idx - 150): min(len(text), idx + 150)].lower()
-    up_words   = ["increase", "induce", "upregulat", "activat", "stimulat", "enhance", "promot", "up-regulat", "elevat"]
-    down_words = ["decrease", "inhibit", "suppress", "reduc", "block", "attenuate", "prevent", "down-regulat", "knockdown", "silenc"]
+    up_words   = ["increase", "induce", "upregulat", "activat", "stimulat",
+                  "enhance", "promot", "up-regulat", "elevat"]
+    down_words = ["decrease", "inhibit", "suppress", "reduc", "block",
+                  "attenuate", "prevent", "down-regulat", "knockdown", "silenc"]
     if any(w in snippet for w in up_words):   return "up"
     if any(w in snippet for w in down_words): return "down"
     return "neutral"
@@ -73,71 +67,31 @@ def get_context_direction(text, gene):
 def analyze_contradictions(gene_evidence):
     conflicts = []
     for gene, hits in gene_evidence.items():
-        dirs  = [h["direction"] for h in hits]
-        up    = dirs.count("up")
-        down  = dirs.count("down")
-        total = up + down
+        dirs     = [h["direction"] for h in hits]
+        up       = dirs.count("up")
+        down     = dirs.count("down")
+        total    = up + down
         if total > 1:
             minority = min(up, down)
             if minority > 0 and (minority / total) > 0.2:
-                conflicts.append({"gene": gene, "up": up, "down": down, "consensus": "Contradictory"})
+                conflicts.append({
+                    "gene": gene, "up": up, "down": down, "consensus": "Contradictory"
+                })
     return conflicts
 
 def compute_fingerprint(gene_evidence, pathway_map):
     up   = sum(1 for hits in gene_evidence.values() for h in hits if h["direction"] == "up")
     down = sum(1 for hits in gene_evidence.values() for h in hits if h["direction"] == "down")
-    if up > down * 1.5:     direction = "Predominant Activation"
-    elif down > up * 1.5:   direction = "Predominant Inhibition"
-    else:                   direction = "Balanced Modulation"
+    if   up > down * 1.5: direction = "Predominant Activation"
+    elif down > up * 1.5: direction = "Predominant Inhibition"
+    else:                 direction = "Balanced Modulation"
     path_counts = [len(g) for g in pathway_map.values()]
     total_conn  = sum(path_counts)
-    entropy = 0.0
+    entropy     = 0.0
     if total_conn > 0:
         probs   = [c / total_conn for c in path_counts]
         entropy = -sum(p * math.log2(p) for p in probs if p > 0)
     return {"direction": direction, "entropy": round(entropy, 4)}
-
-# =========================
-# IMAGE UPLOAD
-# =========================
-def upload_image_to_r2(local_path, filename):
-    """
-    Upload a PNG to Cloudflare R2 (S3-compatible).
-    Returns the public URL string, or None if upload fails / not configured.
-    """
-    if not all([R2_ENDPOINT, R2_BUCKET, R2_ACCESS_KEY, R2_SECRET_KEY, R2_PUBLIC_URL]):
-        print("    ⚠️  R2 env vars not set — image will not be publicly accessible.")
-        print("       Set R2_ENDPOINT, R2_BUCKET, R2_ACCESS_KEY, R2_SECRET_KEY, R2_PUBLIC_URL")
-        print("       as GitHub Actions secrets to enable image hosting.")
-        return None
-
-    try:
-        import boto3
-        from botocore.client import Config
-
-        s3 = boto3.client(
-            "s3",
-            endpoint_url=R2_ENDPOINT,
-            aws_access_key_id=R2_ACCESS_KEY,
-            aws_secret_access_key=R2_SECRET_KEY,
-            config=Config(signature_version="s3v4"),
-        )
-        s3.upload_file(
-            local_path,
-            R2_BUCKET,
-            filename,
-            ExtraArgs={"ContentType": "image/png"},
-        )
-        public_url = f"{R2_PUBLIC_URL}/{filename}"
-        print(f"    ✔ Image uploaded → {public_url}")
-        return public_url
-
-    except ImportError:
-        print("    ⚠️  boto3 not installed. Run: pip install boto3")
-        return None
-    except Exception as e:
-        print(f"    ⚠️  R2 upload failed: {e}")
-        return None
 
 # =========================
 # GENE WHITELIST
@@ -172,7 +126,8 @@ def mine_abstracts_fast(compound, outcome, genes, limit=100):
     print(f"\n[2] ⚡ FAST MODE: Fetching up to {limit} PubMed Abstracts...")
     gene_evidence = defaultdict(list)
     try:
-        h   = Entrez.esearch(db="pubmed", term=f"{compound} AND {outcome}", retmax=limit, sort="relevance")
+        h   = Entrez.esearch(db="pubmed", term=f"{compound} AND {outcome}",
+                             retmax=limit, sort="relevance")
         ids = Entrez.read(h)["IdList"]
         h.close()
         if not ids:
@@ -185,9 +140,10 @@ def mine_abstracts_fast(compound, outcome, genes, limit=100):
         h.close()
         for article in records.get("PubmedArticle", []):
             try:
-                pid             = str(article["MedlineCitation"]["PMID"])
-                abstract_parts  = article["MedlineCitation"]["Article"].get("Abstract", {}).get("AbstractText", [])
-                full_abstract   = " ".join([str(p) for p in abstract_parts])
+                pid            = str(article["MedlineCitation"]["PMID"])
+                abstract_parts = (article["MedlineCitation"]["Article"]
+                                  .get("Abstract", {}).get("AbstractText", []))
+                full_abstract  = " ".join([str(p) for p in abstract_parts])
                 if not full_abstract:
                     continue
                 for g in genes:
@@ -206,7 +162,9 @@ def mine_pmc_full(compound, outcome, genes, limit=100):
     gene_evidence = defaultdict(list)
     pmc_list      = []
     try:
-        h        = Entrez.esearch(db="pmc", term=f"{compound} AND {outcome} AND open access[filter]", retmax=limit, sort="relevance")
+        h        = Entrez.esearch(db="pmc",
+                                  term=f"{compound} AND {outcome} AND open access[filter]",
+                                  retmax=limit, sort="relevance")
         ids      = Entrez.read(h)["IdList"]
         h.close()
         pmc_list = ids
@@ -218,7 +176,8 @@ def mine_pmc_full(compound, outcome, genes, limit=100):
         batch_size         = 5
         articles_processed = 0
 
-        for i in tqdm(range(0, len(ids), batch_size), desc="Mining PMC XMLs", unit="batch", colour="green"):
+        for i in tqdm(range(0, len(ids), batch_size), desc="Mining PMC XMLs",
+                      unit="batch", colour="green"):
             batch_ids = ids[i:i + batch_size]
             try:
                 sleep_safe()
@@ -240,7 +199,8 @@ def mine_pmc_full(compound, outcome, genes, limit=100):
                             current_pmc = "PMC" + (article_id.text or "")
                             break
                     text_chunks = []
-                    for section in article.findall(".//abstract") + article.findall(".//body"):
+                    for section in (article.findall(".//abstract") +
+                                    article.findall(".//body")):
                         text_chunks.append(" ".join(section.itertext()))
                     clean_full_text = " ".join(text_chunks)
                     if not clean_full_text.strip():
@@ -293,8 +253,8 @@ def fetch_live_pathways(gene):
 
 def build_pathway_map(gene_evidence):
     print("\n[3] 🚀 Mapping Pathways (Live API)...")
-    pathway_map    = defaultdict(set)
-    genes_to_map   = list(gene_evidence.keys())
+    pathway_map  = defaultdict(set)
+    genes_to_map = list(gene_evidence.keys())
     with ThreadPoolExecutor(max_workers=10) as executor:
         results = executor.map(fetch_live_pathways, genes_to_map)
         for gene, paths in zip(genes_to_map, results):
@@ -309,7 +269,11 @@ def build_pathway_map(gene_evidence):
 # GRAPH GENERATION
 # =========================
 def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome):
-    """Generate maze-like graph, save locally, upload to R2, return public URL."""
+    """
+    Generate maze-like graph (FULL mode only).
+    Saves PNG locally AND encodes it as a base64 data URI.
+    Returns (filename, base64_data_uri).
+    """
     if "FAST" in mode_name:
         print("\n[4] ⏩ Graph generation skipped (Fast Mode).")
         return None, None
@@ -322,7 +286,8 @@ def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome):
         G = nx.Graph()
 
         if pathway_map:
-            top_paths     = sorted(pathway_map.items(), key=lambda x: len(x[1]), reverse=True)[:20]
+            top_paths     = sorted(pathway_map.items(),
+                                   key=lambda x: len(x[1]), reverse=True)[:20]
             pathway_nodes = set()
             gene_nodes    = set()
             for p, genes in top_paths:
@@ -333,45 +298,60 @@ def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome):
 
             plt.figure(figsize=(20, 16))
             pos = nx.kamada_kawai_layout(G)
-            nx.draw_networkx_nodes(G, pos, nodelist=list(pathway_nodes), node_color="#7ED957", node_size=2800)
-            nx.draw_networkx_nodes(G, pos, nodelist=list(gene_nodes),    node_color="#6EC1E4", node_size=1400)
+            nx.draw_networkx_nodes(G, pos, nodelist=list(pathway_nodes),
+                                   node_color="#7ED957", node_size=2800)
+            nx.draw_networkx_nodes(G, pos, nodelist=list(gene_nodes),
+                                   node_color="#6EC1E4", node_size=1400)
             nx.draw_networkx_edges(G, pos, alpha=0.3, width=1.5)
-            labels = {n: n.replace(" ", "\n", 2) if len(n) > 15 else n for n in G.nodes()}
+            labels = {n: n.replace(" ", "\n", 2) if len(n) > 15 else n
+                      for n in G.nodes()}
             nx.draw_networkx_labels(G, pos, labels, font_size=8, font_weight="bold")
             legend_elements = [
-                Line2D([0], [0], marker="o", color="w", label="Target Gene",        markerfacecolor="#6EC1E4", markersize=15),
-                Line2D([0], [0], marker="o", color="w", label="Biological Pathway", markerfacecolor="#7ED957", markersize=15),
+                Line2D([0], [0], marker="o", color="w", label="Target Gene",
+                       markerfacecolor="#6EC1E4", markersize=15),
+                Line2D([0], [0], marker="o", color="w", label="Biological Pathway",
+                       markerfacecolor="#7ED957", markersize=15),
             ]
-            plt.legend(handles=legend_elements, loc="upper left", fontsize=12, frameon=True)
-            plt.suptitle(f"RELIO Analysis: {compound} + {outcome}", fontsize=16, fontweight="bold", y=0.95)
+            plt.legend(handles=legend_elements, loc="upper left",
+                       fontsize=12, frameon=True)
+            plt.suptitle(f"RELIO Analysis: {compound} + {outcome}",
+                         fontsize=16, fontweight="bold", y=0.95)
 
         else:
             print("    ⚠️ Using Gene-Star Graph (No pathways found)")
-            top_genes = sorted(gene_evidence.keys(), key=lambda g: len(gene_evidence[g]), reverse=True)[:20]
+            top_genes = sorted(gene_evidence.keys(),
+                               key=lambda g: len(gene_evidence[g]), reverse=True)[:20]
             G.add_node(compound)
             for g in top_genes:
                 G.add_edge(compound, g)
             plt.figure(figsize=(14, 12))
             pos = nx.kamada_kawai_layout(G)
-            nx.draw_networkx_nodes(G, pos, nodelist=[compound],  node_color="#FF6B6B", node_size=3000)
-            nx.draw_networkx_nodes(G, pos, nodelist=top_genes,   node_color="#6EC1E4", node_size=1500)
+            nx.draw_networkx_nodes(G, pos, nodelist=[compound],
+                                   node_color="#FF6B6B", node_size=3000)
+            nx.draw_networkx_nodes(G, pos, nodelist=top_genes,
+                                   node_color="#6EC1E4", node_size=1500)
             nx.draw_networkx_edges(G, pos, alpha=0.4)
             nx.draw_networkx_labels(G, pos, font_size=9, font_weight="bold")
             legend_elements = [
-                Line2D([0], [0], marker="o", color="w", label="Compound",    markerfacecolor="#FF6B6B", markersize=15),
-                Line2D([0], [0], marker="o", color="w", label="Gene Target",  markerfacecolor="#6EC1E4", markersize=15),
+                Line2D([0], [0], marker="o", color="w", label="Compound",
+                       markerfacecolor="#FF6B6B", markersize=15),
+                Line2D([0], [0], marker="o", color="w", label="Gene Target",
+                       markerfacecolor="#6EC1E4", markersize=15),
             ]
             plt.legend(handles=legend_elements, loc="lower right", fontsize=12)
 
         plt.axis("off")
         plt.tight_layout()
-        plt.savefig(graph_path, dpi=300, bbox_inches="tight")
+        plt.savefig(graph_path, dpi=150, bbox_inches="tight")  # 150 dpi keeps file size reasonable
         plt.close()
-        print(f"    ✔ Graph saved locally as '{graph_filename}'")
+        print(f"    ✔ Graph saved locally: {graph_path}")
 
-        # Upload and get public URL
-        public_url = upload_image_to_r2(graph_path, graph_filename)
-        return graph_filename, public_url
+        # Encode to base64 data URI so the frontend can display it directly
+        with open(graph_path, "rb") as f:
+            b64 = base64.b64encode(f.read()).decode("utf-8")
+        data_uri = f"data:image/png;base64,{b64}"
+        print(f"    ✔ Graph encoded as base64 ({len(b64) // 1024} KB)")
+        return graph_filename, data_uri
 
     except Exception as e:
         print(f"    ⚠️ Graph generation error: {e}")
@@ -381,7 +361,8 @@ def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome):
 # =========================
 # REPORT GENERATION
 # =========================
-def generate_full_report(compound, outcome, gene_evidence, pathway_map, paper_ids, mode_name):
+def generate_full_report(compound, outcome, gene_evidence, pathway_map,
+                         paper_ids, mode_name):
     print("\n[5] 📝 Generating Report...")
     fingerprint = compute_fingerprint(gene_evidence, pathway_map)
 
@@ -394,6 +375,7 @@ def generate_full_report(compound, outcome, gene_evidence, pathway_map, paper_id
         for g in genes:
             gene_to_paths[g].append(p)
 
+    # ── Text report ──────────────────────────────────────────────────────────
     lines = []
     lines.append("=" * 80)
     lines.append(f"RELIO V0.1 REPORT: {compound.upper()} + {outcome.upper()}")
@@ -439,7 +421,8 @@ def generate_full_report(compound, outcome, gene_evidence, pathway_map, paper_id
             if "PMC" not in pid_str and pid_str != "Unknown":
                 pid_str = "PMC" + pid_str
             if "PMC" in pid_str:
-                lines.append(f"- https://www.ncbi.nlm.nih.gov/pmc/articles/{pid_str}/")
+                lines.append(
+                    f"- https://www.ncbi.nlm.nih.gov/pmc/articles/{pid_str}/")
         else:
             lines.append(f"- https://pubmed.ncbi.nlm.nih.gov/{pid_str}/")
 
@@ -454,7 +437,7 @@ def generate_full_report(compound, outcome, gene_evidence, pathway_map, paper_id
     print(final_report_str)
     print("\n" + "=" * 80 + "\n")
 
-    # Build JSON
+    # ── JSON report ──────────────────────────────────────────────────────────
     gene_list = []
     for g, ev in top_genes_all:
         hits   = len(ev)
@@ -463,7 +446,12 @@ def generate_full_report(compound, outcome, gene_evidence, pathway_map, paper_id
         if any(c["gene"] == g for c in conflicts):
             d_mode = "MIXED"
         my_paths = gene_to_paths.get(g, [])
-        gene_list.append({"gene": g, "hits": hits, "direction": d_mode, "pathways": my_paths})
+        gene_list.append({
+            "gene":      g,
+            "hits":      hits,
+            "direction": d_mode,
+            "pathways":  my_paths,
+        })
 
     source_links = []
     for pid in unique_ids:
@@ -472,9 +460,15 @@ def generate_full_report(compound, outcome, gene_evidence, pathway_map, paper_id
             if "PMC" not in pid_str and pid_str != "Unknown":
                 pid_str = "PMC" + pid_str
             if "PMC" in pid_str:
-                source_links.append({"id": pid_str, "url": f"https://www.ncbi.nlm.nih.gov/pmc/articles/{pid_str}/"})
+                source_links.append({
+                    "id":  pid_str,
+                    "url": f"https://www.ncbi.nlm.nih.gov/pmc/articles/{pid_str}/",
+                })
         else:
-            source_links.append({"id": pid_str, "url": f"https://pubmed.ncbi.nlm.nih.gov/{pid_str}/"})
+            source_links.append({
+                "id":  pid_str,
+                "url": f"https://pubmed.ncbi.nlm.nih.gov/{pid_str}/",
+            })
 
     json_report = {
         "job_id":         JOB_ID,
@@ -487,6 +481,7 @@ def generate_full_report(compound, outcome, gene_evidence, pathway_map, paper_id
         "genes":          gene_list,
         "sources":        source_links,
         "images":         {},
+        "status":         "success",
     }
     return json_report
 
@@ -499,22 +494,32 @@ def main():
     mode     = os.environ.get("MODE",     "FAST").strip().upper()
 
     if not compound or not outcome:
-        save_result({"job_id": JOB_ID, "error": "Missing compound or outcome parameters", "status": "failed"})
+        save_result({
+            "job_id": JOB_ID,
+            "error":  "Missing compound or outcome parameters",
+            "status": "failed",
+        })
         sys.exit(1)
 
     print("\n" + "=" * 80)
-    print(f"🔬 RELIO V0.1 - GitHub Actions Runner")
+    print("🔬 RELIO V0.1 - GitHub Actions Runner")
     print(f"Compound: {compound}")
     print(f"Outcome:  {outcome}")
     print(f"Mode:     {mode}")
     print(f"Job ID:   {JOB_ID}")
     print("=" * 80)
 
+    # Step 1
     whitelist = build_gene_whitelist(outcome)
     if not whitelist:
-        save_result({"job_id": JOB_ID, "error": "Failed to build gene whitelist.", "status": "failed"})
+        save_result({
+            "job_id": JOB_ID,
+            "error":  "Failed to build gene whitelist.",
+            "status": "failed",
+        })
         sys.exit(1)
 
+    # Step 2
     if mode == "FAST":
         gene_evidence, paper_ids = mine_abstracts_fast(compound, outcome, whitelist, limit=100)
         mode_name = "FAST (Abstracts)"
@@ -524,24 +529,35 @@ def main():
 
     if not gene_evidence:
         save_result({
-            "job_id": JOB_ID, "compound": compound, "outcome": outcome,
-            "mode": mode_name, "error": "No evidence found in database", "status": "no_results",
+            "job_id":   JOB_ID,
+            "compound": compound,
+            "outcome":  outcome,
+            "mode":     mode_name,
+            "error":    "No evidence found in database",
+            "status":   "no_results",
         })
         sys.exit(0)
 
+    # Step 3
     pathway_map = build_pathway_map(gene_evidence)
 
-    # Generate graph and upload — returns (filename, public_url)
-    graph_filename, graph_url = draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome)
+    # Step 4 — graph (FULL only); returns base64 data URI
+    graph_filename, graph_data_uri = draw_graph(
+        compound, gene_evidence, pathway_map, mode_name, outcome
+    )
 
-    json_report = generate_full_report(compound, outcome, gene_evidence, pathway_map, paper_ids, mode_name)
+    # Step 5 — report
+    json_report = generate_full_report(
+        compound, outcome, gene_evidence, pathway_map, paper_ids, mode_name
+    )
 
-    # Attach image info so the frontend can display it
-    if graph_filename:
-        json_report["images"]["graph"]     = graph_filename   # local filename (for reference)
-        json_report["images"]["graph_url"] = graph_url or ""  # public URL (used by frontend)
+    # Attach image: graph_url holds the base64 data URI
+    # LitmapResults.js uses images.graph_url for <CardMedia image={...} />
+    # A data URI works exactly like a regular URL there.
+    if graph_filename and graph_data_uri:
+        json_report["images"]["graph"]     = graph_filename   # filename for reference
+        json_report["images"]["graph_url"] = graph_data_uri   # data URI → displays in browser
 
-    json_report["status"] = "success"
     save_result(json_report)
     print("\n✅ Analysis complete!")
 
