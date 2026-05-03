@@ -1,95 +1,383 @@
-import sys
-import os
-import json
-import shutil
-from relio import *  # ensure relio.py is in the same directory or in your PYTHONPATH
-
-print("""
-RELIO V0.1
+"""
+LITMAP V0.1
 ===========
 - TOOL NAME: Relio V0.1
 - FAST MODE: Max 100 Abstracts. Speed focused. (No Graph).
 - FULL MODE: Max 100 Full Text. Maze Graph with LEGENDS. Contradiction Analysis.
 - OUTPUT: Terminal Print + Text File + PNG Graph.
-""")
+"""
 
-# Validate arguments
-if len(sys.argv) != 5:
-    print("❌ ERROR: Expected 4 arguments: compound outcome mode job_id")
-    print(f"Received: {len(sys.argv)-1} arguments")
-    sys.exit(1)
+import time
+import re
+import math
+import requests
+import networkx as nx
+import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
+from collections import Counter, defaultdict
+from concurrent.futures import ThreadPoolExecutor
+import lxml.etree as ET
+from tqdm import tqdm
+import sys
 
-compound, outcome, mode, job_id = sys.argv[1:]
-print("RELIO JOB:", compound, outcome, mode, job_id)
-print()
+try:
+    from Bio import Entrez
+except ImportError:
+    print("CRITICAL: Install biopython: pip install biopython networkx matplotlib requests")
+    exit()
 
-# Define directories
-BASE = os.path.dirname(__file__)
-IMG_DIR = os.path.join(BASE, "images")
-RES_DIR = os.path.join(BASE, "results")
-os.makedirs(IMG_DIR, exist_ok=True)
-os.makedirs(RES_DIR, exist_ok=True)
+# =========================
+# 1. CONFIGURATION
+# =========================
+Entrez.email = "robio.ra.bt@gmail.com"
+Entrez.api_key = "0968ae56e9a676e026f2fd87dcc17a9f8009"
+Entrez.tool = "Relio_V0.1"
+NCBI_DELAY = 0.11
 
-# Run the main analysis as in your script
-# Build whitelist
-whitelist = build_gene_whitelist(outcome)
-if not whitelist:
-    print("❌ Whitelist build failed.")
-    sys.exit(1)
+# =========================
+# 2. UTILITIES
+# =========================
+def sleep():
+    time.sleep(NCBI_DELAY)
 
-# Run mining based on mode
-if mode.upper() == "FAST":
-    ev, ids = mine_abstracts_fast(compound, outcome, whitelist, limit=100)
-    mode_name = "FAST (Abstracts)"
-else:
-    ev, ids = mine_pmc_full(compound, outcome, whitelist, limit=100)
-    mode_name = "FULL (PMC Full Text)"
+def get_context_direction(text, gene):
+    """Scans for up/down regulation keywords around the gene."""
+    starts = [m.start() for m in re.finditer(rf"\b{re.escape(gene)}\b", text, re.IGNORECASE)]
+    if not starts: return "neutral"
+    idx = starts[0]
+    snippet = text[max(0, idx-150): min(len(text), idx+150)].lower()
+    up_words = ["increase", "induce", "upregulat", "activat", "stimulat", "enhance", "promot", "up-regulat", "elevat"]
+    down_words = ["decrease", "inhibit", "suppress", "reduc", "block", "attenuate", "prevent", "down-regulat", "knockdown", "silenc"]
+    if any(w in snippet for w in up_words): return "up"
+    if any(w in snippet for w in down_words): return "down"
+    return "neutral"
 
-if not ev:
-    print("❌ No evidence found.")
-    sys.exit(0)
+def analyze_contradictions(gene_evidence):
+    """Identifies genes with conflicting evidence."""
+    conflicts = []
+    for gene, hits in gene_evidence.items():
+        dirs = [h['direction'] for h in hits]
+        up = dirs.count('up')
+        down = dirs.count('down')
+        total = up + down
+        if total > 1:
+            minority = min(up, down)
+            if minority > 0 and (minority / total) > 0.2:
+                conflicts.append({
+                    "gene": gene, "up": up, "down": down, "consensus": "Contradictory"
+                })
+    return conflicts
 
-# Build pathway map
-pmap = build_pathway_map(ev)
+def compute_fingerprint(gene_evidence, pathway_map):
+    up = sum(1 for hits in gene_evidence.values() for h in hits if h['direction']=='up')
+    down = sum(1 for hits in gene_evidence.values() for h in hits if h['direction']=='down')
+    if up > down * 1.5: direction = "Predominant Activation"
+    elif down > up * 1.5: direction = "Predominant Inhibition"
+    else: direction = "Balanced Modulation"
+    path_counts = [len(genes) for genes in pathway_map.values()]
+    total_conn = sum(path_counts)
+    entropy = 0.0
+    if total_conn > 0:
+        probs = [c / total_conn for c in path_counts]
+        entropy = -sum(p * math.log2(p) for p in probs)
+    return {"direction": direction, "entropy": entropy}
 
-# Generate graph image
-draw_graph(compound, ev, pmap, mode_name, outcome)
+# =========================
+# 3. WHITELIST
+# =========================
+def build_gene_whitelist(outcome):
+    print(f"\n[1] 🧠 Building Gene Whitelist for '{outcome}'...")
+    try:
+        sleep()
+        h = Entrez.esearch(db="gene", term=f"{outcome} AND Homo sapiens[Organism]", retmax=200)
+        ids = Entrez.read(h)["IdList"]
+        h.close()
+        genes = set()
+        if ids:
+            sleep()
+            h = Entrez.esummary(db="gene", id=",".join(ids))
+            data = Entrez.read(h, validate=False)
+            h.close()
+            for d in data["DocumentSummarySet"]["DocumentSummary"]:
+                g = d.get("Name", "")
+                if g.isupper() and 2 <= len(g) <= 10: genes.add(g)
+        print(f"    → Whitelist: {len(genes)} verified genes.")
+        return genes
+    except: return set()
 
-# Generate report
-generate_full_report(compound, outcome, ev, pmap, ids, mode_name)
+# =========================
+# 4. MINING ENGINES
+# =========================
+def mine_abstracts_fast(compound, outcome, genes, limit=100):
+    print(f"\n[2] ⚡ FAST MODE: Fetching up to {limit} PubMed Abstracts...")
+    gene_evidence = defaultdict(list)
+    try:
+        h = Entrez.esearch(db="pubmed", term=f"{compound} AND {outcome}", retmax=limit, sort="relevance")
+        ids = Entrez.read(h)["IdList"]
+        h.close()
+        if not ids: return {}, []
+        print(f"    → Found {len(ids)} abstracts. Downloading...")
 
-# Move generated files to the designated locations
-src_img = os.path.join(IMG_DIR, "litmap_maze.png")
-dst_img = os.path.join(IMG_DIR, f"{job_id}_graph.png")
-if os.path.exists(src_img):
-    shutil.move(src_img, dst_img)
+        sleep()
+        h = Entrez.efetch(db="pubmed", id=",".join(ids), retmode="xml")
+        records = Entrez.read(h)
+        h.close()
+        for article in records.get('PubmedArticle', []):
+            try:
+                pid = str(article['MedlineCitation']['PMID'])
+                abstract_parts = article['MedlineCitation']['Article'].get('Abstract', {}).get('AbstractText', [])
+                full_abstract = " ".join([str(part) for part in abstract_parts])
+                if not full_abstract: continue
+                for g in genes:
+                    if re.search(rf"\b{g}\b", full_abstract):
+                        direction = get_context_direction(full_abstract, g)
+                        gene_evidence[g].append({"id": pid, "direction": direction})
+            except KeyError:
+                continue
+        return gene_evidence, ids
+    except Exception as e:
+        print(f"Error in fast mode: {e}")
+        return {}, []
 
-src_rep = os.path.join(IMG_DIR, "litmap_report.txt")
-dst_rep = os.path.join(RES_DIR, f"{job_id}_report.txt")
-if os.path.exists(src_rep):
-    shutil.move(src_rep, dst_rep)
+def mine_pmc_full(compound, outcome, genes, limit=100):
+    print(f"\n[2] 🤿 FULL MODE: Searching up to {limit} PMC Full Text Articles...")
+    gene_evidence = defaultdict(list)
+    pmc_list = []
+    try:
+        h = Entrez.esearch(db="pmc", term=f"{compound} AND {outcome} AND open access[filter]", retmax=limit, sort="relevance")
+        ids = Entrez.read(h)["IdList"]
+        h.close()
+        pmc_list = ids
+        if not ids: return {}, []
+        print(f"    → Found {len(ids)} full-text XMLs. Downloading in safe batches...")
 
-# Prepare JSON output
-pathways_serializable = {p: list(genes) for p, genes in pmap.items()}
-result = {
-    "compound": compound,
-    "outcome": outcome,
-    "mode": mode,
-    "mode_name": mode_name,
-    "genes": {gene: [{"id": h["id"], "direction": h["direction"]} for h in hits] for gene, hits in ev.items()},
-    "pathways": pathways_serializable,
-    "documents": list(set(ids)),
-    "images": {"graph": f"{job_id}_graph.png" if os.path.exists(dst_img) else None},
-    "job_id": job_id,
-    "success": bool(ev),
-    "total_genes": len(ev),
-    "total_documents": len(ids),
-    "total_pathways": len(pmap),
-}
+        batch_size = 5
+        articles_processed = 0
+        for i in tqdm(range(0, len(ids), batch_size), desc="Mining PMC XMLs", unit="batch", colour="green"):
+            batch_ids = ids[i:i+batch_size]
+            try:
+                sleep()
+                h = Entrez.efetch(db="pmc", id=",".join(batch_ids), retmode="xml")
+                xml_data = h.read()
+                h.close()
+                if isinstance(xml_data, bytes):
+                    xml_data = xml_data.decode('utf-8', errors='ignore')
+                root = ET.fromstring(xml_data)
+                if root.tag == 'ERROR' or root.find('.//ERROR') is not None:
+                    err_msg = "".join(root.itertext())
+                    print(f"    ⚠️ NCBI API Warning: {err_msg.strip()}")
+                    continue
+                for article in root.findall('.//article'):
+                    articles_processed += 1
+                    current_pmc = "Unknown"
+                    for article_id in article.findall('.//article-id'):
+                        if article_id.get('pub-id-type') == 'pmc':
+                            current_pmc = "PMC" + (article_id.text or "")
+                            break
+                    text_chunks = []
+                    for section in article.findall('.//abstract') + article.findall('.//body'):
+                        text_chunks.append(" ".join(section.itertext()))
+                    clean_full_text = " ".join(text_chunks)
+                    if not clean_full_text.strip():
+                        continue
+                    for g in genes:
+                        if re.search(rf"\b{re.escape(g)}\b", clean_full_text, re.IGNORECASE):
+                            direction = get_context_direction(clean_full_text, g)
+                            gene_evidence[g].append({"id": current_pmc, "direction": direction})
+                print(f"    ⏳ Parsed {articles_processed}/{len(ids)} articles...")
+            except ET.ParseError as e:
+                print(f"    ⚠️ XML Parse Error (NCBI likely truncated the payload): {e}")
+                continue
+            except Exception as e:
+                print(f"    ⚠️ Batch error: {e}")
+                continue
+        return gene_evidence, pmc_list
+    except Exception as e:
+        print(f"    ❌ Fatal error in full mode: {e}")
+        return {}, []
 
-json_path = os.path.join(RES_DIR, f"{job_id}.json")
-with open(json_path, "w") as f:
-    json.dump(result, f, indent=2)
+# =========================
+# 5. PATHWAY MAPPING
+# =========================
+def fetch_live_pathways(gene):
+    paths = set()
+    try:
+        r = requests.get("https://reactome.org/ContentService/search/query", 
+                       params={"query": gene, "species": "Homo sapiens", "types": "Pathway"}, timeout=2)
+        if r.ok:
+            for res in r.json().get("results", []): paths.add(res["name"])
+    except: pass
+    try:
+        r = requests.get("https://webservice.wikipathways.org/findPathwaysByText", 
+                       params={"query": gene, "format": "json"}, timeout=2)
+        if r.ok:
+            for res in r.json().get("result", []):
+                if res.get("species") == "Homo sapiens": paths.add(res["name"])
+    except: pass
+    return list(paths)
 
-print("RELIO JOB COMPLETE:", job_id)
-print(f"JSON saved: {json_path}")
+def build_pathway_map(gene_evidence):
+    print("\n[3] 🚀 Mapping Pathways (Live API)...")
+    pathway_map = defaultdict(set)
+    genes_to_map = list(gene_evidence.keys())
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        results = executor.map(fetch_live_pathways, genes_to_map)
+        for gene, paths in zip(genes_to_map, results):
+            for p in paths:
+                p_clean = p.split(" - ")[0].strip()
+                if "Disease" not in p_clean and "metabolism" not in p_clean.lower():
+                    pathway_map[p_clean].add(gene)
+    print(f"    → Mapped {len(pathway_map)} pathways.")
+    return pathway_map
+
+# =========================
+# 6. GRAPH GENERATION (MAZE MODE + LEGEND)
+# =========================
+def draw_graph(compound, gene_evidence, pathway_map, mode_name, outcome):
+    if "FAST" in mode_name:
+        print("\n[4] ⏩ Graph generation skipped (Fast Mode).")
+        return
+
+    print("\n[4] 🎨 Generating Maze-Like Graph...")
+    G = nx.Graph()
+    if pathway_map:
+        top_paths = sorted(pathway_map.items(), key=lambda x: len(x[1]), reverse=True)[:20]
+        pathway_nodes = set()
+        gene_nodes = set()
+        for p, genes in top_paths:
+            pathway_nodes.add(p)
+            for g in genes:
+                gene_nodes.add(g)
+                G.add_edge(g, p)
+        plt.figure(figsize=(20, 16))
+        pos = nx.kamada_kawai_layout(G) 
+        nx.draw_networkx_nodes(G, pos, nodelist=list(pathway_nodes), node_color='#7ED957', node_size=2800)
+        nx.draw_networkx_nodes(G, pos, nodelist=list(gene_nodes), node_color='#6EC1E4', node_size=1400)
+        nx.draw_networkx_edges(G, pos, alpha=0.3, width=1.5)
+        labels = {n: n.replace(" ", "\n", 2) if len(n)>15 else n for n in G.nodes()}
+        nx.draw_networkx_labels(G, pos, labels, font_size=8, font_weight="bold")
+        legend_elements = [
+            Line2D([0], [0], marker='o', color='w', label='Target Gene', markerfacecolor='#6EC1E4', markersize=15),
+            Line2D([0], [0], marker='o', color='w', label='Biological Pathway', markerfacecolor='#7ED957', markersize=15)
+        ]
+        plt.legend(handles=legend_elements, loc='upper left', fontsize=12, frameon=True)
+        plt.suptitle(f"RELIO Analysis: {compound} + {outcome}", fontsize=16, fontweight='bold', y=0.95)
+    else: 
+        print("    ⚠️ Using Gene-Star Graph (No pathways found)")
+        top_genes = sorted(gene_evidence.keys(), key=lambda g: len(gene_evidence[g]), reverse=True)[:20]
+        G.add_node(compound, color='red')
+        for g in top_genes: G.add_edge(compound, g)
+        plt.figure(figsize=(14, 12))
+        pos = nx.kamada_kawai_layout(G)
+        nx.draw_networkx_nodes(G, pos, nodelist=[compound], node_color='#FF6B6B', node_size=3000)
+        nx.draw_networkx_nodes(G, pos, nodelist=top_genes, node_color='#6EC1E4', node_size=1500)
+        nx.draw_networkx_edges(G, pos, alpha=0.4)
+        nx.draw_networkx_labels(G, pos, font_size=9, font_weight="bold")
+        legend_elements = [
+            Line2D([0], [0], marker='o', color='w', label='Compound', markerfacecolor='#FF6B6B', markersize=15),
+            Line2D([0], [0], marker='o', color='w', label='Gene Target', markerfacecolor='#6EC1E4', markersize=15)
+        ]
+        plt.legend(handles=legend_elements, loc='lower right', fontsize=12)
+
+    plt.axis('off')
+    plt.tight_layout()
+    plt.savefig("Relio_maze.png", dpi=300)
+    print("    ✔ Graph saved as 'Relio_maze.png'")
+
+# =========================
+# 7. REPORT GENERATION
+# =========================
+def generate_full_report(compound, outcome, gene_evidence, pathway_map, paper_ids, mode_name):
+    print("\n[5] 📝 Generating Report...")
+    fingerprint = compute_fingerprint(gene_evidence, pathway_map)
+    conflicts = []
+    if "FULL" in mode_name:
+        conflicts = analyze_contradictions(gene_evidence)
+    gene_to_paths = defaultdict(list)
+    for p, genes in pathway_map.items():
+        for g in genes: gene_to_paths[g].append(p)
+
+    lines = []
+    lines.append("="*80)
+    lines.append(f"RELIO V0.1 REPORT: {compound.upper()} + {outcome.upper()}")
+    lines.append("="*80)
+    lines.append(f"Mode             : {mode_name}")
+    lines.append(f"Docs Analyzed    : {len(paper_ids)} (Strict Limit: 100)")
+    lines.append(f"Net Direction    : {fingerprint['direction']}")
+    lines.append("-" * 80 + "\n")
+    if "FULL" in mode_name:
+        lines.append("1. CONTRADICTION & CONTEXT ANALYSIS")
+        lines.append("-" * 40)
+        if conflicts:
+            lines.append("Significant conflicting evidence found for the following genes:")
+            for c in conflicts:
+                lines.append(f"- {c['gene']}: {c['up']} UP studies vs {c['down']} DOWN studies.")
+        else:
+            lines.append("No significant contradictions found in the full text analysis.\n")
+    lines.append("2. GENE ASSOCIATION LIST (Complete Pathway Mapping)")
+    lines.append("-" * 80)
+    lines.append(f"{'GENE':<8} | {'HITS':<4} | {'DIR':<7} | {'FULL PATHWAY LIST'}")
+    lines.append("-" * 80)
+    top_genes_all = sorted(gene_evidence.items(), key=lambda x: len(x[1]), reverse=True)
+    for g, ev in top_genes_all:
+        hits = len(ev)
+        dirs = [e['direction'] for e in ev]
+        d_mode = Counter(dirs).most_common(1)[0][0]
+        if any(c['gene'] == g for c in conflicts): d_mode = "MIXED"
+        my_paths = gene_to_paths.get(g, [])
+        path_str = ", ".join(my_paths) if my_paths else "No specific pathways mapped"
+        lines.append(f"{g:<8} | {hits:<4} | {d_mode:<7} | {path_str}")
+    lines.append("-" * 80 + "\n")
+    lines.append("3. SOURCE DOCUMENT LIST (Clickable Links)")
+    lines.append("-" * 40)
+    unique_ids = sorted(list(set(paper_ids)))
+    for pid in unique_ids:
+        pid_str = str(pid)
+        if mode_name.startswith("FULL"):
+            if "PMC" not in pid_str and pid_str != "Unknown": pid_str = "PMC" + pid_str
+            if "PMC" in pid_str:
+                lines.append(f"- https://www.ncbi.nlm.nih.gov/pmc/articles/{pid_str}/")
+        else:
+            lines.append(f"- https://pubmed.ncbi.nlm.nih.gov/{pid_str}/")
+    final_report_str = "\n".join(lines)
+    with open("Relio_report.txt", "w") as f:
+        f.write(final_report_str)
+    print("    ✔ Report saved as 'Relio_report.txt'")
+    print("\n" + "="*30 + " TERMINAL REPORT OUTPUT " + "="*30 + "\n")
+    print(final_report_str)
+    print("\n" + "="*80 + "\n")
+
+# =========================
+# 8. MAIN
+# =========================
+if __name__ == "__main__":
+    # Get command-line arguments
+    if len(sys.argv) < 3:
+        print("Usage: python relio_main.py <compound> <outcome> [mode]")
+        print("mode: '1' for FAST, '2' for FULL")
+        sys.exit(1)
+
+    c = sys.argv[1]
+    o = sys.argv[2]
+    mode_choice = sys.argv[3] if len(sys.argv) > 3 else "1"
+
+    print(f"\nCompound: {c}")
+    print(f"Outcome : {o}")
+    print(f"Selected Mode: {'FAST' if mode_choice=='1' else 'FULL'}")
+
+    whitelist = build_gene_whitelist(o)
+    if whitelist:
+        if mode_choice == "1":
+            ev, ids = mine_abstracts_fast(c, o, whitelist, limit=100)
+            mode = "FAST (Abstracts)"
+        else:
+            ev, ids = mine_pmc_full(c, o, whitelist, limit=100)
+            mode = "FULL (PMC Full Text)"
+        if ev:
+            pmap = build_pathway_map(ev)
+            draw_graph(c, ev, pmap, mode, o)
+            generate_full_report(c, o, ev, pmap, ids, mode)
+        else:
+            print("❌ No evidence found.")
+    else:
+        print("❌ Whitelist failed.")
