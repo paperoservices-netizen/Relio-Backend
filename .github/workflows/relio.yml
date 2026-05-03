@@ -1,46 +1,37 @@
-name: Relio Job Runner
+name: Run Relio Analysis
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
-    inputs:
-      compound:
-        required: true
-      outcome:
-        required: true
-      mode:
-        required: true
-      job_id:
-        required: true
-
-permissions:
-  contents: write
 
 jobs:
   run-relio:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - uses: actions/setup-python@v5
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          python-version: "3.10"
+          python-version: '3.10'
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Run Relio
         run: |
-          python -m python_runner.relio_job \
-            "${{ github.event.inputs.compound }}" \
-            "${{ github.event.inputs.outcome }}" \
-            "${{ github.event.inputs.mode }}" \
-            "${{ github.event.inputs.job_id }}"
+          pip install --upgrade pip
+          pip install requests networkx matplotlib tqdm lxml biopython
 
-      - name: Commit results
+      - name: Run Relio analysis
         run: |
-          git config user.name github-actions
-          git config user.email actions@github.com
-          git add python_runner/results python_runner/images
-          git commit -m "Relio result ${{ github.event.inputs.job_id }}" || true
-          git push
+          python relio_main.py
+
+      - name: Upload results
+        uses: actions/upload-artifact@v3
+        with:
+          name: relio-results
+          path: |
+            Relio_report.txt
+            Relio_maze.png
