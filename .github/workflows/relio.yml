@@ -8,13 +8,16 @@ on:
         required: true
         default: 'Turmeric'
       outcome:
-        description: 'Outcome'
+        description: 'Biological outcome'
         required: true
         default: 'Infection'
       mode:
         description: 'Mode: 1 for FAST, 2 for FULL'
         required: true
         default: '1'
+      job_id:
+        description: 'Job ID'
+        required: false
 
 jobs:
   run-relio:
@@ -36,12 +39,21 @@ jobs:
 
       - name: Run Relio analysis
         run: |
-          python relio_job.py "${{ github.event.inputs.compound }}" "${{ github.event.inputs.outcome }}" "${{ github.event.inputs.mode }}"
+          python relio_job.py "${{ github.event.inputs.compound }}" "${{ github.event.inputs.outcome }}" "${{ github.event.inputs.mode }}" "${{ github.event.inputs.job_id }}"
+
+      - name: Save results
+        run: |
+          mkdir -p results
+          python -c "
+import json, sys, os
+job_id = sys.argv[4]
+results_data = {'status': 'done', 'images': {'maze': 'maze.png'}}
+with open(f'results/{job_id}.json', 'w') as f:
+    json.dump(results_data, f)
+" "${{ github.event.inputs.compound }}" "${{ github.event.inputs.outcome }}" "${{ github.event.inputs.mode }}" "${{ github.event.inputs.job_id }}"
 
       - name: Upload results
         uses: actions/upload-artifact@v3
         with:
           name: relio-results
-          path: |
-            Relio_report.txt
-            Relio_maze.png
+          path: results/
