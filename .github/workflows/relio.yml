@@ -26,7 +26,7 @@ jobs:
 
       - name: Run Relio analysis
         run: |
-          python relio_main.py
+          python relio_job.py
 
       - name: Upload results
         uses: actions/upload-artifact@v3
