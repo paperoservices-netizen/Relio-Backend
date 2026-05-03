@@ -1,0 +1,791 @@
+{
+  "job_id": "1777796513353",
+  "compound": "Turmeric",
+  "outcome": "Infection",
+  "mode": "FULL (PMC Full Text)",
+  "docs_analyzed": 100,
+  "fingerprint": {
+    "direction": "Predominant Activation",
+    "entropy": 0.0
+  },
+  "contradictions": [
+    {
+      "gene": "ACE2",
+      "up": 2,
+      "down": 3,
+      "consensus": "Contradictory"
+    },
+    {
+      "gene": "JUN",
+      "up": 2,
+      "down": 1,
+      "consensus": "Contradictory"
+    },
+    {
+      "gene": "TNF",
+      "up": 19,
+      "down": 11,
+      "consensus": "Contradictory"
+    },
+    {
+      "gene": "MET",
+      "up": 3,
+      "down": 2,
+      "consensus": "Contradictory"
+    },
+    {
+      "gene": "CRP",
+      "up": 1,
+      "down": 2,
+      "consensus": "Contradictory"
+    },
+    {
+      "gene": "TLR4",
+      "up": 1,
+      "down": 1,
+      "consensus": "Contradictory"
+    },
+    {
+      "gene": "CD4",
+      "up": 4,
+      "down": 3,
+      "consensus": "Contradictory"
+    },
+    {
+      "gene": "NLRP3",
+      "up": 1,
+      "down": 2,
+      "consensus": "Contradictory"
+    },
+    {
+      "gene": "STAT3",
+      "up": 1,
+      "down": 3,
+      "consensus": "Contradictory"
+    },
+    {
+      "gene": "MTOR",
+      "up": 2,
+      "down": 2,
+      "consensus": "Contradictory"
+    },
+    {
+      "gene": "SRC",
+      "up": 1,
+      "down": 1,
+      "consensus": "Contradictory"
+    }
+  ],
+  "genes": [
+    {
+      "gene": "TNF",
+      "hits": 32,
+      "direction": "MIXED",
+      "pathways": []
+    },
+    {
+      "gene": "CRP",
+      "hits": 12,
+      "direction": "MIXED",
+      "pathways": []
+    },
+    {
+      "gene": "MET",
+      "hits": 10,
+      "direction": "MIXED",
+      "pathways": []
+    },
+    {
+      "gene": "CD4",
+      "hits": 9,
+      "direction": "MIXED",
+      "pathways": []
+    },
+    {
+      "gene": "ACE2",
+      "hits": 7,
+      "direction": "MIXED",
+      "pathways": []
+    },
+    {
+      "gene": "STAT3",
+      "hits": 5,
+      "direction": "MIXED",
+      "pathways": []
+    },
+    {
+      "gene": "MYC",
+      "hits": 5,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "EGFR",
+      "hits": 5,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "ACE",
+      "hits": 4,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "TERT",
+      "hits": 4,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "TLR4",
+      "hits": 4,
+      "direction": "MIXED",
+      "pathways": []
+    },
+    {
+      "gene": "FOXP3",
+      "hits": 4,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "NLRP3",
+      "hits": 4,
+      "direction": "MIXED",
+      "pathways": []
+    },
+    {
+      "gene": "FAS",
+      "hits": 4,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "MTOR",
+      "hits": 4,
+      "direction": "MIXED",
+      "pathways": []
+    },
+    {
+      "gene": "ATM",
+      "hits": 3,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "JUN",
+      "hits": 3,
+      "direction": "MIXED",
+      "pathways": []
+    },
+    {
+      "gene": "CD14",
+      "hits": 2,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "APC",
+      "hits": 2,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "ALB",
+      "hits": 2,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "SP1",
+      "hits": 2,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "SRC",
+      "hits": 2,
+      "direction": "MIXED",
+      "pathways": []
+    },
+    {
+      "gene": "TLR2",
+      "hits": 2,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "AGT",
+      "hits": 1,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "IL10",
+      "hits": 1,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "MMP9",
+      "hits": 1,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "AHR",
+      "hits": 1,
+      "direction": "down",
+      "pathways": []
+    },
+    {
+      "gene": "BIRC5",
+      "hits": 1,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "CXCR4",
+      "hits": 1,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "PARP1",
+      "hits": 1,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "WT1",
+      "hits": 1,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "BAX",
+      "hits": 1,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "CYP2C19",
+      "hits": 1,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "E2F1",
+      "hits": 1,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "MLH1",
+      "hits": 1,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "CYP2D6",
+      "hits": 1,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "HGF",
+      "hits": 1,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "CTLA4",
+      "hits": 1,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "ESR1",
+      "hits": 1,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "PTGS2",
+      "hits": 1,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "BDNF",
+      "hits": 1,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "APP",
+      "hits": 1,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "HDAC1",
+      "hits": 1,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "LEP",
+      "hits": 1,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "MIF",
+      "hits": 1,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "CCL2",
+      "hits": 1,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "GDF15",
+      "hits": 1,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "CDKN1A",
+      "hits": 1,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "MMP1",
+      "hits": 1,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "TNFRSF11B",
+      "hits": 1,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "IGF1",
+      "hits": 1,
+      "direction": "neutral",
+      "pathways": []
+    }
+  ],
+  "sources": [
+    {
+      "id": "PMC10073709",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10073709/"
+    },
+    {
+      "id": "PMC10214415",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10214415/"
+    },
+    {
+      "id": "PMC10255361",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10255361/"
+    },
+    {
+      "id": "PMC10281727",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10281727/"
+    },
+    {
+      "id": "PMC10606746",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10606746/"
+    },
+    {
+      "id": "PMC10647697",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10647697/"
+    },
+    {
+      "id": "PMC10695572",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10695572/"
+    },
+    {
+      "id": "PMC10757808",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10757808/"
+    },
+    {
+      "id": "PMC10824080",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10824080/"
+    },
+    {
+      "id": "PMC10831264",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10831264/"
+    },
+    {
+      "id": "PMC11087556",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11087556/"
+    },
+    {
+      "id": "PMC11100965",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11100965/"
+    },
+    {
+      "id": "PMC11124197",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11124197/"
+    },
+    {
+      "id": "PMC11137484",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11137484/"
+    },
+    {
+      "id": "PMC11189596",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11189596/"
+    },
+    {
+      "id": "PMC11206846",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11206846/"
+    },
+    {
+      "id": "PMC11215520",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11215520/"
+    },
+    {
+      "id": "PMC11268915",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11268915/"
+    },
+    {
+      "id": "PMC11532394",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11532394/"
+    },
+    {
+      "id": "PMC11549377",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11549377/"
+    },
+    {
+      "id": "PMC11561237",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11561237/"
+    },
+    {
+      "id": "PMC11568328",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11568328/"
+    },
+    {
+      "id": "PMC11641031",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11641031/"
+    },
+    {
+      "id": "PMC11732890",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11732890/"
+    },
+    {
+      "id": "PMC11858738",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11858738/"
+    },
+    {
+      "id": "PMC11910616",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11910616/"
+    },
+    {
+      "id": "PMC11996126",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11996126/"
+    },
+    {
+      "id": "PMC12108673",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12108673/"
+    },
+    {
+      "id": "PMC12205050",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12205050/"
+    },
+    {
+      "id": "PMC12209257",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12209257/"
+    },
+    {
+      "id": "PMC12295988",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12295988/"
+    },
+    {
+      "id": "PMC12371096",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12371096/"
+    },
+    {
+      "id": "PMC12403855",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12403855/"
+    },
+    {
+      "id": "PMC12518559",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12518559/"
+    },
+    {
+      "id": "PMC12538534",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12538534/"
+    },
+    {
+      "id": "PMC12667007",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12667007/"
+    },
+    {
+      "id": "PMC12677443",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12677443/"
+    },
+    {
+      "id": "PMC12682302",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12682302/"
+    },
+    {
+      "id": "PMC12709529",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12709529/"
+    },
+    {
+      "id": "PMC12918580",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12918580/"
+    },
+    {
+      "id": "PMC12954815",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12954815/"
+    },
+    {
+      "id": "PMC12960772",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12960772/"
+    },
+    {
+      "id": "PMC13029545",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13029545/"
+    },
+    {
+      "id": "PMC13059556",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13059556/"
+    },
+    {
+      "id": "PMC13066156",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13066156/"
+    },
+    {
+      "id": "PMC3249972",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3249972/"
+    },
+    {
+      "id": "PMC3585318",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3585318/"
+    },
+    {
+      "id": "PMC3893568",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3893568/"
+    },
+    {
+      "id": "PMC3898719",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3898719/"
+    },
+    {
+      "id": "PMC4087288",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4087288/"
+    },
+    {
+      "id": "PMC4154301",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4154301/"
+    },
+    {
+      "id": "PMC4210912",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4210912/"
+    },
+    {
+      "id": "PMC4392299",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4392299/"
+    },
+    {
+      "id": "PMC4511036",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4511036/"
+    },
+    {
+      "id": "PMC4525408",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4525408/"
+    },
+    {
+      "id": "PMC5003001",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5003001/"
+    },
+    {
+      "id": "PMC5133244",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5133244/"
+    },
+    {
+      "id": "PMC5415125",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5415125/"
+    },
+    {
+      "id": "PMC5756309",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5756309/"
+    },
+    {
+      "id": "PMC5854386",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5854386/"
+    },
+    {
+      "id": "PMC6264403",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6264403/"
+    },
+    {
+      "id": "PMC6412823",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6412823/"
+    },
+    {
+      "id": "PMC6469369",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6469369/"
+    },
+    {
+      "id": "PMC6471621",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6471621/"
+    },
+    {
+      "id": "PMC6509173",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6509173/"
+    },
+    {
+      "id": "PMC6540245",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6540245/"
+    },
+    {
+      "id": "PMC6643110",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6643110/"
+    },
+    {
+      "id": "PMC6660933",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6660933/"
+    },
+    {
+      "id": "PMC6691850",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6691850/"
+    },
+    {
+      "id": "PMC6723242",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6723242/"
+    },
+    {
+      "id": "PMC6723939",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6723939/"
+    },
+    {
+      "id": "PMC6929647",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6929647/"
+    },
+    {
+      "id": "PMC7266028",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7266028/"
+    },
+    {
+      "id": "PMC7287160",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7287160/"
+    },
+    {
+      "id": "PMC7331668",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7331668/"
+    },
+    {
+      "id": "PMC7355898",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7355898/"
+    },
+    {
+      "id": "PMC7366002",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7366002/"
+    },
+    {
+      "id": "PMC7693600",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7693600/"
+    },
+    {
+      "id": "PMC7795868",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7795868/"
+    },
+    {
+      "id": "PMC7841903",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7841903/"
+    },
+    {
+      "id": "PMC7847013",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7847013/"
+    },
+    {
+      "id": "PMC7912164",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7912164/"
+    },
+    {
+      "id": "PMC7973764",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7973764/"
+    },
+    {
+      "id": "PMC8001478",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8001478/"
+    },
+    {
+      "id": "PMC8037095",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8037095/"
+    },
+    {
+      "id": "PMC8115291",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8115291/"
+    },
+    {
+      "id": "PMC8191517",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8191517/"
+    },
+    {
+      "id": "PMC8347393",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8347393/"
+    },
+    {
+      "id": "PMC8482695",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8482695/"
+    },
+    {
+      "id": "PMC8521574",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8521574/"
+    },
+    {
+      "id": "PMC8537626",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8537626/"
+    },
+    {
+      "id": "PMC8541669",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8541669/"
+    },
+    {
+      "id": "PMC8590273",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8590273/"
+    },
+    {
+      "id": "PMC9353077",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9353077/"
+    },
+    {
+      "id": "PMC9376628",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9376628/"
+    },
+    {
+      "id": "PMC9422945",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9422945/"
+    },
+    {
+      "id": "PMC9427320",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9427320/"
+    },
+    {
+      "id": "PMC9478419",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9478419/"
+    },
+    {
+      "id": "PMC9864671",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9864671/"
+    },
+    {
+      "id": "PMC9871392",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9871392/"
+    }
+  ],
+  "images": {},
+  "status": "success"
+}
