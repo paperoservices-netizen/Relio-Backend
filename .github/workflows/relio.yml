@@ -1,10 +1,20 @@
 name: Run Relio Analysis
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
+    inputs:
+      compound:
+        description: 'Compound name'
+        required: true
+        default: 'Turmeric'
+      outcome:
+        description: 'Outcome'
+        required: true
+        default: 'Infection'
+      mode:
+        description: 'Mode: 1 for FAST, 2 for FULL'
+        required: true
+        default: '1'
 
 jobs:
   run-relio:
@@ -26,7 +36,7 @@ jobs:
 
       - name: Run Relio analysis
         run: |
-          python relio_job.py
+          python relio_job.py "${{ github.event.inputs.compound }}" "${{ github.event.inputs.outcome }}" "${{ github.event.inputs.mode }}"
 
       - name: Upload results
         uses: actions/upload-artifact@v3
