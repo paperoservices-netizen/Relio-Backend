@@ -1,0 +1,190 @@
+================================================================================
+RELIO V0.1 REPORT: ISOQUERCITRIN + WOUND HEALING
+================================================================================
+Mode             : FULL (PMC Full Text)
+Docs Analyzed    : 100 (Strict Limit: 100)
+Net Direction    : Predominant Activation
+--------------------------------------------------------------------------------
+
+1. CONTRADICTION & CONTEXT ANALYSIS
+----------------------------------------
+Significant conflicting evidence found for the following genes:
+- TNF: 20 UP studies vs 11 DOWN studies.
+- EGFR: 1 UP studies vs 1 DOWN studies.
+- MET: 3 UP studies vs 1 DOWN studies.
+- TERT: 1 UP studies vs 1 DOWN studies.
+- MMP1: 1 UP studies vs 1 DOWN studies.
+- HGF: 1 UP studies vs 2 DOWN studies.
+- SIRT1: 2 UP studies vs 1 DOWN studies.
+- CAMP: 2 UP studies vs 1 DOWN studies.
+- TIMP1: 1 UP studies vs 1 DOWN studies.
+- SRC: 2 UP studies vs 1 DOWN studies.
+- CD44: 1 UP studies vs 1 DOWN studies.
+2. GENE ASSOCIATION LIST (Complete Pathway Mapping)
+--------------------------------------------------------------------------------
+GENE     | HITS | DIR     | FULL PATHWAY LIST
+--------------------------------------------------------------------------------
+TNF      | 46   | MIXED   | No specific pathways mapped
+JUN      | 9    | up      | No specific pathways mapped
+MTOR     | 9    | up      | No specific pathways mapped
+EGF      | 7    | up      | No specific pathways mapped
+MET      | 7    | MIXED   | No specific pathways mapped
+STAT3    | 6    | up      | No specific pathways mapped
+EGFR     | 5    | MIXED   | No specific pathways mapped
+MMP9     | 4    | neutral | No specific pathways mapped
+COL1A1   | 4    | up      | No specific pathways mapped
+FOXO1    | 4    | up      | No specific pathways mapped
+CAMP     | 4    | MIXED   | No specific pathways mapped
+TERT     | 3    | MIXED   | No specific pathways mapped
+HGF      | 3    | MIXED   | No specific pathways mapped
+SIRT1    | 3    | MIXED   | No specific pathways mapped
+TIMP1    | 3    | MIXED   | No specific pathways mapped
+SRC      | 3    | MIXED   | No specific pathways mapped
+CD44     | 3    | MIXED   | No specific pathways mapped
+PTEN     | 3    | up      | No specific pathways mapped
+SMAD3    | 2    | neutral | No specific pathways mapped
+SP1      | 2    | neutral | No specific pathways mapped
+MMP1     | 2    | MIXED   | No specific pathways mapped
+TP53     | 2    | up      | No specific pathways mapped
+TLR4     | 2    | neutral | No specific pathways mapped
+VEGFA    | 2    | up      | No specific pathways mapped
+KDR      | 2    | up      | No specific pathways mapped
+MMP2     | 2    | up      | No specific pathways mapped
+INS      | 2    | neutral | No specific pathways mapped
+RUNX2    | 2    | up      | No specific pathways mapped
+AKT1     | 2    | neutral | No specific pathways mapped
+SMAD2    | 1    | neutral | No specific pathways mapped
+HMGB1    | 1    | up      | No specific pathways mapped
+CDC42    | 1    | up      | No specific pathways mapped
+FOXM1    | 1    | up      | No specific pathways mapped
+TRPV1    | 1    | up      | No specific pathways mapped
+FGFR1    | 1    | up      | No specific pathways mapped
+TP63     | 1    | up      | No specific pathways mapped
+CDKN2A   | 1    | up      | No specific pathways mapped
+NFE2L2   | 1    | down    | No specific pathways mapped
+FGFR2    | 1    | up      | No specific pathways mapped
+CXCL8    | 1    | neutral | No specific pathways mapped
+RHOA     | 1    | up      | No specific pathways mapped
+IFNG     | 1    | neutral | No specific pathways mapped
+IGF1     | 1    | neutral | No specific pathways mapped
+PIK3CA   | 1    | neutral | No specific pathways mapped
+FN1      | 1    | neutral | No specific pathways mapped
+PGF      | 1    | up      | No specific pathways mapped
+TIMP2    | 1    | up      | No specific pathways mapped
+PPARG    | 1    | down    | No specific pathways mapped
+SOX9     | 1    | up      | No specific pathways mapped
+HFE      | 1    | down    | No specific pathways mapped
+ERBB3    | 1    | neutral | No specific pathways mapped
+E2F1     | 1    | up      | No specific pathways mapped
+APP      | 1    | down    | No specific pathways mapped
+ERBB2    | 1    | neutral | No specific pathways mapped
+KL       | 1    | neutral | No specific pathways mapped
+IL6R     | 1    | neutral | No specific pathways mapped
+SERPINE1 | 1    | neutral | No specific pathways mapped
+SOX2     | 1    | neutral | No specific pathways mapped
+LRP1     | 1    | down    | No specific pathways mapped
+SOD2     | 1    | up      | No specific pathways mapped
+--------------------------------------------------------------------------------
+
+3. SOURCE DOCUMENT LIST (Clickable Links)
+----------------------------------------
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10058616/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10142266/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10196740/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10255818/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10311562/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10490261/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10608748/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10621105/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10707873/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11007092/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11111528/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11121646/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11280954/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11459347/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11465873/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11505045/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11510288/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11768340/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11768386/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11819889/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12023972/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12029887/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12108421/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12114729/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12114885/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12172375/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12283260/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12299378/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12358139/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12406400/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12605700/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12626814/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12693977/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12764707/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12786445/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12800547/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12844832/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12845167/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12874841/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12943487/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12943522/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12995940/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12996417/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13029716/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13064283/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13093297/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13119818/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13125059/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13125133/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3254175/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3314192/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4613244/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4964293/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5132198/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5318992/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5475310/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5642515/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5668879/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5890364/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5948671/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5986121/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6058565/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6111538/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6225198/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6266645/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6272021/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6282146/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6332176/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6332372/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6460044/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6680997/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7037689/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7049829/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7254783/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7345338/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7709045/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7828031/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7954623/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8151016/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8300756/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8309316/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8405327/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8513029/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8605470/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8618059/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8618348/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8628765/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8747234/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8773851/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9145090/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9182978/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9503541/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9526892/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9693994/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9719705/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9823647/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9846017/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9867334/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9960863/
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9982048/
