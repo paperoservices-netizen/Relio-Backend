@@ -1,0 +1,526 @@
+{
+  "job_id": "1783530392830",
+  "compound": "Curcumin",
+  "outcome": "Anti-inflammatory effect",
+  "mode": "FAST (Abstracts)",
+  "docs_analyzed": 100,
+  "fingerprint": {
+    "direction": "Predominant Activation",
+    "entropy": 0.0
+  },
+  "contradictions": [],
+  "genes": [
+    {
+      "gene": "TNF",
+      "hits": 26,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "CCL2",
+      "hits": 2,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "CRP",
+      "hits": 2,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "TLR4",
+      "hits": 2,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "JAK2",
+      "hits": 2,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "STAT3",
+      "hits": 2,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "MTOR",
+      "hits": 1,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "BDNF",
+      "hits": 1,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "GSK3B",
+      "hits": 1,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "CD40",
+      "hits": 1,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "JUN",
+      "hits": 1,
+      "direction": "down",
+      "pathways": []
+    },
+    {
+      "gene": "SIRT1",
+      "hits": 1,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "TLR2",
+      "hits": 1,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "APP",
+      "hits": 1,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "MMP2",
+      "hits": 1,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "CD14",
+      "hits": 1,
+      "direction": "up",
+      "pathways": []
+    },
+    {
+      "gene": "APC",
+      "hits": 1,
+      "direction": "neutral",
+      "pathways": []
+    },
+    {
+      "gene": "MPO",
+      "hits": 1,
+      "direction": "neutral",
+      "pathways": []
+    }
+  ],
+  "sources": [
+    {
+      "id": "1426014",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1426014/"
+    },
+    {
+      "id": "17996675",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17996675/"
+    },
+    {
+      "id": "19903510",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19903510/"
+    },
+    {
+      "id": "20571541",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20571541/"
+    },
+    {
+      "id": "20950131",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20950131/"
+    },
+    {
+      "id": "21642934",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21642934/"
+    },
+    {
+      "id": "23888334",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23888334/"
+    },
+    {
+      "id": "24138167",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24138167/"
+    },
+    {
+      "id": "25028100",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25028100/"
+    },
+    {
+      "id": "25514226",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25514226/"
+    },
+    {
+      "id": "26097529",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26097529/"
+    },
+    {
+      "id": "26528921",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26528921/"
+    },
+    {
+      "id": "26927041",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26927041/"
+    },
+    {
+      "id": "27380582",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27380582/"
+    },
+    {
+      "id": "27703331",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27703331/"
+    },
+    {
+      "id": "28264607",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28264607/"
+    },
+    {
+      "id": "28284806",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28284806/"
+    },
+    {
+      "id": "28449676",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28449676/"
+    },
+    {
+      "id": "28509396",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28509396/"
+    },
+    {
+      "id": "28662006",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28662006/"
+    },
+    {
+      "id": "28741789",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28741789/"
+    },
+    {
+      "id": "29480523",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29480523/"
+    },
+    {
+      "id": "29664496",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29664496/"
+    },
+    {
+      "id": "29870054",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29870054/"
+    },
+    {
+      "id": "29917276",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29917276/"
+    },
+    {
+      "id": "30317564",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30317564/"
+    },
+    {
+      "id": "30511622",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30511622/"
+    },
+    {
+      "id": "30624435",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30624435/"
+    },
+    {
+      "id": "30741618",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30741618/"
+    },
+    {
+      "id": "31251919",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31251919/"
+    },
+    {
+      "id": "31323374",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31323374/"
+    },
+    {
+      "id": "31353717",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31353717/"
+    },
+    {
+      "id": "31423805",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31423805/"
+    },
+    {
+      "id": "31434176",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31434176/"
+    },
+    {
+      "id": "31549866",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31549866/"
+    },
+    {
+      "id": "32281661",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32281661/"
+    },
+    {
+      "id": "32811563",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32811563/"
+    },
+    {
+      "id": "32814463",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32814463/"
+    },
+    {
+      "id": "32861762",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32861762/"
+    },
+    {
+      "id": "32899726",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32899726/"
+    },
+    {
+      "id": "33202696",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33202696/"
+    },
+    {
+      "id": "33360051",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33360051/"
+    },
+    {
+      "id": "33478498",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33478498/"
+    },
+    {
+      "id": "33606322",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33606322/"
+    },
+    {
+      "id": "33704623",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33704623/"
+    },
+    {
+      "id": "33938775",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33938775/"
+    },
+    {
+      "id": "34012421",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34012421/"
+    },
+    {
+      "id": "34378053",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34378053/"
+    },
+    {
+      "id": "34462629",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34462629/"
+    },
+    {
+      "id": "34717976",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34717976/"
+    },
+    {
+      "id": "34754179",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34754179/"
+    },
+    {
+      "id": "34768818",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34768818/"
+    },
+    {
+      "id": "35216083",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35216083/"
+    },
+    {
+      "id": "35417322",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35417322/"
+    },
+    {
+      "id": "35807304",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35807304/"
+    },
+    {
+      "id": "35908626",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35908626/"
+    },
+    {
+      "id": "36190132",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36190132/"
+    },
+    {
+      "id": "36235189",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36235189/"
+    },
+    {
+      "id": "36269798",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36269798/"
+    },
+    {
+      "id": "36770985",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36770985/"
+    },
+    {
+      "id": "36773869",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36773869/"
+    },
+    {
+      "id": "36825726",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36825726/"
+    },
+    {
+      "id": "36997729",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36997729/"
+    },
+    {
+      "id": "37031388",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37031388/"
+    },
+    {
+      "id": "37049389",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37049389/"
+    },
+    {
+      "id": "37199116",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37199116/"
+    },
+    {
+      "id": "37488765",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37488765/"
+    },
+    {
+      "id": "37493562",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37493562/"
+    },
+    {
+      "id": "37562565",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37562565/"
+    },
+    {
+      "id": "37574203",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37574203/"
+    },
+    {
+      "id": "38067518",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38067518/"
+    },
+    {
+      "id": "38088364",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38088364/"
+    },
+    {
+      "id": "38226733",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38226733/"
+    },
+    {
+      "id": "38363917",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38363917/"
+    },
+    {
+      "id": "38499190",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38499190/"
+    },
+    {
+      "id": "38616356",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38616356/"
+    },
+    {
+      "id": "38654265",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38654265/"
+    },
+    {
+      "id": "38656895",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38656895/"
+    },
+    {
+      "id": "38874047",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38874047/"
+    },
+    {
+      "id": "39140414",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39140414/"
+    },
+    {
+      "id": "39203857",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39203857/"
+    },
+    {
+      "id": "39324614",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39324614/"
+    },
+    {
+      "id": "39362031",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39362031/"
+    },
+    {
+      "id": "39571867",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39571867/"
+    },
+    {
+      "id": "39662680",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39662680/"
+    },
+    {
+      "id": "39709690",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39709690/"
+    },
+    {
+      "id": "39796150",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39796150/"
+    },
+    {
+      "id": "39927337",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39927337/"
+    },
+    {
+      "id": "40043936",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40043936/"
+    },
+    {
+      "id": "40362738",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40362738/"
+    },
+    {
+      "id": "40459062",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40459062/"
+    },
+    {
+      "id": "40583343",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40583343/"
+    },
+    {
+      "id": "40834355",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40834355/"
+    },
+    {
+      "id": "40910581",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40910581/"
+    },
+    {
+      "id": "40928423",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40928423/"
+    },
+    {
+      "id": "41096556",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41096556/"
+    },
+    {
+      "id": "41558061",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41558061/"
+    },
+    {
+      "id": "41721788",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41721788/"
+    },
+    {
+      "id": "42123417",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42123417/"
+    },
+    {
+      "id": "7180736",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7180736/"
+    }
+  ],
+  "images": {},
+  "status": "success"
+}
