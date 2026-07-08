@@ -1,0 +1,123 @@
+================================================================================
+RELIO V0.1 REPORT: ASPIRIN + ANTI-INFLAMMATORY EFFECT
+================================================================================
+Mode             : FAST (Abstracts)
+Docs Analyzed    : 100 (Strict Limit: 100)
+Net Direction    : Predominant Activation
+--------------------------------------------------------------------------------
+
+2. GENE ASSOCIATION LIST (Complete Pathway Mapping)
+--------------------------------------------------------------------------------
+GENE     | HITS | DIR     | FULL PATHWAY LIST
+--------------------------------------------------------------------------------
+TNF      | 3    | neutral | No specific pathways mapped
+PIK3CA   | 2    | up      | No specific pathways mapped
+MPO      | 1    | neutral | No specific pathways mapped
+TLR2     | 1    | neutral | No specific pathways mapped
+TLR4     | 1    | up      | No specific pathways mapped
+CCL2     | 1    | down    | No specific pathways mapped
+STAT3    | 1    | neutral | No specific pathways mapped
+--------------------------------------------------------------------------------
+
+3. SOURCE DOCUMENT LIST (Clickable Links)
+----------------------------------------
+- https://pubmed.ncbi.nlm.nih.gov/10431210/
+- https://pubmed.ncbi.nlm.nih.gov/10643705/
+- https://pubmed.ncbi.nlm.nih.gov/10763201/
+- https://pubmed.ncbi.nlm.nih.gov/10763202/
+- https://pubmed.ncbi.nlm.nih.gov/10763207/
+- https://pubmed.ncbi.nlm.nih.gov/10763210/
+- https://pubmed.ncbi.nlm.nih.gov/11062772/
+- https://pubmed.ncbi.nlm.nih.gov/11487511/
+- https://pubmed.ncbi.nlm.nih.gov/11562331/
+- https://pubmed.ncbi.nlm.nih.gov/11704770/
+- https://pubmed.ncbi.nlm.nih.gov/1191548/
+- https://pubmed.ncbi.nlm.nih.gov/12106797/
+- https://pubmed.ncbi.nlm.nih.gov/12700498/
+- https://pubmed.ncbi.nlm.nih.gov/12843912/
+- https://pubmed.ncbi.nlm.nih.gov/13174/
+- https://pubmed.ncbi.nlm.nih.gov/14187635/
+- https://pubmed.ncbi.nlm.nih.gov/14198487/
+- https://pubmed.ncbi.nlm.nih.gov/15028354/
+- https://pubmed.ncbi.nlm.nih.gov/15962098/
+- https://pubmed.ncbi.nlm.nih.gov/16310244/
+- https://pubmed.ncbi.nlm.nih.gov/16783838/
+- https://pubmed.ncbi.nlm.nih.gov/16951898/
+- https://pubmed.ncbi.nlm.nih.gov/19038679/
+- https://pubmed.ncbi.nlm.nih.gov/19306941/
+- https://pubmed.ncbi.nlm.nih.gov/19723082/
+- https://pubmed.ncbi.nlm.nih.gov/20524092/
+- https://pubmed.ncbi.nlm.nih.gov/21400248/
+- https://pubmed.ncbi.nlm.nih.gov/21501676/
+- https://pubmed.ncbi.nlm.nih.gov/21822417/
+- https://pubmed.ncbi.nlm.nih.gov/22084361/
+- https://pubmed.ncbi.nlm.nih.gov/22085648/
+- https://pubmed.ncbi.nlm.nih.gov/22172645/
+- https://pubmed.ncbi.nlm.nih.gov/22432563/
+- https://pubmed.ncbi.nlm.nih.gov/22503988/
+- https://pubmed.ncbi.nlm.nih.gov/22542157/
+- https://pubmed.ncbi.nlm.nih.gov/23678811/
+- https://pubmed.ncbi.nlm.nih.gov/23757736/
+- https://pubmed.ncbi.nlm.nih.gov/239150/
+- https://pubmed.ncbi.nlm.nih.gov/24709195/
+- https://pubmed.ncbi.nlm.nih.gov/24874482/
+- https://pubmed.ncbi.nlm.nih.gov/25078485/
+- https://pubmed.ncbi.nlm.nih.gov/25501125/
+- https://pubmed.ncbi.nlm.nih.gov/26874033/
+- https://pubmed.ncbi.nlm.nih.gov/29088964/
+- https://pubmed.ncbi.nlm.nih.gov/29137605/
+- https://pubmed.ncbi.nlm.nih.gov/29153543/
+- https://pubmed.ncbi.nlm.nih.gov/29378168/
+- https://pubmed.ncbi.nlm.nih.gov/29551451/
+- https://pubmed.ncbi.nlm.nih.gov/29922878/
+- https://pubmed.ncbi.nlm.nih.gov/30274828/
+- https://pubmed.ncbi.nlm.nih.gov/30406348/
+- https://pubmed.ncbi.nlm.nih.gov/30511622/
+- https://pubmed.ncbi.nlm.nih.gov/31262687/
+- https://pubmed.ncbi.nlm.nih.gov/31509779/
+- https://pubmed.ncbi.nlm.nih.gov/31552879/
+- https://pubmed.ncbi.nlm.nih.gov/31905341/
+- https://pubmed.ncbi.nlm.nih.gov/32453611/
+- https://pubmed.ncbi.nlm.nih.gov/33035431/
+- https://pubmed.ncbi.nlm.nih.gov/332290/
+- https://pubmed.ncbi.nlm.nih.gov/33594505/
+- https://pubmed.ncbi.nlm.nih.gov/33743316/
+- https://pubmed.ncbi.nlm.nih.gov/33879541/
+- https://pubmed.ncbi.nlm.nih.gov/3456056/
+- https://pubmed.ncbi.nlm.nih.gov/34827566/
+- https://pubmed.ncbi.nlm.nih.gov/35570539/
+- https://pubmed.ncbi.nlm.nih.gov/356940/
+- https://pubmed.ncbi.nlm.nih.gov/35753608/
+- https://pubmed.ncbi.nlm.nih.gov/35882144/
+- https://pubmed.ncbi.nlm.nih.gov/3732900/
+- https://pubmed.ncbi.nlm.nih.gov/37643014/
+- https://pubmed.ncbi.nlm.nih.gov/38850411/
+- https://pubmed.ncbi.nlm.nih.gov/3949446/
+- https://pubmed.ncbi.nlm.nih.gov/40017626/
+- https://pubmed.ncbi.nlm.nih.gov/40058719/
+- https://pubmed.ncbi.nlm.nih.gov/4018130/
+- https://pubmed.ncbi.nlm.nih.gov/403575/
+- https://pubmed.ncbi.nlm.nih.gov/40838337/
+- https://pubmed.ncbi.nlm.nih.gov/40865396/
+- https://pubmed.ncbi.nlm.nih.gov/40991180/
+- https://pubmed.ncbi.nlm.nih.gov/4171493/
+- https://pubmed.ncbi.nlm.nih.gov/5310662/
+- https://pubmed.ncbi.nlm.nih.gov/542417/
+- https://pubmed.ncbi.nlm.nih.gov/5471555/
+- https://pubmed.ncbi.nlm.nih.gov/5476879/
+- https://pubmed.ncbi.nlm.nih.gov/6410109/
+- https://pubmed.ncbi.nlm.nih.gov/6429314/
+- https://pubmed.ncbi.nlm.nih.gov/6465177/
+- https://pubmed.ncbi.nlm.nih.gov/6486127/
+- https://pubmed.ncbi.nlm.nih.gov/6486133/
+- https://pubmed.ncbi.nlm.nih.gov/6705826/
+- https://pubmed.ncbi.nlm.nih.gov/6762531/
+- https://pubmed.ncbi.nlm.nih.gov/697250/
+- https://pubmed.ncbi.nlm.nih.gov/7037680/
+- https://pubmed.ncbi.nlm.nih.gov/7401911/
+- https://pubmed.ncbi.nlm.nih.gov/7976985/
+- https://pubmed.ncbi.nlm.nih.gov/824687/
+- https://pubmed.ncbi.nlm.nih.gov/826298/
+- https://pubmed.ncbi.nlm.nih.gov/9263351/
+- https://pubmed.ncbi.nlm.nih.gov/955240/
+- https://pubmed.ncbi.nlm.nih.gov/984064/
